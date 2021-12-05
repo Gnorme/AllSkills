@@ -41,6 +41,7 @@
     line-height:1;
     text-overflow: ellipsis;
     white-space:nowrap;
+    color:white;
 
 }
 .content {
