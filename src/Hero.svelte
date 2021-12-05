@@ -6,15 +6,47 @@
         <div class='scrolling-content'>
             <div class="scrolling-content-mask">
                 <ul class="scroll-animation">
-                    <li>Stick handles</li>
-                    <li>Ball juggling</li>
-                    <li>Trick shots</li>
-                    <li>Dribbling</li>
-                    <li>Piano playing</li>
-                    <li>Gymnists</li>
+                    <li>Archery</li>
+                    <li>Badminton</li>
+                    <li>Band</li>
+                    <li>Baseball</li>
+                    <li>Basketball</li>
+                    <li>Bass</li>
+                    <li>Bowling</li>
+                    <li>Boxing</li>
+                    <li>Chello</li>
+                    <li>Cricket</li>
+                    <li>Dance</li>
+                    <li>Darts</li>
+                    <li>Drums</li>
+                    <li>ESports</li>
+                    <li>Football</li>
+                    <li>Golf</li>
                     <li>Guitar</li>
-                    <li>Billiards</li>
+                    <li>Gymnastics</li>
+                    <li>Harmonica</li>
+                    <li>Hockey</li>
+                    <li>Ice Skating</li>
+                    <li>Lacrosse</li>
                     <li>Parkour</li>
+                    <li>Piano</li>
+                    <li>Rugby</li>
+                    <li>Running</li>
+                    <li>Saxophone</li>
+                    <li>Singing</li>
+                    <li>Skateboard
+                    <li>Ski</li>
+                    <li>Snowboard</li>
+                    <li>Soccer</li>
+                    <li>Surfing</li>
+                    <li>Swimming</li>
+                    <li>Tennis</li>
+                    <li>Trombone</li>
+                    <li>Trumpet</li>
+                    <li>Tuba</li>
+                    <li>Violin</li>
+                    <li>Volleyball</li>
+                    <li>Water Sports</li>
                     <li style="color:aqua; font-weight: 600 !important">All Skills</li>
                 </ul>
             </div>
@@ -172,8 +204,8 @@ ul {
   position:relative;
   text-align:left;
   list-style:none;
-  animation: change 4s cubic-bezier(0.25, 0.2, 0.5, 1.0) 0.1s 1 normal forwards;
-  -webkit-animation: change 4s cubic-bezier(0.25, 0.2, 0.5, 1.0) 0.1s 1 normal forwards;
+  animation: change 5s cubic-bezier(0.5, 0.2, 0.5, 1.0) 0.5s 1 normal forwards;
+  -webkit-animation: change 5s cubic-bezier(0.5, 0.2, 0.5, 1.0) 0.5s 1 normal forwards;
 }
 
 ul li {
@@ -197,7 +229,7 @@ ul li {
 }
 
 @keyframes change {
-    100% {margin-top: -576px;}
+    100% {margin-top: -2624px;}
 
 }
 
