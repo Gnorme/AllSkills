@@ -44,9 +44,9 @@
                     <li>Trombone</li>
                     <li>Trumpet</li>
                     <li>Tuba</li>
-                    <li>Violin</li>
                     <li>Volleyball</li>
-                    <li>Water Sports</li>
+                    <li>Violin</li>                    
+                    
                     <li style="color:aqua; font-weight: 600 !important">All Skills</li>
                 </ul>
             </div>
@@ -87,6 +87,7 @@
     position:relative;
     display:inline-block;
     min-height:0;
+    font-weight: 600;
     overflow:hidden;
 }
 .scrolling-content-mask{
@@ -102,7 +103,7 @@
          height: 64px;
          z-index: 1;
         display:grid;
-        grid-template-columns: 60% 40%;
+        grid-template-columns: 48% 52%;
      }
 
      .hero {
@@ -110,7 +111,7 @@
     width: 100vw;
     height: 100vh;
     display: grid;
-    grid-template-columns: 50% 50%;
+    grid-template-columns: 55% 45%;
     justify-content: space-between;
     align-items: center;
     
@@ -164,7 +165,6 @@ input {
    font-weight: 400;
     width: 70%;
     height:auto;
-    padding-left: 5%;
 }
 
 .hero-split {
@@ -218,9 +218,7 @@ ul li {
 }
 
 @-webkit-keyframes change {
-    0%, 7% {transform:translateY(0);}
-  90%,100% {transform:translateY(-90%);}
-
+    100% {margin-top: -2624px;}
 }
 
 @keyframes opacity {
@@ -229,7 +227,7 @@ ul li {
 }
 
 @keyframes change {
-    100% {margin-top: -2624px;}
+    100% {margin-top: -2560px;}
 
 }
 
