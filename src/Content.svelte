@@ -10,36 +10,55 @@
     <div class="table-content">
         <div class="grid-item">
             <div class="grid-item-text">
-                <h3>Test</h3>
+                <h3>Skills Competition</h3>
                 <p>test test testtesttest testtesttesttestte testtesttest  test  test  test  test  testst</p>
             </div>
         </div>
         <div class="grid-item">
             <div class="grid-item-text">
-                <h3>Test</h3>
+                <h3>Earning Potential</h3>
                 <p>test test testtesttest testtesttesttestte testtesttest  test  test  test  test  testst</p>
             </div>
         </div>
         <div class="grid-item">
             <div class="grid-item-text">
-                <h3>Test</h3>
+                <h3>NFT Collectibles</h3>
                 <p>test test testtesttest testtesttesttestte testtesttest  test  test  test  test  testst</p>
             </div>
         </div>
         <div class="grid-item">
             <div class="grid-item-text">
-                <h3>Test</h3>
+                <h3>NFT Marketplace</h3>
                 <p>test test testtesttest testtesttesttestte testtesttest  test  test  test  test  testst</p>
             </div>
         </div>
     </div>
+    <div class="powered-by">
+        <h3>AllSkills is powered by cryptocurrency, using <span style="background-color:aqua;">future-proof blockchain & smart contract technology</span> to connect talented peopled and audiences, and foster skill development through competition, all while providing <span style="background-color: aqua">incentives for everyone involved.</h3>
+    </div>
+    <div class="roadmap">
+        <h2>Roadmap</h2>
+    </div>
+    <div class="team">
+        <h2>The Team</h2>
+    </div>
 </div>
 <style>
+    /* rgb(143,255,238) */
+    p {
+        font-size: 1.5rem;
+    }
+
     h3 {
         font-size: 3rem;
-        line-height: 1;
+        line-height: 1.5;
         margin-bottom: 2rem;
         font-weight: 500;
+    }
+    .powered-by{
+        margin-top: 20rem;
+        margin-bottom: 20rem;
+        text-align: center;
     }
     .grid-item{
         display:flex;
@@ -52,7 +71,9 @@
     .table-content{
         display:grid;
         margin-top:3rem;
+        margin-bottom:3rem;
         color: white;
+        border: 1px solid aqua;
         grid-template-columns: repeat(2,minmax(0,1fr));
     }
     h2 {
@@ -74,7 +95,7 @@
     }
 
     img {
-        object-fit: scale-down;
+        height: 100%;
     }
 
  .card{
