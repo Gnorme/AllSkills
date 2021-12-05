@@ -9,24 +9,28 @@
     <h2>What We Provide</h2>
     <div class="table-content">
         <div class="grid-item">
+            <div class="table-icon"><img style="width:100%" src="images/handshake.png"></div>
             <div class="grid-item-text">
                 <h3>Skills Competition</h3>
                 <p>test test testtesttest testtesttesttestte testtesttest  test  test  test  test  testst</p>
             </div>
         </div>
         <div class="grid-item">
+            <div class="table-icon"><img style="width:100%" src="images/earn.png"></div>
             <div class="grid-item-text">
                 <h3>Earning Potential</h3>
                 <p>test test testtesttest testtesttesttestte testtesttest  test  test  test  test  testst</p>
             </div>
         </div>
         <div class="grid-item">
+            <div class="table-icon"><img style="width:100%" src="images/stamps.png"></div>
             <div class="grid-item-text">
                 <h3>NFT Collectibles</h3>
                 <p>test test testtesttest testtesttesttestte testtesttest  test  test  test  test  testst</p>
             </div>
         </div>
         <div class="grid-item">
+            <div class="table-icon"><img style="width:100%" src="images/auction.png"></div>
             <div class="grid-item-text">
                 <h3>NFT Marketplace</h3>
                 <p>test test testtesttest testtesttesttestte testtesttest  test  test  test  test  testst</p>
@@ -34,7 +38,7 @@
         </div>
     </div>
     <div class="powered-by">
-        <h3>AllSkills is powered by cryptocurrency, using <span style="background-color:aqua;">future-proof blockchain & smart contract technology</span> to connect talented peopled and audiences, and foster skill development through competition, all while providing <span style="background-color: aqua">incentives for everyone involved.</h3>
+        <h3>AllSkills is powered by cryptocurrency, using <span style="background-color:aqua;">future-proof blockchain & smart contract technology</span> to connect talented people and audiences, and foster skill development through competition, all while providing <span style="background-color: aqua">incentives for everyone involved.</h3>
     </div>
     <div class="roadmap">
         <h2>Roadmap</h2>
@@ -48,7 +52,9 @@
     p {
         font-size: 1.5rem;
     }
-
+    .table-icon {
+        padding-right:2.5rem;
+    }
     h3 {
         font-size: 3rem;
         line-height: 1.5;
@@ -61,11 +67,10 @@
         text-align: center;
     }
     .grid-item{
-        display:flex;
-        flex: 1 1 0%;
+        display:grid;
+        grid-template-columns: 25% 75%;
         align-items: center;
         padding: 2.5rem;
-        display:flex;
         border: 1px solid aqua;
     }
     .table-content{
