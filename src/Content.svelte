@@ -1,7 +1,7 @@
 <div class="content">
-    <div class="card"><img src="images/runner.jpg" /></div>
+    <div class="card"><img src="images/bass.jpg" /></div>
     <div class="card"><img src="images/Dunk.jpg" /></div>
-    <div class="card"><img src="images/runner.jpg" /></div>
+    <div class="card"><img src="images/skateboard.jpg" /></div>
     <div class="card"><img src="images/runner.jpg" /></div>
 </div>
 
