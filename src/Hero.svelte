@@ -1,4 +1,7 @@
 
+<script>
+    import NewsletterSignup from "./NewsletterSignup.svelte";
+</script>
 <section class="hero">
    
    <div class="left-content">
@@ -54,11 +57,8 @@
     </div>
     <div class='hero-split'>
         <div class="description">
-            <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat.</p>
-        <div class="signup">
-            <input placeholder="Sign up for our newsletter">
-            <button onclick="alert('test')">REGISTER NOW</button>
-        </div>
+            <p style="margin-bottom:2rem;">Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat.</p>
+            <NewsletterSignup color='white' />
         </div>
     </div>
 
@@ -117,46 +117,11 @@
     
 
 }
-.signup {
-    display:flex;
-    width: 100%;
-}
+
 
 p {
     font-size: 1.875rem;
 line-height: 2.25rem;
-}
-
-button {
-    margin-top: 2rem;
-    font-weight: 500;
-    padding-top: 2rem;
-    font-weight: 500;
-    padding-bottom: 2rem;
-    width: 40%;
-    letter-spacing: .1em;
-    align-items: center;
-    background-color:transparent;
-    border: 2px solid white;
-    background-image: none;
-    color:white;
-    text-align: center;
-    cursor: pointer;
-}
-
-input {
-    margin-top:2rem;
-    padding-left: 1.5rem;
-    padding-right: 1.5rem;
-    padding-top: 2rem;
-    padding-bottom:2rem;
-    font-size: 1rem;
-    background-color:transparent;
-    width: 60%;
-    border: 2px solid white;
-    color:white;
-    pointer-events:initial;
-    cursor:pointer;
 }
 
 .description {
@@ -170,21 +135,6 @@ input {
 .hero-split {
   font-family: "Roboto", "Lato", sans-serif;
    color: white;
-}
-.hero-content {
-   position: relative;
-   align-items: center;
-   font-weight: 600;
-    width: 100%;
-}
-
-
-
-.visible {
-  font-weight:600;
-  overflow:visible;
-  height:40px;
-  padding:0 40px;
 }
 
 p {
@@ -231,13 +181,6 @@ ul li {
 
 }
 
-
-
-.hero-title {
-    font-size: 3rem;
-    font-weight: 600;
-    margin-bottom: 0;
-}
 
 .hero::before {
     content: "";

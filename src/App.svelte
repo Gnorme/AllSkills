@@ -2,7 +2,7 @@
 	import Navbar from './Navbar.svelte';
 	import Hero from './Hero.svelte';
 	import Content from './Content.svelte'
-	export let name;
+	import Footer from './Footer.svelte'
 </script>
 
 
@@ -10,6 +10,7 @@
 	<Navbar/>
 	<Hero/>
 	<Content/>
+	<Footer/>
 </main>
 
 <style>
@@ -24,13 +25,6 @@
 		margin:0;
 		width:100%;
 		height:100%;
-	}
-
-	h1 {
-		color: #ff3e00;
-		text-transform: uppercase;
-		font-size: 4em;
-		font-weight: 100;
 	}
 
 	@media (min-width: 640px) {

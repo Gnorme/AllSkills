@@ -1,3 +1,8 @@
+<script>
+    import TeamCards from './TeamCards.svelte'
+</script>
+
+
 <div class="content">
     <div class="card"><img src="images/bass.jpg" /></div>
     <div class="card"><img src="images/Dunk.jpg" /></div>
@@ -9,28 +14,28 @@
     <h2>What We Provide</h2>
     <div class="table-content">
         <div class="grid-item">
-            <div class="table-icon"><img style="width:100%" src="images/handshake.png"></div>
+            <div class="table-icon"><img alt="Handshake" style="width:100%" src="images/handshake.png"></div>
             <div class="grid-item-text">
                 <h3>Skills Competition</h3>
                 <p>test test testtesttest testtesttesttestte testtesttest  test  test  test  test  testst</p>
             </div>
         </div>
         <div class="grid-item">
-            <div class="table-icon"><img style="width:100%" src="images/earn.png"></div>
+            <div class="table-icon"><img alt="Earnings" style="width:100%" src="images/earn.png"></div>
             <div class="grid-item-text">
                 <h3>Earning Potential</h3>
                 <p>test test testtesttest testtesttesttestte testtesttest  test  test  test  test  testst</p>
             </div>
         </div>
         <div class="grid-item">
-            <div class="table-icon"><img style="width:100%" src="images/stamps.png"></div>
+            <div class="table-icon"><img alt="Collectibles" style="width:100%" src="images/stamps.png"></div>
             <div class="grid-item-text">
                 <h3>NFT Collectibles</h3>
                 <p>test test testtesttest testtesttesttestte testtesttest  test  test  test  test  testst</p>
             </div>
         </div>
         <div class="grid-item">
-            <div class="table-icon"><img style="width:100%" src="images/auction.png"></div>
+            <div class="table-icon"><img alt="Marketplace" style="width:100%" src="images/auction.png"></div>
             <div class="grid-item-text">
                 <h3>NFT Marketplace</h3>
                 <p>test test testtesttest testtesttesttestte testtesttest  test  test  test  test  testst</p>
@@ -43,8 +48,12 @@
     <div class="roadmap">
         <h2>Roadmap</h2>
     </div>
-    <div class="team">
-        <h2>The Team</h2>
+    <TeamCards/>
+    <div class="partners">
+        <h2>Partners</h2>
+    </div>
+    <div class="partners">
+        <h2>News</h2>
     </div>
 </div>
 <style>
