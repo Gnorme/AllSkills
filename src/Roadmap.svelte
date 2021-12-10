@@ -118,6 +118,7 @@
         justify-content: center;
         align-items: center;
         height: 20%;
+        transition: all 200ms;
     }
     .roadmap-container{
         justify-content: space-between;
@@ -133,6 +134,17 @@
         width: 20%;
         height: 18rem;
         margin-bottom: 3rem;
+        background-color:rgba(0,0,0,0.3);
         box-shadow: 0px 1px 10px rgba(0,0,0,0.5);
+        cursor: pointer;
+        transition: all 300ms;
+    }
+    .roadmap-card:hover{
+        background-color: aqua;
+        color: rgb(54,54,54);
+    }
+    .roadmap-card:hover .header{
+        background-color: rgba(54,54,54);
+        color: aqua;
     }
 </style>

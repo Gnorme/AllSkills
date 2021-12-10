@@ -57,7 +57,7 @@
     </div>
     <div class='hero-split'>
         <div class="description">
-            <p style="margin-bottom:2rem;">Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat.</p>
+            <p style="margin-bottom:2rem;">AllSkills is a platform that looks to bring creativity and increased competition to the sport world. Our platform provides an opportunity to witness people of all skills showcasing their talents and competing against others all while earning money through our carefully crafted token based Vote and Challenge system and NFT marketplace.</p>
             <NewsletterSignup color='white' />
         </div>
     </div>
@@ -128,7 +128,7 @@ line-height: 2.25rem;
 
     position: relative;
    font-weight: 400;
-    width: 70%;
+    width: 90%;
     height:auto;
 }
 

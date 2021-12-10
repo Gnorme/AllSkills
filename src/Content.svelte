@@ -1,6 +1,7 @@
 <script>
     import TeamCards from './TeamCards.svelte'
     import Roadmap from './Roadmap.svelte'
+    import Tokenomics from './Tokenomics.svelte';
 </script>
 
 
@@ -46,7 +47,14 @@
     <div class="powered-by">
         <h3>AllSkills is powered by cryptocurrency, using <span style="background-color:aqua;">future-proof blockchain & smart contract technology</span> to connect talented people and audiences, and foster skill development through competition, all while providing <span style="background-color: aqua">incentives for everyone involved.</h3>
     </div>
+    <div class="partners">
+        <h2>Challenge System</h2>
+    </div>
+    <div class="partners">
+        <h2>Stablecoin Vote Token</h2>
+    </div>
     <Roadmap/>
+    <Tokenomics/>
     <TeamCards/>
     <div class="partners">
         <h2>Partners</h2>

@@ -1,8 +1,8 @@
 <script>
 	import Navbar from './Navbar.svelte';
 	import Hero from './Hero.svelte';
-	import Content from './Content.svelte'
-	import Footer from './Footer.svelte'
+	import Content from './Content.svelte';
+	import Footer from './Footer.svelte';
 </script>
 
 
