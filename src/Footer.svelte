@@ -7,10 +7,10 @@
         <div class="footer-col">
             <h4>Links</h4>
             <ul class="col-content">
-                <li><a>Trailer</a></li>
-                <li><a>Challenge System</a></li>
-                <li><a>Vote Stablecoin</a></li>
-                <li><a>Roadmap</a></li>
+                <li><a href="#Trailer">Trailer</a></li>
+                <li><a href="#Challenge">Challenge System</a></li>
+                <li><a href="#Stablecoin">Vote Stablecoin</a></li>
+                <li><a href="#Roadmap">Roadmap</a></li>
                 <li><a>Tokenomics</a></li>
                 <li><a>Team</a></li>
                 <li><a>Blog</a></li>

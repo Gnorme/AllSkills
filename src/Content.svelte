@@ -2,10 +2,12 @@
     import TeamCards from './TeamCards.svelte'
     import Roadmap from './Roadmap.svelte'
     import Tokenomics from './Tokenomics.svelte';
+    import Challenge from './Challenge.svelte';
+    import VoteToken from './VoteToken.svelte';
 </script>
 
 
-<div class="content">
+<div id="Trailer" class="content">
     <div class="card"><img src="images/bass.jpg" /></div>
     <div class="card"><img src="images/Dunk.jpg" /></div>
     <div class="card"><img src="images/skateboard.jpg" /></div>
@@ -19,36 +21,37 @@
             <div class="table-icon"><img alt="Handshake" style="width:100%" src="images/handshake.png"></div>
             <div class="grid-item-text">
                 <h3>Skills Competition</h3>
-                <p>test test testtesttest testtesttesttestte testtesttest  test  test  test  test  testst</p>
+                <p>Using our platform, creators can challenge others using a video showcasing their talents. Challenge winners are decided by a community vote and all votes enter a reward pool that gets distrubuted to the winning creator and all those who voted for it.</p>
             </div>
         </div>
         <div class="grid-item">
             <div class="table-icon"><img alt="Earnings" style="width:100%" src="images/earn.png"></div>
             <div class="grid-item-text">
                 <h3>Earning Potential</h3>
-                <p>test test testtesttest testtesttesttestte testtesttest  test  test  test  test  testst</p>
+                <p>Our carefully crafted royalties system and stablecoin Vote token will allow both creators and consumers of content to earn money. Creators can earn by winning challenges and viewers can earn by voting.</p>
             </div>
         </div>
         <div class="grid-item">
             <div class="table-icon"><img alt="Collectibles" style="width:100%" src="images/stamps.png"></div>
             <div class="grid-item-text">
                 <h3>NFT Collectibles</h3>
-                <p>test test testtesttest testtesttesttestte testtesttest  test  test  test  test  testst</p>
+                <p>Collect unique moments from talented creators. Winning challenge videos are minted into NFT collectibles that can be traded on our NFT marketplace.</p>
             </div>
         </div>
         <div class="grid-item">
             <div class="table-icon"><img alt="Marketplace" style="width:100%" src="images/auction.png"></div>
             <div class="grid-item-text">
                 <h3>NFT Marketplace</h3>
-                <p>test test testtesttest testtesttesttestte testtesttest  test  test  test  test  testst</p>
+                <p>Buy and Sell winning challenge moments on our NFT Marketplace to increase your collection. Royalties are distributed to video creator and voters.</p>
             </div>
         </div>
     </div>
     <div class="powered-by">
-        <h3>AllSkills is powered by cryptocurrency, using <span style="background-color:aqua;">future-proof blockchain & smart contract technology</span> to connect talented people and audiences, and foster skill development through competition, all while providing <span style="background-color: aqua">incentives for everyone involved.</h3>
+        <h3><span style="color:aqua;">AllSkills</span> is powered by cryptocurrency, using <span style="background-color:aqua; color: rgb(54,54,54);">future-proof blockchain & smart contract technology</span> to connect talented people and audiences, and foster skill development through competition, all while providing <span style="background-color: aqua; color: rgb(54,54,54);">incentives for everyone involved.</h3>
     </div>
     <div class="partners">
         <h2>Challenge System</h2>
+        <Challenge/>
     </div>
     <div class="partners">
         <h2>Stablecoin Vote Token</h2>
@@ -66,14 +69,21 @@
 <style>
     /* rgb(143,255,238) */
     p {
-        font-size: 1.5rem;
+        font-size: 1.25rem;
+        margin-block-end: 0;
+        margin-block-start:0;
     }
     .table-icon {
+        align-items: center;
+        display:grid;
         padding-right:2.5rem;
     }
     h3 {
         font-size: 3rem;
         line-height: 1.5;
+        margin-top:0;
+        margin-block-start:0;
+        margin-block-end:0;
         margin-bottom: 2rem;
         font-weight: 500;
     }
@@ -85,7 +95,6 @@
     .grid-item{
         display:grid;
         grid-template-columns: 25% 75%;
-        align-items: center;
         padding: 2.5rem;
         border: 1px solid aqua;
     }
@@ -114,11 +123,6 @@
    max-width: 80rem;
    box-sizing: border-box;
     }
-
-    img {
-        height: 100%;
-    }
-
  .card{
      height: 800px;
      max-width: 23%;
