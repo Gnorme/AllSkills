@@ -1,6 +1,3 @@
-<div class="team">
-    <h2>The Team</h2>
-</div>
 <div class="cards-container">
     <div class="card">
         <div class="photo">

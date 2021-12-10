@@ -1,5 +1,3 @@
-<div id="Roadmap" style="width: 100%">
-    <h2>Roadmap & Milestones</h2>
     <div class="roadmap-container">
         <div class="roadmap-card">
             <div class="header">
@@ -75,8 +73,6 @@
             </div>
         </div>  
     </div>
-</div>
-
 
 <style>
     h3 {

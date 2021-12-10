@@ -21,7 +21,7 @@
             <div class="table-icon"><img alt="Handshake" style="width:100%" src="images/handshake.png"></div>
             <div class="grid-item-text">
                 <h3>Skills Competition</h3>
-                <p>Using our platform, creators can challenge others using a video showcasing their talents. Challenge winners are decided by a community vote and all votes enter a reward pool that gets distrubuted to the winning creator and all those who voted for it.</p>
+                <p>Using our platform, creators can challenge others using a video showcasing their talents. Challenge winners are decided by a community vote and all votes enter a reward pool that gets distrubuted to the winning creator and all those who voted for it to win.</p>
             </div>
         </div>
         <div class="grid-item">
@@ -49,20 +49,29 @@
     <div class="powered-by">
         <h3><span style="color:aqua;">AllSkills</span> is powered by cryptocurrency, using <span style="background-color:aqua; color: rgb(54,54,54);">future-proof blockchain & smart contract technology</span> to connect talented people and audiences, and foster skill development through competition, all while providing <span style="background-color: aqua; color: rgb(54,54,54);">incentives for everyone involved.</h3>
     </div>
-    <div class="partners">
+    <div id="Challenge" style="width: 100%">
         <h2>Challenge System</h2>
         <Challenge/>
     </div>
-    <div class="partners">
+    <div id="Stablecoin" style="width: 100%">
         <h2>Stablecoin Vote Token</h2>
     </div>
-    <Roadmap/>
-    <Tokenomics/>
-    <TeamCards/>
-    <div class="partners">
+    <div id="Roadmap" style="width: 100%">
+        <h2>Roadmap & Milestones</h2>
+        <Roadmap/>
+    </div>
+    <div id="Tokenomics" style="width: 100%">
+        <h2>Tokenomics</h2>
+        <Tokenomics/>
+    </div>
+    <div id="Team" style="width: 100%">
+        <h2>The Team</h2>
+        <TeamCards/>
+    </div>
+    <div id="Partners" style="width: 100%">
         <h2>Partners</h2>
     </div>
-    <div class="partners">
+    <div id="News" style="width: 100%">
         <h2>News</h2>
     </div>
 </div>
