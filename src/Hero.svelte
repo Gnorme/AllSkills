@@ -50,7 +50,7 @@
                     <li>Volleyball</li>
                     <li>Violin</li>                    
                     
-                    <li style="color:aqua; font-weight: 600 !important">All Skills</li>
+                    <li style="color:aqua; font-weight: 600 !important">AllSkills</li>
                 </ul>
             </div>
         </div>
