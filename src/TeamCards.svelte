@@ -30,7 +30,7 @@
         <div class="photo">
             <img src="images/Charles.jpg"/>
         </div>
-        <h3>Charles Hammelin</h3>
+        <h3>Charles Hamelin</h3>
         <h4>Position</h4>
         <p>Lorem ipsum test test test test test test test test test test test test test test test test test test test test test test test test test test</p>
     </div>            
