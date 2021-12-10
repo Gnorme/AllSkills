@@ -42,7 +42,7 @@
             <div class="table-icon"><img alt="Marketplace" style="width:100%" src="images/auction.png"></div>
             <div class="grid-item-text">
                 <h3>NFT Marketplace</h3>
-                <p>Buy and Sell winning challenge moments on our NFT Marketplace to increase your collection. Royalties are distributed to video creator and voters.</p>
+                <p>Buy and Sell winning challenge moments on our NFT Marketplace to increase your collection. Royalties from collectible sales are distributed to the video creator and voters.</p>
             </div>
         </div>
     </div>

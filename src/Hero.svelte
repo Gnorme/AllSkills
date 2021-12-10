@@ -57,7 +57,7 @@
     </div>
     <div class='hero-split'>
         <div class="description">
-            <p style="margin-bottom:2rem;">AllSkills is a platform that looks to bring <span style="color:aqua">creativity and increased competition to the sport world.</span> Our platform provides an opportunity to witness people of all skills showcasing their talents and competing against others all while earning money through our carefully crafted token based Vote and Challenge system and NFT marketplace.</p>
+            <p style="margin-bottom:2rem;">AllSkills is a platform that looks to bring <span style="color:aqua">creativity, sustainable growth, and increased competition</span> to the talent world. Our platform provides an opportunity to witness people of all skills showcasing their talents and competing against others all while earning money through our carefully crafted token based Vote and Challenge system and NFT marketplace.</p>
             <NewsletterSignup color='white' />
         </div>
     </div>

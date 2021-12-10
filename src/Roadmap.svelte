@@ -4,10 +4,10 @@
                 <h3>2019-2020</h3>
             </div>
             <ul>
-                <li>Coming together of co-founders and ideation</li>
-                <li>Pitch deck and business plan developed</li>
-                <li>Feasibility study</li>
-                <li>Olympic skater Charles Hamelin joins project</li>
+                <li class="cleared">Coming together of co-founders and ideation</li>
+                <li class="cleared">Pitch deck and business plan developed</li>
+                <li class="cleared">Feasibility study</li>
+                <li class="cleared">Olympic skater Charles Hamelin joins project</li>
             </ul>
         </div>
         <div class="roadmap-card">
@@ -15,8 +15,8 @@
                 <h3>First Half 2021</h3>
             </div>
             <ul>
-                <li>Markest research</li>
-                <li>Reached out to potential investors and advisors</li>
+                <li class="cleared">Markest research</li>
+                <li class="cleared">Reached out to potential investors and advisors</li>
             </ul>
         </div>   
         <div class="roadmap-card">
@@ -24,8 +24,8 @@
                 <h3>Q3 2021</h3>
             </div>
             <ul>
-                <li>Backed by PME Montreal </li>
-                <li>CTO Acquisition</li>
+                <li class="cleared">Backed by PME Montreal </li>
+                <li class="cleared">CTO Acquisition</li>
             </ul>
         </div>  
         <div class="roadmap-card">
@@ -33,8 +33,8 @@
                 <h3>Q4 2021</h3>
             </div>
             <ul>
-                <li>Finalists in NBA Launchpad</li>
-                <li>Pivot towards NFT based platform and stablecoin</li>
+                <li class="cleared">Finalists in NBA Launchpad</li>
+                <li class="cleared">Pivot towards NFT based platform and stablecoin</li>
                 <li>Launch website</li>
                 <li>Release whitepaper and tokenomics</li>
             </ul>
@@ -89,7 +89,7 @@
         padding-inline-start:0;
         list-style: none;
     }
-    ul li:before {
+    .cleared:before{
         content: '✓';
         margin-left: -1.3em;
         margin-right:0.5rem;
