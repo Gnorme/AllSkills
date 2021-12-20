@@ -58,19 +58,28 @@
                 <h3>Q2 2022</h3>
             </div>
             <ul>
-                <li>Test</li>
-                <li>Test</li>
+                <li>Mint stablecoin Vote token</li>
+                <li>Launch closed beta</li>
+                <li>Full release of challenge system and marketplace</li>
             </ul>
         </div>  
         <div class="roadmap-card">
             <div class="header">
                 <h3>Q3 2022</h3>
             </div>
+            <ul>
+                <li>Add video editing features</li>
+                <li>Unique Tap-to-Record feature</li>
+                <li>Release of ambassador program</li>
+            </ul>
         </div>  
         <div class="roadmap-card">
             <div class="header">
                 <h3>Q4 2022</h3>
             </div>
+            <ul>
+                <li>Release of GM mode</li>
+            </ul>
         </div>  
     </div>
 
