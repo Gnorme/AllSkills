@@ -61,7 +61,7 @@
         <Roadmap/>
     </div>
     <div id="Tokenomics" style="width: 100%">
-        <h2>Tokenomics</h2>
+        <h2>Governance Tokenomics</h2>
         <Tokenomics/>
     </div>
     <div id="Team" style="width: 100%">
