@@ -77,7 +77,6 @@
 </div>
 
 <style>
-    @import url('https://fonts.googleapis.com/css2?family=Lato:ital,wght@0,100;0,300;1,100&family=Open+Sans+Condensed:wght@300&display=swap');
     img {
         height: 100%;
     }
