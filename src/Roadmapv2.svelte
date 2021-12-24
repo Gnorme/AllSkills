@@ -61,8 +61,8 @@
         </div>
     </div>
     <div class="roadmap-card" style="height:100%;">
-        <div class="header" style="border-bottom: 5px solid #8fffee">
-            <img src="images/global.png" />
+        <div class="header" style="border-bottom: 5px solid aqua">
+            <img src="images/globalization.png" />
         </div>
         <div class="text">
             <h3>Q3+ 2022</h3>
