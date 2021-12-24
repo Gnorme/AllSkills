@@ -115,8 +115,8 @@
     }
     .header{
         border-bottom: 2px solid black;
-        background-color: aqua;
-        color:rgb(54,54,54);
+        background-color: #73498f;
+        color:white;
         width:100%;
         display:flex;
         text-align: center;
@@ -139,7 +139,7 @@
         width: 20%;
         height: 18rem;
         margin-bottom: 3rem;
-        background-color:rgba(0,0,0,0.3);
+        background-color:#252222;
         box-shadow: 0px 1px 10px rgba(0,0,0,0.5);
         cursor: pointer;
         transition: all 300ms;
