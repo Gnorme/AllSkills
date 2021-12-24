@@ -88,7 +88,7 @@
         letter-spacing: 0.8px;
         margin-top:3px;
         font-weight:200;
-        font-family:"Lato", "Roboto", sans-serif;
+        font-family:"Roboto", "Lato", sans-serif;
     }
     p {
         color: rgb(146, 146, 146);
