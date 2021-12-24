@@ -1,5 +1,5 @@
 <div class="roadmap-container">
-    <div class="roadmap-card" style="height:50%;">
+    <div class="roadmap-card" style="height:60%;">
         <div class="header" style="border-bottom: 5px solid #363636">
             <img src="images/idea.png" />
         </div>
@@ -13,7 +13,7 @@
             </ul>
         </div>
     </div>
-    <div class="roadmap-card" style="height:62.5%;">
+    <div class="roadmap-card" style="height:70%;">
         <div class="header" style="border-bottom: 5px solid #852ee7">
             <img src="images/leadership.png" />
         </div>
@@ -30,7 +30,7 @@
             </ul>
         </div>
     </div>
-    <div class="roadmap-card" style="height:75%;">
+    <div class="roadmap-card" style="height:80%;">
         <div class="header" style="border-bottom: 5px solid #e0573f">
             <img src="images/planning.png" />
         </div>
@@ -47,7 +47,7 @@
             </ul>
         </div>
     </div>
-    <div class="roadmap-card" style="height:87.5%;">
+    <div class="roadmap-card" style="height:90%;">
         <div class="header" style="border-bottom: 5px solid #ecec37">
             <img src="images/launch.png" />
         </div>
@@ -88,6 +88,7 @@
         letter-spacing: 0.8px;
         margin-top:3px;
         font-weight:200;
+        font-family:"Lato", "Roboto", sans-serif;
     }
     p {
         color: rgb(146, 146, 146);
