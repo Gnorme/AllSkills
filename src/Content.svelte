@@ -76,8 +76,7 @@
         <h2>News</h2>
     </div>
 </div>
-<style>
-    /* rgb(143,255,238) */
+<style>   /* rgb(143,255,238) */
     p {
         font-size: 1.25rem;
         margin-block-end: 0;
@@ -121,6 +120,8 @@
         min-width:50%;
         font-size: 4.5rem;
         line-height: 1;
+        font-family: 'Lato', sans-serif !important;
+        font-family: 'Roboto', sans-serif;
     }
     .text-content {
         margin-left: auto;

@@ -37,7 +37,7 @@
     }
     ul {
         list-style:none;
-        letter-spacing: 1.5px;
+        letter-spacing: 1px;
     }
     .highlight{
         margin: -2px;
