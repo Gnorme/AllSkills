@@ -58,7 +58,7 @@
         <h2>Stablecoin Vote Token</h2>
     </div>
     <div id="Roadmap" style="width: 100%">
-        <h2 style="margin-bottom:20px;">Roadmap & Milestones</h2>
+        <h2>Roadmap & Milestones</h2>
         <Roadmapv/>
     </div>
     <div id="Tokenomics" style="width: 100%">
