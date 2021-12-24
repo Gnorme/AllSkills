@@ -4,6 +4,7 @@
     import Tokenomics from './Tokenomics.svelte';
     import Challenge from './Challenge.svelte';
     import VoteToken from './VoteToken.svelte';
+    import Roadmapv from './Roadmapv2.svelte';
 </script>
 
 
@@ -57,11 +58,11 @@
         <h2>Stablecoin Vote Token</h2>
     </div>
     <div id="Roadmap" style="width: 100%">
-        <h2>Roadmap & Milestones</h2>
-        <Roadmap/>
+        <h2 style="margin-bottom:20px;">Roadmap & Milestones</h2>
+        <Roadmapv/>
     </div>
     <div id="Tokenomics" style="width: 100%">
-        <h2>Tokenomics</h2>
+        <h2>Tokenomics</h2><span>*placeholder numbers</span>
         <Tokenomics/>
     </div>
     <div id="Team" style="width: 100%">
@@ -105,14 +106,14 @@
         display:grid;
         grid-template-columns: 25% 75%;
         padding: 2.5rem;
-        border: 2px solid aqua;
+        border: 3px solid aqua;
     }
     .table-content{
         display:grid;
         margin-top:3rem;
         margin-bottom:3rem;
         color: white;
-        border: 2px solid aqua;
+        border: 3px solid aqua;
         grid-template-columns: repeat(2,minmax(0,1fr));
     }
     h2 {
