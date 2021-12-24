@@ -17,7 +17,7 @@
 	:global(body) { 
 		margin:0;
 		padding: 0;
-		background-color: rgb(54,54,54);
+		background-color: rgb(30,30,30);
 	}
 
 	main {

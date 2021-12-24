@@ -115,7 +115,7 @@
     }
     .header{
         border-bottom: 2px solid black;
-        background-color: #862fe7;
+        background-color: #73498f;
         color:white;
         width:100%;
         display:flex;

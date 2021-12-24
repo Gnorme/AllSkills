@@ -37,6 +37,7 @@
     }
     ul {
         list-style:none;
+        letter-spacing: 1.5px;
     }
     .highlight{
         margin: -2px;
@@ -54,9 +55,7 @@
         margin-left:10px !important;
         padding-right:10px;
     }
-    .team span {
-        font-weight: bold;
-    }
+
     .team:before {
         color:#003f5c;
     }
@@ -80,7 +79,6 @@
     }
     li {
         list-style-type:none;
-        font-weight: 600;
     }
     .section {
         transform-origin: 50% 50%;
