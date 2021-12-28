@@ -1,7 +1,7 @@
 <div class="tokenomics-container">
     <div style="width:25%"></div>
     <div style="text-align:center;">
-        <p style="display:inline; width: 30%; position:relative; top:50%; z-index:4; font-size: 1.5em; margin-left: auto; margin-right:auto">100,000,000 Tokens</p>
+        <p style="display:inline; font-weight: 200; font-family: 'Montserrat'; width: 30%; position:relative; top:50%; z-index:4; font-size: 1.5em; margin-left: auto; margin-right:auto">100,000,000 Tokens</p>
         <svg xmlns="http://www.w3.org/2000/svg" id="sv" width="500" height="500" viewBox="-50 -50 400 400">
             <path on:mouseover={bringToFront} on:mousemove={showTooltip} data-value="Team 10,000,000" on:mouseleave={deselect} class="section" id="0" fill="#003f5c" d="M150, 0 A150,150 0 0 1 238.1656698289039,28.64591204404894 L214.6548245411962,61.007002165635896 A110,110 0 0 0 150,40 Z"></path>
             <path on:mouseover={bringToFront} on:mousemove={showTooltip} data-value="Advisors 5,000,000" on:mouseleave={deselect} class="section" id="1" fill="#374c80" d="M238.1656698289039, 28.64591204404894 A150,150 0 0 1 271.3502408873674,61.82903518403633 L238.9901766507361,85.3412924682933 A110,110 0 0 0 214.6548245411962,61.007002165635896 Z"></path>
@@ -53,6 +53,7 @@
         font-weight:100;
         letter-spacing: 0.5px;
         font-size: 20px;
+        font-family: 'Montserrat';
         margin-left:10px !important;
         padding-right:10px;
     }

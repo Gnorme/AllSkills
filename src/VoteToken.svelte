@@ -23,7 +23,7 @@
     </div>
     </div>
     <div class="column middle">
-        <h1 style="font-family: 'Ultra';">1 Vote ≈ $0.10</h1>
+        <h1 style="font-family: 'Ultra';">1 $Vote ≈ $0.10</h1>
         <img src="images/token.png" />
     </div>
     <div class="column">

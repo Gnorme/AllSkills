@@ -55,7 +55,7 @@
         <Challenge/>
     </div>
     <div id="Stablecoin" style="width: 100%;">
-        <h2 style="text-align: center;">$Skills Vote Token</h2>
+        <h2 style="text-align: center;">AllSkills $Vote Token</h2>
         <VoteToken/>
     </div>
     <div id="Roadmap" style="width: 100%">
