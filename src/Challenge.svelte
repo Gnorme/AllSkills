@@ -27,8 +27,10 @@
     p {
         display: table-cell;
         vertical-align: middle;
+        font-family: "Montserrat";
         font-size:1.1em;
         line-height:1.5em;
+        font-weight:100;
     }
     .video-container{
         width: 40%;
@@ -52,6 +54,7 @@
     }
     .challenge-container {
         display:flex;
+        padding-bottom:100px;
         justify-content: space-between;
     }
 </style>

@@ -118,12 +118,6 @@
 
 }
 
-
-p {
-    font-size: 1.875rem;
-line-height: 2.25rem;
-}
-
 .description {
 
     position: relative;
@@ -138,6 +132,9 @@ line-height: 2.25rem;
 }
 
 p {
+    font-family: "Montserrat";
+    font-size: 1.875rem;
+    line-height: 2.25rem;
   display:inline;
   float:left;
   margin:0;
@@ -186,7 +183,7 @@ ul li {
     content: "";
     position: absolute;
     mask-image: linear-gradient(to bottom, rgba(54,54,54,1) 40%, rgba(54,54,54,0));
-
+    -webkit-mask-image: linear-gradient(to bottom, rgba(54,54,54,1) 40%, rgba(54,54,54,0));
     top: 0;
     left: 0;
     width: 100%;

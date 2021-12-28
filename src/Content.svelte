@@ -54,16 +54,19 @@
         <h2>Challenge System</h2>
         <Challenge/>
     </div>
-    <div id="Stablecoin" style="width: 100%">
-        <h2>Stablecoin Vote Token</h2>
+    <div id="Stablecoin" style="width: 100%;">
+        <h2 style="text-align: center;">$Skills Vote Token</h2>
+        <VoteToken/>
     </div>
     <div id="Roadmap" style="width: 100%">
         <h2>Roadmap & Milestones</h2>
         <Roadmapv/>
     </div>
     <div id="Tokenomics" style="width: 100%">
-        <h2>Tokenomics</h2><span>*placeholder numbers</span>
-        <Tokenomics/>
+        <h2 style="text-align: center;">Tokenomics</h2>
+        <div class="section">
+            <Tokenomics/>
+        </div>
     </div>
     <div id="Team" style="width: 100%">
         <h2>The Team</h2>
@@ -79,6 +82,8 @@
 <style>   /* rgb(143,255,238) */
     p {
         font-size: 1.25rem;
+        font-weight:100;
+        font-family:"Montserrat";
         margin-block-end: 0;
         margin-block-start:0;
     }

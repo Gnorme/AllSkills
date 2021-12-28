@@ -47,9 +47,11 @@
         content:"\2022";
         font-size: 4rem;
         vertical-align: middle;
-        line-height: 0.9em;
+        line-height: 0.5em;
     }
     span {
+        font-weight:100;
+        letter-spacing: 0.5px;
         font-size: 20px;
         margin-left:10px !important;
         padding-right:10px;
@@ -93,6 +95,7 @@
     }
     .tokenomics-container{
         display:flex;
+        margin-top:-25px;
         margin-left:auto;
         margin-right:auto;
         justify-content: space-evenly;
