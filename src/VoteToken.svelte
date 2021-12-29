@@ -23,7 +23,7 @@
     </div>
     </div>
     <div class="column middle">
-        <h1 style="font-family: 'Ultra';">1 $Vote ≈ $0.10</h1>
+        <h1 id="value">1 $Vote ≈ $0.10</h1>
         <img src="images/token.png" />
     </div>
     <div class="column">
@@ -52,6 +52,11 @@
 </div>
 
 <style>
+    #value{
+        font-family: 'Ultra'; 
+        font-family: 'Asphaltic'; 
+        font-family: 'Oswald';
+    }
     .highlight {
         color: aqua;
     }
@@ -71,7 +76,8 @@
        margin:0;
        font-size:1.35rem;
        font-weight:400;
-       font-family:'Lato';
+       font-family:"Raleway";
+         /*font-family:'Lato'; */
     }
     .section p{
         margin-left: 42px;

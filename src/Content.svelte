@@ -83,6 +83,10 @@
     p {
         font-size: 1.25rem;
         font-weight:100;
+        font-family: "Oswald";
+        font-family: "BentonSans";
+        font-family: "Raleway";
+        font-family: "DINPro";
         font-family:"Montserrat";
         margin-block-end: 0;
         margin-block-start:0;
@@ -100,6 +104,7 @@
         margin-block-end:0;
         margin-bottom: 2rem;
         font-weight: 500;
+        font-family: "Oswald";
     }
     .powered-by{
         margin-top: 20rem;
@@ -125,8 +130,9 @@
         min-width:50%;
         font-size: 4.5rem;
         line-height: 1;
-        font-family: 'Lato', sans-serif !important;
-        font-family: 'Roboto', sans-serif;
+        font-family:'Oswald';
+        /*font-family: 'Lato', sans-serif !important;
+        font-family: 'Roboto', sans-serif;*/
     }
     .text-content {
         margin-left: auto;

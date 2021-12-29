@@ -76,6 +76,10 @@
     color:white;
 
 }
+.left-content{
+    font-family: "BentonSans";
+    font-family: "Oswald";
+}
 .content {
     text-align: right;
     font-size: 64px;
@@ -132,8 +136,8 @@
 }
 
 p {
-    font-family: "Montserrat";
-    font-size: 1.875rem;
+    font-family: "BentonSans";
+    font-size: 1.6rem;
     line-height: 2.25rem;
   display:inline;
   float:left;

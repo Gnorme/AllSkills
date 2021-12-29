@@ -22,6 +22,7 @@
 
 <style>
     h3 {
+        font-family: "Raleway";
         font-size: 1.3em;
     }
     p {
