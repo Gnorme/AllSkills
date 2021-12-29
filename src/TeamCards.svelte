@@ -6,8 +6,8 @@
           <img src={img} alt="profile-sample4" class="profile" class:selected={selected === i}/>
           <h2>{name}<span>Position</span></h2>
           <p class:hidden={selected != i}>Lorem ipsum test test test test test test test test test test test test test test test test test test test test test test test test test test </p>
-          <div style="max-width:100%; display:flex; justify-content:space-around; ">
-          <div class="socials" style="width:45%">
+          <div style="max-width:100%; display:flex; justify-content:space-around; max-height:60px; ">
+            <div class="socials" style="width:45%">
                 <div class="socials-item">
                     <img src="images/twitter-aqua.png">
                 </div>
@@ -155,7 +155,6 @@
 }
 .socials img {
     display: block;
-    height: 100%;
 }
 .snip1336 {
   perspective: 1000px;
