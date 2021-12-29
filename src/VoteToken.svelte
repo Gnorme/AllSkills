@@ -1,25 +1,25 @@
 <div class="vote-container">
     <div class="column">
        <div class="section">
-           <span>
-            <img src="images/twitter-aqua.png" />
-                <h3>Earn through voting</h3>
+           <span class="title">
+            <img src="images/vote.png" />
+                <h3>Cast your vote</h3>
             </span>
-           <p>Lorem ipsum test test test test test test test test test test test test test test test test test test test test.</p>
+           <p>Show your support by voting for the challenge video you like most. All votes form a <span class="highlight">reward pool</span> and decide the winning video.</p>
        </div>
        <div class="section">
-        <span>
-            <img src="images/twitter-aqua.png" />
-             <h3>Become part of the journey</h3>
+        <span class="title">
+            <img src="images/earnings.png" />
+             <h3>Earn through voting</h3>
          </span>
-        <p>Lorem ipsum test test test test test test test test test test test test test test test test test test test test.</p>
+        <p>The reward pool is split between the winner and all those who voted for them. <span class="highlight">Earn up to 145%</span> back for votes cast on winning videos.</p>
     </div>
     <div class="section">
-        <span>
-            <img src="images/twitter-aqua.png" />
-             <h3>Another heading here</h3>
+        <span class="title">
+            <img src="images/revenue.png" />
+             <h3>Share in the success</h3>
          </span>
-        <p>Lorem ipsum test test test test test test test test test test test test test test test test test test test test.</p>
+        <p>Voters continue to share in the success by <span class="highlight">earning royalties</span> everytime a video they voted for is sold on any marketplace.</p>
     </div>
     </div>
     <div class="column middle">
@@ -28,30 +28,33 @@
     </div>
     <div class="column">
         <div class="section">
-            <span>
-                <img src="images/twitter-aqua.png" />
+            <span class="title">
+                <img src="images/stable.png" />
                  <h3>Redeemable at stable value</h3>
              </span>
-            <p>Lorem ipsum test test test test test test test test test test test test test test test test test test test test.</p>
+            <p>$Vote tokens are <span class="highlight">backed by fiat reserves</span> at 1:1 ratio and will always be redeemable at a stable value.</p>
         </div>
         <div class="section">
-            <span>
-                <img src="images/twitter-aqua.png" />
-                 <h3>Stake your tokens to earn more</h3>
+            <span class="title">
+                <img src="images/stake.png" />
+                 <h3>Stake to earn more</h3>
              </span>
-            <p>Lorem ipsum test test test test test test test test test test test test test test test test test test test test.</p>
+            <p>Staking your $Vote tokens allows you to <span class="highlight">earn $Skills tokens.</span> Use $Skills tokens to participate in raffles and to voice your opinion.</p>
         </div>
         <div class="section">
-            <span>
-                <img src="images/twitter-aqua.png" />
-                 <h3>Never have to pay</h3>
+            <span class="title">
+                <img src="images/replenish.png" />
+                 <h3>Easily replenish your wallet</h3>
              </span>
-            <p>Lorem ipsum test test test test test test test test test test test test test test test test test test test test.</p>
+             <p>If you run out of Vote tokens, you can <span class="highlight">watch sponsored videos to earn more</span> and get right back in the game. </p>
         </div>
     </div>
 </div>
 
 <style>
+    .highlight {
+        color: aqua;
+    }
     .middle img {
         width: 100%;
         margin: 50px;
@@ -66,10 +69,14 @@
     }
     h3 {
        margin:0;
+       font-size:1.35rem;
+       font-weight:400;
+       font-family:'Lato';
     }
     .section p{
         margin-left: 42px;
         font-family: "Montserrat";
+        font-size: 1.05rem;
         font-weight:100;
     }
     .section img{
@@ -78,7 +85,7 @@
         width: 32px;
         height: 32px;
     }
-    .section span {
+    .section .title {
         display: inline-flex;
         align-items: center;
     }
@@ -99,6 +106,8 @@
     .vote-container{
         display:flex;
         height: 75vh;
+        max-height: 600px;
+        min-height:525px;
         padding-top:25px;
         padding-bottom:50px;
         margin-left:auto;
