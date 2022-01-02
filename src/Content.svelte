@@ -3,6 +3,7 @@
     import Roadmap from './Roadmap.svelte'
     import Tokenomics from './Tokenomics.svelte';
     import Challenge from './Challenge.svelte';
+    import Challengev from './Challengev.svelte';
     import VoteToken from './VoteToken.svelte';
     import Roadmapv from './Roadmapv2.svelte';
 </script>
@@ -52,7 +53,7 @@
     </div>
     <div id="Challenge" style="width: 100%">
         <h2>Challenge System</h2>
-        <Challenge/>
+        <Challengev/>
     </div>
     <div id="Stablecoin" style="width: 100%;">
         <h2 style="text-align: center;">AllSkills $Vote Token</h2>

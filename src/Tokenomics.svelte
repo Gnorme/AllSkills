@@ -53,7 +53,7 @@
         font-weight:100;
         letter-spacing: 0.5px;
         font-size: 20px;
-        font-family: 'Montserrat';
+        font-family: 'BentonSans';
         margin-left:10px !important;
         padding-right:10px;
     }
@@ -97,6 +97,7 @@
     .tokenomics-container{
         display:flex;
         margin-top:-25px;
+        margin-bottom:200px;
         margin-left:auto;
         margin-right:auto;
         justify-content: space-evenly;

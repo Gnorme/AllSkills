@@ -311,6 +311,7 @@ h4 {
     margin-right: 1rem;
     justify-content: space-between;
     margin-bottom: 10rem;
+    margin-top:100px
 }
 
 .card{

@@ -115,7 +115,7 @@
         max-height: 600px;
         min-height:525px;
         padding-top:25px;
-        padding-bottom:50px;
+        margin-bottom:300px;
         margin-left:auto;
         margin-right:auto;
         justify-content: space-evenly;
