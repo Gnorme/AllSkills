@@ -114,7 +114,6 @@
         height: 75vh;
         max-height: 600px;
         min-height:525px;
-        padding-top:25px;
         margin-bottom:300px;
         margin-left:auto;
         margin-right:auto;

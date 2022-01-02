@@ -96,7 +96,7 @@
     }
     .tokenomics-container{
         display:flex;
-        margin-top:-25px;
+        margin-top:-50px;
         margin-bottom:200px;
         margin-left:auto;
         margin-right:auto;

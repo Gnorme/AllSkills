@@ -71,6 +71,7 @@
     }
     .first{
         order:1;
+        margin-left:-25px;
     }
     .second{
         order:2;
@@ -81,11 +82,9 @@
     }
     .content{
         flex: 0 0 50%;
-        margin:25px;
     }
     .image{
         flex: 0 0 50%;
-        margin:25px;
     }
     .challenge-container{
         display:flex;
@@ -95,7 +94,8 @@
     }
     .section{
         display:flex;
-        margin: 40px;
+        gap:50px;
+        margin: 80px;
         height: 250px;
     }
 </style>

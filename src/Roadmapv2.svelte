@@ -115,7 +115,7 @@
     }
     .roadmap-container {
         display:flex;
-        padding-top:50px;
+        padding-top:25px;
         margin-bottom:200px;
         justify-content: space-between;
         width: 100%;

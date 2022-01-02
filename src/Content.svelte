@@ -132,6 +132,7 @@
         font-size: 4.5rem;
         line-height: 1;
         font-family:'Oswald';
+        margin-bottom:125px;
         /*font-family: 'Lato', sans-serif !important;
         font-family: 'Roboto', sans-serif;*/
     }
