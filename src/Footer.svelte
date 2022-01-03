@@ -60,8 +60,9 @@
     }
 }
 h3 {
-    font-family: "Oswald";
-    font-size: 3rem;
+    font-family: "Asphaltic";
+    font-size: 5rem;
+    letter-spacing:1px;
 }
 #logo {
     display:none;
