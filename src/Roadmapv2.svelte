@@ -138,5 +138,8 @@
             flex-direction: column;
             height: auto;
         }
+        ul {
+            font-size: 1rem;
+        }
     }
 </style>
