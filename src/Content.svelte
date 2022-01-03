@@ -104,14 +104,10 @@
     padding-right:7%;
 }
     p {
-        font-size: 1.25rem;
+        font-size: 1rem;
+        line-height: 1.5rem;
         font-weight:100;
-        font-family: "Oswald";
         font-family: "BentonSans";
-        font-family: "Raleway";
-        font-family: "DINPro";
-        font-family:"Montserrat";
-        margin-block-end: 0;
         padding-top:2.5rem;
         margin-block-start:0;
         grid-area: c;
@@ -146,13 +142,13 @@
             "a b b"
             "a c c"
             "a c c";
-        padding: 2.5rem;
+        padding: 2rem;
         border: 3px solid aqua;
     }
     .table-content{
         display:grid;
-        margin-left:7%;
-        margin-right:7%;
+        margin-left:10%;
+        margin-right:10%;
         margin-top:3rem;
         margin-bottom:3rem;
         color: white;
