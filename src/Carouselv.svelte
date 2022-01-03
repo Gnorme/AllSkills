@@ -1,21 +1,22 @@
-<div class="container">
-    <input type="radio" name="slider" id="item-1" checked>
-    <input type="radio" name="slider" id="item-2">
-    <input type="radio" name="slider" id="item-3">
-  <div class="cards">
-    <label class="card" for="item-1" id="card-1">
-      <img src="images/bass.jpg" alt="card">
-    </label>
-    <label class="card" for="item-2" id="card-2">
-      <img src="images/Dunk.jpg" alt="card">
-    </label>
-    <label class="card" for="item-3" id="card-3">
-      <img src="images/skateboard.jpg" alt="card">
-    </label>
-    
-  </div>
+<div class="carousel-container">
+    <div class="container">
+        <input type="radio" name="slider" id="item-1" checked>
+        <input type="radio" name="slider" id="item-2">
+        <input type="radio" name="slider" id="item-3">
+    <div class="cards">
+        <label class="card" for="item-1" id="card-1">
+        <img src="images/bass.jpg" alt="card">
+        </label>
+        <label class="card" for="item-2" id="card-2">
+        <img src="images/Dunk.jpg" alt="card">
+        </label>
+        <label class="card" for="item-3" id="card-3">
+        <img src="images/skateboard.jpg" alt="card">
+        </label>
+        
+    </div>
+    </div>
 </div>
-
 <style>
 @import url("https://fonts.googleapis.com/css?family=DM+Sans:400,500,700&display=swap");
 
@@ -27,8 +28,23 @@
     .card {
         width: 100% !important;
     }
+    .cards {
+        width: 80% !important;
+    }
+    .container {
+        overflow-x: hidden;
+    }
+    .carousel-container {
+        width: 100% !important;
+    }
 }
-
+.carousel-container {
+        width: 75%; 
+        margin-right:auto; 
+        margin-left:auto; 
+        margin-top: 10rem; 
+        margin-bottom: 10rem;
+    }
 html, body {
   margin: 0;
   padding: 0;

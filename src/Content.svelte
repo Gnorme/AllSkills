@@ -26,7 +26,7 @@
     <div class="card"><img src="images/runner.jpg" /></div>
 </div>
 -->
-<div class="carousel-container">
+
     <Carouselv />
     <!--<Carousel 
         {images}
@@ -38,7 +38,7 @@
         autoplay={true}
         autoplaySpeed={3000}
     />-->
-</div>
+
 
 
 <div class="text-content">
@@ -103,13 +103,6 @@
     padding-left:7%;
     padding-right:7%;
 }
-    .carousel-container {
-        width: 75%; 
-        margin-right:auto; 
-        margin-left:auto; 
-        margin-top: 10rem; 
-        margin-bottom: 10rem;
-    }
     p {
         font-size: 1.25rem;
         font-weight:100;
