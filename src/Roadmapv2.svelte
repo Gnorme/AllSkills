@@ -1,10 +1,10 @@
 <div class="roadmap-container">
     <div class="roadmap-card" style="height:60%;">
+        <h3 style="color:white;">2019 - 2020</h3>
         <div class="header" style="border-bottom: 5px solid #363636">
             <img src="images/idea.png" />
         </div>
         <div class="text">
-            <h3>2019 - 2020</h3>
             <ul>
                 <li class="cleared">Ideation</li>
                 <li class="cleared">Business plan</li>
@@ -14,11 +14,11 @@
         </div>
     </div>
     <div class="roadmap-card" style="height:70%;">
+        <h3 style="color:#852ee7">2021</h3>
         <div class="header" style="border-bottom: 5px solid #852ee7">
             <img src="images/leadership.png" />
         </div>
         <div class="text">
-            <h3>2021</h3>
             <ul>
                 <li class="cleared">Markest research</li>
                 <li class="cleared">Acquired advisors & CTO</li>
@@ -31,11 +31,11 @@
         </div>
     </div>
     <div class="roadmap-card" style="height:80%;">
+        <h3 style="color:#e0573f">Q1 2022</h3>
         <div class="header" style="border-bottom: 5px solid #e0573f">
             <img src="images/planning.png" />
         </div>
         <div class="text">
-            <h3>Q1 2022</h3>
             <ul>
                 <li>Announce partners</li>
                 <li>Setup social accounts</li>
@@ -48,11 +48,11 @@
         </div>
     </div>
     <div class="roadmap-card" style="height:90%;">
+        <h3 style="color:#ecec37;">Q2 2022</h3>
         <div class="header" style="border-bottom: 5px solid #ecec37">
             <img src="images/launch.png" />
         </div>
         <div class="text">
-            <h3>Q2 2022</h3>
             <ul>
                 <li>Mint stablecoin Vote token</li>
                 <li>Launch closed beta</li>
@@ -61,11 +61,11 @@
         </div>
     </div>
     <div class="roadmap-card" style="height:100%;">
+        <h3 style="color: aqua;">Q3+ 2022</h3>
         <div class="header" style="border-bottom: 5px solid aqua">
             <img src="images/globalization.png" />
         </div>
         <div class="text">
-            <h3>Q3+ 2022</h3>
             <ul>
                 <li>Add video editing features</li>
                 <li>Unique Tap-to-Record feature</li>
@@ -84,11 +84,12 @@
         list-style:none;
         margin-left:0;
         padding-left:0;
-        color: rgb(146, 146, 146);
         letter-spacing: 0.8px;
+        line-height:1.2rem;
+        font-size: 0.9rem;
         margin-top:3px;
         font-weight:200;
-        font-family: "DINPro", "Roboto", "Lato", sans-serif;;
+        font-family: "BentonSans", sans-serif;;
         /*font-family:"Roboto", "Lato", sans-serif;*/
     }
     p {
@@ -98,9 +99,10 @@
         font-weight:200;
     }
     h3 {
-        font-family: "DINPro";
+        font-family: "Oswald";
+        text-align:center;
         letter-spacing:1px;
-        margin-bottom:0;
+        margin-bottom:2rem;
         margin-top: 30px;
         font-size:1.3em;
         font-weight:100;
@@ -112,6 +114,7 @@
     }
     .text {
         flex-grow: 1;
+        margin-top: 1rem;
     }
     .roadmap-container {
         display:flex;
