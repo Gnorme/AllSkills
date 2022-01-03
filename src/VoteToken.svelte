@@ -77,15 +77,16 @@
     }
     h3 {
        margin:0;
-       font-size:1.35rem;
+       font-size:1.5rem;
        font-weight:400;
-       font-family:"Raleway";
+       font-family:"Oswald";
          /*font-family:'Lato'; */
     }
     .section p{
         margin-left: 42px;
-        font-family: "Montserrat";
-        font-size: 1.05rem;
+        font-family: "BentonSans";
+        font-size: 1rem;
+        line-height: 1.5rem;
         font-weight:100;
     }
     .section img{
