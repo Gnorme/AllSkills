@@ -121,7 +121,32 @@
     
 
 }
-
+@media screen and (max-width: 820px) {
+        .hero {
+            display:block;
+            height: auto;
+        }
+        .description {
+            display: table-cell;
+            text-align: center;
+            padding: 20px;
+        }
+        .left-content {
+            padding-top: 100px;
+            display: flex;
+            flex-direction:column;
+            height: auto;
+        }
+        .scrolling-content {
+            margin-top:20px
+        }
+        .content {
+            text-align:center;
+        }
+        .scroll-animation {
+            text-align:center;
+        }
+    }
 .description {
 
     position: relative;

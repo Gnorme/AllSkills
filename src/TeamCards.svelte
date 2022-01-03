@@ -161,7 +161,7 @@
   font-family: 'Roboto', Arial, sans-serif;
   align-items: flex-start;
   overflow: hidden;
-  margin: 10px;
+  margin: 0 auto 20px auto;
   min-width: 230px;
   max-width: 280px;
   line-height: 1.4em;
@@ -306,14 +306,11 @@ h4 {
 .cards-container{
     display:flex;
     flex-wrap: wrap;
-    margin-left:1rem;
     align-items:flex-start;
-    margin-right: 1rem;
     justify-content: space-between;
-    margin-bottom: 10rem;
-    margin-top:100px
+    padding-bottom:300px;
+    margin-top:100px;
 }
-
 .card{
     justify-items: center;
     display: grid;

@@ -1,8 +1,8 @@
 <div class="tokenomics-container">
-    <div style="width:25%"></div>
-    <div style="text-align:center;">
+    <div style="width:30%"></div>
+    <div class="svg-container">
         <p style="display:inline; font-weight: 200; font-family: 'Montserrat'; width: 30%; position:relative; top:50%; z-index:4; font-size: 1.5em; margin-left: auto; margin-right:auto">100,000,000 Tokens</p>
-        <svg xmlns="http://www.w3.org/2000/svg" id="sv" width="500" height="500" viewBox="-50 -50 400 400">
+        <svg xmlns="http://www.w3.org/2000/svg" id="sv" viewBox="-50 -50 400 400">
             <path on:mouseover={bringToFront} on:mousemove={showTooltip} data-value="Team 10,000,000" on:mouseleave={deselect} class="section" id="0" fill="#003f5c" d="M150, 0 A150,150 0 0 1 238.1656698289039,28.64591204404894 L214.6548245411962,61.007002165635896 A110,110 0 0 0 150,40 Z"></path>
             <path on:mouseover={bringToFront} on:mousemove={showTooltip} data-value="Advisors 5,000,000" on:mouseleave={deselect} class="section" id="1" fill="#374c80" d="M238.1656698289039, 28.64591204404894 A150,150 0 0 1 271.3502408873674,61.82903518403633 L238.9901766507361,85.3412924682933 A110,110 0 0 0 214.6548245411962,61.007002165635896 Z"></path>
             <path on:mouseover={bringToFront} on:mousemove={showTooltip} data-value="Seed Sale 10,000,000" on:mouseleave={deselect} class="section" id="2" fill="#7a5195" d="M271.3502408873674, 61.82903518403633 A150,150 0 0 1 299.9999998572106,149.99345501530712 L259.9999998952878,149.99520034455855 A110,110 0 0 0 238.9901766507361,85.3412924682933 Z"></path>
@@ -12,7 +12,7 @@
             <path on:mouseover={bringToFront} on:mousemove={showTooltip} data-value="Foundation 30,000,000" on:mouseleave={deselect} class="section" id="6" fill="#ffa600" d="M7.34718665258751, 196.36997783122493 A150,150 0 0 1 149.9738200613531,0.000002284630625126738 L149.9808013783256,40.000001675395794 A110,110 0 0 0 45.387936878564176,184.00465040956496 Z"></path>
         </svg>
     </div>
-    <div style="width:25%; display:table">
+    <div class="list" style="width:30%; display:table">
         <ul style="display: table-cell; vertical-align: middle;">
             <li class:highlight={selected === 0} class="team"><span>Team 10%</span></li>
             <li class:highlight={selected === 1} class="advisors"><span>Advisors 5%</span></li>
@@ -28,6 +28,12 @@
 
 
 <style>
+    .svg-container {
+        text-align:center; 
+        margin-left:auto;
+        margin-right:auto;
+        width: 80%;
+    }
     #tooltip {
         padding:5px;
         background-color:#141414;
@@ -52,7 +58,7 @@
     span {
         font-weight:100;
         letter-spacing: 0.5px;
-        font-size: 20px;
+        font-size: 1rem;
         font-family: 'BentonSans';
         margin-left:10px !important;
         padding-right:10px;
@@ -101,6 +107,17 @@
         margin-left:auto;
         margin-right:auto;
         justify-content: space-evenly;
+    }
+    @media screen and (max-width: 820px) {
+        .tokenomics-container {
+            flex-direction: column;
+        }
+        .list {
+            width: 100% !important;
+        }
+        .svg-container {
+            width: 100%;
+        }
     }
 </style>
 

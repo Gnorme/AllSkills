@@ -127,4 +127,13 @@
         display:flex;
         flex-direction: column;
     }
+    @media screen and (max-width: 820px) {
+        .roadmap-card {
+            width: 100%;
+        }
+        .roadmap-container {
+            flex-direction: column;
+            height: auto;
+        }
+    }
 </style>

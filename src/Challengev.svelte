@@ -35,10 +35,10 @@
             <p>Get rewarded for showing off your skills. The creator of the winning video will receive between 1-25% of all vote tokens cast during the challenge while the rest is rewarded to all those who voted for the winning video. The creators cut changes based on how close the vote is. Closer vote count = bigger cut.</p>
         </div>
     </div>
-    <div style="margin: 200px 100px 150px 100px;">
-    <div class="video">
-        <iframe src="https://www.youtube.com/embed/tgbNymZ7vqY"></iframe>
-    </div>
+    <div class="video-container">
+        <div class="video">
+            <iframe src="https://www.youtube.com/embed/tgbNymZ7vqY"></iframe>
+        </div>
     </div>
 </div>
 
@@ -97,5 +97,23 @@
         gap:50px;
         margin: 80px;
         height: 250px;
+    }
+    .video-container{
+        margin: 200px 100px 150px 100px;
+    }
+    @media screen and (max-width: 820px) {
+        .section {
+            width: 100%;
+            flex-direction: column;
+            margin:0;
+            gap:0;
+            height:auto;
+        }
+        .first{
+            margin-left:0;
+        }
+        .video-container{
+            margin: 50px 0 0 0;
+        }
     }
 </style>

@@ -119,6 +119,16 @@
         margin-right:auto;
         justify-content: space-evenly;
     }
+    @media screen and (max-width: 820px) {
+        .vote-container {
+            flex-direction: column;
+            height: auto;
+            max-height: 100%;
+        }
+        .column{
+            width: 100%;
+        }
+    }
     .floated{
         float:right;
         width:25%;
