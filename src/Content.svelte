@@ -158,6 +158,7 @@
     @media screen and (max-width: 820px) {
         .table-content {
             display:block;
+            border: 2px solid aqua;
         }
         h3 {
             font-size: 2.5rem;
@@ -171,6 +172,7 @@
                 "c c c"
                 "c c c";
             padding: 1.25rem;
+            border: 2px solid aqua;
         }
         .table-icon {
             padding-right:1.25rem;

@@ -61,7 +61,7 @@
         color: aqua;
     }
     .middle img {
-        width: 90%;
+        width: 80%;
         margin-left: auto;
         margin-right: auto;
         margin-top: 50px;
