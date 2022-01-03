@@ -77,7 +77,7 @@
     }
     h3 {
        margin:0;
-       font-size:1.5rem;
+       font-size:1.75rem;
        font-weight:400;
        font-family:"Oswald";
          /*font-family:'Lato'; */
@@ -96,6 +96,7 @@
         height: 32px;
     }
     .section .title {
+        margin-right: -7%;
         display: inline-flex;
         align-items: center;
     }
