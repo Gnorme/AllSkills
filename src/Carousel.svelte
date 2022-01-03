@@ -99,7 +99,6 @@
   }
   #carousel-images {
     display: flex;
-    justify-content: center;
     flex-wrap: nowrap;
     -webkit-mask: linear-gradient(
       to right,
