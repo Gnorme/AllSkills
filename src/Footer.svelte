@@ -4,7 +4,7 @@
 
 <footer class="footer">
     <div class="footer-content">
-        <div class="footer-col">
+        <div class="footer-col" id="links">
             <h4>Links</h4>
             <ul class="col-content">
                 <li><a href="#Trailer">Trailer</a></li>
@@ -16,14 +16,14 @@
                 <li><a>Blog</a></li>
             </ul>
         </div>
-        <div class="footer-col">
+        <div class="footer-col" id="register">
             <h4>Newsletter Subscription</h4>
             <div class="col-content">
                 <NewsletterSignup color='black'/>
             </div>
             
         </div>
-        <div class="footer-col">
+        <div class="footer-col" id="connect">
             <h4>Connect</h4>
             <div class="col-content" style="display:flex; justify-content:space-between">
                 <img src="images/email.png">
@@ -32,11 +32,49 @@
                 <img src="images/twitter.png">
             </div>
         </div>
-
+    </div>
+    <div id="logo">
+        <img style="margin-right: 12px;" src="images/logo-dark.png" />
+        <h3>AllSkills</h3>
     </div>
 </footer>
 
 <style>
+@media screen and (max-width: 820px) {
+    .footer-content {
+        grid-template: 
+            "connect"
+            "register" !important;
+        padding-top: 2rem !important;
+    }
+    #links{
+        display:none;
+    }
+    .footer {
+        height: auto !important;
+    }
+    #logo {
+        display: flex !important;
+        align-items: center;
+        justify-content: center;
+    }
+}
+h3 {
+    font-family: "Oswald";
+    font-size: 3rem;
+}
+#logo {
+    display:none;
+}
+#connect {
+    grid-area: connect;
+}
+#register{
+    grid-area: register;
+}
+#links {
+    grid-area: links;
+}
 
 img{
     width:20%;
@@ -74,6 +112,7 @@ ul{
     max-width: 80rem;
     display:grid;
     align-items: start;
-    grid-template-columns: 0.8fr 3fr 0.8fr;
+    grid-template: "links register connect" auto / 0.8fr 3fr 0.8fr;
+    /*grid-template-columns: 0.8fr 3fr 0.8fr;*/
 }
 </style>
