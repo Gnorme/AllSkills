@@ -7,6 +7,7 @@
     import VoteToken from './VoteToken.svelte';
     import Roadmapv from './Roadmapv2.svelte';
     import Carousel from './Carousel.svelte';
+    import Carouselv from './Carouselv.svelte';
 
 	const images = [
 		{path: 'images/bass.jpg', id: 'image1'},
@@ -26,7 +27,8 @@
 </div>
 -->
 <div class="carousel-container">
-    <Carousel 
+    <Carouselv />
+    <!--<Carousel 
         {images}
         imageWidth={350}
         imageSpacing={15}
@@ -35,7 +37,7 @@
         displayControls={true}
         autoplay={true}
         autoplaySpeed={3000}
-    />
+    />-->
 </div>
 
 

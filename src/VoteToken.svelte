@@ -61,8 +61,11 @@
         color: aqua;
     }
     .middle img {
-        width: 100%;
-        margin: 50px;
+        width: 90%;
+        margin-left: auto;
+        margin-right: auto;
+        margin-top: 50px;
+        margin-bottom: 50px;
         height: auto;
     }
     .middle {

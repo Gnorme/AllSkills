@@ -308,7 +308,7 @@ h4 {
     flex-wrap: wrap;
     align-items:flex-start;
     justify-content: space-between;
-    padding-bottom:300px;
+    padding-bottom:100px;
     margin-top:100px;
 }
 .card{
