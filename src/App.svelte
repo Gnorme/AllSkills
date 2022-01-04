@@ -23,10 +23,6 @@
 			font-family: "DINPro";
 			src: url("./fonts/DINPro.otf");
 		}	
-		@font-face {
-			font-family: "Asphaltic";
-			src: url("./fonts/Asphaltic.ttf");
-		}	
 	</style>
 
 	<link rel="preconnect" href="https://fonts.googleapis.com">
