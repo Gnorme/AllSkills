@@ -37,7 +37,7 @@
     </div>
     <div class="video-container">
         <div class="video">
-            <iframe src="https://www.youtube.com/embed/tgbNymZ7vqY"></iframe>
+            <iframe loading="lazy" src="https://www.youtube.com/embed/tgbNymZ7vqY"></iframe>
         </div>
     </div>
 </div>
