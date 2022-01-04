@@ -1,7 +1,8 @@
 <script>
     export let color;
 </script>
-<form name="newsletter" data-netlify="true" netlify class="signup">
+<form name="newsletter" method="post" data-netlify-honeypot="bot-field" data-netlify="true" netlify class="signup">
+    <input type="hidden" name="form-name" value="newsletter" />
     <input name="email" style="color: {color}; border-color: {color}" placeholder="Sign up for our newsletter">
     <button style="color: {color}; border-color: {color}" onclick="alert('test')">REGISTER NOW</button>
 </form>
