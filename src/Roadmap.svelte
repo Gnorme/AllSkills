@@ -1,48 +1,41 @@
-    <div class="roadmap-container">
-        <div class="roadmap-card">
-            <div class="header">
-                <h3>2019-2020</h3>
-            </div>
+<div class="roadmap-container">
+    <div class="roadmap-card" style="height:60%;">
+        <h3 style="color:white;">2019 - 2020</h3>
+        <div class="header" style="border-bottom: 5px solid #363636">
+            <img alt="Idea" src="images/idea.png" />
+        </div>
+        <div class="text">
             <ul>
-                <li class="cleared">Coming together of co-founders and ideation</li>
-                <li class="cleared">Pitch deck and business plan developed</li>
+                <li class="cleared">Ideation</li>
+                <li class="cleared">Business plan</li>
                 <li class="cleared">Feasibility study</li>
                 <li class="cleared">Olympic skater Charles Hamelin joins project</li>
             </ul>
         </div>
-        <div class="roadmap-card">
-            <div class="header">
-                <h3>First Half 2021</h3>
-            </div>
+    </div>
+    <div class="roadmap-card" style="height:70%;">
+        <h3 style="color:#852ee7">2021</h3>
+        <div class="header" style="border-bottom: 5px solid #852ee7">
+            <img alt="New Direction" src="images/leadership.png" />
+        </div>
+        <div class="text">
             <ul>
                 <li class="cleared">Markest research</li>
-                <li class="cleared">Reached out to potential investors and advisors</li>
-            </ul>
-        </div>   
-        <div class="roadmap-card">
-            <div class="header">
-                <h3>Q3 2021</h3>
-            </div>
-            <ul>
+                <li class="cleared">Acquired advisors & CTO</li>
                 <li class="cleared">Backed by PME Montreal </li>
-                <li class="cleared">CTO Acquisition</li>
-            </ul>
-        </div>  
-        <div class="roadmap-card">
-            <div class="header">
-                <h3>Q4 2021</h3>
-            </div>
-            <ul>
                 <li class="cleared">Finalists in NBA Launchpad</li>
-                <li class="cleared">Pivot towards NFT based platform and stablecoin</li>
+                <li class="cleared">Pivot towards NFT platform</li>
                 <li>Launch website</li>
                 <li>Release whitepaper and tokenomics</li>
             </ul>
-        </div>  
-        <div class="roadmap-card">
-            <div class="header">
-                <h3>Q1 2022</h3>
-            </div>
+        </div>
+    </div>
+    <div class="roadmap-card" style="height:80%;">
+        <h3 style="color:#e0573f">Q1 2022</h3>
+        <div class="header" style="border-bottom: 5px solid #e0573f">
+            <img alt="Pre-launch plan" src="images/planning.png" />
+        </div>
+        <div class="text">
             <ul>
                 <li>Announce partners</li>
                 <li>Setup social accounts</li>
@@ -52,104 +45,95 @@
                 <li>Trailer</li>
                 <li>Token presale</li>
             </ul>
-        </div>  
-        <div class="roadmap-card">
-            <div class="header">
-                <h3>Q2 2022</h3>
-            </div>
+        </div>
+    </div>
+    <div class="roadmap-card" style="height:90%;">
+        <h3 style="color:#ecec37;">Q2 2022</h3>
+        <div class="header" style="border-bottom: 5px solid #ecec37">
+            <img alt="Launch plans" src="images/launch.png" />
+        </div>
+        <div class="text">
             <ul>
                 <li>Mint stablecoin Vote token</li>
                 <li>Launch closed beta</li>
                 <li>Full release of challenge system and marketplace</li>
             </ul>
-        </div>  
-        <div class="roadmap-card">
-            <div class="header">
-                <h3>Q3 2022</h3>
-            </div>
+        </div>
+    </div>
+    <div class="roadmap-card" style="height:100%;">
+        <h3 style="color: aqua;">Q3+ 2022</h3>
+        <div class="header" style="border-bottom: 5px solid aqua">
+            <img alt="Post launch plans" src="images/globalization.png" />
+        </div>
+        <div class="text">
             <ul>
                 <li>Add video editing features</li>
                 <li>Unique Tap-to-Record feature</li>
                 <li>Release of ambassador program</li>
-            </ul>
-        </div>  
-        <div class="roadmap-card">
-            <div class="header">
-                <h3>Q4 2022</h3>
-            </div>
-            <ul>
                 <li>Release of GM mode</li>
             </ul>
-        </div>  
+        </div>
     </div>
+</div>
 
 <style>
+    img {
+        height: 100%;
+    }
+    ul{
+        list-style:none;
+        margin-left:0;
+        padding-left:0;
+        letter-spacing: 0.8px;
+        line-height:1.2rem;
+        font-size: 0.9rem;
+        margin-top:3px;
+        font-weight:200;
+        font-family: "BentonSans", sans-serif;;
+        /*font-family:"Roboto", "Lato", sans-serif;*/
+    }
     h3 {
-        margin:0;
+        font-family: "Oswald";
+        text-align:center;
+        letter-spacing:1px;
+        margin-bottom:2rem;
+        margin-top: 30px;
+        font-size:1.3em;
+        font-weight:100;
     }
-    ul {
-        padding:0;
-        list-style: none;
-        padding-top:1rem;
-        margin-left:1.75rem;
-        margin-right:0.5rem;
-        margin-block-end: 0;
-        margin-block-start: 0;
-        padding-inline-start:0;
-        list-style: none;
+    .header {
+        height: 100px;
+        padding-bottom: 20px;
+        text-align:center;
     }
-    .cleared:before{
-        content: '✓';
-        margin-left: -1.3em;
-        margin-right:0.5rem;
+    .text {
+        flex-grow: 1;
+        margin-top: 1rem;
     }
-    li{
-        padding:0;
-        padding-bottom: 0.5rem;
-    }
-    h2 {
-        text-align:left;
-        min-width:50%;
-        font-size: 4.5rem;
-
-    }
-    .header{
-        border-bottom: 2px solid black;
-        background-color: #73498f;
-        color:white;
-        width:100%;
+    .roadmap-container {
         display:flex;
-        text-align: center;
-        justify-content: center;
-        align-items: center;
-        height: 20%;
-        transition: all 200ms;
-    }
-    .roadmap-container{
+        padding-top:25px;
+        margin-bottom:200px;
         justify-content: space-between;
-        display:flex;
-        flex-flow: row wrap;
         width: 100%;
-        
+        height: 80vh;
+        align-items: flex-end;
     }
-    .roadmap-card{
-        justify-items: center;
-        margin-left: 1rem;
-        margin-right: 1rem;
-        width: 20%;
-        height: 18rem;
-        margin-bottom: 3rem;
-        background-color:#252222;
-        box-shadow: 0px 1px 10px rgba(0,0,0,0.5);
-        cursor: pointer;
-        transition: all 300ms;
+    .roadmap-card {
+        width:18%;
+        display:flex;
+        flex-direction: column;
     }
-    .roadmap-card:hover{
-        background-color: aqua;
-        color: rgb(54,54,54);
-    }
-    .roadmap-card:hover .header{
-        background-color: rgba(54,54,54);
-        color: aqua;
+    @media screen and (max-width: 820px) {
+        .roadmap-card {
+            width: 100%;
+        }
+        .roadmap-container {
+            flex-direction: column;
+            height: auto;
+        }
+        ul {
+            font-size: 1rem;
+        }
     }
 </style>

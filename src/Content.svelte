@@ -1,13 +1,10 @@
 <script>
     import TeamCards from './TeamCards.svelte'
-    import Roadmap from './Roadmap.svelte'
     import Tokenomics from './Tokenomics.svelte';
     import Challenge from './Challenge.svelte';
-    import Challengev from './Challengev.svelte';
     import VoteToken from './VoteToken.svelte';
-    import Roadmapv from './Roadmapv2.svelte';
+    import Roadmap from './Roadmap.svelte';
     import Carousel from './Carousel.svelte';
-    import Carouselv from './Carouselv.svelte';
 
 	const images = [
 		{path: 'images/bass.avif', id: 'image1'},
@@ -27,7 +24,7 @@
 </div>
 -->
 
-    <Carouselv />
+    <Carousel />
     <!--<Carousel 
         {images}
         imageWidth={350}
@@ -70,7 +67,7 @@
     </div>
     <div id="Challenge" class="section">
         <h2>Challenge System</h2>
-        <Challengev/>
+        <Challenge/>
     </div>
     <div id="Stablecoin" class="section">
         <h2 style="text-align: center;">AllSkills $Vote Token</h2>
@@ -78,7 +75,7 @@
     </div>
     <div id="Roadmap" class="section">
         <h2>Roadmap & Milestones</h2>
-        <Roadmapv/>
+        <Roadmap/>
     </div>
     <div id="Tokenomics" class="section">
         <h2 style="text-align: center;">Tokenomics</h2>
@@ -193,38 +190,9 @@
     .text-content {
         margin-left: auto;
         margin-right: auto;
-  align-items: center; 
-  font-family: "Roboto", "Lato", sans-serif;
-   color: white;
-   box-sizing: border-box;
+        align-items: center; 
+        font-family: "Roboto", "Lato", sans-serif;
+        color: white;
+        box-sizing: border-box;
     }
- .card{
-     height: 800px;
-     max-width: 23%;
-     background: rgb(56,56,56);
-     transform: skewX(-5deg);
-     margin-top:-20px;
-     min-width:10%;
-     box-shadow: 10px 10px rgba(0,0,0,0.3);
-    transition-property: min-width;
-    transition: 500ms linear;
-     overflow:hidden;
-    }
-
-    .card:hover {
-        min-width:75%;
-        
-    }
-.content{
-    margin-top:100px;
-    margin-right:2%;
-    max-width:100%;
-    margin-left:1%;
-    background-color:rgb(30,30,30);
-    flex-direction:row;
-    height: 900px;
-    display:flex;
-    width: 100%;
-    justify-content: center;
-}
 </style>

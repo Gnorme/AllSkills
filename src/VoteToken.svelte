@@ -2,21 +2,21 @@
     <div class="column">
        <div class="section">
            <span class="title">
-            <img src="images/vote.png" />
+            <img alt="Vote" src="images/vote.png" />
                 <h3>Cast your vote</h3>
             </span>
            <p>Show your support by voting for the challenge video you like most. All votes form a <span class="highlight">reward pool</span> and decide the winning video.</p>
        </div>
        <div class="section">
         <span class="title">
-            <img src="images/earnings.png" />
+            <img alt="Earnings" src="images/earnings.png" />
              <h3>Earn through voting</h3>
          </span>
         <p>The reward pool is split between the winner and all those who voted for them. <span class="highlight">Earn up to 145%</span> back for votes cast on winning videos.</p>
     </div>
     <div class="section">
         <span class="title">
-            <img src="images/revenue.png" />
+            <img alt="Royalties" src="images/revenue.png" />
              <h3>Share in the success</h3>
          </span>
         <p>Voters continue to share in the success by <span class="highlight">earning royalties</span> everytime a video they voted for is sold on any marketplace.</p>
@@ -24,26 +24,26 @@
     </div>
     <div class="column middle">
         <h1 id="value">1 $Vote ≈ $0.10</h1>
-        <img src="images/token.png" />
+        <img alt="Vote Token" src="images/token.png" />
     </div>
     <div class="column">
         <div class="section">
             <span class="title">
-                <img src="images/stable.png" />
+                <img alt="Stable value" src="images/stable.png" />
                  <h3>Redeemable at stable value</h3>
              </span>
             <p>$Vote tokens are <span class="highlight">backed by fiat reserves</span> at 1:1 ratio and will always be redeemable at a stable value.</p>
         </div>
         <div class="section">
             <span class="title">
-                <img src="images/stake.png" />
+                <img alt="Stake" src="images/stake.png" />
                  <h3>Stake to earn more</h3>
              </span>
             <p>Staking your $Vote tokens allows you to <span class="highlight">earn $Skills tokens.</span> Use $Skills tokens to participate in raffles and to voice your opinion.</p>
         </div>
         <div class="section">
             <span class="title">
-                <img src="images/replenish.png" />
+                <img alt="Replenish" src="images/replenish.png" />
                  <h3>Easily replenish your wallet</h3>
              </span>
              <p>If you run out of Vote tokens, you can <span class="highlight">watch sponsored videos to earn more</span> and get right back in the game. </p>
@@ -104,9 +104,6 @@
         height: 33%;
         width: 100%;
     }
-    .icon {
-        height: 100%
-    }
     h1 {
         color: aqua;
         font: "Lato";
@@ -133,12 +130,5 @@
         .column{
             width: 100%;
         }
-    }
-    .floated{
-        float:right;
-        width:25%;
-        margin: 10px;
-        height: 250px;
-        background-color: black;
     }
 </style>

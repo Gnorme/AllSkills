@@ -1,142 +1,109 @@
-<script>
-  import { flip } from 'svelte/animate';
-  import { onDestroy } from 'svelte';
-
-  export let images;
-  export let imageWidth = 300;
-  export let imageSpacing = 20;
-  export let speed = 500;
-  export let controlColor= '#444';
-  export let controlScale = '0.5';
-  export let autoplay = false;
-  export let autoplaySpeed = 5000;
-  export let displayControls = true;
-  let interval;
-
-
-  const rotateLeft = e => {
-    const transitioningImage = images[images.length - 1]
-    document.getElementById(transitioningImage.id).style.opacity = 1;
-    images = [images[images.length -1],...images.slice(0, images.length - 1)]
-    setTimeout(() => (document.getElementById(transitioningImage.id).style.opacity = 1), speed);
-  }
-
-  const rotateRight = e => {
-    const transitioningImage = images[0]
-    document.getElementById(transitioningImage.id).style.opacity = 1;
-    images = [...images.slice(1, images.length), images[0]]
-    setTimeout(() => (document.getElementById(transitioningImage.id).style.opacity = 1), speed);
-  }
-
-  const startAutoPlay = () => {
-    if(autoplay){
-      interval = setInterval(rotateLeft, autoplaySpeed)
-    }
-  }
-
-  const stopAutoPlay = () => {
-    clearInterval(interval)
-  }
-
-  if(autoplay){
-    startAutoPlay()
-  }
-
-  onDestroy(()=>{stopAutoPlay()})
-
-</script>
-
-<div id="carousel-container">
-  <div id="carousel-images">
-    {#each images as image (image.id)}
-      <img
-        src={image.path}
-        alt={image.id}
-        id={image.id}
-        style={`width:${imageWidth}px; margin: 0 ${imageSpacing}px;`}
-        on:mouseover={stopAutoPlay}
-        on:mouseout={startAutoPlay}
-        animate:flip={{duration: speed}}/>
-    {/each}
-  </div>
-  {#if displayControls}
-    <div>
-    <button id="left" on:click={rotateLeft}>
-      <slot name="left-control">
-        <svg width="39px" height="110px" id="svg8" transform={`scale(${controlScale})`}>
-          <g id="layer1" transform="translate(-65.605611,-95.36949)">
-            <path
-            style={`fill:none;stroke:${controlColor};stroke-width:9.865;stroke-linecap:round;stroke-linejoin:bevel;stroke-miterlimit:4;stroke-dasharray:none;stroke-opacity:1`}
-            d="m 99.785711,100.30199 -23.346628,37.07648 c -7.853858,12.81098 -7.88205,12.81098 0,24.78902 l 23.346628,37.94647"
-            id="path1412" />
-          </g>
-        </svg>
-      </slot>
-    </button>
-    <button id="right" on:click={rotateRight}>
-      <slot name="right-control">
-        <svg width="39px" height="110px" id="svg8" transform={`rotate(180) scale(${controlScale})`}>
-          <g id="layer1" transform="translate(-65.605611,-95.36949)">
-            <path
-            style={`fill:none;stroke:${controlColor};stroke-width:9.865;stroke-linecap:round;stroke-linejoin:bevel;stroke-miterlimit:4;stroke-dasharray:none;stroke-opacity:1`}
-            d="m 99.785711,100.30199 -23.346628,37.07648 c -7.853858,12.81098 -7.88205,12.81098 0,24.78902 l 23.346628,37.94647"
-            id="path1412" />
-          </g>
-        </svg>
-      </slot>
-    </button>
-  </div> 
-  {/if}
+<div class="carousel-container">
+    <div class="container">
+        <input type="radio" name="slider" id="item-1" checked>
+        <input type="radio" name="slider" id="item-2">
+        <input type="radio" name="slider" id="item-3">
+    <div class="cards">
+        <label class="card" for="item-1" id="card-1">
+        <img src="images/bass.avif" alt="NFT Trading Card">
+        </label>
+        <label class="card" for="item-2" id="card-2">
+        <img src="images/Dunk.avif" alt="NFT Trading Card">
+        </label>
+        <label class="card" for="item-3" id="card-3">
+        <img src="images/skateboard.avif" alt="NFT Trading Card">
+        </label>
+        
+    </div>
+    </div>
 </div>
-
 <style>
-  #carousel-container {
-    width: 100%;
-    position: relative;
-    display: flex;
-    flex-direction: column;
-    overflow-x: hidden;
-  }
-  #carousel-images {
-    display: flex;
-    flex-wrap: nowrap;
-    -webkit-mask: linear-gradient(
-      to right,
-      transparent,
-      black 40%,
-      black 60%,
-      transparent
-    );
-    mask: linear-gradient(
-      to right,
-      transparent,
-      black 40%,
-      black 60%,
-      transparent
-    );
-  }
+@import url("https://fonts.googleapis.com/css?family=DM+Sans:400,500,700&display=swap");
 
-  button {
-   position: absolute;
-   top: 50%;
-   transform: translateY(-50%);
-   display: flex;
-   align-items: center;
-   justify-content: center;
-   background: transparent;
-   border: none;
- }
+* {
+  box-sizing: border-box;
+}
 
- button:focus {
-   outline: auto;
- }
+@media screen and (max-width: 820px) { 
+    .card {
+        width: 100% !important;
+    }
+    .cards {
+        width: 80% !important;
+    }
+    .container {
+        overflow-x: hidden;
+    }
+    .carousel-container {
+        width: 100% !important;
+    }
+}
+.carousel-container {
+        width: 75%; 
+        margin-right:auto; 
+        margin-left:auto; 
+        margin-top: 10rem; 
+        margin-bottom: 10rem;
+    }
 
-  #left {
-    left: 10px;
-  }
+input[type=radio] {
+  display: none;
+}
 
-  #right {
-    right: 10px;
-  }
+.card {
+  position: absolute;
+  width: 60%;
+  height: 100%;
+  left: 0;
+  right: 0;
+  margin: auto;
+  transition: transform .4s ease;
+  cursor: pointer;
+}
 
+.container {
+  width: 100%;
+  max-width: 800px;
+  max-height: 600px;
+  height: 70vh;
+  margin-left:auto;
+  margin-right:auto;
+  transform-style: preserve-3d;
+  display: flex;
+  justify-content: center;
+  flex-direction: column;
+  align-items: center;
+}
+
+.cards {
+  position: relative;
+  width: 100%;
+  height: 100%;
+  margin-bottom: 20px;
+}
+
+img {
+  width: 100%;
+  height: 100%;
+  border-radius: 10px;
+  object-fit: cover;
+}
+
+#item-1:checked ~ .cards #card-3, #item-2:checked ~ .cards #card-1, #item-3:checked ~ .cards #card-2 {
+  transform: translatex(-40%) scale(.8);
+  opacity: .4;
+  z-index: 0;
+}
+
+#item-1:checked ~ .cards #card-2, #item-2:checked ~ .cards #card-3, #item-3:checked ~ .cards #card-1 {
+  transform: translatex(40%) scale(.8);
+  opacity: .4;
+  z-index: 0;
+}
+
+#item-1:checked ~ .cards #card-1, #item-2:checked ~ .cards #card-2, #item-3:checked ~ .cards #card-3 {
+  transform: translatex(0) scale(1);
+  opacity: 1;
+  z-index: 1;
+}
 </style>

@@ -13,7 +13,7 @@
                 <li><a href="#Roadmap">Roadmap</a></li>
                 <li><a href="#Tokenomics">Tokenomics</a></li>
                 <li><a href="#Team">Team</a></li>
-                <li><a>Blog</a></li>
+                <li><a href="#News">Blog</a></li>
             </ul>
         </div>
         <div class="footer-col" id="register">
@@ -26,15 +26,15 @@
         <div class="footer-col" id="connect">
             <h4>Connect</h4>
             <div class="col-content" style="display:flex; justify-content:space-between">
-                <img src="images/email.png">
-                <img src="images/discord.png">
-                <img src="images/instagram.png">
-                <img src="images/twitter.png">
+                <img alt="Email" src="images/email.png">
+                <img alt="Discord" src="images/discord.png">
+                <img alt="Instagram" src="images/instagram.png">
+                <img alt="Twitter" src="images/twitter.png">
             </div>
         </div>
     </div>
     <div id="logo">
-        <img style="margin-right: 12px;" src="images/logo-dark.png" />
+        <img alt="Logo" style="margin-right: 12px;" src="images/logo-dark.png" />
         <h3>AllSkills</h3>
     </div>
 </footer>

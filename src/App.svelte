@@ -28,6 +28,9 @@
 			font-display: swap;
 		}	
 	</style>
+	<link rel="canonical" href="https://allskills.ca/" />
+	<title>AllSkills - Competition based NFT Platform for showcasing your skills.</title>
+	<meta name="description" content="AllSkills is a competition based NFT platform where both talented creators and consumers of content can earn money. ">
 </svelte:head>
 
 <main>

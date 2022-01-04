@@ -9,13 +9,13 @@
           <div style="max-width:100%; display:flex; justify-content:space-around; max-height:60px; ">
             <div class="socials" style="width:45%">
                 <div class="socials-item">
-                    <img src="images/twitter-aqua.png">
+                    <img alt="Twitter" src="images/twitter-aqua.png">
                 </div>
                 <div class="socials-item">
-                    <img src="images/email-nocircle-aqua.png">
+                    <img alt="Email" src="images/email-nocircle-aqua.png">
                 </div>
                 <div class="socials-item">
-                    <img src="images/linkedin-aqua.png">
+                    <img alt="LinkedIn" src="images/linkedin-aqua.png">
                 </div>
                 
             </div>
@@ -107,29 +107,6 @@
 </script>
 
 <style>
-.show-back {
-		transform: rotateY(180deg);
-	}
-.content {
-  width: 100%;
-  height: 100%;
-  box-shadow: 0 0 15px rgba(0,0,0,0.1);
-  background-color: #141414;
-  transition: all 0.25s !important;
-  transform-style: preserve-3d;
-}
-.front,
-.back {
-  height: 100%;
-  width: 100%;
-  backface-visibility: hidden;
-}
-
-.back {
-  background: #03446A;
-  color: white;
-  transform: rotateY( 180deg );
-}
 .hidden{
   max-height:0px !important;
   overflow:hidden !important;
@@ -229,21 +206,6 @@ a:hover {
   opacity: 1;
   box-shadow: 0 0 15px rgba(0, 0, 0, 0.3);
 }
-.snip1336 .profile2 {
-    position:relative;
-    opacity: 1;
-  border-radius: 50%;
-  object-fit:cover;
-  margin-top: -125px;
-  z-index: 1;
-  max-width: 150px;
-  box-shadow: 0 0 15px rgba(0, 0, 0, 0.3);
-}
-.follow {
-  margin-right: 4%;
-  border-color: aqua;
-  color: aqua;
-}
 .snip1336 h2 {
   margin: 0 0 15px;
   font-size: 1.4em;
@@ -263,46 +225,6 @@ a:hover {
   transition: max-height 0.25s, overflow 0.25s 0.25s !important;
   opacity: 0.8;
 }
-/* p {
-    margin-left:2rem;
-    margin-right:2rem;
-    color: black;
-    font-size: 0.8rem;
-    text-align: center;
-} */
-h3 {
-    color:black;
-    font-size: 1.2rem;
-    font-weight: 400;
-    letter-spacing: 0.5px;
-}
-h4 {
-    font-size: 0.9rem;
-    color:grey;
-}
-.profile-pic{
-    width: 100%;
-    height: 125px;
-    object-fit:cover;
-    border-radius: 50%;
-}
-.photo {
-    margin-left:auto;
-    margin-right:auto;
-    margin-top: 1rem;
-    margin-bottom:1rem;
-    width: 125px;
-    height: 125px;
-    border-radius: 50px;
-}
-
-/* h2 {
-    text-align:left;
-    min-width:50%;
-    font-size: 4.5rem;
-    line-height: 1;
-} */
-
 .cards-container{
     display:flex;
     flex-wrap: wrap;
@@ -310,16 +232,6 @@ h4 {
     justify-content: space-between;
     padding-bottom:100px;
     margin-top:100px;
-}
-.card{
-    justify-items: center;
-    display: grid;
-    grid-template-rows: 40% 10% 10% 30% 10%;
-    width: 275px;
-    height: 400px;
-    background-color:#222222;
-    border-radius: 15px;
-    box-shadow: 0px 3px 5px black;
 }
 
 </style>
