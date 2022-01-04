@@ -19,7 +19,7 @@
         <div class="footer-col" id="register">
             <h4>Newsletter Subscription</h4>
             <div class="col-content">
-                <!--<NewsletterSignup color='black'/>-->
+                <NewsletterSignup color='black'/>
             </div>
             
         </div>
