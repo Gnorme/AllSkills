@@ -38,7 +38,7 @@
 		position: "Position",
 		descr: "Some text that describes me lorem ipsum ipsum lorem.",
 		email: "test@example.com",
-		img: "images/Noah.jpg"	
+		img: "images/Noah.avif"	
 	},
   {
 	  id: 0,
@@ -46,7 +46,7 @@
 		position: "Position",
 		descr: "Some text that describes me lorem ipsum ipsum lorem.",
 		email: "test@example.com",
-		img: "images/Frank.jpg"	
+		img: "images/Frank.avif"	
 	},
   {
 	  id: 0,
@@ -62,7 +62,7 @@
 		position: "Position",
 		descr: "Some text that describes me lorem ipsum ipsum lorem.",
 		email: "test@example.com",
-		img: "images/Charles.jpg"	
+		img: "images/Charles.avif"	
 	},
   ]
   let selected
