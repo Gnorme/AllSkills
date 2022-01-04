@@ -5,13 +5,13 @@
         <input type="radio" name="slider" id="item-3">
     <div class="cards">
         <label class="card" for="item-1" id="card-1">
-        <img src="images/bass.jpg" alt="card">
+        <img src="images/bass.avif" alt="card">
         </label>
         <label class="card" for="item-2" id="card-2">
-        <img src="images/Dunk.jpg" alt="card">
+        <img src="images/Dunk.avif" alt="card">
         </label>
         <label class="card" for="item-3" id="card-3">
-        <img src="images/skateboard.jpg" alt="card">
+        <img src="images/skateboard.avif" alt="card">
         </label>
         
     </div>

@@ -10,10 +10,10 @@
     import Carouselv from './Carouselv.svelte';
 
 	const images = [
-		{path: 'images/bass.jpg', id: 'image1'},
-		{path: 'images/Dunk.jpg', id: 'image2'},
-		{path: 'images/skateboard.jpg', id: 'image3'},
-		{path: 'images/runner.jpg', id: 'image4'},
+		{path: 'images/bass.avif', id: 'image1'},
+		{path: 'images/Dunk.avif', id: 'image2'},
+		{path: 'images/skateboard.avif', id: 'image3'},
+		{path: 'images/runner.avif', id: 'image4'},
 		// {path: 'images/image6.jpg', id: 'image6'},
 	]
 </script>
