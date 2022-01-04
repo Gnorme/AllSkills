@@ -1,10 +1,10 @@
 <script>
     export let color;
 </script>
-<div class="signup">
-    <input style="color: {color}; border-color: {color}" placeholder="Sign up for our newsletter">
+<form name="newsletter" data-netlify="true" class="signup">
+    <input name="email" style="color: {color}; border-color: {color}" placeholder="Sign up for our newsletter">
     <button style="color: {color}; border-color: {color}" onclick="alert('test')">REGISTER NOW</button>
-</div>
+</form>
 
 <style>
 .signup {
