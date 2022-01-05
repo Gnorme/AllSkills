@@ -77,7 +77,7 @@
     }
     h3 {
        margin:0;
-       font-size:1.75rem;
+       font-size:1.75vw;
        font-weight:400;
        font-family:"Oswald";
          /*font-family:'Lato'; */
@@ -85,8 +85,8 @@
     .section p{
         margin-left: 42px;
         font-family: "BentonSans";
-        font-size: 1rem;
-        line-height: 1.5rem;
+        font-size: 1.25vw;
+        line-height: 1.5vw;
         font-weight:100;
     }
     .section img{
@@ -129,6 +129,13 @@
         }
         .column{
             width: 100%;
+        }
+        p {
+            font-size: 1rem !important;
+            line-height: 1.5rem !important;
+        }
+        h3 {
+            font-size: 1.75rem !important;
         }
     }
 </style>
