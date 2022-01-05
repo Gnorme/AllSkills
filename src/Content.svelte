@@ -3,8 +3,8 @@
     import Tokenomics from './Tokenomics.svelte';
     import Challenge from './Challenge.svelte';
     import VoteToken from './VoteToken.svelte';
-    import Roadmap from './Roadmap.svelte';
-    import Carousel from './Carousel.svelte';
+    import Roadmap from './Roadmapv2.svelte';
+    import Carousel from './Carouselv.svelte';
     import Table from './Table.svelte';
 
 </script>
@@ -12,7 +12,7 @@
 <Carousel />
 
 <div class="text-content">
-    <h2 style="margin-left:7%;">What We Provide</h2>
+    <h2>What We Provide</h2>
     <Table />
     <div class="powered-by">
         <h3><span style="color:aqua;">AllSkills</span> is powered by cryptocurrency, using <span style="background-color:aqua; color: rgb(30,30,30);">future-proof blockchain & smart contract technology</span> to connect talented people and audiences, and foster skill development through competition, all while providing <span style="background-color: aqua; color: rgb(30,30,30);">incentives for everyone involved.</h3>
@@ -49,15 +49,17 @@
 <style>   /* rgb(143,255,238) */
 .section {
     width: 85%;
-    padding-left:7%;
-    padding-right:7%;
+    margin-left:auto;
+    margin-right:auto;
+    max-width:1220px
 }
     .powered-by{
         margin-top: 20rem;
+        max-width: 1220px;
         margin-bottom: 20rem;
         width:85%;
-        padding-left:7%;
-        padding-right:7%;
+        margin-left:auto;
+        margin-right:auto;
         text-align: center;
         font-size: 2.5rem;
         font-family: "Oswald";
@@ -71,6 +73,9 @@
         }
     }
     h2 {
+        margin-left:auto; 
+        margin-right:auto; 
+        max-width: 1200px;
         text-align:left;
         min-width:50%;
         font-size: 4.5rem;

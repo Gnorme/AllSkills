@@ -79,8 +79,9 @@
     }
     .table-content{
         display:grid;
-        margin-left:10%;
-        margin-right:10%;
+        margin-left:auto;
+        margin-right:auto;
+        max-width: 1180px;
         margin-top:3rem;
         margin-bottom:3rem;
         color: white;

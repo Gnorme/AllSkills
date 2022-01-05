@@ -33,6 +33,7 @@
         margin-left:auto;
         margin-right:auto;
         width: 80%;
+        max-width:500px;
     }
     #tooltip {
         padding:5px;
@@ -92,14 +93,7 @@
         transform-origin: 50% 50%;
         transform-box: fill-box;
     }
-    .section:hover {
-        transform:scale(1.05);
-        stroke: aqua;
-        stroke-width: 2px;
-        stroke-linejoin: round;
-        box-shadow: 120px, 80px, 40px, 20px, aqua;
-        z-index:2;
-    }
+
     .tokenomics-container{
         display:flex;
         margin-top:-50px;
@@ -107,6 +101,16 @@
         margin-left:auto;
         margin-right:auto;
         justify-content: space-evenly;
+    }
+    @media(hover: hover) and (pointer: fine) {
+        .section:hover {
+            transform:scale(1.05);
+            stroke: aqua;
+            stroke-width: 2px;
+            stroke-linejoin: round;
+            box-shadow: 120px, 80px, 40px, 20px, aqua;
+            z-index:2;
+        }
     }
     @media screen and (max-width: 820px) {
         .tokenomics-container {
