@@ -232,7 +232,7 @@ a:hover {
     padding-bottom:100px;
     margin-top:100px;
 }
-@media screen and (max-width: 1200px) {
+@media screen and (max-width: 1350px) {
   .card {
     max-width: 230px;
   }
