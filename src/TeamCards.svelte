@@ -1,6 +1,6 @@
 <div class="cards-container">
   {#each staff as {name, position, descr, email, img}, i}
-    <figure class="snip1336">
+    <figure class="card">
         <img src="images/profile-bg-1.jpg" alt="sample87" />
         <figcaption class="slanted-bg" class:bgselected={selected === i} >
           <img src={img} alt="profile-sample4" class="profile" class:selected={selected === i}/>
@@ -115,7 +115,7 @@
   left:25% !important;
 }
 
-.snip1336 .bgselected::before {
+.card .bgselected::before {
   transition: border-width 0.25s linear !important;
   border-width: 55px 0px 0px 5000px !important;
 }
@@ -133,8 +133,7 @@
 .socials img {
     display: block;
 }
-.snip1336 {
-  perspective: 1000px;
+.card {
   font-family: 'Roboto', Arial, sans-serif;
   align-items: flex-start;
   overflow: hidden;
@@ -147,26 +146,26 @@
   transition: all 0.25s ease;
   box-shadow: 0px 0px 7px 1px rgba(0,0,0,0.3);
 }
-.snip1336:hover{
+.card:hover{
   transform: scale(1.05);
 }
-.snip1336 * {
+.card * {
   -webkit-box-sizing: border-box;
   box-sizing: border-box;
   -webkit-transition: all 0.25s ease;
   transition: all 0.25s ease;
 }
-.snip1336 img {
+.card img {
   max-width: 100%;
   vertical-align: top;
   opacity: 0.85;
 }
-.snip1336 figcaption {
+.card figcaption {
   padding: 25px;
   position: relative;
   transition: all 0.25s ease !important;
 }
-.snip1336 .slanted-bg:before {
+.card .slanted-bg:before {
   position: absolute;
   content: '';
   bottom: 100%;
@@ -196,7 +195,7 @@ a {
 a:hover {
   opacity: 1;
 }
-.snip1336 .profile {
+.card .profile {
   border-radius: 50%;
   position: absolute;
   bottom: 100%;
@@ -206,17 +205,17 @@ a:hover {
   opacity: 1;
   box-shadow: 0 0 15px rgba(0, 0, 0, 0.3);
 }
-.snip1336 h2 {
+.card h2 {
   margin: 0 0 15px;
   font-size: 1.4em;
   font-weight: 300;
 }
-.snip1336 h2 span {
+.card h2 span {
   display: block;
   font-size: 0.6em;
   color: aqua;
 }
-.snip1336 p {
+.card p {
   margin: 0 0 10px;
   font-size: 0.8em;
   letter-spacing: 1px;
@@ -233,5 +232,18 @@ a:hover {
     padding-bottom:100px;
     margin-top:100px;
 }
-
+@media screen and (max-width: 1200px) {
+  .card {
+    max-width: 230px;
+  }
+  .card h2{
+    font-size: 1.1em;
+  }
+  a {
+    font-size: 0.55rem;
+  }
+  .card p {
+    font-size: 0.65em;
+  }
+}
 </style>

@@ -4,7 +4,7 @@
     import Challenge from './Challenge.svelte';
     import VoteToken from './VoteToken.svelte';
     import Roadmap from './Roadmapv2.svelte';
-    import Carousel from './Carouselv.svelte';
+    import Carousel from './Carousel.svelte';
     import Table from './Table.svelte';
 
 </script>
