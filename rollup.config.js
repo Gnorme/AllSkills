@@ -1,6 +1,7 @@
 import svelte from 'rollup-plugin-svelte';
 import commonjs from '@rollup/plugin-commonjs';
 import resolve from '@rollup/plugin-node-resolve';
+import json from '@rollup/plugin-json';
 import livereload from 'rollup-plugin-livereload';
 import { terser } from 'rollup-plugin-terser';
 import css from 'rollup-plugin-css-only';
@@ -34,7 +35,8 @@ export default {
 		sourcemap: true,
 		format: 'iife',
 		name: 'app',
-		file: 'public/build/bundle.js'
+		inlineDynamicImports: true,
+		file: 'public/build/bundle.js',
 	},
 	plugins: [
 		svelte({
@@ -57,7 +59,7 @@ export default {
 			dedupe: ['svelte']
 		}),
 		commonjs(),
-
+		json(),
 		// In dev mode, call `npm run start` once
 		// the bundle has been generated
 		!production && serve(),
