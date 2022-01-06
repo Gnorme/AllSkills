@@ -216,7 +216,7 @@ ul li {
     left: 0;
     width: 100%;
     height: 100%;
-    background: url('../images/runner.avif');
+    background: url('../images/runner.webp');
     background-repeat: no-repeat;
     background-size: cover;
     background-position: center center;

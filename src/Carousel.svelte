@@ -5,13 +5,13 @@
         <input type="radio" name="slider" id="item-3">
     <div class="cards">
         <label class="card" for="item-1" id="card-1">
-        <img src="images/bass.avif" alt="NFT Trading Card">
+        <img src="images/bass.webp" alt="NFT Trading Card">
         </label>
         <label class="card" for="item-2" id="card-2">
-        <img src="images/Dunk.avif" alt="NFT Trading Card">
+        <img src="images/Dunk.webp" alt="NFT Trading Card">
         </label>
         <label class="card" for="item-3" id="card-3">
-        <img src="images/skateboard.avif" alt="NFT Trading Card">
+        <img src="images/skateboard.webp" alt="NFT Trading Card">
         </label>
         
     </div>

@@ -26,6 +26,7 @@
             </div>
         </div>
     </div>
+    <div id="overlay"></div>
     
 </nav>
 
@@ -37,16 +38,19 @@
     /* Set the width of the side navigation to 250px */
     function openNav() {
         document.getElementById("sidenav").style.width = "250px";
+        document.getElementById("overlay").style.visibility = "visible";
     }
 
     /* Set the width of the side navigation to 0 */
     function closeNav() {
         document.getElementById("sidenav").style.width = "0";
+        document.getElementById("overlay").style.visibility = "hidden";
     }
 
 	const handleLocaleChange = e => {
 		e.preventDefault();
 		locale.set(e.target.value);
+        closeNav();
 	};
     function handleClick(){
         alert('clicked');
@@ -60,6 +64,16 @@
     margin: 0;
     padding: 0;
     box-sizing: border-box;
+}
+#overlay {
+    position:fixed;
+    top:0;
+    left:0;
+    height:100vh;
+    width:100%;
+    opacity:0.6;
+    background-color:#000;
+    visibility: hidden;
 }
 select {
     background-color: transparent !important;

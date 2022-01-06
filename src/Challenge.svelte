@@ -5,7 +5,7 @@
         </div>
         <div class="content second">
             <h3 style="border-bottom: 2px solid aqua;">Take videos showcasing your skills</h3>
-            <p>No matter if your skill is  <span style="color:aqua;">athletic, artistic, musical,  strategic,  incredibly precise, or even one-of-a-kind,</span> we want to see it. Setup your camera up to capture your finest moment and use our custom editing features to make it stand out even more.</p>
+            <p>No matter if your skill is  <span style="color:aqua;">athletic, artistic, musical,  strategic,  incredibly precise, or even one-of-a-kind,</span> we want to see it. Set your camera up to capture your finest moment and use our custom editing features to make it stand out even more.</p>
         </div>
     </div>
     <div class="section">
