@@ -10,12 +10,13 @@
     </button>
     <div id="sidenav">
         <a href="javascript:void(0)" class="closebtn" on:click={closeNav}>&times;</a>
-        <a href="#">About</a>
-        <a href="#">Challenge System</a>
-        <a href="#">Trailer</a>
-        <a href="#">Vote Token</a>
-        <a href="#">Team</a>
-        <a href="#">Contact</a>
+        <a href="#Table">About</a>
+        <a href="#Challenge">Challenge System</a>
+        <a href="#Trailer">Trailer</a>
+        <a href="#Vote">Vote Token</a>
+        <a href="#Roadmap">Roadmap</a>
+        <a href="#Team">Team</a>
+        <a href="#Contact">Contact</a>
         <div class="locale-selector">
             <div class="select">
                 <select value={value} on:change={handleLocaleChange}>
@@ -60,7 +61,11 @@
     padding: 0;
     box-sizing: border-box;
 }
-
+select {
+    background-color: transparent !important;
+    color: aqua;
+    border: none;
+}
 .logo{
     max-height:100%;
 }
@@ -98,6 +103,7 @@
   z-index: 1; /* Stay on top */
   top: 0; /* Stay at the top */
   right: 0;
+  font-family:"Oswald";
   background-color: #111; /* Black*/
   overflow-x: hidden; /* Disable horizontal scroll */
   padding-top: 60px; /* Place content 60px from the top */
@@ -107,7 +113,8 @@
   position: absolute;
   top: 0;
   right: 25px;
-  font-size: 36px;
+  font-size: 64px;
+  line-height: 64px;
   margin-left: 50px;
 }
 #sidenav a {
@@ -117,5 +124,8 @@
   color: #818181;
   display: block;
   white-space: nowrap;
+}
+#sidenav a:hover {
+  color: aqua;
 }
 </style>

@@ -1,4 +1,4 @@
-<div class="table-content">
+<div class="table-content" id="Table">
     <div class="grid-item">
         <div class="table-icon"><img alt="Handshake" style="width:100%" src="images/handshake.png"></div>
         <h3>Skills Competition</h3>

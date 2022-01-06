@@ -9,7 +9,7 @@
             <ul class="col-content">
                 <li><a href="#Trailer">Trailer</a></li>
                 <li><a href="#Challenge">Challenge System</a></li>
-                <li><a href="#Stablecoin">Vote Stablecoin</a></li>
+                <li><a href="#Vote">Vote Stablecoin</a></li>
                 <li><a href="#Roadmap">Roadmap</a></li>
                 <li><a href="#Tokenomics">Tokenomics</a></li>
                 <li><a href="#Team">Team</a></li>

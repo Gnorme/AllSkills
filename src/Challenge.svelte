@@ -35,7 +35,7 @@
             <p>Get rewarded for showing off your skills. The creator of the winning video will receive between 1-25% of all vote tokens cast during the challenge while the rest is rewarded to all those who voted for the winning video. The creators cut changes based on how close the vote is. <span style="color: gold;">Closer vote count = bigger cut.</span></p>
         </div>
     </div>
-    <div class="video-container">
+    <div id="Trailer" class="video-container">
         <div class="video">
             <iframe title="AllSkills Trailer Video" loading="lazy" src="https://www.youtube.com/embed/tgbNymZ7vqY"></iframe>
         </div>

@@ -21,7 +21,7 @@
         <h2>Challenge System</h2>
         <Challenge/>
     </div>
-    <div id="Stablecoin" class="section">
+    <div id="Vote" class="section">
         <h2 style="text-align: center;">AllSkills $Vote Token</h2>
         <VoteToken/>
     </div>
