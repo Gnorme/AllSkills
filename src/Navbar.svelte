@@ -1,7 +1,6 @@
 <nav class="navbar">
     <img alt="Logo" class="logo" src="images/logo.png"/>
-
-    <button class="hamburger" on:click={handleClick}>
+    <button class="hamburger" on:click={openNav}>
         <svg width="48px" height="48px" viewBox="0 0 48 48" fill="none" xmlns="http://www.w3.org/2000/svg">
             <rect width="48" height="48" fill="white" fill-opacity="0"/>
             <path d="M7.94977 11.9498H39.9498" stroke="white" stroke-width="4" stroke-linecap="round" stroke-linejoin="round"/>
@@ -9,11 +8,45 @@
             <path d="M7.94977 35.9498H39.9498" stroke="white" stroke-width="4" stroke-linecap="round" stroke-linejoin="round"/>
         </svg>      
     </button>
+    <div id="sidenav">
+        <a href="javascript:void(0)" class="closebtn" on:click={closeNav}>&times;</a>
+        <a href="#">About</a>
+        <a href="#">Challenge System</a>
+        <a href="#">Trailer</a>
+        <a href="#">Vote Token</a>
+        <a href="#">Team</a>
+        <a href="#">Contact</a>
+        <div class="locale-selector">
+            <div class="select">
+                <select value={value} on:change={handleLocaleChange}>
+                    <option value="en">EN</option>
+                    <option value="fr">FR</option>
+                </select>
+            </div>
+        </div>
+    </div>
     
 </nav>
 
 
 <script>
+    import { locale } from "svelte-i18n";
+    let value = "en";
+
+    /* Set the width of the side navigation to 250px */
+    function openNav() {
+        document.getElementById("sidenav").style.width = "250px";
+    }
+
+    /* Set the width of the side navigation to 0 */
+    function closeNav() {
+        document.getElementById("sidenav").style.width = "0";
+    }
+
+	const handleLocaleChange = e => {
+		e.preventDefault();
+		locale.set(e.target.value);
+	};
     function handleClick(){
         alert('clicked');
     }
@@ -31,7 +64,11 @@
 .logo{
     max-height:100%;
 }
-
+.locale-selector{
+    position:absolute;
+    top:20px;
+    left:20px;
+}
 .navbar {
     z-index:5;
     position: fixed;
@@ -54,5 +91,31 @@
     padding: 0;
     cursor:pointer;
 }
-
+#sidenav {
+  height: 100%; /* 100% Full-height */
+  width: 0; /* 0 width - change this with JavaScript */
+  position: fixed; /* Stay in place */
+  z-index: 1; /* Stay on top */
+  top: 0; /* Stay at the top */
+  right: 0;
+  background-color: #111; /* Black*/
+  overflow-x: hidden; /* Disable horizontal scroll */
+  padding-top: 60px; /* Place content 60px from the top */
+  transition: 0.5s; /* 0.5 second transition effect to slide in the sidenav */
+}
+#sidenav .closebtn {
+  position: absolute;
+  top: 0;
+  right: 25px;
+  font-size: 36px;
+  margin-left: 50px;
+}
+#sidenav a {
+  padding: 8px 8px 8px 32px;
+  text-decoration: none;
+  font-size: 25px;
+  color: #818181;
+  display: block;
+  white-space: nowrap;
+}
 </style>

@@ -3,6 +3,23 @@
 	import Hero from './Hero.svelte';
 	import Content from './Content.svelte';
 	import Footer from './Footer.svelte';
+	import {
+		_,
+		getLocaleFromNavigator,
+		isLoading,
+		register,
+		init,
+		locale
+	} from "svelte-i18n";
+	register("en", () => import("./langs/en.json"));
+	register("es", () => import("./langs/es.json"));
+	register("fr", () => import("./langs/fr.json"));
+
+	init({
+		fallbackLocale: "en",
+		initialLocale: getLocaleFromNavigator()
+	});
+
 </script>
 
 <svelte:head>
@@ -33,13 +50,16 @@
 	<meta name="description" content="AllSkills is a competition based NFT platform where both talented creators and consumers of content can earn money. ">
 </svelte:head>
 
-<main>
-
-	<Navbar/>
-	<Hero/>
-	<Content/>
-	<Footer/>
-</main>
+{#if $isLoading}
+  <p>Loading</p>
+{:else}
+	<main>
+		<Navbar/>
+		<Hero/>
+		<Content/>
+		<Footer/>
+	</main>
+{/if}
 
 <style>
 	:global(body) { 

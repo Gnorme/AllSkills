@@ -1,11 +1,10 @@
-
 <script>
     import NewsletterSignup from "./NewsletterSignup.svelte";
+    import { _ } from 'svelte-i18n'
 </script>
 <section class="hero">
-   
    <div class="left-content">
-        <div class="content">Built for</div>
+        <div class="content">{$_('home.hero.title')}</div>
         <div class='scrolling-content'>
             <div class="scrolling-content-mask">
                 <ul class="scroll-animation">
@@ -57,7 +56,7 @@
     </div>
     <div class='hero-split'>
         <div class="description">
-            <p style="margin-bottom:2rem;">AllSkills is a platform that looks to bring <span style="color:aqua">creativity, sustainable growth, and increased competition</span> to the talent world. Our platform provides an opportunity to witness people of all skills showcasing their talents and competing against others all while earning money through our carefully crafted token based Vote and Challenge system and NFT marketplace.</p>
+            <p style="margin-bottom:2rem;">{$_('home.hero.description_start')} <span style="color:aqua">{$_('home.hero.description_highlight')}</span> {$_('home.hero.description_end')}</p>
             <NewsletterSignup color='white' />
         </div>
     </div>
