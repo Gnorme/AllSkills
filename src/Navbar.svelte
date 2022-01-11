@@ -1,5 +1,6 @@
 <nav class="navbar">
-    <img alt="Logo" class="logo" src="images/logo.png"/>
+    <a class="logo" href="#"></a>
+    <!--<img alt="Logo" class="logo" src="images/logo.png"/>-->
     <button class="hamburger" on:click={openNav}>
         <svg width="48px" height="48px" viewBox="0 0 48 48" fill="none" xmlns="http://www.w3.org/2000/svg">
             <rect width="48" height="48" fill="white" fill-opacity="0"/>
@@ -82,6 +83,7 @@ select {
 }
 .logo{
     max-height:100%;
+    background-image: url();
 }
 .locale-selector{
     position:absolute;

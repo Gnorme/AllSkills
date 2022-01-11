@@ -1,15 +1,15 @@
 <div class="cards-container">
-  {#each staff as {name, position, descr, email, img}, i}
+  {#each staff as {name, position, descr, email, twitter, img, bg}, i}
     <figure class="card">
-        <img src="images/profile-bg-1.jpg" alt="sample87" />
+        <img class="background" src={bg} alt="sample87" />
         <figcaption class="slanted-bg" class:bgselected={selected === i} >
           <img src={img} alt="profile-sample4" class="profile" class:selected={selected === i}/>
-          <h2>{name}<span>Position</span></h2>
+          <h2>{name}<span>{position}</span></h2>
           <p class:hidden={selected != i}>Lorem ipsum test test test test test test test test test test test test test test test test test test test test test test test test test test </p>
           <div style="max-width:100%; display:flex; justify-content:space-around; max-height:60px; ">
             <div class="socials" style="width:45%">
                 <div class="socials-item">
-                    <img alt="Twitter" src="images/twitter-aqua.png">
+                  <a href={twitter} class="twitter"><img alt="Twitter" src="images/twitter-aqua.png"></a>
                 </div>
                 <div class="socials-item">
                     <img alt="Email" src="images/email-nocircle-aqua.png">
@@ -35,34 +35,42 @@
     {
 	  id: 0,
 		name: "Noah Goren",
-		position: "Position",
+		position: "Co-Founder",
 		descr: "Some text that describes me lorem ipsum ipsum lorem.",
-		email: "test@example.com",
-		img: "images/Noah.webp"	
+		email: "ngoren@allskills.ca",
+    twitter:"https://twitter.com/@NoGoren",
+		img: "images/Noah_s.webp",	
+    bg: "images/summer_bg_s.webp"
 	},
   {
 	  id: 0,
 		name: "Frank Sammut",
-		position: "Position",
+		position: "Co-Founder",
 		descr: "Some text that describes me lorem ipsum ipsum lorem.",
-		email: "test@example.com",
-		img: "images/Frank.webp"	
+		email: "fsammut@allskills.ca",
+    twitter:"https://twitter.com/@Sammut_frank",
+		img: "images/Frank_s.webp",	
+    bg: "images/fall_bg_s.webp"	
 	},
   {
 	  id: 0,
 		name: "Christopher Thompson",
-		position: "Position",
+		position: "Co-Founder",
 		descr: "Some text that describes me lorem ipsum ipsum lorem.",
-		email: "test@example.com",
-		img: "images/Christopher.jpg"	
+		email: "cthompson@allskills.ca",
+    twitter:"",
+		img: "images/Christopher_s.webp",	
+    bg: "images/winter_bg_s.webp"	
 	},
   {
 	  id: 0,
 		name: "Charles Hamelin",
-		position: "Position",
+		position: "Co-Founder",
 		descr: "Some text that describes me lorem ipsum ipsum lorem.",
-		email: "test@example.com",
-		img: "images/Charles.webp"	
+		email: "chamelin@allskills.ca",
+    twitter:"https://twitter.com/@Speedskater01",
+		img: "images/Charles_s.webp",	
+    bg: "images/rings_s.webp"	
 	},
   ]
   let selected
@@ -107,6 +115,12 @@
 </script>
 
 <style>
+  .background {
+    height:200px;
+  }
+  a {
+    cursor:pointer;
+  }
 .hidden{
   max-height:0px !important;
   overflow:hidden !important;
@@ -177,21 +191,6 @@
   border-color: transparent transparent transparent #141414;
   transition: border-width 0.25s ease !important;
 }
-a {
-  padding: 5px;
-  border: 1px solid #ffffff;
-  color: #ffffff;
-  font-size: 0.7em;
-  text-transform: uppercase;
-  display: inline-block;
-  opacity: 0.65;
-  width: 47%;
-  text-align: center;
-  text-decoration: none;
-  font-weight: 600;
-  letter-spacing: 1px;
-  cursor:pointer;
-}
 a:hover {
   opacity: 1;
 }
@@ -231,6 +230,21 @@ a:hover {
     justify-content: space-between;
     padding-bottom:100px;
     margin-top:100px;
+}
+.info {
+  padding: 5px;
+  border: 1px solid #ffffff;
+  color: #ffffff;
+  font-size: 0.7em;
+  text-transform: uppercase;
+  display: inline-block;
+  opacity: 0.65;
+  width: 47%;
+  text-align: center;
+  text-decoration: none;
+  font-weight: 600;
+  letter-spacing: 1px;
+  cursor:pointer;
 }
 @media screen and (max-width: 1350px) {
   .card {
