@@ -55,10 +55,10 @@
   <p>Loading</p>
 {:else}
 	<main>
-		<Navbar/>
+		<!--<Navbar/>-->
 		<Hero/>
-		<Content/>
-		<Footer/>
+<!--	<Content/>
+		<Footer/>-->	
 	</main>
 {/if}
 

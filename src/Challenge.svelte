@@ -1,11 +1,13 @@
 <div class="challenge-container">
     <div class="section">
         <div class="image first">
-            <img src="" />
+            <img src="images/Video.png" />
         </div>
         <div class="content second">
+            <div>
             <h3 style="border-bottom: 2px solid aqua;">Take videos showcasing your skills</h3>
             <p>No matter if your skill is  <span style="color:aqua;">athletic, artistic, musical,  strategic,  incredibly precise, or even one-of-a-kind,</span> we want to see it. Set your camera up to capture your finest moment and use our custom editing features to make it stand out even more.</p>
+            </div>
         </div>
     </div>
     <div class="section">
@@ -19,7 +21,7 @@
     </div>
     <div class="section">
         <div class="image first">
-            <img src="" />
+            <img src="images/Challenge.png" />
         </div>
         <div class="content second">
             <h3 style="border-bottom: 2px solid blueviolet;">Users vote to determine winner</h3>
@@ -85,6 +87,13 @@
     }
     .image{
         flex: 0 0 50%;
+        width: 50%;
+    }
+    .image img {
+        position:relative;
+        top: -125px;
+        left: 20%;
+        width: 300px;
     }
     .challenge-container{
         display:flex;
@@ -95,8 +104,8 @@
     .section{
         display:flex;
         gap:50px;
-        margin: 80px;
-        height: 250px;
+        margin-top: 80px;
+        height: 500px;
     }
     .video-container{
         margin: 200px 100px 150px 100px;

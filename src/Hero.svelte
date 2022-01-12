@@ -1,6 +1,51 @@
 <script>
     import NewsletterSignup from "./NewsletterSignup.svelte";
     import { _ } from 'svelte-i18n'
+    const skills = [
+        "Gymnastics",
+        "Volleyball",
+        "Hockey",
+        "Chello",
+        "Ice Skating",
+        "Badminton",
+        "Cricket",
+        "Drums",
+        "Dance",
+        "Football",
+        "Basketball",
+        "Water Sports",
+        "Snowboard",
+        "Swimming",
+        "Darts",
+        "Piano",
+        "Harmonica",
+        "Lacrosse",
+        "Rugby",
+        "Bass",
+        "Bowling",
+        "Running",
+        "Saxophone",
+        "Trumpet",
+        "Golf",
+        "Violin",
+        "Parkour",
+        "Tuba",
+        "Band",
+        "Surfing",
+        "Singing",
+        "Baseball",
+        "Tennis",
+        "Archery" ,
+        "Trombone",
+        "ESports",
+        "Ski",
+        "Boxing",
+        "Skateboard",
+        "Soccer",
+        "Guitar",
+        "Trickshots",
+    ]
+
 </script>
 <section class="hero">
    <div class="left-content">
@@ -8,47 +53,9 @@
         <div class='scrolling-content'>
             <div class="scrolling-content-mask">
                 <ul class="scroll-animation">
-                    <li>Archery</li>
-                    <li>Badminton</li>
-                    <li>Band</li>
-                    <li>Baseball</li>
-                    <li>Basketball</li>
-                    <li>Bass</li>
-                    <li>Bowling</li>
-                    <li>Boxing</li>
-                    <li>Chello</li>
-                    <li>Cricket</li>
-                    <li>Dance</li>
-                    <li>Darts</li>
-                    <li>Drums</li>
-                    <li>ESports</li>
-                    <li>Football</li>
-                    <li>Golf</li>
-                    <li>Guitar</li>
-                    <li>Gymnastics</li>
-                    <li>Harmonica</li>
-                    <li>Hockey</li>
-                    <li>Ice Skating</li>
-                    <li>Lacrosse</li>
-                    <li>Parkour</li>
-                    <li>Piano</li>
-                    <li>Rugby</li>
-                    <li>Running</li>
-                    <li>Saxophone</li>
-                    <li>Singing</li>
-                    <li>Skateboard
-                    <li>Ski</li>
-                    <li>Snowboard</li>
-                    <li>Soccer</li>
-                    <li>Surfing</li>
-                    <li>Swimming</li>
-                    <li>Tennis</li>
-                    <li>Trombone</li>
-                    <li>Trumpet</li>
-                    <li>Tuba</li>
-                    <li>Volleyball</li>
-                    <li>Violin</li>                    
-                    
+                    {#each skills as skill}
+                        <li>{skill}</li>
+                    {/each}
                     <li style="color:aqua; font-weight: 600 !important;">AllSkills</li>
                 </ul>
             </div>
@@ -193,7 +200,7 @@ ul li {
 }
 
 @-webkit-keyframes change {
-    100% {margin-top: -2624px;}
+    100% {margin-top: -2688px;}
 }
 
 @keyframes opacity {
@@ -202,7 +209,7 @@ ul li {
 }
 
 @keyframes change {
-    100% {margin-top: -2560px;}
+    100% {margin-top: -2688px;}
 
 }
 
@@ -210,17 +217,17 @@ ul li {
 .hero::before {
     content: "";
     position: absolute;
-    mask-image: linear-gradient(to bottom, rgba(54,54,54,1) 40%, rgba(54,54,54,0));
-    -webkit-mask-image: linear-gradient(to bottom, rgba(54,54,54,1) 40%, rgba(54,54,54,0));
+    /*mask-image: linear-gradient(to bottom, rgba(54,54,54,1) 100%, rgba(54,54,54,0));
+    -webkit-mask-image: linear-gradient(to bottom, rgba(54,54,54,1) 40%, rgba(54,54,54,0));*/
     top: 0;
     left: 0;
     width: 100%;
     height: 100%;
-    background: url('../images/runner.webp');
+    background: url('../images/Logo_bg.webp');
     background-repeat: no-repeat;
     background-size: cover;
     background-position: center center;
-    filter: brightness(60%);
+    filter: brightness(60%) blur(6px);
 }
 
 </style>
