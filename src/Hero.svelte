@@ -48,6 +48,7 @@
 
 </script>
 <section class="hero">
+    <span class="countdown">Big news coming soon: </span>
    <div class="left-content">
         <div class="content">{$_('home.hero.title')}</div>
         <div class='scrolling-content'>
@@ -67,7 +68,7 @@
             <NewsletterSignup color='white' />
         </div>
     </div>
-
+    
 </section>
 <style>
      @import url('https://fonts.googleapis.com/css2?family=Roboto&display=swap');
@@ -81,6 +82,15 @@
     white-space:nowrap;
     color:white;
 
+}
+.countdown {
+    position:absolute;
+    top:90%;
+    z-index:10;
+    color:white;
+    font-family: "Oswald";
+    font-size: 24px;
+    left: 5%;
 }
 .left-content{
     font-family: "BentonSans";
@@ -227,7 +237,8 @@ ul li {
     background-repeat: no-repeat;
     background-size: cover;
     background-position: center center;
-    filter: brightness(60%) blur(6px);
+    transform: scale(1.5);
+    filter: brightness(60%) blur(12px);
 }
 
 </style>

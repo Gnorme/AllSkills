@@ -26,6 +26,11 @@ button {
     /* color:black; */
     text-align: center;
     cursor: pointer;
+
+}
+input::placeholder {
+    color: white;
+    opacity: 0.5;
 }
 input {
     padding-left: 1.5rem;
