@@ -8,7 +8,7 @@
         "Chello",
         "Ice Skating",
         "Badminton",
-        "Cricket",
+        "ESports",
         "Drums",
         "Dance",
         "Football",
@@ -37,7 +37,7 @@
         "Tennis",
         "Archery" ,
         "Trombone",
-        "ESports",
+        "Cricket",
         "Ski",
         "Boxing",
         "Skateboard",
@@ -48,7 +48,7 @@
 
 </script>
 <section class="hero">
-    <span class="countdown">Big news coming soon: </span>
+    <span class="countdown">Big news coming soon...</span>
    <div class="left-content">
         <div class="content">{$_('home.hero.title')}</div>
         <div class='scrolling-content'>
