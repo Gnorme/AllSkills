@@ -90,7 +90,7 @@
     color:white;
     font-family: "Oswald";
     font-size: 24px;
-    left: 5%;
+    left:42%;
 }
 .left-content{
     font-family: "BentonSans";
