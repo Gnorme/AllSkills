@@ -48,7 +48,6 @@
 
 </script>
 <section class="hero">
-    <span class="countdown">Big news coming soon...</span>
    <div class="left-content">
         <div class="content">{$_('home.hero.title')}</div>
         <div class='scrolling-content'>
@@ -66,9 +65,10 @@
         <div class="description">
             <p style="margin-bottom:2rem;">{$_('home.hero.description_start')} <span style="color:aqua">{$_('home.hero.description_highlight')}</span> {$_('home.hero.description_end')}</p>
             <NewsletterSignup color='white' />
+            
         </div>
     </div>
-    
+    <span class="countdown">Big news coming soon...<a href="https://twitter.com/@AllSkillsNFT">@AllSkillsNFT</a></span>
 </section>
 <style>
      @import url('https://fonts.googleapis.com/css2?family=Roboto&display=swap');
@@ -83,6 +83,12 @@
     color:white;
 
 }
+.logo {
+    position:absolute;
+    top:2%;
+    left:10%;
+    filter:blur(10px) brightness(60%);
+}
 .countdown {
     position:absolute;
     top:90%;
@@ -91,6 +97,9 @@
     font-family: "Oswald";
     font-size: 24px;
     left:42%;
+}
+.countdown a {
+    color: aqua;
 }
 .left-content{
     font-family: "BentonSans";
@@ -138,6 +147,14 @@
 
 }
 @media screen and (max-width: 820px) {
+        .countdown {
+            display:table;
+            margin-left:auto;
+            margin-right:auto;
+            padding-bottom:20px;
+            position:relative;
+            left:0;
+        }
         .hero {
             display:block;
             height: auto;
@@ -234,7 +251,7 @@ ul li {
     width: 100%;
     height: 100%;
     background-size: 150% !important;
-    background-image: url('../images/Logo_bg.webp');
+    background-image: url('../images/logo_bg.webp');
     background-repeat: no-repeat;
     background-size: cover;
     background-position: center center;
