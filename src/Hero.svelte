@@ -233,11 +233,11 @@ ul li {
     left: 0;
     width: 100%;
     height: 100%;
-    background: url('../images/Logo_bg.webp');
+    background-size: 150% !important;
+    background-image: url('../images/Logo_bg.webp');
     background-repeat: no-repeat;
     background-size: cover;
     background-position: center center;
-    transform: scale(1.5);
     filter: brightness(60%) blur(12px);
 }
 
