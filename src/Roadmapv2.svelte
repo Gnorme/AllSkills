@@ -1,10 +1,13 @@
 <div class="roadmap-container">
-    <div class="roadmap-card" style="height:40%;">
+    <div class="info">
+        <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat.</p>
+    </div>
+    <div class="roadmap-card" style="height:60%;">
+        <h3 style="color:white;">2019 - 2020</h3>
         <div class="header" style="border-bottom: 5px solid #363636">
-            <img src="images/idea.png" />
+            <img alt="Idea" src="images/idea_sw.png" />
         </div>
         <div class="text">
-            <h3>2019 - 2020</h3>
             <ul>
                 <li class="cleared">Ideation</li>
                 <li class="cleared">Business plan</li>
@@ -13,12 +16,12 @@
             </ul>
         </div>
     </div>
-    <div class="roadmap-card" style="height:55%;">
+    <div class="roadmap-card" style="height:70%;">
+        <h3 style="color:#852ee7">2021</h3>
         <div class="header" style="border-bottom: 5px solid #852ee7">
-            <img src="images/leadership.png" />
+            <img alt="New Direction" src="images/leadership_sw.png" />
         </div>
         <div class="text">
-            <h3>2021</h3>
             <ul>
                 <li class="cleared">Markest research</li>
                 <li class="cleared">Acquired advisors & CTO</li>
@@ -30,12 +33,12 @@
             </ul>
         </div>
     </div>
-    <div class="roadmap-card" style="height:70%;">
+    <div class="roadmap-card" style="height:80%;">
+        <h3 style="color:#e0573f">Q1 2022</h3>
         <div class="header" style="border-bottom: 5px solid #e0573f">
-            <img src="images/planning.png" />
+            <img alt="Pre-launch plan" src="images/planning_sw.png" />
         </div>
         <div class="text">
-            <h3>Q1 2022</h3>
             <ul>
                 <li>Announce partners</li>
                 <li>Setup social accounts</li>
@@ -47,12 +50,12 @@
             </ul>
         </div>
     </div>
-    <div class="roadmap-card" style="height:85%;">
+    <div class="roadmap-card" style="height:90%;">
+        <h3 style="color:#ecec37;">Q2 2022</h3>
         <div class="header" style="border-bottom: 5px solid #ecec37">
-            <img src="images/launch.png" />
+            <img alt="Launch plans" src="images/launch_sw.png" />
         </div>
         <div class="text">
-            <h3>Q2 2022</h3>
             <ul>
                 <li>Mint stablecoin Vote token</li>
                 <li>Launch closed beta</li>
@@ -61,11 +64,11 @@
         </div>
     </div>
     <div class="roadmap-card" style="height:100%;">
-        <div class="header" style="border-bottom: 5px solid #8fffee">
-            <img src="images/global.png" />
+        <h3 style="color: aqua;">Q3+ 2022</h3>
+        <div class="header" style="border-bottom: 5px solid aqua">
+            <img alt="Post launch plans" src="images/globalization_sw.png" />
         </div>
         <div class="text">
-            <h3>Q3+ 2022</h3>
             <ul>
                 <li>Add video editing features</li>
                 <li>Unique Tap-to-Record feature</li>
@@ -77,6 +80,22 @@
 </div>
 
 <style>
+    .info {
+        position:absolute;
+        top:0%;
+        left:2%;
+        width: 30%;
+    }
+    .info h3 {
+        text-decoration: underline aqua;
+        text-shadow: none;
+        font-size: 32px;
+        font-family: "Oswald";
+        text-align: left;
+    }
+    .info p {
+        font-size: 12px;
+    }
     img {
         height: 100%;
     }
@@ -84,24 +103,23 @@
         list-style:none;
         margin-left:0;
         padding-left:0;
-        color: rgb(146, 146, 146);
         letter-spacing: 0.8px;
+        line-height:1.2rem;
+        font-size: 0.9rem;
         margin-top:3px;
         font-weight:200;
-    }
-    p {
-        color: rgb(146, 146, 146);
-        letter-spacing: 0.8px;
-        margin-top:3px;
-        font-weight:200;
+        font-family: "BentonSans", sans-serif;;
+        /*font-family:"Roboto", "Lato", sans-serif;*/
     }
     h3 {
-        font-family: 'Lato', sans-serif;
+        font-family: "Oswald";
+        text-align:center;
         letter-spacing:1px;
-        margin-bottom:0;
+        margin-bottom:2rem;
         margin-top: 30px;
         font-size:1.3em;
         font-weight:100;
+        text-shadow: 0px 4px 3px black;
     }
     .header {
         height: 100px;
@@ -110,17 +128,36 @@
     }
     .text {
         flex-grow: 1;
+        margin-top: 1rem;
     }
     .roadmap-container {
         display:flex;
+        padding-top:20px;
+        margin-bottom:200px;
         justify-content: space-between;
         width: 100%;
         height: 80vh;
         align-items: flex-end;
+        position:relative;
     }
     .roadmap-card {
         width:18%;
         display:flex;
         flex-direction: column;
+    }
+    .roadmap-card:hover h3{
+        text-shadow: 0px 0px 15px rgba(255,255,255,0.5);
+    }
+    @media screen and (max-width: 820px) {
+        .roadmap-card {
+            width: 100%;
+        }
+        .roadmap-container {
+            flex-direction: column;
+            height: auto;
+        }
+        ul {
+            font-size: 1rem;
+        }
     }
 </style>

@@ -1,21 +1,21 @@
 <div class="cards-container">
-  {#each staff as {name, position, descr, email, img}, i}
-    <figure class="snip1336">
-        <img src="images/profile-bg-1.jpg" alt="sample87" />
+  {#each staff as {name, position, descr, email, twitter, img, bg}, i}
+    <figure class="card">
+        <img class="background" src={bg} alt="sample87" />
         <figcaption class="slanted-bg" class:bgselected={selected === i} >
           <img src={img} alt="profile-sample4" class="profile" class:selected={selected === i}/>
-          <h2>{name}<span>Position</span></h2>
+          <h2>{name}<span>{position}</span></h2>
           <p class:hidden={selected != i}>Lorem ipsum test test test test test test test test test test test test test test test test test test test test test test test test test test </p>
-          <div style="max-width:100%; display:flex; justify-content:space-around; ">
-          <div class="socials" style="width:45%">
+          <div style="max-width:100%; display:flex; justify-content:space-around; max-height:60px; ">
+            <div class="socials" style="width:45%">
                 <div class="socials-item">
-                    <img src="images/twitter-aqua.png">
+                  <a href={twitter} class="twitter"><img alt="Twitter" src="images/twitter-aqua.png"></a>
                 </div>
                 <div class="socials-item">
-                    <img src="images/email-nocircle-aqua.png">
+                    <img alt="Email" src="images/email-nocircle-aqua.png">
                 </div>
                 <div class="socials-item">
-                    <img src="images/linkedin-aqua.png">
+                    <img alt="LinkedIn" src="images/linkedin-aqua.png">
                 </div>
                 
             </div>
@@ -35,34 +35,42 @@
     {
 	  id: 0,
 		name: "Noah Goren",
-		position: "Position",
+		position: "Co-Founder",
 		descr: "Some text that describes me lorem ipsum ipsum lorem.",
-		email: "test@example.com",
-		img: "images/Noah.jpg"	
+		email: "ngoren@allskills.ca",
+    twitter:"https://twitter.com/@NoGoren",
+		img: "images/Noah_s.webp",	
+    bg: "images/summer_bg_s.webp"
 	},
   {
 	  id: 0,
 		name: "Frank Sammut",
-		position: "Position",
+		position: "Co-Founder",
 		descr: "Some text that describes me lorem ipsum ipsum lorem.",
-		email: "test@example.com",
-		img: "images/Frank.jpg"	
+		email: "fsammut@allskills.ca",
+    twitter:"https://twitter.com/@Sammut_frank",
+		img: "images/Frank_s.webp",	
+    bg: "images/fall_bg_s.webp"	
 	},
   {
 	  id: 0,
 		name: "Christopher Thompson",
-		position: "Position",
+		position: "Co-Founder",
 		descr: "Some text that describes me lorem ipsum ipsum lorem.",
-		email: "test@example.com",
-		img: "images/Christopher.jpg"	
+		email: "cthompson@allskills.ca",
+    twitter:"",
+		img: "images/Christopher_s.webp",	
+    bg: "images/winter_bg_s.webp"	
 	},
   {
 	  id: 0,
 		name: "Charles Hamelin",
-		position: "Position",
+		position: "Co-Founder",
 		descr: "Some text that describes me lorem ipsum ipsum lorem.",
-		email: "test@example.com",
-		img: "images/Charles.jpg"	
+		email: "chamelin@allskills.ca",
+    twitter:"https://twitter.com/@Speedskater01",
+		img: "images/Charles_s.webp",	
+    bg: "images/rings_s.webp"	
 	},
   ]
   let selected
@@ -107,29 +115,12 @@
 </script>
 
 <style>
-.show-back {
-		transform: rotateY(180deg);
-	}
-.content {
-  width: 100%;
-  height: 100%;
-  box-shadow: 0 0 15px rgba(0,0,0,0.1);
-  background-color: #141414;
-  transition: all 0.25s !important;
-  transform-style: preserve-3d;
-}
-.front,
-.back {
-  height: 100%;
-  width: 100%;
-  backface-visibility: hidden;
-}
-
-.back {
-  background: #03446A;
-  color: white;
-  transform: rotateY( 180deg );
-}
+  .background {
+    height:200px;
+  }
+  a {
+    cursor:pointer;
+  }
 .hidden{
   max-height:0px !important;
   overflow:hidden !important;
@@ -138,7 +129,7 @@
   left:25% !important;
 }
 
-.snip1336 .bgselected::before {
+.card .bgselected::before {
   transition: border-width 0.25s linear !important;
   border-width: 55px 0px 0px 5000px !important;
 }
@@ -150,19 +141,17 @@
 .socials-item{
     padding-left:2px;
     padding-right:2px;
-    max-width:25px;
+    max-width:30%;
     align-self:center;
 }
 .socials img {
     display: block;
-    height: 100%;
 }
-.snip1336 {
-  perspective: 1000px;
+.card {
   font-family: 'Roboto', Arial, sans-serif;
   align-items: flex-start;
   overflow: hidden;
-  margin: 10px;
+  margin: 0 auto 20px auto;
   min-width: 230px;
   max-width: 280px;
   line-height: 1.4em;
@@ -171,26 +160,26 @@
   transition: all 0.25s ease;
   box-shadow: 0px 0px 7px 1px rgba(0,0,0,0.3);
 }
-.snip1336:hover{
+.card:hover{
   transform: scale(1.05);
 }
-.snip1336 * {
+.card * {
   -webkit-box-sizing: border-box;
   box-sizing: border-box;
   -webkit-transition: all 0.25s ease;
   transition: all 0.25s ease;
 }
-.snip1336 img {
+.card img {
   max-width: 100%;
   vertical-align: top;
   opacity: 0.85;
 }
-.snip1336 figcaption {
+.card figcaption {
   padding: 25px;
   position: relative;
   transition: all 0.25s ease !important;
 }
-.snip1336 .slanted-bg:before {
+.card .slanted-bg:before {
   position: absolute;
   content: '';
   bottom: 100%;
@@ -202,7 +191,49 @@
   border-color: transparent transparent transparent #141414;
   transition: border-width 0.25s ease !important;
 }
-a {
+a:hover {
+  opacity: 1;
+}
+.card .profile {
+  border-radius: 50%;
+  position: absolute;
+  bottom: 100%;
+  z-index: 1;
+  left:25px;
+  max-width: 150px;
+  opacity: 1;
+  box-shadow: 0 0 15px rgba(0, 0, 0, 0.3);
+}
+.card h2 {
+  margin: 0 0 15px;
+  font-size: 1.4em;
+  font-weight: 300;
+}
+.card h2 span {
+  display: block;
+  font-size: 0.6em;
+  color: aqua;
+}
+.card p {
+  margin: 0 0 10px;
+  font-size: 0.8em;
+  letter-spacing: 1px;
+  max-height: 7em;
+  overflow:auto;
+  transition: max-height 0.25s, overflow 0.25s 0.25s !important;
+  opacity: 0.8;
+}
+.cards-container{
+    display:flex;
+    flex-wrap: wrap;
+    align-items:flex-start;
+    justify-content: space-between;
+    padding-bottom:100px;
+    margin-top:100px;
+
+}
+
+.info {
   padding: 5px;
   border: 1px solid #ffffff;
   color: #ffffff;
@@ -217,112 +248,18 @@ a {
   letter-spacing: 1px;
   cursor:pointer;
 }
-a:hover {
-  opacity: 1;
+@media screen and (max-width: 1350px) {
+  .card {
+    max-width: 230px;
+  }
+  .card h2{
+    font-size: 1.1em;
+  }
+  a {
+    font-size: 0.55rem;
+  }
+  .card p {
+    font-size: 0.65em;
+  }
 }
-.snip1336 .profile {
-  border-radius: 50%;
-  position: absolute;
-  bottom: 100%;
-  z-index: 1;
-  left:25px;
-  max-width: 150px;
-  opacity: 1;
-  box-shadow: 0 0 15px rgba(0, 0, 0, 0.3);
-}
-.snip1336 .profile2 {
-    position:relative;
-    opacity: 1;
-  border-radius: 50%;
-  object-fit:cover;
-  margin-top: -125px;
-  z-index: 1;
-  max-width: 150px;
-  box-shadow: 0 0 15px rgba(0, 0, 0, 0.3);
-}
-.follow {
-  margin-right: 4%;
-  border-color: aqua;
-  color: aqua;
-}
-.snip1336 h2 {
-  margin: 0 0 15px;
-  font-size: 1.4em;
-  font-weight: 300;
-}
-.snip1336 h2 span {
-  display: block;
-  font-size: 0.6em;
-  color: aqua;
-}
-.snip1336 p {
-  margin: 0 0 10px;
-  font-size: 0.8em;
-  letter-spacing: 1px;
-  max-height: 7em;
-  overflow:auto;
-  transition: max-height 0.25s, overflow 0.25s 0.25s !important;
-  opacity: 0.8;
-}
-/* p {
-    margin-left:2rem;
-    margin-right:2rem;
-    color: black;
-    font-size: 0.8rem;
-    text-align: center;
-} */
-h3 {
-    color:black;
-    font-size: 1.2rem;
-    font-weight: 400;
-    letter-spacing: 0.5px;
-}
-h4 {
-    font-size: 0.9rem;
-    color:grey;
-}
-.profile-pic{
-    width: 100%;
-    height: 125px;
-    object-fit:cover;
-    border-radius: 50%;
-}
-.photo {
-    margin-left:auto;
-    margin-right:auto;
-    margin-top: 1rem;
-    margin-bottom:1rem;
-    width: 125px;
-    height: 125px;
-    border-radius: 50px;
-}
-
-/* h2 {
-    text-align:left;
-    min-width:50%;
-    font-size: 4.5rem;
-    line-height: 1;
-} */
-
-.cards-container{
-    display:flex;
-    flex-wrap: wrap;
-    margin-left:1rem;
-    align-items:flex-start;
-    margin-right: 1rem;
-    justify-content: space-between;
-    margin-bottom: 10rem;
-}
-
-.card{
-    justify-items: center;
-    display: grid;
-    grid-template-rows: 40% 10% 10% 30% 10%;
-    width: 275px;
-    height: 400px;
-    background-color:#222222;
-    border-radius: 15px;
-    box-shadow: 0px 3px 5px black;
-}
-
 </style>

@@ -1,67 +1,74 @@
-
 <script>
     import NewsletterSignup from "./NewsletterSignup.svelte";
+    import { _ } from 'svelte-i18n'
+    const skills = [
+        "Gymnastics",
+        "Volleyball",
+        "Hockey",
+        "Chello",
+        "Ice Skating",
+        "Badminton",
+        "ESports",
+        "Drums",
+        "Dance",
+        "Football",
+        "Basketball",
+        "Water Sports",
+        "Snowboard",
+        "Swimming",
+        "Darts",
+        "Piano",
+        "Harmonica",
+        "Lacrosse",
+        "Rugby",
+        "Bass",
+        "Bowling",
+        "Running",
+        "Saxophone",
+        "Trumpet",
+        "Golf",
+        "Violin",
+        "Parkour",
+        "Tuba",
+        "Band",
+        "Surfing",
+        "Singing",
+        "Baseball",
+        "Tennis",
+        "Archery" ,
+        "Trombone",
+        "Cricket",
+        "Ski",
+        "Boxing",
+        "Skateboard",
+        "Soccer",
+        "Guitar",
+        "Trickshots",
+    ]
+
 </script>
 <section class="hero">
-   
    <div class="left-content">
-        <div class="content">Built for</div>
+        <div class="content">{$_('home.hero.title')}</div>
         <div class='scrolling-content'>
             <div class="scrolling-content-mask">
                 <ul class="scroll-animation">
-                    <li>Archery</li>
-                    <li>Badminton</li>
-                    <li>Band</li>
-                    <li>Baseball</li>
-                    <li>Basketball</li>
-                    <li>Bass</li>
-                    <li>Bowling</li>
-                    <li>Boxing</li>
-                    <li>Chello</li>
-                    <li>Cricket</li>
-                    <li>Dance</li>
-                    <li>Darts</li>
-                    <li>Drums</li>
-                    <li>ESports</li>
-                    <li>Football</li>
-                    <li>Golf</li>
-                    <li>Guitar</li>
-                    <li>Gymnastics</li>
-                    <li>Harmonica</li>
-                    <li>Hockey</li>
-                    <li>Ice Skating</li>
-                    <li>Lacrosse</li>
-                    <li>Parkour</li>
-                    <li>Piano</li>
-                    <li>Rugby</li>
-                    <li>Running</li>
-                    <li>Saxophone</li>
-                    <li>Singing</li>
-                    <li>Skateboard
-                    <li>Ski</li>
-                    <li>Snowboard</li>
-                    <li>Soccer</li>
-                    <li>Surfing</li>
-                    <li>Swimming</li>
-                    <li>Tennis</li>
-                    <li>Trombone</li>
-                    <li>Trumpet</li>
-                    <li>Tuba</li>
-                    <li>Volleyball</li>
-                    <li>Violin</li>                    
-                    
-                    <li style="color:aqua; font-weight: 600 !important">AllSkills</li>
+                    {#each skills as skill}
+                        <li>{skill}</li>
+                    {/each}
+                    <li style="color:aqua; font-weight: 600 !important;">AllSkills</li>
                 </ul>
             </div>
         </div>
     </div>
     <div class='hero-split'>
         <div class="description">
-            <p style="margin-bottom:2rem;">AllSkills is a platform that looks to bring <span style="color:aqua">creativity, sustainable growth, and increased competition</span> to the talent world. Our platform provides an opportunity to witness people of all skills showcasing their talents and competing against others all while earning money through our carefully crafted token based Vote and Challenge system and NFT marketplace.</p>
+            <p style="margin-bottom:2rem;">{$_('home.hero.description_start')} <span style="color:aqua">{$_('home.hero.description_highlight')}</span> {$_('home.hero.description_end')}</p>
             <NewsletterSignup color='white' />
+            
         </div>
     </div>
-
+    <span class="countdown">Big news coming soon...<a href="https://twitter.com/@AllSkillsNFT">@AllSkillsNFT</a></span>
 </section>
 <style>
      @import url('https://fonts.googleapis.com/css2?family=Roboto&display=swap');
@@ -75,6 +82,28 @@
     white-space:nowrap;
     color:white;
 
+}
+.logo {
+    position:absolute;
+    top:2%;
+    left:10%;
+    filter:blur(10px) brightness(60%);
+}
+.countdown {
+    position:absolute;
+    top:90%;
+    z-index:10;
+    color:white;
+    font-family: "Oswald";
+    font-size: 24px;
+    left:42%;
+}
+.countdown a {
+    color: aqua;
+}
+.left-content{
+    font-family: "BentonSans";
+    font-family: "Oswald";
 }
 .content {
     text-align: right;
@@ -117,13 +146,40 @@
     
 
 }
-
-
-p {
-    font-size: 1.875rem;
-line-height: 2.25rem;
-}
-
+@media screen and (max-width: 820px) {
+        .countdown {
+            display:table;
+            margin-left:auto;
+            margin-right:auto;
+            padding-bottom:20px;
+            position:relative;
+            left:0;
+        }
+        .hero {
+            display:block;
+            height: auto;
+        }
+        .description {
+            display: table-cell;
+            text-align: center;
+            padding: 20px;
+        }
+        .left-content {
+            padding-top: 100px;
+            display: flex;
+            flex-direction:column;
+            height: auto;
+        }
+        .scrolling-content {
+            margin-top:20px
+        }
+        .content {
+            text-align:center;
+        }
+        .scroll-animation {
+            text-align:center;
+        }
+    }
 .description {
 
     position: relative;
@@ -138,6 +194,9 @@ line-height: 2.25rem;
 }
 
 p {
+    font-family: "BentonSans";
+    font-size: 1.6rem;
+    line-height: 2.25rem;
   display:inline;
   float:left;
   margin:0;
@@ -168,7 +227,7 @@ ul li {
 }
 
 @-webkit-keyframes change {
-    100% {margin-top: -2624px;}
+    100% {margin-top: -2688px;}
 }
 
 @keyframes opacity {
@@ -177,7 +236,7 @@ ul li {
 }
 
 @keyframes change {
-    100% {margin-top: -2560px;}
+    100% {margin-top: -2688px;}
 
 }
 
@@ -185,17 +244,18 @@ ul li {
 .hero::before {
     content: "";
     position: absolute;
-    mask-image: linear-gradient(to bottom, rgba(54,54,54,1) 40%, rgba(54,54,54,0));
-
+    /*mask-image: linear-gradient(to bottom, rgba(54,54,54,1) 100%, rgba(54,54,54,0));
+    -webkit-mask-image: linear-gradient(to bottom, rgba(54,54,54,1) 40%, rgba(54,54,54,0));*/
     top: 0;
     left: 0;
     width: 100%;
     height: 100%;
-    background: url('../images/runner.jpg');
+    background-size: 150% !important;
+    background-image: url('../images/logo_bg.webp');
     background-repeat: no-repeat;
     background-size: cover;
     background-position: center center;
-    filter: brightness(60%);
+    filter: brightness(60%) blur(12px);
 }
 
 </style>
