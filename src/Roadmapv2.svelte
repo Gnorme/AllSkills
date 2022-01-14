@@ -144,6 +144,10 @@
         width:18%;
         display:flex;
         flex-direction: column;
+        transition: transform 0.2s;
+    }
+    .roadmap-card:hover {
+        transform: scale(1.05);
     }
     .roadmap-card:hover h3{
         text-shadow: 0px 0px 15px rgba(255,255,255,0.5);

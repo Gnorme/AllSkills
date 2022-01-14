@@ -157,11 +157,11 @@
   line-height: 1.4em;
   border-radius: 15px;
   background-color: #141414;
-  transition: all 0.25s ease;
+  transition: all 0.3s ease;
   box-shadow: 0px 0px 7px 1px rgba(0,0,0,0.3);
 }
 .card:hover{
-  transform: scale(1.05);
+  box-shadow: 0px 0px 15px 0px rgba(0, 238, 255, 0.2);
 }
 .card * {
   -webkit-box-sizing: border-box;

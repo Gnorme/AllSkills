@@ -8,12 +8,12 @@
     <div class="svg-container">
         <img id="coin" src="images/coin.png" />
         <svg xmlns="http://www.w3.org/2000/svg" id="sv" viewBox="-50 -50 400 400">
-            <path id="0" class="test" fill="#ffffff" d="M150, 0 A150,150 0 0 1 234.49594861401022,26.062779328328688 L206.33063240934013,67.3751862188858 A100,100 0 0 0 150,50 Z"></path>
-            <path id="1" fill="#8a2be2" d="M234.49594861401022, 26.062779328328688 A150,150 0 0 1 289.62924038982374,95.19420442908603 L243.0861602598825,113.46280295272402 A100,100 0 0 0 206.33063240934013,67.3751862188858 Z"></path>
-            <path id="2" fill="#FF3333" d="M289.62924038982374, 95.19420442908603 A150,150 0 0 1 279.9081736709546,224.99244237572935 L236.60544911396977,199.99496158381956 A100,100 0 0 0 243.0861602598825,113.46280295272402 Z"></path>
-            <path id="3" fill="#FFDD33" d="M279.9081736709546, 224.99244237572935 A150,150 0 0 1 127.65722030200284,298.32666717541645 L135.10481353466855,248.88444478361097 A100,100 0 0 0 236.60544911396977,199.99496158381956 Z"></path>
-            <path id="4" fill="#4dFFFF" d="M127.65722030200284, 298.32666717541645 A150,150 0 0 1 3.7649754408533056,183.39637094334898 L52.50998362723553,172.26424729556598 A100,100 0 0 0 135.10481353466855,248.88444478361097 Z"></path>
-            <path id="5" fill="#004D0D" d="M3.7649754408533056, 183.39637094334898 A150,150 0 0 1 149.97382006135282,0.000002284630625126738 L149.98254670756856,50.00000152308709 A100,100 0 0 0 52.50998362723553,172.26424729556598 Z"></path>
+            <path on:mouseover={bringToFront} on:focus={showTooltip} on:mousemove={showTooltip} data-value="Team 10,000,000" on:mouseleave={deselect} id="0" class="test" fill="#ffffff" d="M150, 0 A150,150 0 0 1 234.49594861401022,26.062779328328688 L206.33063240934013,67.3751862188858 A100,100 0 0 0 150,50 Z"></path>
+            <path on:mouseover={bringToFront} on:focus={showTooltip} on:mousemove={showTooltip} data-value="Partners 10,000,000" on:mouseleave={deselect} id="1" fill="#8a2be2" d="M234.49594861401022, 26.062779328328688 A150,150 0 0 1 289.62924038982374,95.19420442908603 L243.0861602598825,113.46280295272402 A100,100 0 0 0 206.33063240934013,67.3751862188858 Z"></path>
+            <path on:mouseover={bringToFront} on:focus={showTooltip} on:mousemove={showTooltip} data-value="Private Sale 15,000,000" on:mouseleave={deselect} id="2" fill="#FF3333" d="M289.62924038982374, 95.19420442908603 A150,150 0 0 1 279.9081736709546,224.99244237572935 L236.60544911396977,199.99496158381956 A100,100 0 0 0 243.0861602598825,113.46280295272402 Z"></path>
+            <path on:mouseover={bringToFront} on:focus={showTooltip} on:mousemove={showTooltip} data-value="Public Sale 20,000,000" on:mouseleave={deselect} id="3" fill="#FFDD33" d="M279.9081736709546, 224.99244237572935 A150,150 0 0 1 127.65722030200284,298.32666717541645 L135.10481353466855,248.88444478361097 A100,100 0 0 0 236.60544911396977,199.99496158381956 Z"></path>
+            <path on:mouseover={bringToFront} on:focus={showTooltip} on:mousemove={showTooltip} data-value="Liquidity Pool 15,000,000" on:mouseleave={deselect} id="4" fill="#4dFFFF" d="M127.65722030200284, 298.32666717541645 A150,150 0 0 1 3.7649754408533056,183.39637094334898 L52.50998362723553,172.26424729556598 A100,100 0 0 0 135.10481353466855,248.88444478361097 Z"></path>
+            <path on:mouseover={bringToFront} on:focus={showTooltip} on:mousemove={showTooltip} data-value="Foundation 30,000,000" on:mouseleave={deselect} id="5" fill="#004D0D" d="M3.7649754408533056, 183.39637094334898 A150,150 0 0 1 149.97382006135282,0.000002284630625126738 L149.98254670756856,50.00000152308709 A100,100 0 0 0 52.50998362723553,172.26424729556598 Z"></path>
         </svg>
         <!--<p style="display:inline; font-weight: 200; font-family: 'Montserrat'; width: 30%; position:relative; top:50%; z-index:4; font-size: 1.5em; margin-left: auto; margin-right:auto">100,000,000 Tokens</p>-->
         <!--<svg xmlns="http://www.w3.org/2000/svg" id="sv" viewBox="-50 -50 400 400">
@@ -31,9 +31,9 @@
             <li class:highlight={selected === 0} class="team"><span>Team 10%</span></li>
             <li class:highlight={selected === 1} class="advisors"><span>Advisors & Partners 10%</span></li>
             <li class:highlight={selected === 2} class="private"><span>Private Sale 15%</span></li>
-            <li class:highlight={selected === 4} class="public"><span>Public Sale 20%</span></li>
-            <li class:highlight={selected === 5} class="liquidity"><span>Liquidity Pool 15%</span></li>
-            <li class:highlight={selected === 6} class="foundation"><span>Foundation 30%</span></li>
+            <li class:highlight={selected === 3} class="public"><span>Public Sale 20%</span></li>
+            <li class:highlight={selected === 4} class="liquidity"><span>Liquidity Pool 15%</span></li>
+            <li class:highlight={selected === 5} class="foundation"><span>Foundation 30%</span></li>
         </ul>
     </div>
 </div>
@@ -51,6 +51,12 @@
         width: 60%;
         left: 20%;
         top:20%;
+        z-index:0;
+        transition: all 0.3s;
+    }
+    .svg-container:hover #coin {
+        transform: scale(1.15);
+        z-index:-1;
     }
     .svg-container {
         text-align:center; 
@@ -72,7 +78,7 @@
     }
     .highlight{
         margin: -2px;
-        border: 2px solid aqua;
+        border: 2px solid gold;
     }
     ul li:before{
         margin: 0 0.2em 0 -0.5em;
@@ -127,16 +133,6 @@
         margin-right:auto;
         justify-content: space-evenly;
     }
-    @media(hover: hover) and (pointer: fine) {
-        .section:hover {
-            transform:scale(1.05);
-            stroke: aqua;
-            stroke-width: 2px;
-            stroke-linejoin: round;
-            box-shadow: 120px, 80px, 40px, 20px, aqua;
-            z-index:2;
-        }
-    }
     @media screen and (max-width: 820px) {
         .tokenomics-container {
             flex-direction: column;
@@ -152,18 +148,17 @@
 
 <script>
     function showTooltip(evt, text) {
-  let tooltip = document.getElementById("tooltip");
-  tooltip.innerHTML = evt.target.dataset.value;
-  tooltip.style.display = "block";
-  tooltip.style.left = evt.pageX + 15 + 'px';
-  tooltip.style.top = evt.pageY - 20 + 'px';
-}
-function hideTooltip() {
-  var tooltip = document.getElementById("tooltip");
-  tooltip.style.display = "none";
-}
+        let tooltip = document.getElementById("tooltip");
+        tooltip.innerHTML = evt.target.dataset.value;
+        tooltip.style.display = "block";
+        tooltip.style.left = evt.pageX + 15 + 'px';
+        tooltip.style.top = evt.pageY - 20 + 'px';
+    }
+    function hideTooltip() {
+        var tooltip = document.getElementById("tooltip");
+        tooltip.style.display = "none";
+    }
     let selected;
-    import Chart from 'svelte-frappe-charts';
     function bringToFront(e) {
         selected = Number(e.target.id)
         console.log(e.target.id);
