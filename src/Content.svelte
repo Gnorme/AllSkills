@@ -19,25 +19,25 @@
         <h3><span style="color:aqua;">AllSkills</span> is powered by cryptocurrency, using <span style="background-color:aqua; color: rgb(30,30,30);">future-proof blockchain & smart contract technology</span> to connect talented people and audiences, and foster skill development through competition, all while providing <span style="background-color: aqua; color: rgb(30,30,30);">incentives for everyone involved.</h3>
     </div>
     <div id="Challenge" class="section">
-        <h2 style="text-decoration: underline red;">Challenge System</h2>
+        <h2 style="text-decoration: underline red; -webkit-text-decoration-line: underline; -webkit-text-decoration-color: red;">Challenge System</h2>
         <Challenge/>
     </div>
     <div id="Vote" class="section">
-        <h2 style="text-align: center; text-decoration: underline aqua;">AllSkills $Vote Token</h2>
+        <h2 style="text-align: center; text-decoration: underline aqua; -webkit-text-decoration-line: underline; -webkit-text-decoration-color: aqua;">AllSkills $Vote Token</h2>
         <VoteToken/>
     </div>
     <div id="Roadmap" class="section">
-        <h2 style="text-decoration: underline blueviolet; margin-bottom: 75px;">Buildup to Launch & Beyond</h2>
+        <h2 style="text-decoration: underline blueviolet; -webkit-text-decoration-line: underline; -webkit-text-decoration-color: blueviolet; margin-bottom: 75px;">Buildup to Launch & Beyond</h2>
         <Roadmap/>
     </div>
     <div id="Tokenomics" class="section">
-        <h2 style="text-align: center; text-decoration: underline gold;">Tokenomics</h2>
+        <h2 style="text-align: center; text-decoration: underline gold; -webkit-text-decoration-line: underline; -webkit-text-decoration-color: gold;">Tokenomics</h2>
         <div class="section">
             <Tokenomics/>
         </div>
     </div>
     <div id="Team" class="section">
-        <h2 style="text-decoration: underline white;">The Team</h2>
+        <h2 style="text-decoration: underline white; -webkit-text-decoration-line: underline;">The Team</h2>
         <TeamCards/>
     </div>
     <div class="top">
