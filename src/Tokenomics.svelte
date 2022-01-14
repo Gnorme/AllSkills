@@ -1,8 +1,22 @@
 <div class="tokenomics-container">
-    <div style="width:30%"></div>
+    <div style="width:30%; display: flex;">
+        <div style="align-self:center">
+            <h2>100,000,000 Tokens</h2>
+            <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat.</p>
+        </div>
+    </div>
     <div class="svg-container">
-        <p style="display:inline; font-weight: 200; font-family: 'Montserrat'; width: 30%; position:relative; top:50%; z-index:4; font-size: 1.5em; margin-left: auto; margin-right:auto">100,000,000 Tokens</p>
+        <img id="coin" src="images/coin.png" />
         <svg xmlns="http://www.w3.org/2000/svg" id="sv" viewBox="-50 -50 400 400">
+            <path on:mouseover={bringToFront} on:focus={showTooltip} on:mousemove={showTooltip} data-value="Team 10,000,000" on:mouseleave={deselect} id="0" class="test" fill="#ffffff" d="M150, 0 A150,150 0 0 1 234.49594861401022,26.062779328328688 L206.33063240934013,67.3751862188858 A100,100 0 0 0 150,50 Z"></path>
+            <path on:mouseover={bringToFront} on:focus={showTooltip} on:mousemove={showTooltip} data-value="Partners 10,000,000" on:mouseleave={deselect} id="1" fill="#8a2be2" d="M234.49594861401022, 26.062779328328688 A150,150 0 0 1 289.62924038982374,95.19420442908603 L243.0861602598825,113.46280295272402 A100,100 0 0 0 206.33063240934013,67.3751862188858 Z"></path>
+            <path on:mouseover={bringToFront} on:focus={showTooltip} on:mousemove={showTooltip} data-value="Private Sale 15,000,000" on:mouseleave={deselect} id="2" fill="#FF3333" d="M289.62924038982374, 95.19420442908603 A150,150 0 0 1 279.9081736709546,224.99244237572935 L236.60544911396977,199.99496158381956 A100,100 0 0 0 243.0861602598825,113.46280295272402 Z"></path>
+            <path on:mouseover={bringToFront} on:focus={showTooltip} on:mousemove={showTooltip} data-value="Public Sale 20,000,000" on:mouseleave={deselect} id="3" fill="#FFDD33" d="M279.9081736709546, 224.99244237572935 A150,150 0 0 1 127.65722030200284,298.32666717541645 L135.10481353466855,248.88444478361097 A100,100 0 0 0 236.60544911396977,199.99496158381956 Z"></path>
+            <path on:mouseover={bringToFront} on:focus={showTooltip} on:mousemove={showTooltip} data-value="Liquidity Pool 15,000,000" on:mouseleave={deselect} id="4" fill="#4dFFFF" d="M127.65722030200284, 298.32666717541645 A150,150 0 0 1 3.7649754408533056,183.39637094334898 L52.50998362723553,172.26424729556598 A100,100 0 0 0 135.10481353466855,248.88444478361097 Z"></path>
+            <path on:mouseover={bringToFront} on:focus={showTooltip} on:mousemove={showTooltip} data-value="Foundation 30,000,000" on:mouseleave={deselect} id="5" fill="#004D0D" d="M3.7649754408533056, 183.39637094334898 A150,150 0 0 1 149.97382006135282,0.000002284630625126738 L149.98254670756856,50.00000152308709 A100,100 0 0 0 52.50998362723553,172.26424729556598 Z"></path>
+        </svg>
+        <!--<p style="display:inline; font-weight: 200; font-family: 'Montserrat'; width: 30%; position:relative; top:50%; z-index:4; font-size: 1.5em; margin-left: auto; margin-right:auto">100,000,000 Tokens</p>-->
+        <!--<svg xmlns="http://www.w3.org/2000/svg" id="sv" viewBox="-50 -50 400 400">
             <path on:mouseover={bringToFront} on:mousemove={showTooltip} data-value="Team 10,000,000" on:mouseleave={deselect} class="section" id="0" fill="#003f5c" d="M150, 0 A150,150 0 0 1 238.1656698289039,28.64591204404894 L214.6548245411962,61.007002165635896 A110,110 0 0 0 150,40 Z"></path>
             <path on:mouseover={bringToFront} on:mousemove={showTooltip} data-value="Advisors 5,000,000" on:mouseleave={deselect} class="section" id="1" fill="#374c80" d="M238.1656698289039, 28.64591204404894 A150,150 0 0 1 271.3502408873674,61.82903518403633 L238.9901766507361,85.3412924682933 A110,110 0 0 0 214.6548245411962,61.007002165635896 Z"></path>
             <path on:mouseover={bringToFront} on:mousemove={showTooltip} data-value="Seed Sale 10,000,000" on:mouseleave={deselect} class="section" id="2" fill="#7a5195" d="M271.3502408873674, 61.82903518403633 A150,150 0 0 1 299.9999998572106,149.99345501530712 L259.9999998952878,149.99520034455855 A110,110 0 0 0 238.9901766507361,85.3412924682933 Z"></path>
@@ -10,17 +24,16 @@
             <path on:mouseover={bringToFront} on:mousemove={showTooltip} data-value="Public Sale 20,000,000" on:mouseleave={deselect} class="section" id="4" fill="#ef5675" d="M292.6609042625172, 196.34507951229457 A150,150 0 0 1 150.01308996937328,299.99999942884233 L150.00959931087374,259.9999995811511 A110,110 0 0 0 254.61799645917927,183.98639164234936 Z"></path>
             <path on:mouseover={bringToFront} on:mousemove={showTooltip} data-value="Liquidity Pool 20,000,000" on:mouseleave={deselect} class="section" id="5" fill="#ff764a" d="M150.01308996937328, 299.99999942884233 A150,150 0 0 1 7.34718665258751,196.36997783122493 L45.387936878564176,184.00465040956496 A110,110 0 0 0 150.00959931087374,259.9999995811511 Z"></path>
             <path on:mouseover={bringToFront} on:mousemove={showTooltip} data-value="Foundation 30,000,000" on:mouseleave={deselect} class="section" id="6" fill="#ffa600" d="M7.34718665258751, 196.36997783122493 A150,150 0 0 1 149.9738200613531,0.000002284630625126738 L149.9808013783256,40.000001675395794 A110,110 0 0 0 45.387936878564176,184.00465040956496 Z"></path>
-        </svg>
+        </svg>-->
     </div>
-    <div class="list" style="width:30%; display:table">
-        <ul style="display: table-cell; vertical-align: middle;">
+    <div class="list" style="width:30%; display:flex;">
+        <ul style="align-self:center;">
             <li class:highlight={selected === 0} class="team"><span>Team 10%</span></li>
-            <li class:highlight={selected === 1} class="advisors"><span>Advisors 5%</span></li>
-            <li class:highlight={selected === 2} class="seed"><span>Seed Sale 10%</span></li>
-            <li class:highlight={selected === 3} class="private"><span>Private Sale 5%</span></li>
-            <li class:highlight={selected === 4} class="public"><span>Public Sale 20%</span></li>
-            <li class:highlight={selected === 5} class="liquidity"><span>Liquidity Pool 20%</span></li>
-            <li class:highlight={selected === 6} class="foundation"><span>Foundation 30%</span></li>
+            <li class:highlight={selected === 1} class="advisors"><span>Advisors & Partners 10%</span></li>
+            <li class:highlight={selected === 2} class="private"><span>Private Sale 15%</span></li>
+            <li class:highlight={selected === 3} class="public"><span>Public Sale 20%</span></li>
+            <li class:highlight={selected === 4} class="liquidity"><span>Liquidity Pool 15%</span></li>
+            <li class:highlight={selected === 5} class="foundation"><span>Foundation 30%</span></li>
         </ul>
     </div>
 </div>
@@ -28,11 +41,29 @@
 
 
 <style>
+    path {
+        stroke: rgb(34,34,34);
+        stroke-width: 2px;
+        stroke-linejoin: round;
+    }
+    #coin {
+        position:absolute;
+        width: 60%;
+        left: 20%;
+        top:20%;
+        z-index:0;
+        transition: all 0.3s;
+    }
+    .svg-container:hover #coin {
+        transform: scale(1.15);
+        z-index:-1;
+    }
     .svg-container {
         text-align:center; 
         margin-left:auto;
         margin-right:auto;
         width: 80%;
+        position:relative;
         max-width:500px;
     }
     #tooltip {
@@ -47,7 +78,7 @@
     }
     .highlight{
         margin: -2px;
-        border: 2px solid aqua;
+        border: 2px solid gold;
     }
     ul li:before{
         margin: 0 0.2em 0 -0.5em;
@@ -66,25 +97,25 @@
     }
 
     .team:before {
-        color:#003f5c;
+        color:white;
     }
     .advisors:before{
-        color:#374c80;
+        color:#8a2be2;
     }
     .seed:before {
-        color:#7a5195;
+        color:#FF3333;
     }
     .private:before {
-        color:#bc5090;
+        color:#FF3333;
     }
     .public:before {
-        color:#ef5675;
+        color:#FFDD33;
     }
     .liquidity:before {
-        color:#ff764a;
+        color:#4dFFFF;
     }
     .foundation:before {
-        color:#ffa600;
+        color:#004D0D;
     }
     li {
         list-style-type:none;
@@ -102,16 +133,6 @@
         margin-right:auto;
         justify-content: space-evenly;
     }
-    @media(hover: hover) and (pointer: fine) {
-        .section:hover {
-            transform:scale(1.05);
-            stroke: aqua;
-            stroke-width: 2px;
-            stroke-linejoin: round;
-            box-shadow: 120px, 80px, 40px, 20px, aqua;
-            z-index:2;
-        }
-    }
     @media screen and (max-width: 820px) {
         .tokenomics-container {
             flex-direction: column;
@@ -127,18 +148,17 @@
 
 <script>
     function showTooltip(evt, text) {
-  let tooltip = document.getElementById("tooltip");
-  tooltip.innerHTML = evt.target.dataset.value;
-  tooltip.style.display = "block";
-  tooltip.style.left = evt.pageX + 15 + 'px';
-  tooltip.style.top = evt.pageY - 20 + 'px';
-}
-function hideTooltip() {
-  var tooltip = document.getElementById("tooltip");
-  tooltip.style.display = "none";
-}
+        let tooltip = document.getElementById("tooltip");
+        tooltip.innerHTML = evt.target.dataset.value;
+        tooltip.style.display = "block";
+        tooltip.style.left = evt.pageX + 15 + 'px';
+        tooltip.style.top = evt.pageY - 20 + 'px';
+    }
+    function hideTooltip() {
+        var tooltip = document.getElementById("tooltip");
+        tooltip.style.display = "none";
+    }
     let selected;
-    import Chart from 'svelte-frappe-charts';
     function bringToFront(e) {
         selected = Number(e.target.id)
         console.log(e.target.id);

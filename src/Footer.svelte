@@ -26,10 +26,10 @@
         <div class="footer-col" id="connect">
             <h4>Connect</h4>
             <div class="col-content" style="display:flex; justify-content:space-between">
-                <img alt="Email" src="images/email.png">
-                <img alt="Discord" src="images/discord.png">
-                <img alt="Instagram" src="images/instagram.png">
-                <img alt="Twitter" src="images/twitter.png">
+                <a href="mailto:info@allskills.ca"><img alt="Email" src="images/email.png"></a>
+                <a><img alt="Discord" src="images/discord.png"></a>
+                <a href="https:www.instagram.com/AllSkillsNFT"><img alt="Instagram" src="images/instagram.png"></a>
+                <a href="https://www.twitter.com/@AllSkillsNFT"><img alt="Twitter" src="images/twitter.png"></a>
             </div>
         </div>
     </div>
@@ -58,6 +58,13 @@
         align-items: center;
         justify-content: center;
     }
+}
+.col-content a {
+    width: 25%;
+    margin-left:5px;
+}
+a > img {
+    width:100%;
 }
 h3 {
     font-family: "Asphaltic";
@@ -105,6 +112,7 @@ ul{
     width:100%;
     height: 400px;
     background-color: aqua;
+    border-top: 1px solid black;
 }
 .footer-content{
     padding-top: 5rem;

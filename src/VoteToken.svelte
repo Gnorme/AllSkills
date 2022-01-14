@@ -48,6 +48,12 @@
 </div>
 
 <style>
+    .middle:hover h1 {
+        text-decoration: underline aqua;
+    }
+    .section:hover h3 {
+        text-decoration: underline aqua;
+    }
     #token {
         grid-area: token;
     }

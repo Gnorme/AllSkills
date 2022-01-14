@@ -1,8 +1,11 @@
 <div class="roadmap-container">
+    <div class="info">
+        <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat.</p>
+    </div>
     <div class="roadmap-card" style="height:60%;">
         <h3 style="color:white;">2019 - 2020</h3>
         <div class="header" style="border-bottom: 5px solid #363636">
-            <img alt="Idea" src="images/idea.png" />
+            <img alt="Idea" src="images/idea_sw.png" />
         </div>
         <div class="text">
             <ul>
@@ -16,7 +19,7 @@
     <div class="roadmap-card" style="height:70%;">
         <h3 style="color:#852ee7">2021</h3>
         <div class="header" style="border-bottom: 5px solid #852ee7">
-            <img alt="New Direction" src="images/leadership.png" />
+            <img alt="New Direction" src="images/leadership_sw.png" />
         </div>
         <div class="text">
             <ul>
@@ -33,7 +36,7 @@
     <div class="roadmap-card" style="height:80%;">
         <h3 style="color:#e0573f">Q1 2022</h3>
         <div class="header" style="border-bottom: 5px solid #e0573f">
-            <img alt="Pre-launch plan" src="images/planning.png" />
+            <img alt="Pre-launch plan" src="images/planning_sw.png" />
         </div>
         <div class="text">
             <ul>
@@ -50,7 +53,7 @@
     <div class="roadmap-card" style="height:90%;">
         <h3 style="color:#ecec37;">Q2 2022</h3>
         <div class="header" style="border-bottom: 5px solid #ecec37">
-            <img alt="Launch plans" src="images/launch.png" />
+            <img alt="Launch plans" src="images/launch_sw.png" />
         </div>
         <div class="text">
             <ul>
@@ -63,7 +66,7 @@
     <div class="roadmap-card" style="height:100%;">
         <h3 style="color: aqua;">Q3+ 2022</h3>
         <div class="header" style="border-bottom: 5px solid aqua">
-            <img alt="Post launch plans" src="images/globalization.png" />
+            <img alt="Post launch plans" src="images/globalization_sw.png" />
         </div>
         <div class="text">
             <ul>
@@ -77,6 +80,22 @@
 </div>
 
 <style>
+    .info {
+        position:absolute;
+        top:0%;
+        left:2%;
+        width: 30%;
+    }
+    .info h3 {
+        text-decoration: underline aqua;
+        text-shadow: none;
+        font-size: 32px;
+        font-family: "Oswald";
+        text-align: left;
+    }
+    .info p {
+        font-size: 12px;
+    }
     img {
         height: 100%;
     }
@@ -100,6 +119,7 @@
         margin-top: 30px;
         font-size:1.3em;
         font-weight:100;
+        text-shadow: 0px 4px 3px black;
     }
     .header {
         height: 100px;
@@ -112,17 +132,25 @@
     }
     .roadmap-container {
         display:flex;
-        padding-top:25px;
+        padding-top:20px;
         margin-bottom:200px;
         justify-content: space-between;
         width: 100%;
         height: 80vh;
         align-items: flex-end;
+        position:relative;
     }
     .roadmap-card {
         width:18%;
         display:flex;
         flex-direction: column;
+        transition: transform 0.2s;
+    }
+    .roadmap-card:hover {
+        transform: scale(1.05);
+    }
+    .roadmap-card:hover h3{
+        text-shadow: 0px 0px 15px rgba(255,255,255,0.5);
     }
     @media screen and (max-width: 820px) {
         .roadmap-card {
