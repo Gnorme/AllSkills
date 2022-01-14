@@ -163,5 +163,8 @@
         ul {
             font-size: 1rem;
         }
+        .info {
+            display: none;
+        }
     }
 </style>

@@ -1,5 +1,5 @@
 <div class="tokenomics-container">
-    <div style="width:30%; display: flex;">
+    <div class="list" style="width:30%; display: flex;">
         <div style="align-self:center">
             <h2>100,000,000 Tokens</h2>
             <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat.</p>
