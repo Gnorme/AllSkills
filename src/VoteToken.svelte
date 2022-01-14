@@ -50,6 +50,8 @@
 <style>
     .middle:hover h1 {
         text-decoration: underline aqua;
+        -webkit-text-decoration-line: underline;
+        -webkit-text-decoration-color: aqua;
     }
     .section:hover h3 {
         text-decoration: underline aqua;
