@@ -27,7 +27,7 @@
         <div class="section right">
             <span class="title">
                 <img alt="Stable value" src="images/stable.png" />
-                 <h3>Redeemable at stable value</h3>
+                 <h3>Stablecoin for all skills</h3>
              </span>
             <p>$Vote tokens are <span class="highlight">backed by fiat reserves</span> at 1:1 ratio and will always be redeemable at a stable value.</p>
         </div>
@@ -36,7 +36,7 @@
                 <img alt="Stake" src="images/stake.png" />
                  <h3>Stake to earn more</h3>
              </span>
-            <p>Staking your $Vote tokens allows you to <span class="highlight">earn $Skills tokens.</span> Use $Skills tokens to participate in raffles and to voice your opinion.</p>
+            <p>Staking your $Skills tokens allows you to <span class="highlight">earn $Vote tokens.</span> $Skills tokens can also be used to participate in raffles, pay gas fees, and to declare how you think AllSkills should operate.</p>
         </div>
         <div class="section right">
             <span class="title">

@@ -3,7 +3,7 @@
 </script>
 <form name="newsletter" data-netlify-honeypot="bot-field" method="POST" data-netlify="true" netlify class="signup">
     <input type="hidden" name="form-name" value="newsletter" />
-    <input name="email" style="color: {color}; border-color: {color}" placeholder="Sign up for our newsletter">
+    <input name="email" style="color: {color}; border-color: {color}; --placeholder: {color}" placeholder="Sign up for our newsletter">
     <button style="color: {color}; border-color: {color}" >REGISTER NOW</button>
 </form>
 
@@ -26,7 +26,6 @@ button {
     /* color:black; */
     text-align: center;
     cursor: pointer;
-
 }
 input::placeholder {
     color: white;
@@ -44,5 +43,16 @@ input {
     /* color:black; */
     pointer-events:initial;
     cursor:pointer;
+}
+@media screen and (max-width: 820px) { 
+    input {
+        padding-left: 0.5rem;
+        padding-right: 0.5rem;
+        padding-top:1rem;
+        padding-bottom:1rem;
+    }
+}
+input::placeholder {
+    color: var(--placeholder);
 }
 </style>

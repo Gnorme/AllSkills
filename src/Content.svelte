@@ -7,6 +7,7 @@
     import Carousel from './Carousel.svelte';
     import Table from './Table.svelte';
     import News from './News.svelte';
+    import NFT from './NFT.svelte';
 
 </script>
 
@@ -18,38 +19,43 @@
     <div class="powered-by">
         <h3><span style="color:aqua;">AllSkills</span> is powered by cryptocurrency, using <span style="background-color:aqua; color: rgb(30,30,30);">future-proof blockchain & smart contract technology</span> to connect talented people and audiences, and foster skill development through competition, all while providing <span style="background-color: aqua; color: rgb(30,30,30);">incentives for everyone involved.</h3>
     </div>
-    <div id="Challenge" class="section">
+    <section id="Challenge" class="section">
         <h2 style="text-decoration: underline red; -webkit-text-decoration-line: underline; -webkit-text-decoration-color: red;">Challenge System</h2>
         <Challenge/>
-    </div>
-    <div id="Vote" class="section">
+    </section>
+    <section id="Vote" class="section">
         <h2 style="text-align: center; text-decoration: underline aqua; -webkit-text-decoration-line: underline; -webkit-text-decoration-color: aqua;">AllSkills $Vote Token</h2>
         <VoteToken/>
-    </div>
-    <div id="Roadmap" class="section">
+    </section>
+    <section id="NFT" class="section">
+        <h2 style="text-align: center; text-decoration: underline #004D0D; -webkit-text-decoration-line: underline; -webkit-text-decoration-color: #004D0D;">AllSkills NFTs</h2>
+        <NFT/>
+    </section>
+    <section id="Roadmap" class="section">
         <h2 style="text-decoration: underline blueviolet; -webkit-text-decoration-line: underline; -webkit-text-decoration-color: blueviolet; margin-bottom: 75px;">Buildup to Launch & Beyond</h2>
         <Roadmap/>
-    </div>
-    <div id="Tokenomics" class="section">
+    </section>
+    <section id="Tokenomics" class="section">
         <h2 style="text-align: center; text-decoration: underline gold; -webkit-text-decoration-line: underline; -webkit-text-decoration-color: gold;">Tokenomics</h2>
         <div class="section">
             <Tokenomics/>
         </div>
-    </div>
-    <div id="Team" class="section">
+    </section>
+    <section id="Team" class="section">
         <h2 style="text-decoration: underline white; -webkit-text-decoration-line: underline;">The Team</h2>
         <TeamCards/>
-    </div>
+    </section>
     <div class="top">
         <div class="triangle"></div>
     </div>
-    <div id="Partners" class="white" style="width: 100%;">
-        <h2 style="margin-left:7%">Partners</h2>
-    </div>
-    <div id="News" class="white" style="width: 100%; ">
+    <section id="Partners" class="white" style="width: 100%;">
+        <h2 style="margin-left:7%">Partners</h2>  
+        <p style="margin-left:7%; font-size: 1.5rem;">Announcements coming soon</p>
+    </section>
+    <section id="News" class="white" style="width: 100%; ">
         <h2 style="margin-left:7%">News</h2>
         <News />
-    </div>
+    </section>
 </div>
 <style>   /* rgb(143,255,238) */
 .white {
@@ -104,6 +110,12 @@
         }
         h2 {
             text-align:center !important;
+        }
+        .white {
+            text-align: center;
+        }
+        .white h2 {
+            margin-left: 0!important;
         }
     }
     h2 {

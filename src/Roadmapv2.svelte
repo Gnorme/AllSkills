@@ -1,7 +1,4 @@
 <div class="roadmap-container">
-    <div class="info">
-        <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat.</p>
-    </div>
     <div class="roadmap-card" style="height:60%;">
         <h3 style="color:white;">2019 - 2020</h3>
         <div class="header" style="border-bottom: 5px solid #363636">
@@ -28,8 +25,8 @@
                 <li class="cleared">Backed by PME Montreal </li>
                 <li class="cleared">Finalists in NBA Launchpad</li>
                 <li class="cleared">Pivot towards NFT platform</li>
-                <li>Launch website</li>
-                <li>Release whitepaper and tokenomics</li>
+                <li class="cleared">Launch website</li>
+                <li class="cleared">Release whitepaper and tokenomics</li>
             </ul>
         </div>
     </div>
@@ -41,10 +38,11 @@
         <div class="text">
             <ul>
                 <li>Announce partners</li>
-                <li>Setup social accounts</li>
-                <li>Release marketing plan</li>
+                <li class="cleared">Setup social accounts</li>
+                <li class="cleared">Release marketing plan</li>
+                <li>Reveal plan for Ambassador program</li>
+                <li>Reveal first AllSkills Ambassadors</li>
                 <li>Mint governance token</li>
-                <li>Release plan for Ambassador program</li>
                 <li>Trailer</li>
                 <li>Token presale</li>
             </ul>
@@ -60,6 +58,7 @@
                 <li>Mint stablecoin Vote token</li>
                 <li>Launch closed beta</li>
                 <li>Full release of challenge system and marketplace</li>
+                <li>Release of ambassador program</li>
             </ul>
         </div>
     </div>
@@ -70,31 +69,39 @@
         </div>
         <div class="text">
             <ul>
-                <li>Add video editing features</li>
-                <li>Unique Tap-to-Record feature</li>
-                <li>Release of ambassador program</li>
-                <li>Release of GM mode</li>
+                <li>Release unique Tap-to-Record feature</li>
+                <li>Release Scout mode</li>
+                <li>Add more cosmetics and editing features</li>
+                <li>Release GM mode</li>
             </ul>
         </div>
+    </div>
+    <div class="info">
+        <p>Join our Discord and follow our Twitter to get access to the latest announcements and enter raffles to earn prizes from our Ambassadors</p>
     </div>
 </div>
 
 <style>
+    .cleared::after {
+        margin-left: 10px;
+        font-weight: 600;
+        font-size:16px;
+        content: '\2713';
+        color: aqua;
+    }
     .info {
         position:absolute;
+        color: #852ee7 ;
         top:0%;
         left:2%;
         width: 30%;
     }
-    .info h3 {
-        text-decoration: underline aqua;
-        text-shadow: none;
-        font-size: 32px;
-        font-family: "Oswald";
-        text-align: left;
-    }
     .info p {
-        font-size: 12px;
+        padding: 10px;
+        font-weight: 600;
+        font-size: 13px;
+        font-family: "Raleway";
+        letter-spacing: 0.5px;
     }
     img {
         height: 100%;
@@ -164,7 +171,12 @@
             font-size: 1rem;
         }
         .info {
-            display: none;
+            position:relative;
+            width:auto;
+            margin-top: 30px;
+        }
+        .info p {
+            font-size:16px !important;
         }
     }
 </style>

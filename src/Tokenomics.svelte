@@ -1,6 +1,6 @@
 <div class="tokenomics-container">
     <div class="list" style="width:30%; display: flex;">
-        <div style="align-self:center">
+        <div style="align-self:center;">
             <h2>100,000,000 Tokens</h2>
             <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat.</p>
         </div>
@@ -12,7 +12,7 @@
             <path on:mouseover={bringToFront} on:focus={showTooltip} on:mousemove={showTooltip} data-value="Partners 10,000,000" on:mouseleave={deselect} id="1" fill="#8a2be2" d="M234.49594861401022, 26.062779328328688 A150,150 0 0 1 289.62924038982374,95.19420442908603 L243.0861602598825,113.46280295272402 A100,100 0 0 0 206.33063240934013,67.3751862188858 Z"></path>
             <path on:mouseover={bringToFront} on:focus={showTooltip} on:mousemove={showTooltip} data-value="Private Sale 15,000,000" on:mouseleave={deselect} id="2" fill="#FF3333" d="M289.62924038982374, 95.19420442908603 A150,150 0 0 1 279.9081736709546,224.99244237572935 L236.60544911396977,199.99496158381956 A100,100 0 0 0 243.0861602598825,113.46280295272402 Z"></path>
             <path on:mouseover={bringToFront} on:focus={showTooltip} on:mousemove={showTooltip} data-value="Public Sale 20,000,000" on:mouseleave={deselect} id="3" fill="#FFDD33" d="M279.9081736709546, 224.99244237572935 A150,150 0 0 1 127.65722030200284,298.32666717541645 L135.10481353466855,248.88444478361097 A100,100 0 0 0 236.60544911396977,199.99496158381956 Z"></path>
-            <path on:mouseover={bringToFront} on:focus={showTooltip} on:mousemove={showTooltip} data-value="Liquidity Pool 15,000,000" on:mouseleave={deselect} id="4" fill="#4dFFFF" d="M127.65722030200284, 298.32666717541645 A150,150 0 0 1 3.7649754408533056,183.39637094334898 L52.50998362723553,172.26424729556598 A100,100 0 0 0 135.10481353466855,248.88444478361097 Z"></path>
+            <path on:mouseover={bringToFront} on:focus={showTooltip} on:mousemove={showTooltip} data-value="Liquidity Pool 15,000,000" on:mouseleave={deselect} id="4" fill="#00ddff" d="M127.65722030200284, 298.32666717541645 A150,150 0 0 1 3.7649754408533056,183.39637094334898 L52.50998362723553,172.26424729556598 A100,100 0 0 0 135.10481353466855,248.88444478361097 Z"></path>
             <path on:mouseover={bringToFront} on:focus={showTooltip} on:mousemove={showTooltip} data-value="Foundation 30,000,000" on:mouseleave={deselect} id="5" fill="#004D0D" d="M3.7649754408533056, 183.39637094334898 A150,150 0 0 1 149.97382006135282,0.000002284630625126738 L149.98254670756856,50.00000152308709 A100,100 0 0 0 52.50998362723553,172.26424729556598 Z"></path>
         </svg>
         <!--<p style="display:inline; font-weight: 200; font-family: 'Montserrat'; width: 30%; position:relative; top:50%; z-index:4; font-size: 1.5em; margin-left: auto; margin-right:auto">100,000,000 Tokens</p>-->

@@ -32,7 +32,7 @@
         </div>
         <div class="content first">
             <h3 style="border-bottom: 2px solid red;">Put videos up for Challenge</h3>
-            <p>After you’re satisfied with your video, it’s time to put it up for Challenge.  <span style="color:red;">Winning a challenge round is how your video becomes eligible for minting.</span> Choose between putting your video up for Open Challenge or directly challenging another video or user. Round lengths can be either 24h or 72h.</p>
+            <p>After you’re satisfied with your video, it’s time to put it up for Challenge.  <span style="color:red;">Winning a challenge round is how your video becomes eligible for minting.</span> Choose between putting your video up for Open Challenge or directly challenging another video or user. Rounds last 72h.</p>
         </div>
     </div>
     <div class="section">
@@ -44,7 +44,7 @@
         </div>
         <div class="content second">
             <h3 style="border-bottom: 2px solid blueviolet;">Users vote to determine winner</h3>
-            <p>Once the challenge starts, <span style="color:blueviolet;">the control is now in the voters hands.</span> Users can use Vote tokens to show their support and become part of the journey. Once the challenge is complete, the video with the most votes is declared the winner and minted as an NFT.</p>
+            <p>Once the challenge starts, <span style="color:blueviolet;">the control is now in the voters hands.</span> Users can use Vote tokens to show their support and become part of the journey. Once the challenge is complete, the video with the most votes is declared the winner and has the opportunity to be minted as an NFT.</p>
         </div>
     </div>
     <div class="section">

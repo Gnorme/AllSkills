@@ -47,7 +47,7 @@
     ]
 
 </script>
-<section class="hero">
+<div id="hero">
    <div class="left-content">
         <div class="content">{$_('home.hero.title')}</div>
         <div class='scrolling-content'>
@@ -56,20 +56,20 @@
                     {#each skills as skill}
                         <li>{skill}</li>
                     {/each}
-                    <li style="color:aqua; font-weight: 600 !important;">AllSkills</li>
+                    <li style="color:#00F3FF; font-weight: 600 !important;">AllSkills</li>
                 </ul>
             </div>
         </div>
     </div>
     <div class='hero-split'>
         <div class="description">
-            <p style="margin-bottom:2rem;">{$_('home.hero.description_start')} <span style="color:aqua">{$_('home.hero.description_highlight')}</span> {$_('home.hero.description_end')}</p>
+            <p style="margin-bottom:2rem;">{$_('home.hero.description_start')} <span style="color:#00F3FF">{$_('home.hero.description_highlight')}</span> {$_('home.hero.description_end')}</p>
             <NewsletterSignup color='white' />
             
         </div>
     </div>
     <span class="countdown">Big news coming soon...<a href="https://twitter.com/@AllSkillsNFT">@AllSkillsNFT</a></span>
-</section>
+</div>
 <style>
      @import url('https://fonts.googleapis.com/css2?family=Roboto&display=swap');
      .scrolling-content{
@@ -135,7 +135,7 @@
         grid-template-columns: 48% 52%;
      }
 
-     .hero {
+#hero {
     position: relative;
     width: 100vw;
     height: 100vh;
@@ -143,8 +143,6 @@
     grid-template-columns: 55% 45%;
     justify-content: space-between;
     align-items: center;
-    
-
 }
 @media screen and (max-width: 820px) {
         .countdown {
@@ -155,7 +153,7 @@
             position:relative;
             left:0;
         }
-        .hero {
+        #hero {
             display:block;
             height: auto;
         }
@@ -181,9 +179,8 @@
         }
     }
 .description {
-
     position: relative;
-   font-weight: 400;
+    font-weight: 400;
     width: 90%;
     height:auto;
 }
@@ -241,7 +238,7 @@ ul li {
 }
 
 
-.hero::before {
+#hero::before {
     content: "";
     position: absolute;
     /*mask-image: linear-gradient(to bottom, rgba(54,54,54,1) 100%, rgba(54,54,54,0));

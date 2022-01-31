@@ -18,11 +18,26 @@
             img: "",
             title: "Soft Launch!",
             content: "Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat.",
+        },
+        {
+            img: "",
+            title: "First videoshoot with local hockey phenom",
+            content: "Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat.",
+        },
+        {
+            img: "",
+            title: "Charles Hammelin leaves for Olympics",
+            content: "Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat.",
         }
     ]
 </script>
 
 <style>
+    @media screen and (max-width: 820px) {
+        .image img {
+            width: auto !important;
+        }
+    }
     .image {
         height:150px;
     }
@@ -45,10 +60,11 @@
     }
     .card {
         border-radius: 10px;
+        margin-bottom:20px;
         margin-top:30px;
         text-align: center;
         max-width: 400px;
-        max-height: 500px;
+        max-height: 550px;
         display: grid;
         transition: box-shadow 0.2s;
         grid-template-areas: 
@@ -64,5 +80,9 @@
         padding-top:30px;
         margin-left:auto;
         margin-right: auto;
+        display: flex; 
+        overflow-x: scroll;
+        overflow-y:hidden;
+        gap: 12px;
     }
 </style>

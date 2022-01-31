@@ -17,14 +17,14 @@
             </ul>
         </div>
         <div class="footer-col" id="register">
-            <h4>Newsletter Subscription</h4>
+            <h4 id="links">Newsletter Subscription</h4>
             <div class="col-content">
                 <NewsletterSignup color='black'/>
             </div>
             
         </div>
         <div class="footer-col" id="connect">
-            <h4>Connect</h4>
+            <h4 id="links">Connect</h4>
             <div class="col-content" style="display:flex; justify-content:space-between">
                 <a href="mailto:info@allskills.ca"><img alt="Email" src="images/email.png"></a>
                 <a><img alt="Discord" src="images/discord.png"></a>
@@ -34,8 +34,7 @@
         </div>
     </div>
     <div id="logo">
-        <img alt="Logo" style="margin-right: 12px;" src="images/logo-dark.png" />
-        <h3>AllSkills</h3>
+        <img alt="Logo" style="margin-right: 12px;" src="images/logo-dark-bottom.png" />
     </div>
 </footer>
 
@@ -47,6 +46,7 @@
             "register" !important;
         padding-top: 2rem !important;
     }
+
     #links{
         display:none;
     }
@@ -58,6 +58,17 @@
         align-items: center;
         justify-content: center;
     }
+    .col-content {
+        margin-top: 0 !important;
+        margin-bottom: 10px !important;
+    }
+    .col-content a {
+        width: 18% !important;
+    }   
+}
+h4 {
+    font-size: 1.2rem;
+    margin-bottom:0;
 }
 .col-content a {
     width: 25%;
@@ -85,7 +96,9 @@ h3 {
 }
 
 img{
-    width:20%;
+    width:50%;
+    margin-bottom: 20px;
+    margin-top:10px;
 
 }
 .col-content{

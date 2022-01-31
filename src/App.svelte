@@ -14,12 +14,15 @@
 	register("en", () => import("./langs/en.json"));
 	register("es", () => import("./langs/es.json"));
 	register("fr", () => import("./langs/fr.json"));
+	let page = document.location.hash;
 
 	init({
 		fallbackLocale: "en",
 		initialLocale: getLocaleFromNavigator()
 	});
-
+	window.onpopstate = function(event) {
+        page = document.location.hash;
+    };
 </script>
 
 <svelte:head>

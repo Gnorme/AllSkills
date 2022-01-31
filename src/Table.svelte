@@ -12,7 +12,7 @@
     <div class="grid-item">
         <div class="table-icon"><img alt="Collectibles" style="width:100%" src="images/stamps.png"></div>
         <h3>NFT Collectibles</h3>
-        <p>Collect unique moments from talented creators. Winning challenge videos are minted into NFT collectibles that can be traded on our NFT marketplace.</p>
+        <p>Collect unique moments from talented creators. Winning challenge videos have the opportunity to be minted into NFT collectibles that can be traded on our NFT marketplace.</p>
     </div>
     <div class="grid-item">
         <div class="table-icon"><img alt="Marketplace" style="width:100%" src="images/auction.png"></div>
