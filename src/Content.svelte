@@ -11,6 +11,12 @@
 
 </script>
 
+<div style="text-align:center !important; color: white; margin-top: 5rem; margin-bottom: 3rem;">
+    <h2 style="text-align:center; margin-bottom: 10px;">Ambassadors</h2>
+    <p>Details below, more coming soon</p>
+</div>
+
+
 <Carousel />
 
 <div class="text-content">
@@ -24,15 +30,18 @@
         <Challenge/>
     </section>
     <section id="Vote" class="section">
-        <h2 style="text-align: center; text-decoration: underline aqua; -webkit-text-decoration-line: underline; -webkit-text-decoration-color: aqua;">AllSkills $Vote Token</h2>
+        <h2 style="text-align: center; text-decoration: underline aqua; -webkit-text-decoration-line: underline; -webkit-text-decoration-color: aqua;"><span style="font-family: 'Bebas Neue';">AllSkills</span> $Vote Token</h2>
         <VoteToken/>
     </section>
     <section id="NFT" class="section">
-        <h2 style="text-align: center; text-decoration: underline #004D0D; -webkit-text-decoration-line: underline; -webkit-text-decoration-color: #004D0D;">AllSkills NFTs</h2>
+        <h2 id="nftTitle" ><span style="font-family: 'Bebas Neue';">AllSkills</span> NFTs</h2>
         <NFT/>
     </section>
+    <section id="Ambassador Program" class="section">
+        <h2 style="text-decoration: underline #004D0D; -webkit-text-decoration-line: underline; -webkit-text-decoration-color: #004D0D;">Ambassador Program</h2>
+    </section>
     <section id="Roadmap" class="section">
-        <h2 style="text-decoration: underline blueviolet; -webkit-text-decoration-line: underline; -webkit-text-decoration-color: blueviolet; margin-bottom: 75px;">Buildup to Launch & Beyond</h2>
+        <h2 style="text-decoration: underline white; -webkit-text-decoration-line: underline; -webkit-text-decoration-color: blueviolet; margin-bottom: 75px;">Buildup to Launch & Beyond</h2>
         <Roadmap/>
     </section>
     <section id="Tokenomics" class="section">
@@ -58,6 +67,13 @@
     </section>
 </div>
 <style>   /* rgb(143,255,238) */
+#nftTitle {
+    margin-bottom: 1rem; 
+    margin-left: 6rem; 
+    text-decoration: underline blueviolet; 
+    -webkit-text-decoration-line: underline; 
+    -webkit-text-decoration-color: #004D0D;
+}
 .white {
     background-color:white;
     color: rgb(30,30,30);
@@ -105,6 +121,9 @@
         font-family: "Oswald";
     }
     @media screen and (max-width: 820px) {
+        #nftTitle {
+            margin-left:0;
+        }
         h3 {
             font-size: 2.5rem !important;
         }
@@ -116,6 +135,9 @@
         }
         .white h2 {
             margin-left: 0!important;
+        }
+        p {
+            text-align: center !important;
         }
     }
     h2 {

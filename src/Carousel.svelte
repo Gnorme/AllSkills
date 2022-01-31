@@ -5,13 +5,15 @@
         <input type="radio" name="slider" id="item-3">
     <div class="cards">
         <label class="card" for="item-1" id="card-1">
-        <img src="images/bass.webp" alt="NFT Trading Card">
+        <img src="images/Chris_Boucher.jpeg" alt="NFT Trading Card">
         </label>
         <label class="card" for="item-2" id="card-2">
-        <img src="images/Dunk.webp" alt="NFT Trading Card">
+          <div class="text-holder"><h1 class="overlay-text">Coming soon</h1></div>
+          <img class="blurred" src="images/Dunk.webp" alt="NFT Trading Card">
         </label>
         <label class="card" for="item-3" id="card-3">
-        <img src="images/skateboard.webp" alt="NFT Trading Card">
+          <div class="text-holder"><h1 class="overlay-text">Coming soon</h1></div>
+          <img class="blurred" src="images/skateboard.webp" alt="NFT Trading Card">
         </label>
         
     </div>
@@ -38,11 +40,30 @@
         width: 100% !important;
     }
 }
+.overlay-text {
+  flex-grow: 1; 
+  position: relative; 
+  z-index:10; 
+  font-size: 2rem; 
+  font-family: 'Oswald'; 
+  color: white;
+}
+.text-holder {
+  display: flex;
+  position: absolute;
+  align-items:center;
+  width: 100%;
+  height: 100%;
+  text-align:center;
+}
+.blurred {
+  filter: blur(10px);
+}
 .carousel-container {
         width: 75%; 
         margin-right:auto; 
         margin-left:auto; 
-        margin-top: 10rem; 
+        margin-top: 1rem; 
         margin-bottom: 10rem;
     }
 

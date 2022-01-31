@@ -33,6 +33,11 @@
 			font-display: swap;
 		}	
 		@font-face {
+			font-family: "Bebas Neue";
+			src: url("./fonts/BebasNeue-Regular.ttf");
+			font-display: swap;
+		}	
+		@font-face {
 			font-family: "Raleway";
 			src: url("./fonts/Raleway-Medium.ttf");
 			font-display: swap;
