@@ -119,27 +119,6 @@ var app = (function () {
     function set_current_component(component) {
         current_component = component;
     }
-    function get_current_component() {
-        if (!current_component)
-            throw new Error('Function called outside component initialization');
-        return current_component;
-    }
-    function onMount(fn) {
-        get_current_component().$$.on_mount.push(fn);
-    }
-    function onDestroy(fn) {
-        get_current_component().$$.on_destroy.push(fn);
-    }
-    // TODO figure out if we still want to support
-    // shorthand events, or if we want to implement
-    // a real bubbling mechanism
-    function bubble(component, event) {
-        const callbacks = component.$$.callbacks[event.type];
-        if (callbacks) {
-            // @ts-ignore
-            callbacks.slice().forEach(fn => fn.call(this, event));
-        }
-    }
 
     const dirty_components = [];
     const binding_callbacks = [];
@@ -3500,24 +3479,25 @@ var app = (function () {
     			attr_dev(input0, "type", "hidden");
     			attr_dev(input0, "name", "form-name");
     			input0.value = "newsletter";
-    			attr_dev(input0, "class", "svelte-1lmsi1u");
+    			attr_dev(input0, "class", "svelte-1lrr3ng");
     			add_location(input0, file$d, 4, 4, 165);
     			attr_dev(input1, "name", "email");
     			set_style(input1, "color", /*color*/ ctx[0]);
     			set_style(input1, "border-color", /*color*/ ctx[0]);
+    			set_style(input1, "--placeholder", /*color*/ ctx[0]);
     			attr_dev(input1, "placeholder", "Sign up for our newsletter");
-    			attr_dev(input1, "class", "svelte-1lmsi1u");
+    			attr_dev(input1, "class", "svelte-1lrr3ng");
     			add_location(input1, file$d, 5, 4, 230);
     			set_style(button, "color", /*color*/ ctx[0]);
     			set_style(button, "border-color", /*color*/ ctx[0]);
-    			attr_dev(button, "class", "svelte-1lmsi1u");
-    			add_location(button, file$d, 6, 4, 343);
+    			attr_dev(button, "class", "svelte-1lrr3ng");
+    			add_location(button, file$d, 6, 4, 367);
     			attr_dev(form, "name", "newsletter");
     			attr_dev(form, "data-netlify-honeypot", "bot-field");
     			attr_dev(form, "method", "POST");
     			attr_dev(form, "data-netlify", "true");
     			attr_dev(form, "netlify", "");
-    			attr_dev(form, "class", "signup svelte-1lmsi1u");
+    			attr_dev(form, "class", "signup svelte-1lrr3ng");
     			add_location(form, file$d, 3, 0, 44);
     		},
     		l: function claim(nodes) {
@@ -3539,6 +3519,10 @@ var app = (function () {
 
     			if (dirty & /*color*/ 1) {
     				set_style(input1, "border-color", /*color*/ ctx[0]);
+    			}
+
+    			if (dirty & /*color*/ 1) {
+    				set_style(input1, "--placeholder", /*color*/ ctx[0]);
     			}
 
     			if (dirty & /*color*/ 1) {
@@ -3642,8 +3626,8 @@ var app = (function () {
     		c: function create() {
     			li = element("li");
     			t = text(t_value);
-    			attr_dev(li, "class", "svelte-112ncx8");
-    			add_location(li, file$c, 56, 24, 1319);
+    			attr_dev(li, "class", "svelte-1wg9hwf");
+    			add_location(li, file$c, 56, 24, 1312);
     		},
     		m: function mount(target, anchor) {
     			insert_dev(target, li, anchor);
@@ -3667,7 +3651,7 @@ var app = (function () {
     }
 
     function create_fragment$c(ctx) {
-    	let section;
+    	let div6;
     	let div3;
     	let div0;
     	let t0_value = /*$_*/ ctx[0]('home.hero.title') + "";
@@ -3713,7 +3697,7 @@ var app = (function () {
 
     	const block = {
     		c: function create() {
-    			section = element("section");
+    			div6 = element("div");
     			div3 = element("div");
     			div0 = element("div");
     			t0 = text(t0_value);
@@ -3746,43 +3730,44 @@ var app = (function () {
     			t12 = text("Big news coming soon...");
     			a = element("a");
     			a.textContent = "@AllSkillsNFT";
-    			attr_dev(div0, "class", "content svelte-112ncx8");
-    			add_location(div0, file$c, 51, 8, 1060);
-    			set_style(li, "color", "aqua");
+    			attr_dev(div0, "class", "content svelte-1wg9hwf");
+    			add_location(div0, file$c, 51, 8, 1053);
+    			set_style(li, "color", "#00F3FF");
     			set_style(li, "font-weight", "600", 1);
-    			attr_dev(li, "class", "svelte-112ncx8");
-    			add_location(li, file$c, 58, 20, 1386);
-    			attr_dev(ul, "class", "scroll-animation svelte-112ncx8");
-    			add_location(ul, file$c, 54, 16, 1219);
-    			attr_dev(div1, "class", "scrolling-content-mask svelte-112ncx8");
-    			add_location(div1, file$c, 53, 12, 1165);
-    			attr_dev(div2, "class", "scrolling-content svelte-112ncx8");
-    			add_location(div2, file$c, 52, 8, 1120);
-    			attr_dev(div3, "class", "left-content svelte-112ncx8");
-    			add_location(div3, file$c, 50, 3, 1024);
-    			set_style(span0, "color", "aqua");
-    			add_location(span0, file$c, 65, 79, 1670);
+    			attr_dev(li, "class", "svelte-1wg9hwf");
+    			add_location(li, file$c, 58, 20, 1379);
+    			attr_dev(ul, "class", "scroll-animation svelte-1wg9hwf");
+    			add_location(ul, file$c, 54, 16, 1212);
+    			attr_dev(div1, "class", "scrolling-content-mask svelte-1wg9hwf");
+    			add_location(div1, file$c, 53, 12, 1158);
+    			attr_dev(div2, "class", "scrolling-content svelte-1wg9hwf");
+    			add_location(div2, file$c, 52, 8, 1113);
+    			attr_dev(div3, "class", "left-content svelte-1wg9hwf");
+    			add_location(div3, file$c, 50, 3, 1017);
+    			set_style(span0, "color", "#00F3FF");
+    			add_location(span0, file$c, 65, 79, 1666);
     			set_style(p, "margin-bottom", "2rem");
-    			attr_dev(p, "class", "svelte-112ncx8");
-    			add_location(p, file$c, 65, 12, 1603);
-    			attr_dev(div4, "class", "description svelte-112ncx8");
-    			add_location(div4, file$c, 64, 8, 1564);
-    			attr_dev(div5, "class", "hero-split svelte-112ncx8");
-    			add_location(div5, file$c, 63, 4, 1530);
+    			attr_dev(p, "class", "svelte-1wg9hwf");
+    			add_location(p, file$c, 65, 12, 1599);
+    			attr_dev(div4, "class", "description svelte-1wg9hwf");
+    			add_location(div4, file$c, 64, 8, 1560);
+    			attr_dev(div5, "class", "hero-split svelte-1wg9hwf");
+    			add_location(div5, file$c, 63, 4, 1526);
     			attr_dev(a, "href", "https://twitter.com/@AllSkillsNFT");
-    			attr_dev(a, "class", "svelte-112ncx8");
-    			add_location(a, file$c, 70, 51, 1922);
-    			attr_dev(span1, "class", "countdown svelte-112ncx8");
-    			add_location(span1, file$c, 70, 4, 1875);
-    			attr_dev(section, "class", "hero svelte-112ncx8");
-    			add_location(section, file$c, 49, 0, 997);
+    			attr_dev(a, "class", "svelte-1wg9hwf");
+    			add_location(a, file$c, 70, 51, 1921);
+    			attr_dev(span1, "class", "countdown svelte-1wg9hwf");
+    			add_location(span1, file$c, 70, 4, 1874);
+    			attr_dev(div6, "id", "hero");
+    			attr_dev(div6, "class", "svelte-1wg9hwf");
+    			add_location(div6, file$c, 49, 0, 997);
     		},
     		l: function claim(nodes) {
     			throw new Error("options.hydrate only works if the component was compiled with the `hydratable: true` option");
     		},
     		m: function mount(target, anchor) {
-    			insert_dev(target, section, anchor);
-    			append_dev(section, div3);
+    			insert_dev(target, div6, anchor);
+    			append_dev(div6, div3);
     			append_dev(div3, div0);
     			append_dev(div0, t0);
     			append_dev(div3, t1);
@@ -3796,8 +3781,8 @@ var app = (function () {
 
     			append_dev(ul, t2);
     			append_dev(ul, li);
-    			append_dev(section, t4);
-    			append_dev(section, div5);
+    			append_dev(div6, t4);
+    			append_dev(div6, div5);
     			append_dev(div5, div4);
     			append_dev(div4, p);
     			append_dev(p, t5);
@@ -3808,8 +3793,8 @@ var app = (function () {
     			append_dev(p, t9);
     			append_dev(div4, t10);
     			mount_component(newslettersignup, div4, null);
-    			append_dev(section, t11);
-    			append_dev(section, span1);
+    			append_dev(div6, t11);
+    			append_dev(div6, span1);
     			append_dev(span1, t12);
     			append_dev(span1, a);
     			current = true;
@@ -3855,7 +3840,7 @@ var app = (function () {
     			current = false;
     		},
     		d: function destroy(detaching) {
-    			if (detaching) detach_dev(section);
+    			if (detaching) detach_dev(div6);
     			destroy_each(each_blocks, detaching);
     			destroy_component(newslettersignup);
     		}
@@ -3976,9 +3961,9 @@ var app = (function () {
     		c: function create() {
     			a = element("a");
     			a.textContent = "More Info";
-    			attr_dev(a, "class", "info svelte-1rrwjx5");
+    			attr_dev(a, "class", "info svelte-1iemx4u");
     			attr_dev(a, "data-card-id", /*i*/ ctx[18]);
-    			add_location(a, file$b, 24, 12, 1411);
+    			add_location(a, file$b, 24, 12, 1276);
     		},
     		m: function mount(target, anchor) {
     			insert_dev(target, a, anchor);
@@ -4008,7 +3993,7 @@ var app = (function () {
     }
 
     // (22:12) {#if selected === i}
-    function create_if_block$1(ctx) {
+    function create_if_block$2(ctx) {
     	let a;
     	let mounted;
     	let dispose;
@@ -4017,9 +4002,9 @@ var app = (function () {
     		c: function create() {
     			a = element("a");
     			a.textContent = "Less Info";
-    			attr_dev(a, "class", "info svelte-1rrwjx5");
+    			attr_dev(a, "class", "info svelte-1iemx4u");
     			attr_dev(a, "data-card-id", /*i*/ ctx[18]);
-    			add_location(a, file$b, 22, 12, 1304);
+    			add_location(a, file$b, 22, 12, 1169);
     		},
     		m: function mount(target, anchor) {
     			insert_dev(target, a, anchor);
@@ -4039,7 +4024,7 @@ var app = (function () {
 
     	dispatch_dev("SvelteRegisterBlock", {
     		block,
-    		id: create_if_block$1.name,
+    		id: create_if_block$2.name,
     		type: "if",
     		source: "(22:12) {#if selected === i}",
     		ctx
@@ -4066,6 +4051,8 @@ var app = (function () {
     	let t3;
     	let t4;
     	let p;
+    	let t5_value = /*descr*/ ctx[12] + "";
+    	let t5;
     	let t6;
     	let div4;
     	let div3;
@@ -4085,7 +4072,7 @@ var app = (function () {
     	let t10;
 
     	function select_block_type(ctx, dirty) {
-    		if (/*selected*/ ctx[0] === /*i*/ ctx[18]) return create_if_block$1;
+    		if (/*selected*/ ctx[0] === /*i*/ ctx[18]) return create_if_block$2;
     		return create_else_block$1;
     	}
 
@@ -4106,7 +4093,7 @@ var app = (function () {
     			t3 = text(t3_value);
     			t4 = space();
     			p = element("p");
-    			p.textContent = "Lorem ipsum test test test test test test test test test test test test test test test test test test test test test test test test test test";
+    			t5 = text(t5_value);
     			t6 = space();
     			div4 = element("div");
     			div3 = element("div");
@@ -4122,56 +4109,56 @@ var app = (function () {
     			t9 = space();
     			if_block.c();
     			t10 = space();
-    			attr_dev(img0, "class", "background svelte-1rrwjx5");
+    			attr_dev(img0, "class", "background svelte-1iemx4u");
     			if (!src_url_equal(img0.src, img0_src_value = /*bg*/ ctx[16])) attr_dev(img0, "src", img0_src_value);
     			attr_dev(img0, "alt", "sample87");
     			add_location(img0, file$b, 3, 8, 138);
     			if (!src_url_equal(img1.src, img1_src_value = /*img*/ ctx[15])) attr_dev(img1, "src", img1_src_value);
     			attr_dev(img1, "alt", "profile-sample4");
-    			attr_dev(img1, "class", "profile svelte-1rrwjx5");
+    			attr_dev(img1, "class", "profile svelte-1iemx4u");
     			toggle_class(img1, "selected", /*selected*/ ctx[0] === /*i*/ ctx[18]);
     			add_location(img1, file$b, 5, 10, 276);
-    			attr_dev(span, "class", "svelte-1rrwjx5");
+    			attr_dev(span, "class", "svelte-1iemx4u");
     			add_location(span, file$b, 6, 20, 384);
-    			attr_dev(h2, "class", "svelte-1rrwjx5");
+    			attr_dev(h2, "class", "svelte-1iemx4u");
     			add_location(h2, file$b, 6, 10, 374);
-    			attr_dev(p, "class", "svelte-1rrwjx5");
+    			attr_dev(p, "class", "svelte-1iemx4u");
     			toggle_class(p, "hidden", /*selected*/ ctx[0] != /*i*/ ctx[18]);
     			add_location(p, file$b, 7, 10, 424);
     			attr_dev(img2, "alt", "Twitter");
     			if (!src_url_equal(img2.src, img2_src_value = "images/twitter-aqua.png")) attr_dev(img2, "src", img2_src_value);
-    			attr_dev(img2, "class", "svelte-1rrwjx5");
-    			add_location(img2, file$b, 11, 52, 856);
+    			attr_dev(img2, "class", "svelte-1iemx4u");
+    			add_location(img2, file$b, 11, 52, 721);
     			attr_dev(a, "href", /*twitter*/ ctx[14]);
-    			attr_dev(a, "class", "twitter svelte-1rrwjx5");
-    			add_location(a, file$b, 11, 18, 822);
-    			attr_dev(div0, "class", "socials-item svelte-1rrwjx5");
-    			add_location(div0, file$b, 10, 16, 776);
+    			attr_dev(a, "class", "twitter svelte-1iemx4u");
+    			add_location(a, file$b, 11, 18, 687);
+    			attr_dev(div0, "class", "socials-item svelte-1iemx4u");
+    			add_location(div0, file$b, 10, 16, 641);
     			attr_dev(img3, "alt", "Email");
     			if (!src_url_equal(img3.src, img3_src_value = "images/email-nocircle-aqua.png")) attr_dev(img3, "src", img3_src_value);
-    			attr_dev(img3, "class", "svelte-1rrwjx5");
-    			add_location(img3, file$b, 14, 20, 999);
-    			attr_dev(div1, "class", "socials-item svelte-1rrwjx5");
-    			add_location(div1, file$b, 13, 16, 951);
+    			attr_dev(img3, "class", "svelte-1iemx4u");
+    			add_location(img3, file$b, 14, 20, 864);
+    			attr_dev(div1, "class", "socials-item svelte-1iemx4u");
+    			add_location(div1, file$b, 13, 16, 816);
     			attr_dev(img4, "alt", "LinkedIn");
     			if (!src_url_equal(img4.src, img4_src_value = "images/linkedin-aqua.png")) attr_dev(img4, "src", img4_src_value);
-    			attr_dev(img4, "class", "svelte-1rrwjx5");
-    			add_location(img4, file$b, 17, 20, 1143);
-    			attr_dev(div2, "class", "socials-item svelte-1rrwjx5");
-    			add_location(div2, file$b, 16, 16, 1095);
-    			attr_dev(div3, "class", "socials svelte-1rrwjx5");
+    			attr_dev(img4, "class", "svelte-1iemx4u");
+    			add_location(img4, file$b, 17, 20, 1008);
+    			attr_dev(div2, "class", "socials-item svelte-1iemx4u");
+    			add_location(div2, file$b, 16, 16, 960);
+    			attr_dev(div3, "class", "socials svelte-1iemx4u");
     			set_style(div3, "width", "45%");
-    			add_location(div3, file$b, 9, 12, 719);
+    			add_location(div3, file$b, 9, 12, 584);
     			set_style(div4, "max-width", "100%");
     			set_style(div4, "display", "flex");
     			set_style(div4, "justify-content", "space-around");
     			set_style(div4, "max-height", "60px");
-    			attr_dev(div4, "class", "svelte-1rrwjx5");
-    			add_location(div4, file$b, 8, 10, 614);
-    			attr_dev(figcaption, "class", "slanted-bg svelte-1rrwjx5");
+    			attr_dev(div4, "class", "svelte-1iemx4u");
+    			add_location(div4, file$b, 8, 10, 479);
+    			attr_dev(figcaption, "class", "slanted-bg svelte-1iemx4u");
     			toggle_class(figcaption, "bgselected", /*selected*/ ctx[0] === /*i*/ ctx[18]);
     			add_location(figcaption, file$b, 4, 8, 198);
-    			attr_dev(figure, "class", "card svelte-1rrwjx5");
+    			attr_dev(figure, "class", "card svelte-1iemx4u");
     			add_location(figure, file$b, 2, 4, 107);
     		},
     		m: function mount(target, anchor) {
@@ -4187,6 +4174,7 @@ var app = (function () {
     			append_dev(span, t3);
     			append_dev(figcaption, t4);
     			append_dev(figcaption, p);
+    			append_dev(p, t5);
     			append_dev(figcaption, t6);
     			append_dev(figcaption, div4);
     			append_dev(div4, div3);
@@ -4263,7 +4251,7 @@ var app = (function () {
     				each_blocks[i].c();
     			}
 
-    			attr_dev(div, "class", "cards-container svelte-1rrwjx5");
+    			attr_dev(div, "class", "cards-container svelte-1iemx4u");
     			add_location(div, file$b, 0, 0, 0);
     		},
     		l: function claim(nodes) {
@@ -4329,7 +4317,7 @@ var app = (function () {
     			id: 0,
     			name: "Noah Goren",
     			position: "Co-Founder",
-    			descr: "Some text that describes me lorem ipsum ipsum lorem.",
+    			descr: "Noah has been in and around the sport industry since he was 16. After graduating from Brock University’s Sport Management program, he began to focus his career on marketing. Through his experience in Junior Hockey, CFL, AHL and NHL, as well as freelance, Noah has learned the art of connecting with athletes. Noah’s passion for making sports and competition more accessible helps guide AllSkills and stems from his desire to improve the world around him. ",
     			email: "ngoren@allskills.ca",
     			twitter: "https://twitter.com/@NoGoren",
     			img: "images/Noah_s.webp",
@@ -4337,9 +4325,9 @@ var app = (function () {
     		},
     		{
     			id: 0,
-    			name: "Frank Sammut",
+    			name: "François Sammut",
     			position: "Co-Founder",
-    			descr: "Some text that describes me lorem ipsum ipsum lorem.",
+    			descr: "A director, conceptualist and creative, François, known as the Skating Cameraman, is quick to navigate and come up with new and forward ideas. A lover of all things skills, he has worked on honing his craft and meeting with people across multiple sectors for over 14 years. From musicians to athletes to editors, François has learned from them all and applies this knowledge and passion to AllSkills.",
     			email: "fsammut@allskills.ca",
     			twitter: "https://twitter.com/@Sammut_frank",
     			img: "images/Frank_s.webp",
@@ -4349,7 +4337,7 @@ var app = (function () {
     			id: 0,
     			name: "Christopher Thompson",
     			position: "Co-Founder",
-    			descr: "Some text that describes me lorem ipsum ipsum lorem.",
+    			descr: "Christopher has a wide range of interests and knowledge.  On top of taking on the role of full-stack engineer and smart contract developer, Christopher is an all-round problem solver and helps out wherever he can. With 17 years experience in software development and 9 years being involved in the blockchain world, his vision of bringing AllSkills in to the emerging Web 3.0 space has brought out the true potential of AllSkills and his foresight continues to be invaluable.",
     			email: "cthompson@allskills.ca",
     			twitter: "",
     			img: "images/Christopher_s.webp",
@@ -4359,7 +4347,7 @@ var app = (function () {
     			id: 0,
     			name: "Charles Hamelin",
     			position: "Co-Founder",
-    			descr: "Some text that describes me lorem ipsum ipsum lorem.",
+    			descr: "A ﬁve-time Olympian and two-time Speed Skating World Champion, Charles has worked with some of the world’s biggest brands and brings a competitive edge to AllSkills. Charles not only has experience on the ice, but is also an avid gamer, which combined with his athletic background helps provides great insight in to the minds of athletes and gamers.",
     			email: "chamelin@allskills.ca",
     			twitter: "https://twitter.com/@Speedskater01",
     			img: "images/Charles_s.webp",
@@ -4460,449 +4448,12 @@ var app = (function () {
     	}
     }
 
-    var commonjsGlobal = typeof globalThis !== 'undefined' ? globalThis : typeof window !== 'undefined' ? window : typeof global !== 'undefined' ? global : typeof self !== 'undefined' ? self : {};
-
-    function createCommonjsModule(fn) {
-      var module = { exports: {} };
-    	return fn(module, module.exports), module.exports;
-    }
-
-    var frappeCharts_min_umd = createCommonjsModule(function (module, exports) {
-    !function(t,e){module.exports=e();}(commonjsGlobal,function(){function t(t,e){return "string"==typeof t?(e||document).querySelector(t):t||null}function e(t){var e=t.getBoundingClientRect();return {top:e.top+(document.documentElement.scrollTop||document.body.scrollTop),left:e.left+(document.documentElement.scrollLeft||document.body.scrollLeft)}}function i(t){return null===t.offsetParent}function n(t){var e=t.getBoundingClientRect();return e.top>=0&&e.left>=0&&e.bottom<=(window.innerHeight||document.documentElement.clientHeight)&&e.right<=(window.innerWidth||document.documentElement.clientWidth)}function a(t){var e=window.getComputedStyle(t),i=parseFloat(e.paddingLeft)+parseFloat(e.paddingRight);return t.clientWidth-i}function s(t,e,i){var n=document.createEvent("HTMLEvents");n.initEvent(e,!0,!0);for(var a in i)n[a]=i[a];return t.dispatchEvent(n)}function r(t){return t.titleHeight+t.margins.top+t.paddings.top}function o(t){return t.margins.left+t.paddings.left}function l(t){return t.margins.top+t.margins.bottom+t.paddings.top+t.paddings.bottom+t.titleHeight+t.legendHeight}function u(t){return t.margins.left+t.margins.right+t.paddings.left+t.paddings.right}function h(t){return parseFloat(t.toFixed(2))}function c(t,e,i){var n=arguments.length>3&&void 0!==arguments[3]&&arguments[3];i||(i=n?t[0]:t[t.length-1]);var a=new Array(Math.abs(e)).fill(i);return t=n?a.concat(t):t.concat(a)}function d(t,e){return (t+"").length*e}function p(t,e){return {x:Math.sin(t*Zt)*e,y:Math.cos(t*Zt)*e}}function f(t){var e=arguments.length>1&&void 0!==arguments[1]&&arguments[1];return !Number.isNaN(t)&&(void 0!==t&&(!!Number.isFinite(t)&&!(e&&t<0)))}function v(t){return Number(Math.round(t+"e4")+"e-4")}function g(t){var e=void 0,i=void 0,n=void 0;if(t instanceof Date)return new Date(t.getTime());if("object"!==(void 0===t?"undefined":Ft(t))||null===t)return t;e=Array.isArray(t)?[]:{};for(n in t)i=t[n],e[n]=g(i);return e}function m(t,e){var i=void 0,n=void 0;return t<=e?(i=e-t,n=t):(i=t-e,n=e),[i,n]}function y(t,e){var i=arguments.length>2&&void 0!==arguments[2]?arguments[2]:e.length-t.length;return i>0?t=c(t,i):e=c(e,i),[t,e]}function b(t,e){if(t)return t.length>e?t.slice(0,e-3)+"...":t}function x(t){var e=void 0;if("number"==typeof t)e=t;else if("string"==typeof t&&(e=Number(t),Number.isNaN(e)))return t;var i=Math.floor(Math.log10(Math.abs(e)));if(i<=2)return e;var n=Math.floor(i/3),a=Math.pow(10,i-3*n)*+(e/Math.pow(10,i)).toFixed(1);return Math.round(100*a)/100+" "+["","K","M","B","T"][n]}function k(t,e){for(var i=[],n=0;n<t.length;n++)i.push([t[n],e[n]]);var a=function(t,e){var i=e[0]-t[0],n=e[1]-t[1];return {length:Math.sqrt(Math.pow(i,2)+Math.pow(n,2)),angle:Math.atan2(n,i)}},s=function(t,e,i,n){var s=a(e||t,i||t),r=s.angle+(n?Math.PI:0),o=.2*s.length;return [t[0]+Math.cos(r)*o,t[1]+Math.sin(r)*o]};return function(t,e){return t.reduce(function(t,i,n,a){return 0===n?i[0]+","+i[1]:t+" "+e(i,n,a)},"")}(i,function(t,e,i){var n=s(i[e-1],i[e-2],t),a=s(t,i[e-1],i[e+1],!0);return "C "+n[0]+","+n[1]+" "+a[0]+","+a[1]+" "+t[0]+","+t[1]})}function w(t){return t>255?255:t<0?0:t}function A(t,e){var i=ie(t),n=!1;"#"==i[0]&&(i=i.slice(1),n=!0);var a=parseInt(i,16),s=w((a>>16)+e),r=w((a>>8&255)+e),o=w((255&a)+e);return (n?"#":"")+(o|r<<8|s<<16).toString(16)}function P(t){var e=/(^\s*)(rgb|hsl)(a?)[(]\s*([\d.]+\s*%?)\s*,\s*([\d.]+\s*%?)\s*,\s*([\d.]+\s*%?)\s*(?:,\s*([\d.]+)\s*)?[)]$/i;return /(^\s*)(#)((?:[A-Fa-f0-9]{3}){1,2})$/i.test(t)||e.test(t)}function T(t,e){return "string"==typeof t?(e||document).querySelector(t):t||null}function L(t,e){var i=document.createElementNS("http://www.w3.org/2000/svg",t);for(var n in e){var a=e[n];if("inside"===n)T(a).appendChild(i);else if("around"===n){var s=T(a);s.parentNode.insertBefore(i,s),i.appendChild(s);}else "styles"===n?"object"===(void 0===a?"undefined":Ft(a))&&Object.keys(a).map(function(t){i.style[t]=a[t];}):("className"===n&&(n="class"),"innerHTML"===n?i.textContent=a:i.setAttribute(n,a));}return i}function O(t,e){return L("linearGradient",{inside:t,id:e,x1:0,x2:0,y1:0,y2:1})}function M(t,e,i,n){return L("stop",{inside:t,style:"stop-color: "+i,offset:e,"stop-opacity":n})}function C(t,e,i,n){return L("svg",{className:e,inside:t,width:i,height:n})}function D(t){return L("defs",{inside:t})}function N(t){var e=arguments.length>1&&void 0!==arguments[1]?arguments[1]:"",i=arguments.length>2&&void 0!==arguments[2]?arguments[2]:void 0,n={className:t,transform:e};return i&&(n.inside=i),L("g",n)}function S(t){return L("path",{className:arguments.length>1&&void 0!==arguments[1]?arguments[1]:"",d:t,styles:{stroke:arguments.length>2&&void 0!==arguments[2]?arguments[2]:"none",fill:arguments.length>3&&void 0!==arguments[3]?arguments[3]:"none","stroke-width":arguments.length>4&&void 0!==arguments[4]?arguments[4]:2}})}function E(t,e,i,n){var a=arguments.length>4&&void 0!==arguments[4]?arguments[4]:1,s=arguments.length>5&&void 0!==arguments[5]?arguments[5]:0,r=i.x+t.x,o=i.y+t.y,l=i.x+e.x,u=i.y+e.y;return "M"+i.x+" "+i.y+"\n\t\tL"+r+" "+o+"\n\t\tA "+n+" "+n+" 0 "+s+" "+(a?1:0)+"\n\t\t"+l+" "+u+" z"}function _(t,e,i,n){var a=arguments.length>4&&void 0!==arguments[4]?arguments[4]:1,s=arguments.length>5&&void 0!==arguments[5]?arguments[5]:0,r=i.x+t.x,o=i.y+t.y,l=i.x+e.x,u=2*i.y,h=i.y+e.y;return "M"+i.x+" "+i.y+"\n\t\tL"+r+" "+o+"\n\t\tA "+n+" "+n+" 0 "+s+" "+(a?1:0)+"\n\t\t"+l+" "+u+" z\n\t\tL"+r+" "+u+"\n\t\tA "+n+" "+n+" 0 "+s+" "+(a?1:0)+"\n\t\t"+l+" "+h+" z"}function z(t,e,i,n){var a=arguments.length>4&&void 0!==arguments[4]?arguments[4]:1,s=arguments.length>5&&void 0!==arguments[5]?arguments[5]:0,r=i.x+t.x,o=i.y+t.y,l=i.x+e.x,u=i.y+e.y;return "M"+r+" "+o+"\n\t\tA "+n+" "+n+" 0 "+s+" "+(a?1:0)+"\n\t\t"+l+" "+u}function W(t,e,i,n){var a=arguments.length>4&&void 0!==arguments[4]?arguments[4]:1,s=arguments.length>5&&void 0!==arguments[5]?arguments[5]:0,r=i.x+t.x,o=i.y+t.y,l=i.x+e.x,u=2*n+o,h=i.y+t.y;return "M"+r+" "+o+"\n\t\tA "+n+" "+n+" 0 "+s+" "+(a?1:0)+"\n\t\t"+l+" "+u+"\n\t\tM"+r+" "+u+"\n\t\tA "+n+" "+n+" 0 "+s+" "+(a?1:0)+"\n\t\t"+l+" "+h}function j(t,e){var i=arguments.length>2&&void 0!==arguments[2]&&arguments[2],n="path-fill-gradient-"+e+"-"+(i?"lighter":"default"),a=O(t,n),s=[1,.6,.2];return i&&(s=[.4,.2,0]),M(a,"0%",e,s[0]),M(a,"50%",e,s[1]),M(a,"100%",e,s[2]),n}function F(t,e,i,n){var a=arguments.length>4&&void 0!==arguments[4]?arguments[4]:Jt,s=arguments.length>5&&void 0!==arguments[5]?arguments[5]:"none";return L("rect",{className:"percentage-bar",x:t,y:e,width:i,height:n,fill:s,styles:{stroke:A(s,-25),"stroke-dasharray":"0, "+(n+i)+", "+i+", "+n,"stroke-width":a}})}function H(t,e,i,n,a){var s=arguments.length>5&&void 0!==arguments[5]?arguments[5]:"none",r=arguments.length>6&&void 0!==arguments[6]?arguments[6]:{},o={className:t,x:e,y:i,width:n,height:n,rx:a,fill:s};return Object.keys(r).map(function(t){o[t]=r[t];}),L("rect",o)}function I(t,e,i){var n=arguments.length>3&&void 0!==arguments[3]?arguments[3]:"none",a=arguments[4];a=arguments.length>5&&void 0!==arguments[5]&&arguments[5]?b(a,se):a;var s={className:"legend-bar",x:0,y:0,width:i,height:"2px",fill:n},r=L("text",{className:"legend-dataset-text",x:0,y:0,dy:2*re+"px","font-size":1.2*re+"px","text-anchor":"start",fill:le,innerHTML:a}),o=L("g",{transform:"translate("+t+", "+e+")"});return o.appendChild(L("rect",s)),o.appendChild(r),o}function R(t,e,i){var n=arguments.length>3&&void 0!==arguments[3]?arguments[3]:"none",a=arguments[4];a=arguments.length>5&&void 0!==arguments[5]&&arguments[5]?b(a,se):a;var s={className:"legend-dot",cx:0,cy:0,r:i,fill:n},r=L("text",{className:"legend-dataset-text",x:0,y:0,dx:re+"px",dy:re/3+"px","font-size":1.2*re+"px","text-anchor":"start",fill:le,innerHTML:a}),o=L("g",{transform:"translate("+t+", "+e+")"});return o.appendChild(L("circle",s)),o.appendChild(r),o}function Y(t,e,i,n){var a=arguments.length>4&&void 0!==arguments[4]?arguments[4]:{},s=a.fontSize||re;return L("text",{className:t,x:e,y:i,dy:(void 0!==a.dy?a.dy:s/2)+"px","font-size":s+"px",fill:a.fill||le,"text-anchor":a.textAnchor||"start",innerHTML:n})}function B(t,e,i,n){var a=arguments.length>4&&void 0!==arguments[4]?arguments[4]:{};a.stroke||(a.stroke=oe);var s=L("line",{className:"line-vertical "+a.className,x1:0,x2:0,y1:i,y2:n,styles:{stroke:a.stroke}}),r=L("text",{x:0,y:i>n?i+ae:i-ae-re,dy:re+"px","font-size":re+"px","text-anchor":"middle",innerHTML:e+""}),o=L("g",{transform:"translate("+t+", 0)"});return o.appendChild(s),o.appendChild(r),o}function V(t,e,i,n){var a=arguments.length>4&&void 0!==arguments[4]?arguments[4]:{};a.stroke||(a.stroke=oe),a.lineType||(a.lineType=""),a.shortenNumbers&&(e=x(e));var s=L("line",{className:"line-horizontal "+a.className+("dashed"===a.lineType?"dashed":""),x1:i,x2:n,y1:0,y2:0,styles:{stroke:a.stroke}}),r=L("text",{x:i<n?i-ae:i+ae,y:0,dy:re/2-2+"px","font-size":re+"px","text-anchor":i<n?"end":"start",innerHTML:e+""}),o=L("g",{transform:"translate(0, "+t+")","stroke-opacity":1});return 0!==r&&"0"!==r||(o.style.stroke="rgba(27, 31, 35, 0.6)"),o.appendChild(s),o.appendChild(r),o}function U(t,e,i){var n=arguments.length>3&&void 0!==arguments[3]?arguments[3]:{};f(t)||(t=0),n.pos||(n.pos="left"),n.offset||(n.offset=0),n.mode||(n.mode="span"),n.stroke||(n.stroke=oe),n.className||(n.className="");var a=-1*ne,s="span"===n.mode?i+ne:0;return "tick"===n.mode&&"right"===n.pos&&(a=i+ne,s=i),a+=n.offset,s+=n.offset,V(t,e,a,s,{stroke:n.stroke,className:n.className,lineType:n.lineType,shortenNumbers:n.shortenNumbers})}function G(t,e,i){var n=arguments.length>3&&void 0!==arguments[3]?arguments[3]:{};f(t)||(t=0),n.pos||(n.pos="bottom"),n.offset||(n.offset=0),n.mode||(n.mode="span"),n.stroke||(n.stroke=oe),n.className||(n.className="");var a=i+ne,s="span"===n.mode?-1*ne:i;return "tick"===n.mode&&"top"===n.pos&&(a=-1*ne,s=0),B(t,e,a,s,{stroke:n.stroke,className:n.className,lineType:n.lineType})}function q(t,e,i){var n=arguments.length>3&&void 0!==arguments[3]?arguments[3]:{};n.labelPos||(n.labelPos="right");var a=L("text",{className:"chart-label",x:"left"===n.labelPos?ae:i-d(e,5)-ae,y:0,dy:re/-2+"px","font-size":re+"px","text-anchor":"start",innerHTML:e+""}),s=V(t,"",0,i,{stroke:n.stroke||oe,className:n.className||"",lineType:n.lineType});return s.appendChild(a),s}function X(t,e,i,n){var a=arguments.length>4&&void 0!==arguments[4]?arguments[4]:{},s=t-e,r=L("rect",{className:"bar mini",styles:{fill:"rgba(228, 234, 239, 0.49)",stroke:oe,"stroke-dasharray":i+", "+s},x:0,y:0,width:i,height:s});a.labelPos||(a.labelPos="right");var o=L("text",{className:"chart-label",x:"left"===a.labelPos?ae:i-d(n+"",4.5)-ae,y:0,dy:re/-2+"px","font-size":re+"px","text-anchor":"start",innerHTML:n+""}),l=L("g",{transform:"translate(0, "+e+")"});return l.appendChild(r),l.appendChild(o),l}function J(t,e,i,n){var a=arguments.length>4&&void 0!==arguments[4]?arguments[4]:"",s=arguments.length>5&&void 0!==arguments[5]?arguments[5]:0,r=arguments.length>6&&void 0!==arguments[6]?arguments[6]:0,o=arguments.length>7&&void 0!==arguments[7]?arguments[7]:{},l=m(e,o.zeroLine),u=Vt(l,2),h=u[0],c=u[1];c-=r,0===h&&(h=o.minHeight,c-=o.minHeight),f(t)||(t=0),f(c)||(c=0),f(h,!0)||(h=0),f(i,!0)||(i=0);var d=L("rect",{className:"bar mini",style:"fill: "+n,"data-point-index":s,x:t,y:c,width:i,height:h});if((a+="")||a.length){d.setAttribute("y",0),d.setAttribute("x",0);var p=L("text",{className:"data-point-value",x:i/2,y:0,dy:re/2*-1+"px","font-size":re+"px","text-anchor":"middle",innerHTML:a}),v=L("g",{"data-point-index":s,transform:"translate("+t+", "+c+")"});return v.appendChild(d),v.appendChild(p),v}return d}function K(t,e,i,n){var a=arguments.length>4&&void 0!==arguments[4]?arguments[4]:"",s=arguments.length>5&&void 0!==arguments[5]?arguments[5]:0,r=L("circle",{style:"fill: "+n,"data-point-index":s,cx:t,cy:e,r:i});if((a+="")||a.length){r.setAttribute("cy",0),r.setAttribute("cx",0);var o=L("text",{className:"data-point-value",x:0,y:0,dy:re/2*-1-i+"px","font-size":re+"px","text-anchor":"middle",innerHTML:a}),l=L("g",{"data-point-index":s,transform:"translate("+t+", "+e+")"});return l.appendChild(r),l.appendChild(o),l}return r}function $(t,e,i){var n=arguments.length>3&&void 0!==arguments[3]?arguments[3]:{},a=arguments.length>4&&void 0!==arguments[4]?arguments[4]:{},s=e.map(function(e,i){return t[i]+","+e}).join("L");n.spline&&(s=k(t,e));var r=S("M"+s,"line-graph-path",i);if(n.heatline){var o=j(a.svgDefs,i);r.style.stroke="url(#"+o+")";}var l={path:r};if(n.regionFill){var u=j(a.svgDefs,i,!0),h="M"+t[0]+","+a.zeroLine+"L"+s+"L"+t.slice(-1)[0]+","+a.zeroLine;l.region=S(h,"region-fill","none","url(#"+u+")");}return l}function Q(t,e,i,n){var a="string"==typeof e?e:e.join(", ");return [t,{transform:i.join(", ")},n,ve,"translate",{transform:a}]}function Z(t,e,i){return Q(t,[i,0],[e,0],pe)}function tt(t,e,i){return Q(t,[0,i],[0,e],pe)}function et(t,e,i,n){var a=e-i,s=t.childNodes[0];return [[s,{height:a,"stroke-dasharray":s.getAttribute("width")+", "+a},pe,ve],Q(t,[0,n],[0,i],pe)]}function it(t,e,i,n){var a=arguments.length>4&&void 0!==arguments[4]?arguments[4]:0,s=m(i,(arguments.length>5&&void 0!==arguments[5]?arguments[5]:{}).zeroLine),r=Vt(s,2),o=r[0],l=r[1];return l-=a,"rect"!==t.nodeName?[[t.childNodes[0],{width:n,height:o},ce,ve],Q(t,t.getAttribute("transform").split("(")[1].slice(0,-1),[e,l],pe)]:[[t,{width:n,height:o,x:e,y:l},ce,ve]]}function nt(t,e,i){return "circle"!==t.nodeName?[Q(t,t.getAttribute("transform").split("(")[1].slice(0,-1),[e,i],pe)]:[[t,{cx:e,cy:i},ce,ve]]}function at(t,e,i,n,a){var s=[],r=i.map(function(t,i){return e[i]+","+t}).join("L");a&&(r=k(e,i));var o=[t.path,{d:"M"+r},de,ve];if(s.push(o),t.region){var l=e[0]+","+n+"L",u="L"+e.slice(-1)[0]+", "+n,h=[t.region,{d:"M"+l+r+u},de,ve];s.push(h);}return s}function st(t,e){return [t,{d:e},ce,ve]}function rt(t,e,i){var n=arguments.length>3&&void 0!==arguments[3]?arguments[3]:"linear",a=arguments.length>4&&void 0!==arguments[4]?arguments[4]:void 0,s=arguments.length>5&&void 0!==arguments[5]?arguments[5]:{},r=t.cloneNode(!0),o=t.cloneNode(!0);for(var l in e){var u=void 0;u="transform"===l?document.createElementNS("http://www.w3.org/2000/svg","animateTransform"):document.createElementNS("http://www.w3.org/2000/svg","animate");var h=s[l]||t.getAttribute(l),c=e[l],d={attributeName:l,from:h,to:c,begin:"0s",dur:i/1e3+"s",values:h+";"+c,keySplines:ge[n],keyTimes:"0;1",calcMode:"spline",fill:"freeze"};a&&(d.type=a);for(var p in d)u.setAttribute(p,d[p]);r.appendChild(u),a?o.setAttribute(l,"translate("+c+")"):o.setAttribute(l,c);}return [r,o]}function ot(t,e){t.style.transform=e,t.style.webkitTransform=e,t.style.msTransform=e,t.style.mozTransform=e,t.style.oTransform=e;}function lt(t,e){var i=[],n=[];e.map(function(t){var e=t[0],a=e.parentNode,s=void 0,r=void 0;t[0]=e;var o=rt.apply(void 0,Ut(t)),l=Vt(o,2);s=l[0],r=l[1],i.push(r),n.push([s,a]),a&&a.replaceChild(s,e);});var a=t.cloneNode(!0);return n.map(function(t,n){t[1]&&(t[1].replaceChild(i[n],t[0]),e[n][0]=i[n]);}),a}function ut(t,e,i){if(0!==i.length){var n=lt(e,i);e.parentNode==t&&(t.removeChild(e),t.appendChild(n)),setTimeout(function(){n.parentNode==t&&(t.removeChild(n),t.appendChild(e));},fe);}}function ht(t,e){var i=document.createElement("a");i.style="display: none";var n=new Blob(e,{type:"image/svg+xml; charset=utf-8"}),a=window.URL.createObjectURL(n);i.href=a,i.download=t,document.body.appendChild(i),i.click(),setTimeout(function(){document.body.removeChild(i),window.URL.revokeObjectURL(a);},300);}function ct(e){var i=e.cloneNode(!0);i.classList.add("chart-container"),i.setAttribute("xmlns","http://www.w3.org/2000/svg"),i.setAttribute("xmlns:xlink","http://www.w3.org/1999/xlink");var n=t.create("style",{innerHTML:me});i.insertBefore(n,i.firstChild);var a=t.create("div");return a.appendChild(i),a.innerHTML}function dt(t){var e=new Date(t);return e.setMinutes(e.getMinutes()-e.getTimezoneOffset()),e}function pt(t){var e=t.getDate(),i=t.getMonth()+1;return [t.getFullYear(),(i>9?"":"0")+i,(e>9?"":"0")+e].join("-")}function ft(t){return new Date(t.getTime())}function vt(t,e){var i=xt(t);return Math.ceil(gt(i,e)/xe)}function gt(t,e){var i=we*ke;return (dt(e)-dt(t))/i}function mt(t,e){return t.getMonth()===e.getMonth()&&t.getFullYear()===e.getFullYear()}function yt(t){var e=arguments.length>1&&void 0!==arguments[1]&&arguments[1],i=Ae[t];return e?i.slice(0,3):i}function bt(t,e){return new Date(e,t+1,0)}function xt(t){var e=ft(t),i=e.getDay();return 0!==i&&kt(e,-1*i),e}function kt(t,e){t.setDate(t.getDate()+e);}function wt(t,e,i){var n=Object.keys(Le).filter(function(e){return t.includes(e)}),a=Le[n[0]];return Object.assign(a,{constants:e,getData:i}),new Te(a)}function At(t){if(0===t)return [0,0];if(isNaN(t))return {mantissa:-6755399441055744,exponent:972};var e=t>0?1:-1;if(!isFinite(t))return {mantissa:4503599627370496*e,exponent:972};t=Math.abs(t);var i=Math.floor(Math.log10(t));return [e*(t/Math.pow(10,i)),i]}function Pt(t){var e=arguments.length>1&&void 0!==arguments[1]?arguments[1]:0,i=Math.ceil(t),n=Math.floor(e),a=i-n,s=a,r=1;a>5&&(a%2!=0&&(a=++i-n),s=a/2,r=2),a<=2&&(r=a/(s=4)),0===a&&(s=5,r=1);for(var o=[],l=0;l<=s;l++)o.push(n+r*l);return o}function Tt(t){var e=arguments.length>1&&void 0!==arguments[1]?arguments[1]:0,i=At(t),n=Vt(i,2),a=n[0],s=n[1],r=e?e/Math.pow(10,s):0,o=Pt(a=a.toFixed(6),r);return o=o.map(function(t){return t*Math.pow(10,s)})}function Lt(t){function e(t,e){for(var i=Tt(t),n=i[1]-i[0],a=0,s=1;a<e;s++)a+=n,i.unshift(-1*a);return i}var i=arguments.length>1&&void 0!==arguments[1]&&arguments[1],n=Math.max.apply(Math,Ut(t)),a=Math.min.apply(Math,Ut(t)),s=[];if(n>=0&&a>=0)At(n)[1],s=i?Tt(n,a):Tt(n);else if(n>0&&a<0){var r=Math.abs(a);n>=r?(At(n)[1],s=e(n,r)):(At(r)[1],s=e(r,n).reverse().map(function(t){return -1*t}));}else if(n<=0&&a<=0){var o=Math.abs(a),l=Math.abs(n);At(o)[1],s=(s=i?Tt(o,l):Tt(o)).reverse().map(function(t){return -1*t});}return s}function Ot(t){var e=Mt(t);return t.indexOf(0)>=0?t.indexOf(0):t[0]>0?-1*t[0]/e:-1*t[t.length-1]/e+(t.length-1)}function Mt(t){return t[1]-t[0]}function Ct(t){return t[t.length-1]-t[0]}function Dt(t,e){return h(e.zeroLine-t*e.scaleMultiplier)}function Nt(t,e){var i=arguments.length>2&&void 0!==arguments[2]&&arguments[2],n=e.reduce(function(e,i){return Math.abs(i-t)<Math.abs(e-t)?i:e},[]);return i?e.indexOf(n):n}function St(t,e){for(var i=Math.max.apply(Math,Ut(t)),n=1/(e-1),a=[],s=0;s<e;s++){var r=i*(n*s);a.push(r);}return a}function Et(t,e){return e.filter(function(e){return e<t}).length}function _t(t,e){t.labels=t.labels||[];var i=t.labels.length,n=t.datasets,a=new Array(i).fill(0);return n||(n=[{values:a}]),n.map(function(t){if(t.values){var n=t.values;n=(n=n.map(function(t){return isNaN(t)?0:t})).length>i?n.slice(0,i):c(n,i-n.length,0),t.values=n;}else t.values=a;t.chartType||(t.chartType=e);}),t.yRegions&&t.yRegions.map(function(t){if(t.end<t.start){var e=[t.end,t.start];t.start=e[0],t.end=e[1];}}),t}function zt(t){var e=t.labels.length,i=new Array(e).fill(0),n={labels:t.labels.slice(0,-1),datasets:t.datasets.map(function(t){return {name:"",values:i.slice(0,-1),chartType:t.chartType}})};return t.yMarkers&&(n.yMarkers=[{value:0,label:""}]),t.yRegions&&(n.yRegions=[{start:0,end:0,label:""}]),n}function Wt(t){var e=arguments.length>1&&void 0!==arguments[1]?arguments[1]:[],i=!(arguments.length>2&&void 0!==arguments[2])||arguments[2],n=t/e.length;n<=0&&(n=1);var a=n/Kt,s=void 0;if(i){var r=Math.max.apply(Math,Ut(e.map(function(t){return t.length})));s=Math.ceil(r/a);}return e.map(function(t,e){return (t+="").length>a&&(i?e%s!=0&&(t=""):t=a-3>0?t.slice(0,a-3)+" ...":t.slice(0,a)+".."),t})}function jt(){var t=arguments.length>0&&void 0!==arguments[0]?arguments[0]:"line",e=arguments[1],i=arguments[2];return "axis-mixed"===t?(i.type="line",new De(e,i)):Se[t]?new Se[t](e,i):void console.error("Undefined chart type: "+t)}!function(t,e){void 0===e&&(e={});var i=e.insertAt;if(t&&"undefined"!=typeof document){var n=document.head||document.getElementsByTagName("head")[0],a=document.createElement("style");a.type="text/css","top"===i&&n.firstChild?n.insertBefore(a,n.firstChild):n.appendChild(a),a.styleSheet?a.styleSheet.cssText=t:a.appendChild(document.createTextNode(t));}}('.chart-container{position:relative;font-family:-apple-system,BlinkMacSystemFont,Segoe UI,Roboto,Oxygen,Ubuntu,Cantarell,Fira Sans,Droid Sans,Helvetica Neue,sans-serif}.chart-container .axis,.chart-container .chart-label{fill:#555b51}.chart-container .axis line,.chart-container .chart-label line{stroke:#dadada}.chart-container .dataset-units circle{stroke:#fff;stroke-width:2}.chart-container .dataset-units path{fill:none;stroke-opacity:1;stroke-width:2px}.chart-container .dataset-path{stroke-width:2px}.chart-container .path-group path{fill:none;stroke-opacity:1;stroke-width:2px}.chart-container line.dashed{stroke-dasharray:5,3}.chart-container .axis-line .specific-value{text-anchor:start}.chart-container .axis-line .y-line{text-anchor:end}.chart-container .axis-line .x-line{text-anchor:middle}.chart-container .legend-dataset-text{fill:#6c7680;font-weight:600}.graph-svg-tip{position:absolute;z-index:99999;padding:10px;font-size:12px;color:#959da5;text-align:center;background:rgba(0,0,0,.8);border-radius:3px}.graph-svg-tip ol,.graph-svg-tip ul{padding-left:0;display:-webkit-box;display:-ms-flexbox;display:flex}.graph-svg-tip ul.data-point-list li{min-width:90px;-webkit-box-flex:1;-ms-flex:1;flex:1;font-weight:600}.graph-svg-tip strong{color:#dfe2e5;font-weight:600}.graph-svg-tip .svg-pointer{position:absolute;height:5px;margin:0 0 0 -5px;content:" ";border:5px solid transparent;border-top-color:rgba(0,0,0,.8)}.graph-svg-tip.comparison{padding:0;text-align:left;pointer-events:none}.graph-svg-tip.comparison .title{display:block;padding:10px;margin:0;font-weight:600;line-height:1;pointer-events:none}.graph-svg-tip.comparison ul{margin:0;white-space:nowrap;list-style:none}.graph-svg-tip.comparison li{display:inline-block;padding:5px 10px}');var Ft="function"==typeof Symbol&&"symbol"==typeof Symbol.iterator?function(t){return typeof t}:function(t){return t&&"function"==typeof Symbol&&t.constructor===Symbol&&t!==Symbol.prototype?"symbol":typeof t},Ht=(function(t,e){if(!(t instanceof e))throw new TypeError("Cannot call a class as a function")}),It=function(){function t(t,e){for(var i=0;i<e.length;i++){var n=e[i];n.enumerable=n.enumerable||!1,n.configurable=!0,"value"in n&&(n.writable=!0),Object.defineProperty(t,n.key,n);}}return function(e,i,n){return i&&t(e.prototype,i),n&&t(e,n),e}}(),Rt=function t(e,i,n){null===e&&(e=Function.prototype);var a=Object.getOwnPropertyDescriptor(e,i);if(void 0===a){var s=Object.getPrototypeOf(e);return null===s?void 0:t(s,i,n)}if("value"in a)return a.value;var r=a.get;if(void 0!==r)return r.call(n)},Yt=function(t,e){if("function"!=typeof e&&null!==e)throw new TypeError("Super expression must either be null or a function, not "+typeof e);t.prototype=Object.create(e&&e.prototype,{constructor:{value:t,enumerable:!1,writable:!0,configurable:!0}}),e&&(Object.setPrototypeOf?Object.setPrototypeOf(t,e):t.__proto__=e);},Bt=function(t,e){if(!t)throw new ReferenceError("this hasn't been initialised - super() hasn't been called");return !e||"object"!=typeof e&&"function"!=typeof e?t:e},Vt=function(){function t(t,e){var i=[],n=!0,a=!1,s=void 0;try{for(var r,o=t[Symbol.iterator]();!(n=(r=o.next()).done)&&(i.push(r.value),!e||i.length!==e);n=!0);}catch(t){a=!0,s=t;}finally{try{!n&&o.return&&o.return();}finally{if(a)throw s}}return i}return function(e,i){if(Array.isArray(e))return e;if(Symbol.iterator in Object(e))return t(e,i);throw new TypeError("Invalid attempt to destructure non-iterable instance")}}(),Ut=function(t){if(Array.isArray(t)){for(var e=0,i=Array(t.length);e<t.length;e++)i[e]=t[e];return i}return Array.from(t)};t.create=function(e,i){var n=document.createElement(e);for(var a in i){var s=i[a];if("inside"===a)t(s).appendChild(n);else if("around"===a){var r=t(s);r.parentNode.insertBefore(n,r),n.appendChild(r);}else "styles"===a?"object"===(void 0===s?"undefined":Ft(s))&&Object.keys(s).map(function(t){n.style[t]=s[t];}):a in n?n[a]=s:n.setAttribute(a,s);}return n};var Gt={margins:{top:10,bottom:10,left:20,right:20},paddings:{top:20,bottom:40,left:30,right:10},baseHeight:240,titleHeight:20,legendHeight:30,titleFontSize:12},qt=700,Jt=2,Kt=7,$t=["light-blue","blue","violet","red","orange","yellow","green","light-green","purple","magenta","light-grey","dark-grey"],Qt={bar:$t,line:$t,pie:$t,percentage:$t,heatmap:["#ebedf0","#c6e48b","#7bc96f","#239a3b","#196127"],donut:$t},Zt=Math.PI/180,te=function(){function e(t){var i=t.parent,n=void 0===i?null:i,a=t.colors,s=void 0===a?[]:a;Ht(this,e),this.parent=n,this.colors=s,this.titleName="",this.titleValue="",this.listValues=[],this.titleValueFirst=0,this.x=0,this.y=0,this.top=0,this.left=0,this.setup();}return It(e,[{key:"setup",value:function(){this.makeTooltip();}},{key:"refresh",value:function(){this.fill(),this.calcPosition();}},{key:"makeTooltip",value:function(){var e=this;this.container=t.create("div",{inside:this.parent,className:"graph-svg-tip comparison",innerHTML:'<span class="title"></span>\n\t\t\t\t<ul class="data-point-list"></ul>\n\t\t\t\t<div class="svg-pointer"></div>'}),this.hideTip(),this.title=this.container.querySelector(".title"),this.dataPointList=this.container.querySelector(".data-point-list"),this.parent.addEventListener("mouseleave",function(){e.hideTip();});}},{key:"fill",value:function(){var e=this,i=void 0;this.index&&this.container.setAttribute("data-point-index",this.index),i=this.titleValueFirst?"<strong>"+this.titleValue+"</strong>"+this.titleName:this.titleName+"<strong>"+this.titleValue+"</strong>",this.title.innerHTML=i,this.dataPointList.innerHTML="",this.listValues.map(function(i,n){var a=e.colors[n]||"black",s=0===i.formatted||i.formatted?i.formatted:i.value,r=t.create("li",{styles:{"border-top":"3px solid "+a},innerHTML:'<strong style="display: block;">'+(0===s||s?s:"")+"</strong>\n\t\t\t\t\t"+(i.title?i.title:"")});e.dataPointList.appendChild(r);});}},{key:"calcPosition",value:function(){var t=this.container.offsetWidth;this.top=this.y-this.container.offsetHeight-5,this.left=this.x-t/2;var e=this.parent.offsetWidth-t,i=this.container.querySelector(".svg-pointer");if(this.left<0)i.style.left="calc(50% - "+-1*this.left+"px)",this.left=0;else if(this.left>e){var n="calc(50% + "+(this.left-e)+"px)";i.style.left=n,this.left=e;}else i.style.left="50%";}},{key:"setValues",value:function(t,e){var i=arguments.length>2&&void 0!==arguments[2]?arguments[2]:{},n=arguments.length>3&&void 0!==arguments[3]?arguments[3]:[],a=arguments.length>4&&void 0!==arguments[4]?arguments[4]:-1;this.titleName=i.name,this.titleValue=i.value,this.listValues=n,this.x=t,this.y=e,this.titleValueFirst=i.valueFirst||0,this.index=a,this.refresh();}},{key:"hideTip",value:function(){this.container.style.top="0px",this.container.style.left="0px",this.container.style.opacity="0";}},{key:"showTip",value:function(){this.container.style.top=this.top+"px",this.container.style.left=this.left+"px",this.container.style.opacity="1";}}]),e}(),ee={"light-blue":"#7cd6fd",blue:"#5e64ff",violet:"#743ee2",red:"#ff5858",orange:"#ffa00a",yellow:"#feef72",green:"#28a745","light-green":"#98d85b",purple:"#b554ff",magenta:"#ffa3ef",black:"#36114C",grey:"#bdd3e6","light-grey":"#f0f4f7","dark-grey":"#b8c2cc"},ie=function(t){return /rgb[a]{0,1}\([\d, ]+\)/gim.test(t)?/\D+(\d*)\D+(\d*)\D+(\d*)/gim.exec(t).map(function(t,e){return 0!==e?Number(t).toString(16):"#"}).reduce(function(t,e){return ""+t+e}):ee[t]||t},ne=6,ae=4,se=15,re=10,oe="#dadada",le="#555b51",ue={bar:function(t){var e=void 0;"rect"!==t.nodeName&&(e=t.getAttribute("transform"),t=t.childNodes[0]);var i=t.cloneNode();return i.style.fill="#000000",i.style.opacity="0.4",e&&i.setAttribute("transform",e),i},dot:function(t){var e=void 0;"circle"!==t.nodeName&&(e=t.getAttribute("transform"),t=t.childNodes[0]);var i=t.cloneNode(),n=t.getAttribute("r"),a=t.getAttribute("fill");return i.setAttribute("r",parseInt(n)+4),i.setAttribute("fill",a),i.style.opacity="0.6",e&&i.setAttribute("transform",e),i},heat_square:function(t){var e=void 0;"circle"!==t.nodeName&&(e=t.getAttribute("transform"),t=t.childNodes[0]);var i=t.cloneNode(),n=t.getAttribute("r"),a=t.getAttribute("fill");return i.setAttribute("r",parseInt(n)+4),i.setAttribute("fill",a),i.style.opacity="0.6",e&&i.setAttribute("transform",e),i}},he={bar:function(t,e){var i=void 0;"rect"!==t.nodeName&&(i=t.getAttribute("transform"),t=t.childNodes[0]);var n=["x","y","width","height"];Object.values(t.attributes).filter(function(t){return n.includes(t.name)&&t.specified}).map(function(t){e.setAttribute(t.name,t.nodeValue);}),i&&e.setAttribute("transform",i);},dot:function(t,e){var i=void 0;"circle"!==t.nodeName&&(i=t.getAttribute("transform"),t=t.childNodes[0]);var n=["cx","cy"];Object.values(t.attributes).filter(function(t){return n.includes(t.name)&&t.specified}).map(function(t){e.setAttribute(t.name,t.nodeValue);}),i&&e.setAttribute("transform",i);},heat_square:function(t,e){var i=void 0;"circle"!==t.nodeName&&(i=t.getAttribute("transform"),t=t.childNodes[0]);var n=["cx","cy"];Object.values(t.attributes).filter(function(t){return n.includes(t.name)&&t.specified}).map(function(t){e.setAttribute(t.name,t.nodeValue);}),i&&e.setAttribute("transform",i);}},ce=350,de=350,pe=ce,fe=250,ve="easein",ge={ease:"0.25 0.1 0.25 1",linear:"0 0 1 1",easein:"0.1 0.8 0.2 1",easeout:"0 0 0.58 1",easeinout:"0.42 0 0.58 1"},me=".chart-container{position:relative;font-family:-apple-system,BlinkMacSystemFont,'Segoe UI','Roboto','Oxygen','Ubuntu','Cantarell','Fira Sans','Droid Sans','Helvetica Neue',sans-serif}.chart-container .axis,.chart-container .chart-label{fill:#555b51}.chart-container .axis line,.chart-container .chart-label line{stroke:#dadada}.chart-container .dataset-units circle{stroke:#fff;stroke-width:2}.chart-container .dataset-units path{fill:none;stroke-opacity:1;stroke-width:2px}.chart-container .dataset-path{stroke-width:2px}.chart-container .path-group path{fill:none;stroke-opacity:1;stroke-width:2px}.chart-container line.dashed{stroke-dasharray:5,3}.chart-container .axis-line .specific-value{text-anchor:start}.chart-container .axis-line .y-line{text-anchor:end}.chart-container .axis-line .x-line{text-anchor:middle}.chart-container .legend-dataset-text{fill:#6c7680;font-weight:600}.graph-svg-tip{position:absolute;z-index:99999;padding:10px;font-size:12px;color:#959da5;text-align:center;background:rgba(0,0,0,.8);border-radius:3px}.graph-svg-tip ul{padding-left:0;display:flex}.graph-svg-tip ol{padding-left:0;display:flex}.graph-svg-tip ul.data-point-list li{min-width:90px;flex:1;font-weight:600}.graph-svg-tip strong{color:#dfe2e5;font-weight:600}.graph-svg-tip .svg-pointer{position:absolute;height:5px;margin:0 0 0 -5px;content:' ';border:5px solid transparent;border-top-color:rgba(0,0,0,.8)}.graph-svg-tip.comparison{padding:0;text-align:left;pointer-events:none}.graph-svg-tip.comparison .title{display:block;padding:10px;margin:0;font-weight:600;line-height:1;pointer-events:none}.graph-svg-tip.comparison ul{margin:0;white-space:nowrap;list-style:none}.graph-svg-tip.comparison li{display:inline-block;padding:5px 10px}",ye=function(){function e(t,i){if(Ht(this,e),i=g(i),this.parent="string"==typeof t?document.querySelector(t):t,!(this.parent instanceof HTMLElement))throw new Error("No `parent` element to render on was provided.");this.rawChartArgs=i,this.title=i.title||"",this.type=i.type||"",this.realData=this.prepareData(i.data),this.data=this.prepareFirstData(this.realData),this.colors=this.validateColors(i.colors,this.type),this.config={showTooltip:1,showLegend:1,isNavigable:i.isNavigable||0,animate:void 0!==i.animate?i.animate:1,truncateLegends:i.truncateLegends||1},this.measures=JSON.parse(JSON.stringify(Gt));var n=this.measures;this.setMeasures(i),this.title.length||(n.titleHeight=0),this.config.showLegend||(n.legendHeight=0),this.argHeight=i.height||n.baseHeight,this.state={},this.options={},this.initTimeout=qt,this.config.isNavigable&&(this.overlays=[]),this.configure(i);}return It(e,[{key:"prepareData",value:function(t){return t}},{key:"prepareFirstData",value:function(t){return t}},{key:"validateColors",value:function(t,e){var i=[];return (t=(t||[]).concat(Qt[e])).forEach(function(t){var e=ie(t);P(e)?i.push(e):console.warn('"'+t+'" is not a valid color.');}),i}},{key:"setMeasures",value:function(){}},{key:"configure",value:function(){var t=this,e=this.argHeight;this.baseHeight=e,this.height=e-l(this.measures),this.boundDrawFn=function(){return t.draw(!0)},ResizeObserver&&(this.resizeObserver=new ResizeObserver(this.boundDrawFn),this.resizeObserver.observe(this.parent)),window.addEventListener("resize",this.boundDrawFn),window.addEventListener("orientationchange",this.boundDrawFn);}},{key:"destroy",value:function(){this.resizeObserver&&this.resizeObserver.disconnect(),window.removeEventListener("resize",this.boundDrawFn),window.removeEventListener("orientationchange",this.boundDrawFn);}},{key:"setup",value:function(){this.makeContainer(),this.updateWidth(),this.makeTooltip(),this.draw(!1,!0);}},{key:"makeContainer",value:function(){this.parent.innerHTML="";var e={inside:this.parent,className:"chart-container"};this.independentWidth&&(e.styles={width:this.independentWidth+"px"}),this.container=t.create("div",e);}},{key:"makeTooltip",value:function(){this.tip=new te({parent:this.container,colors:this.colors}),this.bindTooltip();}},{key:"bindTooltip",value:function(){}},{key:"draw",value:function(){var t=this,e=arguments.length>0&&void 0!==arguments[0]&&arguments[0],n=arguments.length>1&&void 0!==arguments[1]&&arguments[1];e&&i(this.parent)||(this.updateWidth(),this.calc(e),this.makeChartArea(),this.setupComponents(),this.components.forEach(function(e){return e.setup(t.drawArea)}),this.render(this.components,!1),n&&(this.data=this.realData,setTimeout(function(){t.update(t.data);},this.initTimeout)),this.renderLegend(),this.setupNavigation(n));}},{key:"calc",value:function(){}},{key:"updateWidth",value:function(){this.baseWidth=a(this.parent),this.width=this.baseWidth-u(this.measures);}},{key:"makeChartArea",value:function(){this.svg&&this.container.removeChild(this.svg);var t=this.measures;this.svg=C(this.container,"frappe-chart chart",this.baseWidth,this.baseHeight),this.svgDefs=D(this.svg),this.title.length&&(this.titleEL=Y("title",t.margins.left,t.margins.top,this.title,{fontSize:t.titleFontSize,fill:"#666666",dy:t.titleFontSize}));var e=r(t);this.drawArea=N(this.type+"-chart chart-draw-area","translate("+o(t)+", "+e+")"),this.config.showLegend&&(e+=this.height+t.paddings.bottom,this.legendArea=N("chart-legend","translate("+o(t)+", "+e+")")),this.title.length&&this.svg.appendChild(this.titleEL),this.svg.appendChild(this.drawArea),this.config.showLegend&&this.svg.appendChild(this.legendArea),this.updateTipOffset(o(t),r(t));}},{key:"updateTipOffset",value:function(t,e){this.tip.offset={x:t,y:e};}},{key:"setupComponents",value:function(){this.components=new Map;}},{key:"update",value:function(t){t||console.error("No data to update."),this.data=this.prepareData(t),this.calc(),this.render(this.components,this.config.animate),this.renderLegend();}},{key:"render",value:function(){var t=this,e=arguments.length>0&&void 0!==arguments[0]?arguments[0]:this.components,i=!(arguments.length>1&&void 0!==arguments[1])||arguments[1];this.config.isNavigable&&this.overlays.map(function(t){return t.parentNode.removeChild(t)});var n=[];e.forEach(function(t){n=n.concat(t.update(i));}),n.length>0?(ut(this.container,this.svg,n),setTimeout(function(){e.forEach(function(t){return t.make()}),t.updateNav();},400)):(e.forEach(function(t){return t.make()}),this.updateNav());}},{key:"updateNav",value:function(){this.config.isNavigable&&(this.makeOverlay(),this.bindUnits());}},{key:"renderLegend",value:function(){}},{key:"setupNavigation",value:function(){var t=this,e=arguments.length>0&&void 0!==arguments[0]&&arguments[0];this.config.isNavigable&&e&&(this.bindOverlay(),this.keyActions={13:this.onEnterKey.bind(this),37:this.onLeftArrow.bind(this),38:this.onUpArrow.bind(this),39:this.onRightArrow.bind(this),40:this.onDownArrow.bind(this)},document.addEventListener("keydown",function(e){n(t.container)&&(e=e||window.event,t.keyActions[e.keyCode]&&t.keyActions[e.keyCode]());}));}},{key:"makeOverlay",value:function(){}},{key:"updateOverlay",value:function(){}},{key:"bindOverlay",value:function(){}},{key:"bindUnits",value:function(){}},{key:"onLeftArrow",value:function(){}},{key:"onRightArrow",value:function(){}},{key:"onUpArrow",value:function(){}},{key:"onDownArrow",value:function(){}},{key:"onEnterKey",value:function(){}},{key:"addDataPoint",value:function(){}},{key:"removeDataPoint",value:function(){}},{key:"getDataPoint",value:function(){}},{key:"setCurrentDataPoint",value:function(){}},{key:"updateDataset",value:function(){}},{key:"export",value:function(){var t=ct(this.svg);ht(this.title||"Chart",[t]);}}]),e}(),be=function(t){function e(t,i){return Ht(this,e),Bt(this,(e.__proto__||Object.getPrototypeOf(e)).call(this,t,i))}return Yt(e,t),It(e,[{key:"configure",value:function(t){Rt(e.prototype.__proto__||Object.getPrototypeOf(e.prototype),"configure",this).call(this,t),this.config.formatTooltipY=(t.tooltipOptions||{}).formatTooltipY,this.config.maxSlices=t.maxSlices||20,this.config.maxLegendPoints=t.maxLegendPoints||20;}},{key:"calc",value:function(){var t=this,e=this.state,i=this.config.maxSlices;e.sliceTotals=[];var n=this.data.labels.map(function(e,i){var n=0;return t.data.datasets.map(function(t){n+=t.values[i];}),[n,e]}).filter(function(t){return t[0]>=0}),a=n;if(n.length>i){n.sort(function(t,e){return e[0]-t[0]}),a=n.slice(0,i-1);var s=0;n.slice(i-1).map(function(t){s+=t[0];}),a.push([s,"Rest"]),this.colors[i-1]="grey";}e.labels=[],a.map(function(t){e.sliceTotals.push(v(t[0])),e.labels.push(t[1]);}),e.grandTotal=e.sliceTotals.reduce(function(t,e){return t+e},0),this.center={x:this.width/2,y:this.height/2};}},{key:"renderLegend",value:function(){var t=this,e=this.state;this.legendArea.textContent="",this.legendTotals=e.sliceTotals.slice(0,this.config.maxLegendPoints);var i=0,n=0;this.legendTotals.map(function(a,s){var r=150,o=Math.floor((t.width-u(t.measures))/r);t.legendTotals.length<o&&(r=t.width/t.legendTotals.length),i>o&&(i=0,n+=20);var l=r*i+5,h=t.config.truncateLegends?b(e.labels[s],r/10):e.labels[s],c=t.config.formatTooltipY?t.config.formatTooltipY(a):a,d=R(l,n,5,t.colors[s],h+": "+c,!1);t.legendArea.appendChild(d),i++;});}}]),e}(ye),xe=7,ke=1e3,we=86400,Ae=["January","February","March","April","May","June","July","August","September","October","November","December"],Pe=["Sun","Mon","Tue","Wed","Thu","Fri","Sat"],Te=function(){function t(e){var i=e.layerClass,n=void 0===i?"":i,a=e.layerTransform,s=void 0===a?"":a,r=e.constants,o=e.getData,l=e.makeElements,u=e.animateElements;Ht(this,t),this.layerTransform=s,this.constants=r,this.makeElements=l,this.getData=o,this.animateElements=u,this.store=[],this.labels=[],this.layerClass=n,this.layerClass="function"==typeof this.layerClass?this.layerClass():this.layerClass,this.refresh();}return It(t,[{key:"refresh",value:function(t){this.data=t||this.getData();}},{key:"setup",value:function(t){this.layer=N(this.layerClass,this.layerTransform,t);}},{key:"make",value:function(){this.render(this.data),this.oldData=this.data;}},{key:"render",value:function(t){var e=this;this.store=this.makeElements(t),this.layer.textContent="",this.store.forEach(function(t){e.layer.appendChild(t);}),this.labels.forEach(function(t){e.layer.appendChild(t);});}},{key:"update",value:function(){var t=!(arguments.length>0&&void 0!==arguments[0])||arguments[0];this.refresh();var e=[];return t&&(e=this.animateElements(this.data)||[]),e}}]),t}(),Le={donutSlices:{layerClass:"donut-slices",makeElements:function(t){return t.sliceStrings.map(function(e,i){var n=S(e,"donut-path",t.colors[i],"none",t.strokeWidth);return n.style.transition="transform .3s;",n})},animateElements:function(t){return this.store.map(function(e,i){return st(e,t.sliceStrings[i])})}},pieSlices:{layerClass:"pie-slices",makeElements:function(t){return t.sliceStrings.map(function(e,i){var n=S(e,"pie-path","none",t.colors[i]);return n.style.transition="transform .3s;",n})},animateElements:function(t){return this.store.map(function(e,i){return st(e,t.sliceStrings[i])})}},percentageBars:{layerClass:"percentage-bars",makeElements:function(t){var e=this;return t.xPositions.map(function(i,n){return F(i,0,t.widths[n],e.constants.barHeight,e.constants.barDepth,t.colors[n])})},animateElements:function(t){if(t)return []}},yAxis:{layerClass:"y axis",makeElements:function(t){var e=this;return t.positions.map(function(i,n){return U(i,t.labels[n],e.constants.width,{mode:e.constants.mode,pos:e.constants.pos,shortenNumbers:e.constants.shortenNumbers})})},animateElements:function(t){var e=t.positions,i=t.labels,n=this.oldData.positions,a=this.oldData.labels,s=y(n,e),r=Vt(s,2);n=r[0],e=r[1];var o=y(a,i),l=Vt(o,2);return a=l[0],i=l[1],this.render({positions:n,labels:i}),this.store.map(function(t,i){return tt(t,e[i],n[i])})}},xAxis:{layerClass:"x axis",makeElements:function(t){var e=this;return t.positions.map(function(i,n){return G(i,t.calcLabels[n],e.constants.height,{mode:e.constants.mode,pos:e.constants.pos})})},animateElements:function(t){var e=t.positions,i=t.calcLabels,n=this.oldData.positions,a=this.oldData.calcLabels,s=y(n,e),r=Vt(s,2);n=r[0],e=r[1];var o=y(a,i),l=Vt(o,2);return a=l[0],i=l[1],this.render({positions:n,calcLabels:i}),this.store.map(function(t,i){return Z(t,e[i],n[i])})}},yMarkers:{layerClass:"y-markers",makeElements:function(t){var e=this;return t.map(function(t){return q(t.position,t.label,e.constants.width,{labelPos:t.options.labelPos,mode:"span",lineType:"dashed"})})},animateElements:function(t){var e=y(this.oldData,t),i=Vt(e,2);this.oldData=i[0];var n=(t=i[1]).map(function(t){return t.position}),a=t.map(function(t){return t.label}),s=t.map(function(t){return t.options}),r=this.oldData.map(function(t){return t.position});return this.render(r.map(function(t,e){return {position:r[e],label:a[e],options:s[e]}})),this.store.map(function(t,e){return tt(t,n[e],r[e])})}},yRegions:{layerClass:"y-regions",makeElements:function(t){var e=this;return t.map(function(t){return X(t.startPos,t.endPos,e.constants.width,t.label,{labelPos:t.options.labelPos})})},animateElements:function(t){var e=y(this.oldData,t),i=Vt(e,2);this.oldData=i[0];var n=(t=i[1]).map(function(t){return t.endPos}),a=t.map(function(t){return t.label}),s=t.map(function(t){return t.startPos}),r=t.map(function(t){return t.options}),o=this.oldData.map(function(t){return t.endPos}),l=this.oldData.map(function(t){return t.startPos});this.render(o.map(function(t,e){return {startPos:l[e],endPos:o[e],label:a[e],options:r[e]}}));var u=[];return this.store.map(function(t,e){u=u.concat(et(t,s[e],n[e],o[e]));}),u}},heatDomain:{layerClass:function(){return "heat-domain domain-"+this.constants.index},makeElements:function(t){var e=this,i=this.constants,n=i.index,a=i.colWidth,s=i.rowHeight,r=i.squareSize,o=i.radius,l=i.xTranslate,u=0;return this.serializedSubDomains=[],t.cols.map(function(t,i){1===i&&e.labels.push(Y("domain-name",l,-12,yt(n,!0).toUpperCase(),{fontSize:9})),t.map(function(t,i){if(t.fill){var n={"data-date":t.yyyyMmDd,"data-value":t.dataValue,"data-day":i},a=H("day",l,u,r,o,t.fill,n);e.serializedSubDomains.push(a);}u+=s;}),u=0,l+=a;}),this.serializedSubDomains},animateElements:function(t){if(t)return []}},barGraph:{layerClass:function(){return "dataset-units dataset-bars dataset-"+this.constants.index},makeElements:function(t){var e=this.constants;return this.unitType="bar",this.units=t.yPositions.map(function(i,n){return J(t.xPositions[n],i,t.barWidth,e.color,t.labels[n],n,t.offsets[n],{zeroLine:t.zeroLine,barsWidth:t.barsWidth,minHeight:e.minHeight})}),this.units},animateElements:function(t){var e=t.xPositions,i=t.yPositions,n=t.offsets,a=t.labels,s=this.oldData.xPositions,r=this.oldData.yPositions,o=this.oldData.offsets,l=this.oldData.labels,u=y(s,e),h=Vt(u,2);s=h[0],e=h[1];var c=y(r,i),d=Vt(c,2);r=d[0],i=d[1];var p=y(o,n),f=Vt(p,2);o=f[0],n=f[1];var v=y(l,a),g=Vt(v,2);l=g[0],a=g[1],this.render({xPositions:s,yPositions:r,offsets:o,labels:a,zeroLine:this.oldData.zeroLine,barsWidth:this.oldData.barsWidth,barWidth:this.oldData.barWidth});var m=[];return this.store.map(function(a,s){m=m.concat(it(a,e[s],i[s],t.barWidth,n[s],{zeroLine:t.zeroLine}));}),m}},lineGraph:{layerClass:function(){return "dataset-units dataset-line dataset-"+this.constants.index},makeElements:function(t){var e=this.constants;return this.unitType="dot",this.paths={},e.hideLine||(this.paths=$(t.xPositions,t.yPositions,e.color,{heatline:e.heatline,regionFill:e.regionFill,spline:e.spline},{svgDefs:e.svgDefs,zeroLine:t.zeroLine})),this.units=[],e.hideDots||(this.units=t.yPositions.map(function(i,n){return K(t.xPositions[n],i,t.radius,e.color,e.valuesOverPoints?t.values[n]:"",n)})),Object.values(this.paths).concat(this.units)},animateElements:function(t){var e=t.xPositions,i=t.yPositions,n=t.values,a=this.oldData.xPositions,s=this.oldData.yPositions,r=this.oldData.values,o=y(a,e),l=Vt(o,2);a=l[0],e=l[1];var u=y(s,i),h=Vt(u,2);s=h[0],i=h[1];var c=y(r,n),d=Vt(c,2);r=d[0],n=d[1],this.render({xPositions:a,yPositions:s,values:n,zeroLine:this.oldData.zeroLine,radius:this.oldData.radius});var p=[];return Object.keys(this.paths).length&&(p=p.concat(at(this.paths,e,i,t.zeroLine,this.constants.spline))),this.units.length&&this.units.map(function(t,n){p=p.concat(nt(t,e[n],i[n]));}),p}}},Oe=function(t){function i(t,e){Ht(this,i);var n=Bt(this,(i.__proto__||Object.getPrototypeOf(i)).call(this,t,e));return n.type="percentage",n.setup(),n}return Yt(i,t),It(i,[{key:"setMeasures",value:function(t){var e=this.measures;this.barOptions=t.barOptions||{};var i=this.barOptions;i.height=i.height||20,i.depth=i.depth||Jt,e.paddings.right=30,e.legendHeight=60,e.baseHeight=8*(i.height+.5*i.depth);}},{key:"setupComponents",value:function(){var t=this.state,e=[["percentageBars",{barHeight:this.barOptions.height,barDepth:this.barOptions.depth},function(){return {xPositions:t.xPositions,widths:t.widths,colors:this.colors}}.bind(this)]];this.components=new Map(e.map(function(t){var e=wt.apply(void 0,Ut(t));return [t[0],e]}));}},{key:"calc",value:function(){var t=this;Rt(i.prototype.__proto__||Object.getPrototypeOf(i.prototype),"calc",this).call(this);var e=this.state;e.xPositions=[],e.widths=[];var n=0;e.sliceTotals.map(function(i){var a=t.width*i/e.grandTotal;e.widths.push(a),e.xPositions.push(n),n+=a;});}},{key:"makeDataByIndex",value:function(){}},{key:"bindTooltip",value:function(){var t=this,i=this.state;this.container.addEventListener("mousemove",function(n){var a=t.components.get("percentageBars").store,s=n.target;if(a.includes(s)){var r=a.indexOf(s),o=e(t.container),l=e(s),u=l.left-o.left+parseInt(s.getAttribute("width"))/2,h=l.top-o.top,c=(t.formattedLabels&&t.formattedLabels.length>0?t.formattedLabels[r]:t.state.labels[r])+": ",d=i.sliceTotals[r]/i.grandTotal;t.tip.setValues(u,h,{name:c,value:(100*d).toFixed(1)+"%"}),t.tip.showTip();}});}}]),i}(be),Me=function(t){function i(t,e){Ht(this,i);var n=Bt(this,(i.__proto__||Object.getPrototypeOf(i)).call(this,t,e));return n.type="pie",n.initTimeout=0,n.init=1,n.setup(),n}return Yt(i,t),It(i,[{key:"configure",value:function(t){Rt(i.prototype.__proto__||Object.getPrototypeOf(i.prototype),"configure",this).call(this,t),this.mouseMove=this.mouseMove.bind(this),this.mouseLeave=this.mouseLeave.bind(this),this.hoverRadio=t.hoverRadio||.1,this.config.startAngle=t.startAngle||0,this.clockWise=t.clockWise||!1;}},{key:"calc",value:function(){var t=this;Rt(i.prototype.__proto__||Object.getPrototypeOf(i.prototype),"calc",this).call(this);var e=this.state;this.radius=this.height>this.width?this.center.x:this.center.y;var n=this.radius,a=this.clockWise,s=e.slicesProperties||[];e.sliceStrings=[],e.slicesProperties=[];var r=180-this.config.startAngle;e.sliceTotals.map(function(i,o){var l=r,u=i/e.grandTotal*360,h=u>180?1:0,c=a?-u:u,d=r+=c,f=p(l,n),v=p(d,n),g=t.init&&s[o],m=void 0,y=void 0;t.init?(m=g?g.startPosition:f,y=g?g.endPosition:f):(m=f,y=v);var b=360===u?_(m,y,t.center,t.radius,a,h):E(m,y,t.center,t.radius,a,h);e.sliceStrings.push(b),e.slicesProperties.push({startPosition:f,endPosition:v,value:i,total:e.grandTotal,startAngle:l,endAngle:d,angle:c});}),this.init=0;}},{key:"setupComponents",value:function(){var t=this.state,e=[["pieSlices",{},function(){return {sliceStrings:t.sliceStrings,colors:this.colors}}.bind(this)]];this.components=new Map(e.map(function(t){var e=wt.apply(void 0,Ut(t));return [t[0],e]}));}},{key:"calTranslateByAngle",value:function(t){var e=this.radius,i=this.hoverRadio,n=p(t.startAngle+t.angle/2,e);return "translate3d("+n.x*i+"px,"+n.y*i+"px,0)"}},{key:"hoverSlice",value:function(t,i,n,a){if(t){var s=this.colors[i];if(n){ot(t,this.calTranslateByAngle(this.state.slicesProperties[i])),t.style.fill=A(s,50);var r=e(this.svg),o=a.pageX-r.left+10,l=a.pageY-r.top-10,u=(this.formatted_labels&&this.formatted_labels.length>0?this.formatted_labels[i]:this.state.labels[i])+": ",h=(100*this.state.sliceTotals[i]/this.state.grandTotal).toFixed(1);this.tip.setValues(o,l,{name:u,value:h+"%"}),this.tip.showTip();}else ot(t,"translate3d(0,0,0)"),this.tip.hideTip(),t.style.fill=s;}}},{key:"bindTooltip",value:function(){this.container.addEventListener("mousemove",this.mouseMove),this.container.addEventListener("mouseleave",this.mouseLeave);}},{key:"mouseMove",value:function(t){var e=t.target,i=this.components.get("pieSlices").store,n=this.curActiveSliceIndex,a=this.curActiveSlice;if(i.includes(e)){var s=i.indexOf(e);this.hoverSlice(a,n,!1),this.curActiveSlice=e,this.curActiveSliceIndex=s,this.hoverSlice(e,s,!0,t);}else this.mouseLeave();}},{key:"mouseLeave",value:function(){this.hoverSlice(this.curActiveSlice,this.curActiveSliceIndex,!1);}}]),i}(be),Ce=function(t){function e(t,i){Ht(this,e);var n=Bt(this,(e.__proto__||Object.getPrototypeOf(e)).call(this,t,i));n.type="heatmap",n.countLabel=i.countLabel||"";var a=["Sunday","Monday"],s=a.includes(i.startSubDomain)?i.startSubDomain:"Sunday";return n.startSubDomainIndex=a.indexOf(s),n.setup(),n}return Yt(e,t),It(e,[{key:"setMeasures",value:function(t){var e=this.measures;this.discreteDomains=0===t.discreteDomains?0:1,e.paddings.top=36,e.paddings.bottom=0,e.legendHeight=24,e.baseHeight=12*xe+l(e);var i=this.data,n=this.discreteDomains?12:0;this.independentWidth=12*(vt(i.start,i.end)+n)+u(e);}},{key:"updateWidth",value:function(){var t=this.discreteDomains?12:0,e=this.state.noOfWeeks?this.state.noOfWeeks:52;this.baseWidth=12*(e+t)+u(this.measures);}},{key:"prepareData",value:function(){var t=arguments.length>0&&void 0!==arguments[0]?arguments[0]:this.data;if(t.start&&t.end&&t.start>t.end)throw new Error("Start date cannot be greater than end date.");if(t.start||(t.start=new Date,t.start.setFullYear(t.start.getFullYear()-1)),t.end||(t.end=new Date),t.dataPoints=t.dataPoints||{},parseInt(Object.keys(t.dataPoints)[0])>1e5){var e={};Object.keys(t.dataPoints).forEach(function(i){var n=new Date(i*ke);e[pt(n)]=t.dataPoints[i];}),t.dataPoints=e;}return t}},{key:"calc",value:function(){var t=this.state;t.start=ft(this.data.start),t.end=ft(this.data.end),t.firstWeekStart=ft(t.start),t.noOfWeeks=vt(t.start,t.end),t.distribution=St(Object.values(this.data.dataPoints),5),t.domainConfigs=this.getDomains();}},{key:"setupComponents",value:function(){var t=this,e=this.state,i=this.discreteDomains?0:1,n=e.domainConfigs.map(function(n,a){return ["heatDomain",{index:n.index,colWidth:12,rowHeight:12,squareSize:10,radius:t.rawChartArgs.radius||0,xTranslate:12*e.domainConfigs.filter(function(t,e){return e<a}).map(function(t){return t.cols.length-i}).reduce(function(t,e){return t+e},0)},function(){return e.domainConfigs[a]}.bind(t)]});this.components=new Map(n.map(function(t,e){var i=wt.apply(void 0,Ut(t));return [t[0]+"-"+e,i]}));var a=0;Pe.forEach(function(e,i){if([1,3,5].includes(i)){var n=Y("subdomain-name",-6,a,e,{fontSize:10,dy:8,textAnchor:"end"});t.drawArea.appendChild(n);}a+=12;});}},{key:"update",value:function(t){t||console.error("No data to update."),this.data=this.prepareData(t),this.draw(),this.bindTooltip();}},{key:"bindTooltip",value:function(){var t=this;this.container.addEventListener("mousemove",function(e){t.components.forEach(function(i){var n=i.store,a=e.target;if(n.includes(a)){var s=a.getAttribute("data-value"),r=a.getAttribute("data-date").split("-"),o=yt(parseInt(r[1])-1,!0),l=t.container.getBoundingClientRect(),u=a.getBoundingClientRect(),h=parseInt(e.target.getAttribute("width")),c=u.left-l.left+h/2,d=u.top-l.top,p=s+" "+t.countLabel,f=" on "+o+" "+r[0]+", "+r[2];t.tip.setValues(c,d,{name:f,value:p,valueFirst:1},[]),t.tip.showTip();}});});}},{key:"renderLegend",value:function(){var t=this;this.legendArea.textContent="";var e=0,i=this.rawChartArgs.radius||0,n=Y("subdomain-name",e,12,"Less",{fontSize:11,dy:9});e=30,this.legendArea.appendChild(n),this.colors.slice(0,5).map(function(n,a){var s=H("heatmap-legend-unit",e+15*a,12,10,i,n);t.legendArea.appendChild(s);});var a=Y("subdomain-name",e+75+3,12,"More",{fontSize:11,dy:9});this.legendArea.appendChild(a);}},{key:"getDomains",value:function(){for(var t=this.state,e=[t.start.getMonth(),t.start.getFullYear()],i=e[0],n=e[1],a=[t.end.getMonth(),t.end.getFullYear()],s=a[0]-i+1+12*(a[1]-n),r=[],o=ft(t.start),l=0;l<s;l++){var u=t.end;if(!mt(o,t.end)){var h=[o.getMonth(),o.getFullYear()];u=bt(h[0],h[1]);}r.push(this.getDomainConfig(o,u)),kt(u,1),o=u;}return r}},{key:"getDomainConfig",value:function(t){var e=arguments.length>1&&void 0!==arguments[1]?arguments[1]:"",i=[t.getMonth(),t.getFullYear()],n=i[0],a=i[1],s=xt(t),r={index:n,cols:[]};kt(e=ft(e)||bt(n,a),1);for(var o=vt(s,e),l=[],u=void 0,h=0;h<o;h++)u=this.getCol(s,n),l.push(u),kt(s=new Date(u[xe-1].yyyyMmDd),1);return void 0!==u[xe-1].dataValue&&(kt(s,1),l.push(this.getCol(s,n,!0))),r.cols=l,r}},{key:"getCol",value:function(t,e){for(var i=arguments.length>2&&void 0!==arguments[2]&&arguments[2],n=this.state,a=ft(t),s=[],r=0;r<xe;r++,kt(a,1)){var o={},l=a>=n.start&&a<=n.end;i||a.getMonth()!==e||!l?o.yyyyMmDd=pt(a):o=this.getSubDomainConfig(a),s.push(o);}return s}},{key:"getSubDomainConfig",value:function(t){var e=pt(t),i=this.data.dataPoints[e];return {yyyyMmDd:e,dataValue:i||0,fill:this.colors[Et(i,this.state.distribution)]}}}]),e}(ye),De=function(t){function i(t,e){Ht(this,i);var n=Bt(this,(i.__proto__||Object.getPrototypeOf(i)).call(this,t,e));return n.barOptions=e.barOptions||{},n.lineOptions=e.lineOptions||{},n.type=e.type||"line",n.init=1,n.setup(),n}return Yt(i,t),It(i,[{key:"setMeasures",value:function(){this.data.datasets.length<=1&&(this.config.showLegend=0,this.measures.paddings.bottom=30);}},{key:"configure",value:function(t){Rt(i.prototype.__proto__||Object.getPrototypeOf(i.prototype),"configure",this).call(this,t),t.axisOptions=t.axisOptions||{},t.tooltipOptions=t.tooltipOptions||{},this.config.xAxisMode=t.axisOptions.xAxisMode||"span",this.config.yAxisMode=t.axisOptions.yAxisMode||"span",this.config.xIsSeries=t.axisOptions.xIsSeries||0,this.config.shortenYAxisNumbers=t.axisOptions.shortenYAxisNumbers||0,this.config.formatTooltipX=t.tooltipOptions.formatTooltipX,this.config.formatTooltipY=t.tooltipOptions.formatTooltipY,this.config.valuesOverPoints=t.valuesOverPoints;}},{key:"prepareData",value:function(){return _t(arguments.length>0&&void 0!==arguments[0]?arguments[0]:this.data,this.type)}},{key:"prepareFirstData",value:function(){return zt(arguments.length>0&&void 0!==arguments[0]?arguments[0]:this.data)}},{key:"calc",value:function(){var t=arguments.length>0&&void 0!==arguments[0]&&arguments[0];this.calcXPositions(),t||this.calcYAxisParameters(this.getAllYValues(),"line"===this.type),this.makeDataByIndex();}},{key:"calcXPositions",value:function(){var t=this.state,e=this.data.labels;t.datasetLength=e.length,t.unitWidth=this.width/t.datasetLength,t.xOffset=t.unitWidth/2,t.xAxis={labels:e,positions:e.map(function(e,i){return h(t.xOffset+i*t.unitWidth)})};}},{key:"calcYAxisParameters",value:function(t){var e=Lt(t,arguments.length>1&&void 0!==arguments[1]?arguments[1]:"false"),i=this.height/Ct(e),n=Mt(e)*i,a=this.height-Ot(e)*n;this.state.yAxis={labels:e,positions:e.map(function(t){return a-t*i}),scaleMultiplier:i,zeroLine:a},this.calcDatasetPoints(),this.calcYExtremes(),this.calcYRegions();}},{key:"calcDatasetPoints",value:function(){var t=this.state,e=function(e){return e.map(function(e){return Dt(e,t.yAxis)})};t.datasets=this.data.datasets.map(function(t,i){var n=t.values,a=t.cumulativeYs||[];return {name:t.name&&t.name.replace(/<|>|&/g,function(t){return "&"==t?"&amp;":"<"==t?"&lt;":"&gt;"}),index:i,chartType:t.chartType,values:n,yPositions:e(n),cumulativeYs:a,cumulativeYPos:e(a)}});}},{key:"calcYExtremes",value:function(){var t=this.state;if(this.barOptions.stacked)return void(t.yExtremes=t.datasets[t.datasets.length-1].cumulativeYPos);t.yExtremes=new Array(t.datasetLength).fill(9999),t.datasets.map(function(e){e.yPositions.map(function(e,i){e<t.yExtremes[i]&&(t.yExtremes[i]=e);});});}},{key:"calcYRegions",value:function(){var t=this.state;this.data.yMarkers&&(this.state.yMarkers=this.data.yMarkers.map(function(e){return e.position=Dt(e.value,t.yAxis),e.options||(e.options={}),e})),this.data.yRegions&&(this.state.yRegions=this.data.yRegions.map(function(e){return e.startPos=Dt(e.start,t.yAxis),e.endPos=Dt(e.end,t.yAxis),e.options||(e.options={}),e}));}},{key:"getAllYValues",value:function(){var t,e=this,i="values";if(this.barOptions.stacked){i="cumulativeYs";var n=new Array(this.state.datasetLength).fill(0);this.data.datasets.map(function(t,a){var s=e.data.datasets[a].values;t[i]=n=n.map(function(t,e){return t+s[e]});});}var a=this.data.datasets.map(function(t){return t[i]});return this.data.yMarkers&&a.push(this.data.yMarkers.map(function(t){return t.value})),this.data.yRegions&&this.data.yRegions.map(function(t){a.push([t.end,t.start]);}),(t=[]).concat.apply(t,Ut(a))}},{key:"setupComponents",value:function(){var t=this,e=[["yAxis",{mode:this.config.yAxisMode,width:this.width,shortenNumbers:this.config.shortenYAxisNumbers},function(){return this.state.yAxis}.bind(this)],["xAxis",{mode:this.config.xAxisMode,height:this.height},function(){var t=this.state;return t.xAxis.calcLabels=Wt(this.width,t.xAxis.labels,this.config.xIsSeries),t.xAxis}.bind(this)],["yRegions",{width:this.width,pos:"right"},function(){return this.state.yRegions}.bind(this)]],i=this.state.datasets.filter(function(t){return "bar"===t.chartType}),n=this.state.datasets.filter(function(t){return "line"===t.chartType}),a=i.map(function(e){var n=e.index;return ["barGraph-"+e.index,{index:n,color:t.colors[n],stacked:t.barOptions.stacked,valuesOverPoints:t.config.valuesOverPoints,minHeight:0*t.height},function(){var t=this.state,e=t.datasets[n],a=this.barOptions.stacked,s=this.barOptions.spaceRatio||.5,r=t.unitWidth*(1-s),o=r/(a?1:i.length),l=t.xAxis.positions.map(function(t){return t-r/2});a||(l=l.map(function(t){return t+o*n}));var u=new Array(t.datasetLength).fill("");this.config.valuesOverPoints&&(u=a&&e.index===t.datasets.length-1?e.cumulativeYs:e.values);var h=new Array(t.datasetLength).fill(0);return a&&(h=e.yPositions.map(function(t,i){return t-e.cumulativeYPos[i]})),{xPositions:l,yPositions:e.yPositions,offsets:h,labels:u,zeroLine:t.yAxis.zeroLine,barsWidth:r,barWidth:o}}.bind(t)]}),s=n.map(function(e){var i=e.index;return ["lineGraph-"+e.index,{index:i,color:t.colors[i],svgDefs:t.svgDefs,heatline:t.lineOptions.heatline,regionFill:t.lineOptions.regionFill,spline:t.lineOptions.spline,hideDots:t.lineOptions.hideDots,hideLine:t.lineOptions.hideLine,valuesOverPoints:t.config.valuesOverPoints},function(){var t=this.state,e=t.datasets[i],n=t.yAxis.positions[0]<t.yAxis.zeroLine?t.yAxis.positions[0]:t.yAxis.zeroLine;return {xPositions:t.xAxis.positions,yPositions:e.yPositions,values:e.values,zeroLine:n,radius:this.lineOptions.dotSize||4}}.bind(t)]}),r=[["yMarkers",{width:this.width,pos:"right"},function(){return this.state.yMarkers}.bind(this)]];e=e.concat(a,s,r);var o=["yMarkers","yRegions"];this.dataUnitComponents=[],this.components=new Map(e.filter(function(e){return !o.includes(e[0])||t.state[e[0]]}).map(function(e){var i=wt.apply(void 0,Ut(e));return (e[0].includes("lineGraph")||e[0].includes("barGraph"))&&t.dataUnitComponents.push(i),[e[0],i]}));}},{key:"makeDataByIndex",value:function(){var t=this;this.dataByIndex={};var e=this.state,i=this.config.formatTooltipX,n=this.config.formatTooltipY;e.xAxis.labels.map(function(a,s){var r=t.state.datasets.map(function(e,i){var a=e.values[s];return {title:e.name,value:a,yPos:e.yPositions[s],color:t.colors[i],formatted:n?n(a):a}});t.dataByIndex[s]={label:a,formattedLabel:i?i(a):a,xPos:e.xAxis.positions[s],values:r,yExtreme:e.yExtremes[s]};});}},{key:"bindTooltip",value:function(){var t=this;this.container.addEventListener("mousemove",function(i){var n=t.measures,a=e(t.container),s=i.pageX-a.left-o(n),l=i.pageY-a.top;l<t.height+r(n)&&l>r(n)?t.mapTooltipXPosition(s):t.tip.hideTip();});}},{key:"mapTooltipXPosition",value:function(t){var e=this.state;if(e.yExtremes){var i=Nt(t,e.xAxis.positions,!0);if(i>=0){var n=this.dataByIndex[i];this.tip.setValues(n.xPos+this.tip.offset.x,n.yExtreme+this.tip.offset.y,{name:n.formattedLabel,value:""},n.values,i),this.tip.showTip();}}}},{key:"renderLegend",value:function(){var t=this,e=this.data;e.datasets.length>1&&(this.legendArea.textContent="",e.datasets.map(function(e,i){var n=I(100*i,"0",100,t.colors[i],e.name,t.config.truncateLegends);t.legendArea.appendChild(n);}));}},{key:"makeOverlay",value:function(){var t=this;if(this.init)return void(this.init=0);this.overlayGuides&&this.overlayGuides.forEach(function(t){var e=t.overlay;e.parentNode.removeChild(e);}),this.overlayGuides=this.dataUnitComponents.map(function(t){return {type:t.unitType,overlay:void 0,units:t.units}}),void 0===this.state.currentIndex&&(this.state.currentIndex=this.state.datasetLength-1),this.overlayGuides.map(function(e){var i=e.units[t.state.currentIndex];e.overlay=ue[e.type](i),t.drawArea.appendChild(e.overlay);});}},{key:"updateOverlayGuides",value:function(){this.overlayGuides&&this.overlayGuides.forEach(function(t){var e=t.overlay;e.parentNode.removeChild(e);});}},{key:"bindOverlay",value:function(){var t=this;this.parent.addEventListener("data-select",function(){t.updateOverlay();});}},{key:"bindUnits",value:function(){var t=this;this.dataUnitComponents.map(function(e){e.units.map(function(e){e.addEventListener("click",function(){var i=e.getAttribute("data-point-index");t.setCurrentDataPoint(i);});});}),this.tip.container.addEventListener("click",function(){var e=t.tip.container.getAttribute("data-point-index");t.setCurrentDataPoint(e);});}},{key:"updateOverlay",value:function(){var t=this;this.overlayGuides.map(function(e){var i=e.units[t.state.currentIndex];he[e.type](i,e.overlay);});}},{key:"onLeftArrow",value:function(){this.setCurrentDataPoint(this.state.currentIndex-1);}},{key:"onRightArrow",value:function(){this.setCurrentDataPoint(this.state.currentIndex+1);}},{key:"getDataPoint",value:function(){var t=arguments.length>0&&void 0!==arguments[0]?arguments[0]:this.state.currentIndex,e=this.state;return {index:t,label:e.xAxis.labels[t],values:e.datasets.map(function(e){return e.values[t]})}}},{key:"setCurrentDataPoint",value:function(t){var e=this.state;(t=parseInt(t))<0&&(t=0),t>=e.xAxis.labels.length&&(t=e.xAxis.labels.length-1),t!==e.currentIndex&&(e.currentIndex=t,s(this.parent,"data-select",this.getDataPoint()));}},{key:"addDataPoint",value:function(t,e){var n=arguments.length>2&&void 0!==arguments[2]?arguments[2]:this.state.datasetLength;Rt(i.prototype.__proto__||Object.getPrototypeOf(i.prototype),"addDataPoint",this).call(this,t,e,n),this.data.labels.splice(n,0,t),this.data.datasets.map(function(t,i){t.values.splice(n,0,e[i]);}),this.update(this.data);}},{key:"removeDataPoint",value:function(){var t=arguments.length>0&&void 0!==arguments[0]?arguments[0]:this.state.datasetLength-1;this.data.labels.length<=1||(Rt(i.prototype.__proto__||Object.getPrototypeOf(i.prototype),"removeDataPoint",this).call(this,t),this.data.labels.splice(t,1),this.data.datasets.map(function(e){e.values.splice(t,1);}),this.update(this.data));}},{key:"updateDataset",value:function(t){var e=arguments.length>1&&void 0!==arguments[1]?arguments[1]:0;this.data.datasets[e].values=t,this.update(this.data);}},{key:"updateDatasets",value:function(t){this.data.datasets.map(function(e,i){t[i]&&(e.values=t[i]);}),this.update(this.data);}}]),i}(ye),Ne=function(t){function i(t,e){Ht(this,i);var n=Bt(this,(i.__proto__||Object.getPrototypeOf(i)).call(this,t,e));return n.type="donut",n.initTimeout=0,n.init=1,n.setup(),n}return Yt(i,t),It(i,[{key:"configure",value:function(t){Rt(i.prototype.__proto__||Object.getPrototypeOf(i.prototype),"configure",this).call(this,t),this.mouseMove=this.mouseMove.bind(this),this.mouseLeave=this.mouseLeave.bind(this),this.hoverRadio=t.hoverRadio||.1,this.config.startAngle=t.startAngle||0,this.clockWise=t.clockWise||!1,this.strokeWidth=t.strokeWidth||30;}},{key:"calc",value:function(){var t=this;Rt(i.prototype.__proto__||Object.getPrototypeOf(i.prototype),"calc",this).call(this);var e=this.state;this.radius=this.height>this.width?this.center.x-this.strokeWidth/2:this.center.y-this.strokeWidth/2;var n=this.radius,a=this.clockWise,s=e.slicesProperties||[];e.sliceStrings=[],e.slicesProperties=[];var r=180-this.config.startAngle;e.sliceTotals.map(function(i,o){var l=r,u=i/e.grandTotal*360,h=u>180?1:0,c=a?-u:u,d=r+=c,f=p(l,n),v=p(d,n),g=t.init&&s[o],m=void 0,y=void 0;t.init?(m=g?g.startPosition:f,y=g?g.endPosition:f):(m=f,y=v);var b=360===u?W(m,y,t.center,t.radius,t.clockWise,h):z(m,y,t.center,t.radius,t.clockWise,h);e.sliceStrings.push(b),e.slicesProperties.push({startPosition:f,endPosition:v,value:i,total:e.grandTotal,startAngle:l,endAngle:d,angle:c});}),this.init=0;}},{key:"setupComponents",value:function(){var t=this.state,e=[["donutSlices",{},function(){return {sliceStrings:t.sliceStrings,colors:this.colors,strokeWidth:this.strokeWidth}}.bind(this)]];this.components=new Map(e.map(function(t){var e=wt.apply(void 0,Ut(t));return [t[0],e]}));}},{key:"calTranslateByAngle",value:function(t){var e=this.radius,i=this.hoverRadio,n=p(t.startAngle+t.angle/2,e);return "translate3d("+n.x*i+"px,"+n.y*i+"px,0)"}},{key:"hoverSlice",value:function(t,i,n,a){if(t){var s=this.colors[i];if(n){ot(t,this.calTranslateByAngle(this.state.slicesProperties[i])),t.style.stroke=A(s,50);var r=e(this.svg),o=a.pageX-r.left+10,l=a.pageY-r.top-10,u=(this.formatted_labels&&this.formatted_labels.length>0?this.formatted_labels[i]:this.state.labels[i])+": ",h=(100*this.state.sliceTotals[i]/this.state.grandTotal).toFixed(1);this.tip.setValues(o,l,{name:u,value:h+"%"}),this.tip.showTip();}else ot(t,"translate3d(0,0,0)"),this.tip.hideTip(),t.style.stroke=s;}}},{key:"bindTooltip",value:function(){this.container.addEventListener("mousemove",this.mouseMove),this.container.addEventListener("mouseleave",this.mouseLeave);}},{key:"mouseMove",value:function(t){var e=t.target,i=this.components.get("donutSlices").store,n=this.curActiveSliceIndex,a=this.curActiveSlice;if(i.includes(e)){var s=i.indexOf(e);this.hoverSlice(a,n,!1),this.curActiveSlice=e,this.curActiveSliceIndex=s,this.hoverSlice(e,s,!0,t);}else this.mouseLeave();}},{key:"mouseLeave",value:function(){this.hoverSlice(this.curActiveSlice,this.curActiveSliceIndex,!1);}}]),i}(be),Se={bar:De,line:De,percentage:Oe,heatmap:Ce,pie:Me,donut:Ne},Ee=function t(e,i){return Ht(this,t),jt(i.type,e,i)},_e=Object.freeze({Chart:Ee,PercentageChart:Oe,PieChart:Me,Heatmap:Ce,AxisChart:De}),ze={};return ze.NAME="Frappe Charts",ze.VERSION="1.6.2",ze=Object.assign({},ze,_e)});
-
-    });
-
-    /* node_modules/svelte-frappe-charts/src/components/base.svelte generated by Svelte v3.44.3 */
-    const file$a = "node_modules/svelte-frappe-charts/src/components/base.svelte";
-
-    function create_fragment$a(ctx) {
-    	let div;
-    	let mounted;
-    	let dispose;
-
-    	const block = {
-    		c: function create() {
-    			div = element("div");
-    			add_location(div, file$a, 91, 0, 2116);
-    		},
-    		l: function claim(nodes) {
-    			throw new Error("options.hydrate only works if the component was compiled with the `hydratable: true` option");
-    		},
-    		m: function mount(target, anchor) {
-    			insert_dev(target, div, anchor);
-    			/*div_binding*/ ctx[19](div);
-
-    			if (!mounted) {
-    				dispose = listen_dev(div, "data-select", /*data_select_handler*/ ctx[18], false, false, false);
-    				mounted = true;
-    			}
-    		},
-    		p: noop,
-    		i: noop,
-    		o: noop,
-    		d: function destroy(detaching) {
-    			if (detaching) detach_dev(div);
-    			/*div_binding*/ ctx[19](null);
-    			mounted = false;
-    			dispose();
-    		}
-    	};
-
-    	dispatch_dev("SvelteRegisterBlock", {
-    		block,
-    		id: create_fragment$a.name,
-    		type: "component",
-    		source: "",
-    		ctx
-    	});
-
-    	return block;
-    }
-
-    function instance$a($$self, $$props, $$invalidate) {
-    	let { $$slots: slots = {}, $$scope } = $$props;
-    	validate_slots('Base', slots, []);
-
-    	let { data = {
-    		labels: [],
-    		datasets: [{ values: [] }],
-    		yMarkers: {},
-    		yRegions: []
-    	} } = $$props;
-
-    	let { title = '' } = $$props;
-    	let { type = 'line' } = $$props;
-    	let { height = 300 } = $$props;
-    	let { animate = true } = $$props;
-    	let { axisOptions = {} } = $$props;
-    	let { barOptions = {} } = $$props;
-    	let { lineOptions = {} } = $$props;
-    	let { tooltipOptions = {} } = $$props;
-    	let { colors = [] } = $$props;
-    	let { valuesOverPoints = 0 } = $$props;
-    	let { isNavigable = false } = $$props;
-    	let { maxSlices = 3 } = $$props;
-    	let { fontSize = 16 } = $$props;
-
-    	/**
-     *  COMPONENT
-     */
-    	//  The Chart returned from frappe
-    	let chart = null;
-
-    	//  DOM node for frappe to latch onto
-    	let chartRef;
-
-    	//  Helper HOF for calling a fn only if chart exists
-    	function ifChartThen(fn) {
-    		return function ifChart(...args) {
-    			if (chart) {
-    				return fn(...args);
-    			}
-    		};
-    	}
-
-    	const addDataPoint = ifChartThen((label, valueFromEachDataset, index) => chart.addDataPoint(label, valueFromEachDataset, index));
-    	const removeDataPoint = ifChartThen(index => chart.removeDataPoint(index));
-    	const exportChart = ifChartThen(() => chart.export());
-
-    	//  Update the chart when incoming data changes
-    	const updateChart = ifChartThen(newData => chart.update(newData));
-
-    	/**
-     *  Handle initializing the chart when this Svelte component mounts
-     */
-    	onMount(() => {
-    		chart = new frappeCharts_min_umd.Chart(chartRef,
-    		{
-    				data,
-    				title,
-    				type,
-    				height,
-    				animate,
-    				colors,
-    				axisOptions,
-    				barOptions,
-    				lineOptions,
-    				tooltipOptions,
-    				valuesOverPoints,
-    				isNavigable,
-    				maxSlices,
-    				fontSize
-    			});
-    	});
-
-    	//  Mark Chart references for garbage collection when component is unmounted
-    	onDestroy(() => {
-    		chart = null;
-    	});
-
-    	const writable_props = [
-    		'data',
-    		'title',
-    		'type',
-    		'height',
-    		'animate',
-    		'axisOptions',
-    		'barOptions',
-    		'lineOptions',
-    		'tooltipOptions',
-    		'colors',
-    		'valuesOverPoints',
-    		'isNavigable',
-    		'maxSlices',
-    		'fontSize'
-    	];
-
-    	Object.keys($$props).forEach(key => {
-    		if (!~writable_props.indexOf(key) && key.slice(0, 2) !== '$$' && key !== 'slot') console.warn(`<Base> was created with unknown prop '${key}'`);
-    	});
-
-    	function data_select_handler(event) {
-    		bubble.call(this, $$self, event);
-    	}
-
-    	function div_binding($$value) {
-    		binding_callbacks[$$value ? 'unshift' : 'push'](() => {
-    			chartRef = $$value;
-    			$$invalidate(0, chartRef);
-    		});
-    	}
-
-    	$$self.$$set = $$props => {
-    		if ('data' in $$props) $$invalidate(1, data = $$props.data);
-    		if ('title' in $$props) $$invalidate(2, title = $$props.title);
-    		if ('type' in $$props) $$invalidate(3, type = $$props.type);
-    		if ('height' in $$props) $$invalidate(4, height = $$props.height);
-    		if ('animate' in $$props) $$invalidate(5, animate = $$props.animate);
-    		if ('axisOptions' in $$props) $$invalidate(6, axisOptions = $$props.axisOptions);
-    		if ('barOptions' in $$props) $$invalidate(7, barOptions = $$props.barOptions);
-    		if ('lineOptions' in $$props) $$invalidate(8, lineOptions = $$props.lineOptions);
-    		if ('tooltipOptions' in $$props) $$invalidate(9, tooltipOptions = $$props.tooltipOptions);
-    		if ('colors' in $$props) $$invalidate(10, colors = $$props.colors);
-    		if ('valuesOverPoints' in $$props) $$invalidate(11, valuesOverPoints = $$props.valuesOverPoints);
-    		if ('isNavigable' in $$props) $$invalidate(12, isNavigable = $$props.isNavigable);
-    		if ('maxSlices' in $$props) $$invalidate(13, maxSlices = $$props.maxSlices);
-    		if ('fontSize' in $$props) $$invalidate(14, fontSize = $$props.fontSize);
-    	};
-
-    	$$self.$capture_state = () => ({
-    		onMount,
-    		onDestroy,
-    		Chart: frappeCharts_min_umd.Chart,
-    		data,
-    		title,
-    		type,
-    		height,
-    		animate,
-    		axisOptions,
-    		barOptions,
-    		lineOptions,
-    		tooltipOptions,
-    		colors,
-    		valuesOverPoints,
-    		isNavigable,
-    		maxSlices,
-    		fontSize,
-    		chart,
-    		chartRef,
-    		ifChartThen,
-    		addDataPoint,
-    		removeDataPoint,
-    		exportChart,
-    		updateChart
-    	});
-
-    	$$self.$inject_state = $$props => {
-    		if ('data' in $$props) $$invalidate(1, data = $$props.data);
-    		if ('title' in $$props) $$invalidate(2, title = $$props.title);
-    		if ('type' in $$props) $$invalidate(3, type = $$props.type);
-    		if ('height' in $$props) $$invalidate(4, height = $$props.height);
-    		if ('animate' in $$props) $$invalidate(5, animate = $$props.animate);
-    		if ('axisOptions' in $$props) $$invalidate(6, axisOptions = $$props.axisOptions);
-    		if ('barOptions' in $$props) $$invalidate(7, barOptions = $$props.barOptions);
-    		if ('lineOptions' in $$props) $$invalidate(8, lineOptions = $$props.lineOptions);
-    		if ('tooltipOptions' in $$props) $$invalidate(9, tooltipOptions = $$props.tooltipOptions);
-    		if ('colors' in $$props) $$invalidate(10, colors = $$props.colors);
-    		if ('valuesOverPoints' in $$props) $$invalidate(11, valuesOverPoints = $$props.valuesOverPoints);
-    		if ('isNavigable' in $$props) $$invalidate(12, isNavigable = $$props.isNavigable);
-    		if ('maxSlices' in $$props) $$invalidate(13, maxSlices = $$props.maxSlices);
-    		if ('fontSize' in $$props) $$invalidate(14, fontSize = $$props.fontSize);
-    		if ('chart' in $$props) chart = $$props.chart;
-    		if ('chartRef' in $$props) $$invalidate(0, chartRef = $$props.chartRef);
-    	};
-
-    	if ($$props && "$$inject" in $$props) {
-    		$$self.$inject_state($$props.$$inject);
-    	}
-
-    	$$self.$$.update = () => {
-    		if ($$self.$$.dirty & /*data*/ 2) {
-    			updateChart(data);
-    		}
-    	};
-
-    	return [
-    		chartRef,
-    		data,
-    		title,
-    		type,
-    		height,
-    		animate,
-    		axisOptions,
-    		barOptions,
-    		lineOptions,
-    		tooltipOptions,
-    		colors,
-    		valuesOverPoints,
-    		isNavigable,
-    		maxSlices,
-    		fontSize,
-    		addDataPoint,
-    		removeDataPoint,
-    		exportChart,
-    		data_select_handler,
-    		div_binding
-    	];
-    }
-
-    class Base extends SvelteComponentDev {
-    	constructor(options) {
-    		super(options);
-
-    		init(this, options, instance$a, create_fragment$a, safe_not_equal, {
-    			data: 1,
-    			title: 2,
-    			type: 3,
-    			height: 4,
-    			animate: 5,
-    			axisOptions: 6,
-    			barOptions: 7,
-    			lineOptions: 8,
-    			tooltipOptions: 9,
-    			colors: 10,
-    			valuesOverPoints: 11,
-    			isNavigable: 12,
-    			maxSlices: 13,
-    			fontSize: 14,
-    			addDataPoint: 15,
-    			removeDataPoint: 16,
-    			exportChart: 17
-    		});
-
-    		dispatch_dev("SvelteRegisterComponent", {
-    			component: this,
-    			tagName: "Base",
-    			options,
-    			id: create_fragment$a.name
-    		});
-    	}
-
-    	get data() {
-    		throw new Error("<Base>: Props cannot be read directly from the component instance unless compiling with 'accessors: true' or '<svelte:options accessors/>'");
-    	}
-
-    	set data(value) {
-    		throw new Error("<Base>: Props cannot be set directly on the component instance unless compiling with 'accessors: true' or '<svelte:options accessors/>'");
-    	}
-
-    	get title() {
-    		throw new Error("<Base>: Props cannot be read directly from the component instance unless compiling with 'accessors: true' or '<svelte:options accessors/>'");
-    	}
-
-    	set title(value) {
-    		throw new Error("<Base>: Props cannot be set directly on the component instance unless compiling with 'accessors: true' or '<svelte:options accessors/>'");
-    	}
-
-    	get type() {
-    		throw new Error("<Base>: Props cannot be read directly from the component instance unless compiling with 'accessors: true' or '<svelte:options accessors/>'");
-    	}
-
-    	set type(value) {
-    		throw new Error("<Base>: Props cannot be set directly on the component instance unless compiling with 'accessors: true' or '<svelte:options accessors/>'");
-    	}
-
-    	get height() {
-    		throw new Error("<Base>: Props cannot be read directly from the component instance unless compiling with 'accessors: true' or '<svelte:options accessors/>'");
-    	}
-
-    	set height(value) {
-    		throw new Error("<Base>: Props cannot be set directly on the component instance unless compiling with 'accessors: true' or '<svelte:options accessors/>'");
-    	}
-
-    	get animate() {
-    		throw new Error("<Base>: Props cannot be read directly from the component instance unless compiling with 'accessors: true' or '<svelte:options accessors/>'");
-    	}
-
-    	set animate(value) {
-    		throw new Error("<Base>: Props cannot be set directly on the component instance unless compiling with 'accessors: true' or '<svelte:options accessors/>'");
-    	}
-
-    	get axisOptions() {
-    		throw new Error("<Base>: Props cannot be read directly from the component instance unless compiling with 'accessors: true' or '<svelte:options accessors/>'");
-    	}
-
-    	set axisOptions(value) {
-    		throw new Error("<Base>: Props cannot be set directly on the component instance unless compiling with 'accessors: true' or '<svelte:options accessors/>'");
-    	}
-
-    	get barOptions() {
-    		throw new Error("<Base>: Props cannot be read directly from the component instance unless compiling with 'accessors: true' or '<svelte:options accessors/>'");
-    	}
-
-    	set barOptions(value) {
-    		throw new Error("<Base>: Props cannot be set directly on the component instance unless compiling with 'accessors: true' or '<svelte:options accessors/>'");
-    	}
-
-    	get lineOptions() {
-    		throw new Error("<Base>: Props cannot be read directly from the component instance unless compiling with 'accessors: true' or '<svelte:options accessors/>'");
-    	}
-
-    	set lineOptions(value) {
-    		throw new Error("<Base>: Props cannot be set directly on the component instance unless compiling with 'accessors: true' or '<svelte:options accessors/>'");
-    	}
-
-    	get tooltipOptions() {
-    		throw new Error("<Base>: Props cannot be read directly from the component instance unless compiling with 'accessors: true' or '<svelte:options accessors/>'");
-    	}
-
-    	set tooltipOptions(value) {
-    		throw new Error("<Base>: Props cannot be set directly on the component instance unless compiling with 'accessors: true' or '<svelte:options accessors/>'");
-    	}
-
-    	get colors() {
-    		throw new Error("<Base>: Props cannot be read directly from the component instance unless compiling with 'accessors: true' or '<svelte:options accessors/>'");
-    	}
-
-    	set colors(value) {
-    		throw new Error("<Base>: Props cannot be set directly on the component instance unless compiling with 'accessors: true' or '<svelte:options accessors/>'");
-    	}
-
-    	get valuesOverPoints() {
-    		throw new Error("<Base>: Props cannot be read directly from the component instance unless compiling with 'accessors: true' or '<svelte:options accessors/>'");
-    	}
-
-    	set valuesOverPoints(value) {
-    		throw new Error("<Base>: Props cannot be set directly on the component instance unless compiling with 'accessors: true' or '<svelte:options accessors/>'");
-    	}
-
-    	get isNavigable() {
-    		throw new Error("<Base>: Props cannot be read directly from the component instance unless compiling with 'accessors: true' or '<svelte:options accessors/>'");
-    	}
-
-    	set isNavigable(value) {
-    		throw new Error("<Base>: Props cannot be set directly on the component instance unless compiling with 'accessors: true' or '<svelte:options accessors/>'");
-    	}
-
-    	get maxSlices() {
-    		throw new Error("<Base>: Props cannot be read directly from the component instance unless compiling with 'accessors: true' or '<svelte:options accessors/>'");
-    	}
-
-    	set maxSlices(value) {
-    		throw new Error("<Base>: Props cannot be set directly on the component instance unless compiling with 'accessors: true' or '<svelte:options accessors/>'");
-    	}
-
-    	get fontSize() {
-    		throw new Error("<Base>: Props cannot be read directly from the component instance unless compiling with 'accessors: true' or '<svelte:options accessors/>'");
-    	}
-
-    	set fontSize(value) {
-    		throw new Error("<Base>: Props cannot be set directly on the component instance unless compiling with 'accessors: true' or '<svelte:options accessors/>'");
-    	}
-
-    	get addDataPoint() {
-    		return this.$$.ctx[15];
-    	}
-
-    	set addDataPoint(value) {
-    		throw new Error("<Base>: Props cannot be set directly on the component instance unless compiling with 'accessors: true' or '<svelte:options accessors/>'");
-    	}
-
-    	get removeDataPoint() {
-    		return this.$$.ctx[16];
-    	}
-
-    	set removeDataPoint(value) {
-    		throw new Error("<Base>: Props cannot be set directly on the component instance unless compiling with 'accessors: true' or '<svelte:options accessors/>'");
-    	}
-
-    	get exportChart() {
-    		return this.$$.ctx[17];
-    	}
-
-    	set exportChart(value) {
-    		throw new Error("<Base>: Props cannot be set directly on the component instance unless compiling with 'accessors: true' or '<svelte:options accessors/>'");
-    	}
-    }
-
-    var Base$1 = Base;
-
     /* src/Tokenomics.svelte generated by Svelte v3.44.3 */
 
     const { console: console_1 } = globals;
-    const file$9 = "src/Tokenomics.svelte";
+    const file$a = "src/Tokenomics.svelte";
 
-    function create_fragment$9(ctx) {
+    function create_fragment$a(ctx) {
     	let div4;
     	let div1;
     	let div0;
@@ -4943,6 +4494,8 @@ var app = (function () {
     	let span5;
     	let t17;
     	let div5;
+    	let mounted;
+    	let dispose;
 
     	const block = {
     		c: function create() {
@@ -4993,98 +4546,105 @@ var app = (function () {
     			span5.textContent = "Foundation 30%";
     			t17 = space();
     			div5 = element("div");
-    			add_location(h2, file$9, 3, 12, 131);
-    			add_location(p, file$9, 4, 12, 171);
+    			add_location(h2, file$a, 3, 12, 145);
+    			add_location(p, file$a, 4, 12, 185);
     			set_style(div0, "align-self", "center");
-    			add_location(div0, file$9, 2, 8, 87);
+    			add_location(div0, file$a, 2, 8, 100);
+    			attr_dev(div1, "class", "list svelte-psh70i");
     			set_style(div1, "width", "30%");
     			set_style(div1, "display", "flex");
-    			add_location(div1, file$9, 1, 4, 39);
+    			add_location(div1, file$a, 1, 4, 39);
     			attr_dev(img, "id", "coin");
     			if (!src_url_equal(img.src, img_src_value = "images/coin.png")) attr_dev(img, "src", img_src_value);
-    			attr_dev(img, "class", "svelte-1rxan2x");
-    			add_location(img, file$9, 8, 8, 476);
+    			attr_dev(img, "class", "svelte-psh70i");
+    			add_location(img, file$a, 8, 8, 526);
+    			attr_dev(path0, "data-value", "Team 10,000,000");
     			attr_dev(path0, "id", "0");
-    			attr_dev(path0, "class", "test svelte-1rxan2x");
+    			attr_dev(path0, "class", "test svelte-psh70i");
     			attr_dev(path0, "fill", "#ffffff");
     			attr_dev(path0, "d", "M150, 0 A150,150 0 0 1 234.49594861401022,26.062779328328688 L206.33063240934013,67.3751862188858 A100,100 0 0 0 150,50 Z");
-    			add_location(path0, file$9, 10, 12, 611);
+    			add_location(path0, file$a, 10, 12, 661);
+    			attr_dev(path1, "data-value", "Partners 10,000,000");
     			attr_dev(path1, "id", "1");
     			attr_dev(path1, "fill", "#8a2be2");
     			attr_dev(path1, "d", "M234.49594861401022, 26.062779328328688 A150,150 0 0 1 289.62924038982374,95.19420442908603 L243.0861602598825,113.46280295272402 A100,100 0 0 0 206.33063240934013,67.3751862188858 Z");
-    			attr_dev(path1, "class", "svelte-1rxan2x");
-    			add_location(path1, file$9, 11, 12, 798);
+    			attr_dev(path1, "class", "svelte-psh70i");
+    			add_location(path1, file$a, 11, 12, 980);
+    			attr_dev(path2, "data-value", "Private Sale 15,000,000");
     			attr_dev(path2, "id", "2");
     			attr_dev(path2, "fill", "#FF3333");
     			attr_dev(path2, "d", "M289.62924038982374, 95.19420442908603 A150,150 0 0 1 279.9081736709546,224.99244237572935 L236.60544911396977,199.99496158381956 A100,100 0 0 0 243.0861602598825,113.46280295272402 Z");
-    			attr_dev(path2, "class", "svelte-1rxan2x");
-    			add_location(path2, file$9, 12, 12, 1033);
+    			attr_dev(path2, "class", "svelte-psh70i");
+    			add_location(path2, file$a, 12, 12, 1351);
+    			attr_dev(path3, "data-value", "Public Sale 20,000,000");
     			attr_dev(path3, "id", "3");
     			attr_dev(path3, "fill", "#FFDD33");
     			attr_dev(path3, "d", "M279.9081736709546, 224.99244237572935 A150,150 0 0 1 127.65722030200284,298.32666717541645 L135.10481353466855,248.88444478361097 A100,100 0 0 0 236.60544911396977,199.99496158381956 Z");
-    			attr_dev(path3, "class", "svelte-1rxan2x");
-    			add_location(path3, file$9, 13, 12, 1269);
+    			attr_dev(path3, "class", "svelte-psh70i");
+    			add_location(path3, file$a, 13, 12, 1727);
+    			attr_dev(path4, "data-value", "Liquidity Pool 15,000,000");
     			attr_dev(path4, "id", "4");
-    			attr_dev(path4, "fill", "#4dFFFF");
+    			attr_dev(path4, "fill", "#00ddff");
     			attr_dev(path4, "d", "M127.65722030200284, 298.32666717541645 A150,150 0 0 1 3.7649754408533056,183.39637094334898 L52.50998362723553,172.26424729556598 A100,100 0 0 0 135.10481353466855,248.88444478361097 Z");
-    			attr_dev(path4, "class", "svelte-1rxan2x");
-    			add_location(path4, file$9, 14, 12, 1507);
+    			attr_dev(path4, "class", "svelte-psh70i");
+    			add_location(path4, file$a, 14, 12, 2104);
+    			attr_dev(path5, "data-value", "Foundation 30,000,000");
     			attr_dev(path5, "id", "5");
     			attr_dev(path5, "fill", "#004D0D");
     			attr_dev(path5, "d", "M3.7649754408533056, 183.39637094334898 A150,150 0 0 1 149.97382006135282,0.000002284630625126738 L149.98254670756856,50.00000152308709 A100,100 0 0 0 52.50998362723553,172.26424729556598 Z");
-    			attr_dev(path5, "class", "svelte-1rxan2x");
-    			add_location(path5, file$9, 15, 12, 1745);
+    			attr_dev(path5, "class", "svelte-psh70i");
+    			add_location(path5, file$a, 15, 12, 2484);
     			attr_dev(svg, "xmlns", "http://www.w3.org/2000/svg");
     			attr_dev(svg, "id", "sv");
     			attr_dev(svg, "viewBox", "-50 -50 400 400");
-    			add_location(svg, file$9, 9, 8, 524);
-    			attr_dev(div2, "class", "svg-container svelte-1rxan2x");
-    			add_location(div2, file$9, 7, 4, 440);
-    			attr_dev(span0, "class", "svelte-1rxan2x");
-    			add_location(span0, file$9, 30, 62, 4978);
-    			attr_dev(li0, "class", "team svelte-1rxan2x");
+    			add_location(svg, file$a, 9, 8, 574);
+    			attr_dev(div2, "class", "svg-container svelte-psh70i");
+    			add_location(div2, file$a, 7, 4, 454);
+    			attr_dev(span0, "class", "svelte-psh70i");
+    			add_location(span0, file$a, 30, 62, 5855);
+    			attr_dev(li0, "class", "team svelte-psh70i");
     			toggle_class(li0, "highlight", /*selected*/ ctx[0] === 0);
-    			add_location(li0, file$9, 30, 12, 4928);
-    			attr_dev(span1, "class", "svelte-1rxan2x");
-    			add_location(span1, file$9, 31, 66, 5071);
-    			attr_dev(li1, "class", "advisors svelte-1rxan2x");
+    			add_location(li0, file$a, 30, 12, 5805);
+    			attr_dev(span1, "class", "svelte-psh70i");
+    			add_location(span1, file$a, 31, 66, 5948);
+    			attr_dev(li1, "class", "advisors svelte-psh70i");
     			toggle_class(li1, "highlight", /*selected*/ ctx[0] === 1);
-    			add_location(li1, file$9, 31, 12, 5017);
-    			attr_dev(span2, "class", "svelte-1rxan2x");
-    			add_location(span2, file$9, 32, 65, 5178);
-    			attr_dev(li2, "class", "private svelte-1rxan2x");
+    			add_location(li1, file$a, 31, 12, 5894);
+    			attr_dev(span2, "class", "svelte-psh70i");
+    			add_location(span2, file$a, 32, 65, 6055);
+    			attr_dev(li2, "class", "private svelte-psh70i");
     			toggle_class(li2, "highlight", /*selected*/ ctx[0] === 2);
-    			add_location(li2, file$9, 32, 12, 5125);
-    			attr_dev(span3, "class", "svelte-1rxan2x");
-    			add_location(span3, file$9, 33, 64, 5277);
-    			attr_dev(li3, "class", "public svelte-1rxan2x");
-    			toggle_class(li3, "highlight", /*selected*/ ctx[0] === 4);
-    			add_location(li3, file$9, 33, 12, 5225);
-    			attr_dev(span4, "class", "svelte-1rxan2x");
-    			add_location(span4, file$9, 34, 67, 5378);
-    			attr_dev(li4, "class", "liquidity svelte-1rxan2x");
-    			toggle_class(li4, "highlight", /*selected*/ ctx[0] === 5);
-    			add_location(li4, file$9, 34, 12, 5323);
-    			attr_dev(span5, "class", "svelte-1rxan2x");
-    			add_location(span5, file$9, 35, 68, 5483);
-    			attr_dev(li5, "class", "foundation svelte-1rxan2x");
-    			toggle_class(li5, "highlight", /*selected*/ ctx[0] === 6);
-    			add_location(li5, file$9, 35, 12, 5427);
+    			add_location(li2, file$a, 32, 12, 6002);
+    			attr_dev(span3, "class", "svelte-psh70i");
+    			add_location(span3, file$a, 33, 64, 6154);
+    			attr_dev(li3, "class", "public svelte-psh70i");
+    			toggle_class(li3, "highlight", /*selected*/ ctx[0] === 3);
+    			add_location(li3, file$a, 33, 12, 6102);
+    			attr_dev(span4, "class", "svelte-psh70i");
+    			add_location(span4, file$a, 34, 67, 6255);
+    			attr_dev(li4, "class", "liquidity svelte-psh70i");
+    			toggle_class(li4, "highlight", /*selected*/ ctx[0] === 4);
+    			add_location(li4, file$a, 34, 12, 6200);
+    			attr_dev(span5, "class", "svelte-psh70i");
+    			add_location(span5, file$a, 35, 68, 6360);
+    			attr_dev(li5, "class", "foundation svelte-psh70i");
+    			toggle_class(li5, "highlight", /*selected*/ ctx[0] === 5);
+    			add_location(li5, file$a, 35, 12, 6304);
     			set_style(ul, "align-self", "center");
-    			attr_dev(ul, "class", "svelte-1rxan2x");
-    			add_location(ul, file$9, 29, 8, 4884);
-    			attr_dev(div3, "class", "list svelte-1rxan2x");
+    			attr_dev(ul, "class", "svelte-psh70i");
+    			add_location(ul, file$a, 29, 8, 5761);
+    			attr_dev(div3, "class", "list svelte-psh70i");
     			set_style(div3, "width", "30%");
     			set_style(div3, "display", "flex");
-    			add_location(div3, file$9, 28, 4, 4824);
-    			attr_dev(div4, "class", "tokenomics-container svelte-1rxan2x");
-    			add_location(div4, file$9, 0, 0, 0);
+    			add_location(div3, file$a, 28, 4, 5701);
+    			attr_dev(div4, "class", "tokenomics-container svelte-psh70i");
+    			add_location(div4, file$a, 0, 0, 0);
     			attr_dev(div5, "id", "tooltip");
     			attr_dev(div5, "display", "none");
     			set_style(div5, "position", "absolute");
     			set_style(div5, "display", "none");
-    			attr_dev(div5, "class", "svelte-1rxan2x");
-    			add_location(div5, file$9, 39, 0, 5548);
+    			attr_dev(div5, "class", "svelte-psh70i");
+    			add_location(div5, file$a, 39, 0, 6425);
     		},
     		l: function claim(nodes) {
     			throw new Error("options.hydrate only works if the component was compiled with the `hydratable: true` option");
@@ -5129,6 +4689,39 @@ var app = (function () {
     			append_dev(li5, span5);
     			insert_dev(target, t17, anchor);
     			insert_dev(target, div5, anchor);
+
+    			if (!mounted) {
+    				dispose = [
+    					listen_dev(path0, "mouseover", /*bringToFront*/ ctx[1], false, false, false),
+    					listen_dev(path0, "focus", showTooltip, false, false, false),
+    					listen_dev(path0, "mousemove", showTooltip, false, false, false),
+    					listen_dev(path0, "mouseleave", /*deselect*/ ctx[2], false, false, false),
+    					listen_dev(path1, "mouseover", /*bringToFront*/ ctx[1], false, false, false),
+    					listen_dev(path1, "focus", showTooltip, false, false, false),
+    					listen_dev(path1, "mousemove", showTooltip, false, false, false),
+    					listen_dev(path1, "mouseleave", /*deselect*/ ctx[2], false, false, false),
+    					listen_dev(path2, "mouseover", /*bringToFront*/ ctx[1], false, false, false),
+    					listen_dev(path2, "focus", showTooltip, false, false, false),
+    					listen_dev(path2, "mousemove", showTooltip, false, false, false),
+    					listen_dev(path2, "mouseleave", /*deselect*/ ctx[2], false, false, false),
+    					listen_dev(path3, "mouseover", /*bringToFront*/ ctx[1], false, false, false),
+    					listen_dev(path3, "focus", showTooltip, false, false, false),
+    					listen_dev(path3, "mousemove", showTooltip, false, false, false),
+    					listen_dev(path3, "mouseleave", /*deselect*/ ctx[2], false, false, false),
+    					listen_dev(path4, "mouseover", /*bringToFront*/ ctx[1], false, false, false),
+    					listen_dev(path4, "focus", showTooltip, false, false, false),
+    					listen_dev(path4, "mousemove", showTooltip, false, false, false),
+    					listen_dev(path4, "mouseleave", /*deselect*/ ctx[2], false, false, false),
+    					listen_dev(path5, "mouseover", /*bringToFront*/ ctx[1], false, false, false),
+    					listen_dev(path5, "focus", showTooltip, false, false, false),
+    					listen_dev(path5, "mousemove", showTooltip, false, false, false),
+    					listen_dev(path5, "mouseleave", /*deselect*/ ctx[2], false, false, false),
+    					listen_dev(div2, "mouseover", grow, false, false, false),
+    					listen_dev(div2, "focus", grow, false, false, false)
+    				];
+
+    				mounted = true;
+    			}
     		},
     		p: function update(ctx, [dirty]) {
     			if (dirty & /*selected*/ 1) {
@@ -5144,15 +4737,15 @@ var app = (function () {
     			}
 
     			if (dirty & /*selected*/ 1) {
-    				toggle_class(li3, "highlight", /*selected*/ ctx[0] === 4);
+    				toggle_class(li3, "highlight", /*selected*/ ctx[0] === 3);
     			}
 
     			if (dirty & /*selected*/ 1) {
-    				toggle_class(li4, "highlight", /*selected*/ ctx[0] === 5);
+    				toggle_class(li4, "highlight", /*selected*/ ctx[0] === 4);
     			}
 
     			if (dirty & /*selected*/ 1) {
-    				toggle_class(li5, "highlight", /*selected*/ ctx[0] === 6);
+    				toggle_class(li5, "highlight", /*selected*/ ctx[0] === 5);
     			}
     		},
     		i: noop,
@@ -5161,18 +4754,26 @@ var app = (function () {
     			if (detaching) detach_dev(div4);
     			if (detaching) detach_dev(t17);
     			if (detaching) detach_dev(div5);
+    			mounted = false;
+    			run_all(dispose);
     		}
     	};
 
     	dispatch_dev("SvelteRegisterBlock", {
     		block,
-    		id: create_fragment$9.name,
+    		id: create_fragment$a.name,
     		type: "component",
     		source: "",
     		ctx
     	});
 
     	return block;
+    }
+
+    function grow(e) {
+    	let coin = document.getElementById("coin");
+    	coin.style.transform = "scale(1.15)";
+    	coin.style.zIndex = "-1";
     }
 
     function showTooltip(evt, text) {
@@ -5188,7 +4789,7 @@ var app = (function () {
     	tooltip.style.display = "none";
     }
 
-    function instance$9($$self, $$props, $$invalidate) {
+    function instance$a($$self, $$props, $$invalidate) {
     	let { $$slots: slots = {}, $$scope } = $$props;
     	validate_slots('Tokenomics', slots, []);
     	let selected;
@@ -5229,10 +4830,10 @@ var app = (function () {
     	});
 
     	$$self.$capture_state = () => ({
+    		grow,
     		showTooltip,
     		hideTooltip,
     		selected,
-    		Chart: Base$1,
     		bringToFront,
     		deselect,
     		data
@@ -5247,28 +4848,28 @@ var app = (function () {
     		$$self.$inject_state($$props.$$inject);
     	}
 
-    	return [selected];
+    	return [selected, bringToFront, deselect];
     }
 
     class Tokenomics extends SvelteComponentDev {
     	constructor(options) {
     		super(options);
-    		init(this, options, instance$9, create_fragment$9, safe_not_equal, {});
+    		init(this, options, instance$a, create_fragment$a, safe_not_equal, {});
 
     		dispatch_dev("SvelteRegisterComponent", {
     			component: this,
     			tagName: "Tokenomics",
     			options,
-    			id: create_fragment$9.name
+    			id: create_fragment$a.name
     		});
     	}
     }
 
     /* src/Challenge.svelte generated by Svelte v3.44.3 */
 
-    const file$8 = "src/Challenge.svelte";
+    const file$9 = "src/Challenge.svelte";
 
-    function create_fragment$8(ctx) {
+    function create_fragment$9(ctx) {
     	let div19;
     	let div4;
     	let div1;
@@ -5446,7 +5047,7 @@ var app = (function () {
     			t35 = text("After you’re satisfied with your video, it’s time to put it up for Challenge.  ");
     			span6 = element("span");
     			span6.textContent = "Winning a challenge round is how your video becomes eligible for minting.";
-    			t37 = text(" Choose between putting your video up for Open Challenge or directly challenging another video or user. Round lengths can be either 24h or 72h.");
+    			t37 = text(" Choose between putting your video up for Open Challenge or directly challenging another video or user. Rounds last 72h.");
     			t38 = space();
     			div13 = element("div");
     			div11 = element("div");
@@ -5464,7 +5065,7 @@ var app = (function () {
     			t44 = text("Once the challenge starts, ");
     			span7 = element("span");
     			span7.textContent = "the control is now in the voters hands.";
-    			t46 = text(" Users can use Vote tokens to show their support and become part of the journey. Once the challenge is complete, the video with the most votes is declared the winner and minted as an NFT.");
+    			t46 = text(" Users can use Vote tokens to show their support and become part of the journey. Once the challenge is complete, the video with the most votes is declared the winner and has the opportunity to be minted as an NFT.");
     			t47 = space();
     			div16 = element("div");
     			div14 = element("div");
@@ -5484,138 +5085,138 @@ var app = (function () {
     			iframe = element("iframe");
     			if (!src_url_equal(img0.src, img0_src_value = "images/Edit_sw.webp")) attr_dev(img0, "src", img0_src_value);
     			attr_dev(img0, "class", "svelte-fiq2g0");
-    			add_location(img0, file$8, 3, 12, 106);
+    			add_location(img0, file$9, 3, 12, 106);
     			set_style(span0, "text-decoration", "underline");
-    			add_location(span0, file$8, 5, 49, 255);
-    			add_location(br0, file$8, 5, 102, 308);
+    			add_location(span0, file$9, 5, 49, 255);
+    			add_location(br0, file$9, 5, 102, 308);
     			attr_dev(p0, "id", "music");
     			attr_dev(p0, "class", "extra-info svelte-fiq2g0");
-    			add_location(p0, file$8, 5, 16, 222);
+    			add_location(p0, file$9, 5, 16, 222);
     			set_style(span1, "text-decoration", "underline");
-    			add_location(span1, file$8, 6, 51, 443);
-    			add_location(br1, file$8, 6, 106, 498);
+    			add_location(span1, file$9, 6, 51, 443);
+    			add_location(br1, file$9, 6, 106, 498);
     			attr_dev(p1, "id", "filters");
     			attr_dev(p1, "class", "extra-info svelte-fiq2g0");
-    			add_location(p1, file$8, 6, 16, 408);
+    			add_location(p1, file$9, 6, 16, 408);
     			set_style(span2, "text-decoration", "underline");
-    			add_location(span2, file$8, 7, 51, 628);
-    			add_location(br2, file$8, 7, 106, 683);
+    			add_location(span2, file$9, 7, 51, 628);
+    			add_location(br2, file$9, 7, 106, 683);
     			attr_dev(p2, "id", "effects");
     			attr_dev(p2, "class", "extra-info svelte-fiq2g0");
-    			add_location(p2, file$8, 7, 16, 593);
+    			add_location(p2, file$9, 7, 16, 593);
     			set_style(span3, "text-decoration", "underline");
-    			add_location(span3, file$8, 8, 58, 837);
-    			add_location(br3, file$8, 8, 110, 889);
+    			add_location(span3, file$9, 8, 58, 837);
+    			add_location(br3, file$9, 8, 110, 889);
     			attr_dev(p3, "id", "gifs");
     			attr_dev(p3, "class", "extra-info info-left svelte-fiq2g0");
-    			add_location(p3, file$8, 8, 16, 795);
+    			add_location(p3, file$9, 8, 16, 795);
     			set_style(span4, "text-decoration", "underline");
-    			add_location(span4, file$8, 9, 58, 1052);
-    			add_location(br4, file$8, 9, 110, 1104);
+    			add_location(span4, file$9, 9, 58, 1052);
+    			add_location(br4, file$9, 9, 110, 1104);
     			attr_dev(p4, "id", "crop");
     			attr_dev(p4, "class", "extra-info info-left svelte-fiq2g0");
-    			add_location(p4, file$8, 9, 16, 1010);
+    			add_location(p4, file$9, 9, 16, 1010);
     			attr_dev(div0, "class", "tooltips svelte-fiq2g0");
     			set_style(div0, "color", "rgb(200,255,255)");
-    			add_location(div0, file$8, 4, 12, 152);
+    			add_location(div0, file$9, 4, 12, 152);
     			attr_dev(div1, "class", "image first svelte-fiq2g0");
-    			add_location(div1, file$8, 2, 8, 68);
+    			add_location(div1, file$9, 2, 8, 68);
     			set_style(h30, "border-bottom", "2px solid aqua");
     			attr_dev(h30, "class", "svelte-fiq2g0");
-    			add_location(h30, file$8, 14, 12, 1290);
+    			add_location(h30, file$9, 14, 12, 1290);
     			set_style(span5, "color", "aqua");
-    			add_location(span5, file$8, 15, 43, 1416);
+    			add_location(span5, file$9, 15, 43, 1416);
     			attr_dev(p5, "class", "svelte-fiq2g0");
-    			add_location(p5, file$8, 15, 12, 1385);
-    			add_location(div2, file$8, 13, 12, 1272);
+    			add_location(p5, file$9, 15, 12, 1385);
+    			add_location(div2, file$9, 13, 12, 1272);
     			attr_dev(div3, "class", "content second svelte-fiq2g0");
-    			add_location(div3, file$8, 12, 8, 1231);
+    			add_location(div3, file$9, 12, 8, 1231);
     			attr_dev(div4, "class", "section svelte-fiq2g0");
-    			add_location(div4, file$8, 1, 4, 38);
+    			add_location(div4, file$9, 1, 4, 38);
     			if (!src_url_equal(img1.src, img1_src_value = "images/upload_sw.webp")) attr_dev(img1, "src", img1_src_value);
     			attr_dev(img1, "class", "svelte-fiq2g0");
-    			add_location(img1, file$8, 21, 12, 1792);
+    			add_location(img1, file$9, 21, 12, 1792);
     			attr_dev(p6, "id", "music");
     			attr_dev(p6, "class", "extra-info info-left svelte-fiq2g0");
-    			add_location(p6, file$8, 23, 16, 1910);
+    			add_location(p6, file$9, 23, 16, 1910);
     			attr_dev(p7, "id", "name");
     			attr_dev(p7, "class", "extra-info info-left svelte-fiq2g0");
-    			add_location(p7, file$8, 24, 16, 2042);
+    			add_location(p7, file$9, 24, 16, 2042);
     			attr_dev(p8, "class", "svelte-fiq2g0");
-    			add_location(p8, file$8, 26, 20, 2210);
+    			add_location(p8, file$9, 26, 20, 2210);
     			attr_dev(p9, "class", "svelte-fiq2g0");
-    			add_location(p9, file$8, 27, 20, 2336);
+    			add_location(p9, file$9, 27, 20, 2336);
     			attr_dev(p10, "class", "svelte-fiq2g0");
-    			add_location(p10, file$8, 28, 20, 2461);
+    			add_location(p10, file$9, 28, 20, 2461);
     			attr_dev(div5, "id", "tags");
     			attr_dev(div5, "class", "extra-info info-left svelte-fiq2g0");
-    			add_location(div5, file$8, 25, 16, 2145);
+    			add_location(div5, file$9, 25, 16, 2145);
     			attr_dev(div6, "class", "tooltips svelte-fiq2g0");
     			set_style(div6, "color", "rgb(255,150,150)");
-    			add_location(div6, file$8, 22, 12, 1840);
+    			add_location(div6, file$9, 22, 12, 1840);
     			attr_dev(div7, "class", "image second svelte-fiq2g0");
-    			add_location(div7, file$8, 20, 8, 1753);
+    			add_location(div7, file$9, 20, 8, 1753);
     			set_style(h31, "border-bottom", "2px solid red");
     			attr_dev(h31, "class", "svelte-fiq2g0");
-    			add_location(h31, file$8, 33, 12, 2637);
+    			add_location(h31, file$9, 33, 12, 2637);
     			set_style(span6, "color", "red");
-    			add_location(span6, file$8, 34, 94, 2806);
+    			add_location(span6, file$9, 34, 94, 2806);
     			attr_dev(p11, "class", "svelte-fiq2g0");
-    			add_location(p11, file$8, 34, 12, 2724);
+    			add_location(p11, file$9, 34, 12, 2724);
     			attr_dev(div8, "class", "content first svelte-fiq2g0");
-    			add_location(div8, file$8, 32, 8, 2597);
+    			add_location(div8, file$9, 32, 8, 2597);
     			attr_dev(div9, "class", "section svelte-fiq2g0");
-    			add_location(div9, file$8, 19, 4, 1723);
+    			add_location(div9, file$9, 19, 4, 1723);
     			if (!src_url_equal(img2.src, img2_src_value = "images/challenge_sw.webp")) attr_dev(img2, "src", img2_src_value);
     			attr_dev(img2, "class", "svelte-fiq2g0");
-    			add_location(img2, file$8, 39, 12, 3157);
+    			add_location(img2, file$9, 39, 12, 3134);
     			attr_dev(p12, "id", "music");
     			attr_dev(p12, "class", "extra-info svelte-fiq2g0");
-    			add_location(p12, file$8, 41, 16, 3278);
+    			add_location(p12, file$9, 41, 16, 3255);
     			attr_dev(div10, "class", "tooltips svelte-fiq2g0");
     			set_style(div10, "color", "rgb(225,175,255)");
-    			add_location(div10, file$8, 40, 12, 3208);
+    			add_location(div10, file$9, 40, 12, 3185);
     			attr_dev(div11, "class", "image first svelte-fiq2g0");
-    			add_location(div11, file$8, 38, 8, 3119);
+    			add_location(div11, file$9, 38, 8, 3096);
     			set_style(h32, "border-bottom", "2px solid blueviolet");
     			attr_dev(h32, "class", "svelte-fiq2g0");
-    			add_location(h32, file$8, 45, 12, 3498);
+    			add_location(h32, file$9, 45, 12, 3475);
     			set_style(span7, "color", "blueviolet");
-    			add_location(span7, file$8, 46, 42, 3625);
+    			add_location(span7, file$9, 46, 42, 3602);
     			attr_dev(p13, "class", "svelte-fiq2g0");
-    			add_location(p13, file$8, 46, 12, 3595);
+    			add_location(p13, file$9, 46, 12, 3572);
     			attr_dev(div12, "class", "content second svelte-fiq2g0");
-    			add_location(div12, file$8, 44, 8, 3457);
+    			add_location(div12, file$9, 44, 8, 3434);
     			attr_dev(div13, "class", "section svelte-fiq2g0");
-    			add_location(div13, file$8, 37, 4, 3089);
+    			add_location(div13, file$9, 37, 4, 3066);
     			if (!src_url_equal(img3.src, img3_src_value = "")) attr_dev(img3, "src", img3_src_value);
     			attr_dev(img3, "class", "svelte-fiq2g0");
-    			add_location(img3, file$8, 51, 12, 3994);
+    			add_location(img3, file$9, 51, 12, 3997);
     			attr_dev(div14, "class", "image second svelte-fiq2g0");
-    			add_location(div14, file$8, 50, 8, 3955);
+    			add_location(div14, file$9, 50, 8, 3958);
     			set_style(h33, "border-bottom", "2px solid gold");
     			attr_dev(h33, "class", "svelte-fiq2g0");
-    			add_location(h33, file$8, 54, 12, 4072);
+    			add_location(h33, file$9, 54, 12, 4075);
     			set_style(span8, "color", "gold");
-    			add_location(span8, file$8, 55, 292, 4458);
+    			add_location(span8, file$9, 55, 292, 4461);
     			attr_dev(p14, "class", "svelte-fiq2g0");
-    			add_location(p14, file$8, 55, 12, 4178);
+    			add_location(p14, file$9, 55, 12, 4181);
     			attr_dev(div15, "class", "content first svelte-fiq2g0");
-    			add_location(div15, file$8, 53, 8, 4032);
+    			add_location(div15, file$9, 53, 8, 4035);
     			attr_dev(div16, "class", "section svelte-fiq2g0");
-    			add_location(div16, file$8, 49, 4, 3925);
+    			add_location(div16, file$9, 49, 4, 3928);
     			attr_dev(iframe, "title", "AllSkills Trailer Video");
     			attr_dev(iframe, "loading", "lazy");
     			if (!src_url_equal(iframe.src, iframe_src_value = "https://www.youtube.com/embed/tgbNymZ7vqY")) attr_dev(iframe, "src", iframe_src_value);
     			attr_dev(iframe, "class", "svelte-fiq2g0");
-    			add_location(iframe, file$8, 60, 12, 4641);
+    			add_location(iframe, file$9, 60, 12, 4644);
     			attr_dev(div17, "class", "video svelte-fiq2g0");
-    			add_location(div17, file$8, 59, 8, 4609);
+    			add_location(div17, file$9, 59, 8, 4612);
     			attr_dev(div18, "id", "Trailer");
     			attr_dev(div18, "class", "video-container svelte-fiq2g0");
-    			add_location(div18, file$8, 58, 4, 4558);
+    			add_location(div18, file$9, 58, 4, 4561);
     			attr_dev(div19, "class", "challenge-container svelte-fiq2g0");
-    			add_location(div19, file$8, 0, 0, 0);
+    			add_location(div19, file$9, 0, 0, 0);
     		},
     		l: function claim(nodes) {
     			throw new Error("options.hydrate only works if the component was compiled with the `hydratable: true` option");
@@ -5725,7 +5326,7 @@ var app = (function () {
 
     	dispatch_dev("SvelteRegisterBlock", {
     		block,
-    		id: create_fragment$8.name,
+    		id: create_fragment$9.name,
     		type: "component",
     		source: "",
     		ctx
@@ -5734,7 +5335,7 @@ var app = (function () {
     	return block;
     }
 
-    function instance$8($$self, $$props) {
+    function instance$9($$self, $$props) {
     	let { $$slots: slots = {}, $$scope } = $$props;
     	validate_slots('Challenge', slots, []);
     	const writable_props = [];
@@ -5749,22 +5350,22 @@ var app = (function () {
     class Challenge extends SvelteComponentDev {
     	constructor(options) {
     		super(options);
-    		init(this, options, instance$8, create_fragment$8, safe_not_equal, {});
+    		init(this, options, instance$9, create_fragment$9, safe_not_equal, {});
 
     		dispatch_dev("SvelteRegisterComponent", {
     			component: this,
     			tagName: "Challenge",
     			options,
-    			id: create_fragment$8.name
+    			id: create_fragment$9.name
     		});
     	}
     }
 
     /* src/VoteToken.svelte generated by Svelte v3.44.3 */
 
-    const file$7 = "src/VoteToken.svelte";
+    const file$8 = "src/VoteToken.svelte";
 
-    function create_fragment$7(ctx) {
+    function create_fragment$8(ctx) {
     	let div7;
     	let div0;
     	let span0;
@@ -5897,7 +5498,7 @@ var app = (function () {
     			img4 = element("img");
     			t24 = space();
     			h33 = element("h3");
-    			h33.textContent = "Redeemable at stable value";
+    			h33.textContent = "Stablecoin for all skills";
     			t26 = space();
     			p3 = element("p");
     			t27 = text("$Vote tokens are ");
@@ -5913,10 +5514,10 @@ var app = (function () {
     			h34.textContent = "Stake to earn more";
     			t33 = space();
     			p4 = element("p");
-    			t34 = text("Staking your $Vote tokens allows you to ");
+    			t34 = text("Staking your $Skills tokens allows you to ");
     			span9 = element("span");
-    			span9.textContent = "earn $Skills tokens.";
-    			t36 = text(" Use $Skills tokens to participate in raffles and to voice your opinion.");
+    			span9.textContent = "earn $Vote tokens.";
+    			t36 = text(" $Skills tokens can also be used to participate in raffles, pay gas fees, and to declare how you think AllSkills should operate.");
     			t37 = space();
     			div6 = element("div");
     			span10 = element("span");
@@ -5932,100 +5533,100 @@ var app = (function () {
     			t43 = text(" and get right back in the game.");
     			attr_dev(img0, "alt", "Vote");
     			if (!src_url_equal(img0.src, img0_src_value = "images/vote.png")) attr_dev(img0, "src", img0_src_value);
-    			attr_dev(img0, "class", "svelte-xtai9e");
-    			add_location(img0, file$7, 3, 12, 107);
-    			attr_dev(h30, "class", "svelte-xtai9e");
-    			add_location(h30, file$7, 4, 16, 164);
-    			attr_dev(span0, "class", "title svelte-xtai9e");
-    			add_location(span0, file$7, 2, 11, 74);
-    			attr_dev(span1, "class", "highlight svelte-xtai9e");
-    			add_location(span1, file$7, 6, 98, 306);
-    			attr_dev(p0, "class", "svelte-xtai9e");
-    			add_location(p0, file$7, 6, 11, 219);
-    			attr_dev(div0, "class", "section left svelte-xtai9e");
-    			add_location(div0, file$7, 1, 7, 36);
+    			attr_dev(img0, "class", "svelte-1wy6fda");
+    			add_location(img0, file$8, 3, 12, 107);
+    			attr_dev(h30, "class", "svelte-1wy6fda");
+    			add_location(h30, file$8, 4, 16, 164);
+    			attr_dev(span0, "class", "title svelte-1wy6fda");
+    			add_location(span0, file$8, 2, 11, 74);
+    			attr_dev(span1, "class", "highlight svelte-1wy6fda");
+    			add_location(span1, file$8, 6, 98, 306);
+    			attr_dev(p0, "class", "svelte-1wy6fda");
+    			add_location(p0, file$8, 6, 11, 219);
+    			attr_dev(div0, "class", "section left svelte-1wy6fda");
+    			add_location(div0, file$8, 1, 7, 36);
     			attr_dev(img1, "alt", "Earnings");
     			if (!src_url_equal(img1.src, img1_src_value = "images/earnings.png")) attr_dev(img1, "src", img1_src_value);
-    			attr_dev(img1, "class", "svelte-xtai9e");
-    			add_location(img1, file$7, 10, 12, 472);
-    			attr_dev(h31, "class", "svelte-xtai9e");
-    			add_location(h31, file$7, 11, 13, 534);
-    			attr_dev(span2, "class", "title svelte-xtai9e");
-    			add_location(span2, file$7, 9, 8, 439);
-    			attr_dev(span3, "class", "highlight svelte-xtai9e");
-    			add_location(span3, file$7, 13, 89, 669);
-    			attr_dev(p1, "class", "svelte-xtai9e");
-    			add_location(p1, file$7, 13, 8, 588);
-    			attr_dev(div1, "class", "section left svelte-xtai9e");
-    			add_location(div1, file$7, 8, 7, 404);
+    			attr_dev(img1, "class", "svelte-1wy6fda");
+    			add_location(img1, file$8, 10, 12, 472);
+    			attr_dev(h31, "class", "svelte-1wy6fda");
+    			add_location(h31, file$8, 11, 13, 534);
+    			attr_dev(span2, "class", "title svelte-1wy6fda");
+    			add_location(span2, file$8, 9, 8, 439);
+    			attr_dev(span3, "class", "highlight svelte-1wy6fda");
+    			add_location(span3, file$8, 13, 89, 669);
+    			attr_dev(p1, "class", "svelte-1wy6fda");
+    			add_location(p1, file$8, 13, 8, 588);
+    			attr_dev(div1, "class", "section left svelte-1wy6fda");
+    			add_location(div1, file$8, 8, 7, 404);
     			attr_dev(img2, "alt", "Royalties");
     			if (!src_url_equal(img2.src, img2_src_value = "images/revenue.png")) attr_dev(img2, "src", img2_src_value);
-    			attr_dev(img2, "class", "svelte-xtai9e");
-    			add_location(img2, file$7, 17, 12, 842);
-    			attr_dev(h32, "class", "svelte-xtai9e");
-    			add_location(h32, file$7, 18, 13, 904);
-    			attr_dev(span4, "class", "title svelte-xtai9e");
-    			add_location(span4, file$7, 16, 8, 809);
-    			attr_dev(span5, "class", "highlight svelte-xtai9e");
-    			add_location(span5, file$7, 20, 54, 1005);
-    			attr_dev(p2, "class", "svelte-xtai9e");
-    			add_location(p2, file$7, 20, 8, 959);
-    			attr_dev(div2, "class", "section left svelte-xtai9e");
-    			add_location(div2, file$7, 15, 4, 774);
+    			attr_dev(img2, "class", "svelte-1wy6fda");
+    			add_location(img2, file$8, 17, 12, 842);
+    			attr_dev(h32, "class", "svelte-1wy6fda");
+    			add_location(h32, file$8, 18, 13, 904);
+    			attr_dev(span4, "class", "title svelte-1wy6fda");
+    			add_location(span4, file$8, 16, 8, 809);
+    			attr_dev(span5, "class", "highlight svelte-1wy6fda");
+    			add_location(span5, file$8, 20, 54, 1005);
+    			attr_dev(p2, "class", "svelte-1wy6fda");
+    			add_location(p2, file$8, 20, 8, 959);
+    			attr_dev(div2, "class", "section left svelte-1wy6fda");
+    			add_location(div2, file$8, 15, 4, 774);
     			attr_dev(h1, "id", "value");
-    			attr_dev(h1, "class", "svelte-xtai9e");
-    			add_location(h1, file$7, 23, 8, 1170);
+    			attr_dev(h1, "class", "svelte-1wy6fda");
+    			add_location(h1, file$8, 23, 8, 1170);
     			attr_dev(img3, "id", "token");
     			attr_dev(img3, "alt", "Vote Token");
     			if (!src_url_equal(img3.src, img3_src_value = "images/token.png")) attr_dev(img3, "src", img3_src_value);
-    			attr_dev(img3, "class", "svelte-xtai9e");
-    			add_location(img3, file$7, 24, 8, 1214);
-    			attr_dev(div3, "class", "column middle svelte-xtai9e");
-    			add_location(div3, file$7, 22, 4, 1134);
+    			attr_dev(img3, "class", "svelte-1wy6fda");
+    			add_location(img3, file$8, 24, 8, 1214);
+    			attr_dev(div3, "class", "column middle svelte-1wy6fda");
+    			add_location(div3, file$8, 22, 4, 1134);
     			attr_dev(img4, "alt", "Stable value");
     			if (!src_url_equal(img4.src, img4_src_value = "images/stable.png")) attr_dev(img4, "src", img4_src_value);
-    			attr_dev(img4, "class", "svelte-xtai9e");
-    			add_location(img4, file$7, 28, 16, 1369);
-    			attr_dev(h33, "class", "svelte-xtai9e");
-    			add_location(h33, file$7, 29, 17, 1437);
-    			attr_dev(span6, "class", "title svelte-xtai9e");
-    			add_location(span6, file$7, 27, 12, 1332);
-    			attr_dev(span7, "class", "highlight svelte-xtai9e");
-    			add_location(span7, file$7, 31, 32, 1526);
-    			attr_dev(p3, "class", "svelte-xtai9e");
-    			add_location(p3, file$7, 31, 12, 1506);
-    			attr_dev(div4, "class", "section right svelte-xtai9e");
-    			add_location(div4, file$7, 26, 8, 1292);
+    			attr_dev(img4, "class", "svelte-1wy6fda");
+    			add_location(img4, file$8, 28, 16, 1369);
+    			attr_dev(h33, "class", "svelte-1wy6fda");
+    			add_location(h33, file$8, 29, 17, 1437);
+    			attr_dev(span6, "class", "title svelte-1wy6fda");
+    			add_location(span6, file$8, 27, 12, 1332);
+    			attr_dev(span7, "class", "highlight svelte-1wy6fda");
+    			add_location(span7, file$8, 31, 32, 1525);
+    			attr_dev(p3, "class", "svelte-1wy6fda");
+    			add_location(p3, file$8, 31, 12, 1505);
+    			attr_dev(div4, "class", "section right svelte-1wy6fda");
+    			add_location(div4, file$8, 26, 8, 1292);
     			attr_dev(img5, "alt", "Stake");
     			if (!src_url_equal(img5.src, img5_src_value = "images/stake.png")) attr_dev(img5, "src", img5_src_value);
-    			attr_dev(img5, "class", "svelte-xtai9e");
-    			add_location(img5, file$7, 35, 16, 1747);
-    			attr_dev(h34, "class", "svelte-xtai9e");
-    			add_location(h34, file$7, 36, 17, 1807);
-    			attr_dev(span8, "class", "title svelte-xtai9e");
-    			add_location(span8, file$7, 34, 12, 1710);
-    			attr_dev(span9, "class", "highlight svelte-xtai9e");
-    			add_location(span9, file$7, 38, 55, 1911);
-    			attr_dev(p4, "class", "svelte-xtai9e");
-    			add_location(p4, file$7, 38, 12, 1868);
-    			attr_dev(div5, "class", "section right svelte-xtai9e");
-    			add_location(div5, file$7, 33, 8, 1670);
+    			attr_dev(img5, "class", "svelte-1wy6fda");
+    			add_location(img5, file$8, 35, 16, 1746);
+    			attr_dev(h34, "class", "svelte-1wy6fda");
+    			add_location(h34, file$8, 36, 17, 1806);
+    			attr_dev(span8, "class", "title svelte-1wy6fda");
+    			add_location(span8, file$8, 34, 12, 1709);
+    			attr_dev(span9, "class", "highlight svelte-1wy6fda");
+    			add_location(span9, file$8, 38, 57, 1912);
+    			attr_dev(p4, "class", "svelte-1wy6fda");
+    			add_location(p4, file$8, 38, 12, 1867);
+    			attr_dev(div5, "class", "section right svelte-1wy6fda");
+    			add_location(div5, file$8, 33, 8, 1669);
     			attr_dev(img6, "alt", "Replenish");
     			if (!src_url_equal(img6.src, img6_src_value = "images/replenish.png")) attr_dev(img6, "src", img6_src_value);
-    			attr_dev(img6, "class", "svelte-xtai9e");
-    			add_location(img6, file$7, 42, 16, 2139);
-    			attr_dev(h35, "class", "svelte-xtai9e");
-    			add_location(h35, file$7, 43, 17, 2207);
-    			attr_dev(span10, "class", "title svelte-xtai9e");
-    			add_location(span10, file$7, 41, 12, 2102);
-    			attr_dev(span11, "class", "highlight svelte-xtai9e");
-    			add_location(span11, file$7, 45, 55, 2321);
-    			attr_dev(p5, "class", "svelte-xtai9e");
-    			add_location(p5, file$7, 45, 13, 2279);
-    			attr_dev(div6, "class", "section right svelte-xtai9e");
-    			add_location(div6, file$7, 40, 8, 2062);
-    			attr_dev(div7, "class", "vote-container svelte-xtai9e");
-    			add_location(div7, file$7, 0, 0, 0);
+    			attr_dev(img6, "class", "svelte-1wy6fda");
+    			add_location(img6, file$8, 42, 16, 2194);
+    			attr_dev(h35, "class", "svelte-1wy6fda");
+    			add_location(h35, file$8, 43, 17, 2262);
+    			attr_dev(span10, "class", "title svelte-1wy6fda");
+    			add_location(span10, file$8, 41, 12, 2157);
+    			attr_dev(span11, "class", "highlight svelte-1wy6fda");
+    			add_location(span11, file$8, 45, 55, 2376);
+    			attr_dev(p5, "class", "svelte-1wy6fda");
+    			add_location(p5, file$8, 45, 13, 2334);
+    			attr_dev(div6, "class", "section right svelte-1wy6fda");
+    			add_location(div6, file$8, 40, 8, 2117);
+    			attr_dev(div7, "class", "vote-container svelte-1wy6fda");
+    			add_location(div7, file$8, 0, 0, 0);
     		},
     		l: function claim(nodes) {
     			throw new Error("options.hydrate only works if the component was compiled with the `hydratable: true` option");
@@ -6113,7 +5714,7 @@ var app = (function () {
 
     	dispatch_dev("SvelteRegisterBlock", {
     		block,
-    		id: create_fragment$7.name,
+    		id: create_fragment$8.name,
     		type: "component",
     		source: "",
     		ctx
@@ -6122,7 +5723,7 @@ var app = (function () {
     	return block;
     }
 
-    function instance$7($$self, $$props) {
+    function instance$8($$self, $$props) {
     	let { $$slots: slots = {}, $$scope } = $$props;
     	validate_slots('VoteToken', slots, []);
     	const writable_props = [];
@@ -6137,470 +5738,490 @@ var app = (function () {
     class VoteToken extends SvelteComponentDev {
     	constructor(options) {
     		super(options);
-    		init(this, options, instance$7, create_fragment$7, safe_not_equal, {});
+    		init(this, options, instance$8, create_fragment$8, safe_not_equal, {});
 
     		dispatch_dev("SvelteRegisterComponent", {
     			component: this,
     			tagName: "VoteToken",
     			options,
-    			id: create_fragment$7.name
+    			id: create_fragment$8.name
     		});
     	}
     }
 
     /* src/Roadmapv2.svelte generated by Svelte v3.44.3 */
 
-    const file$6 = "src/Roadmapv2.svelte";
+    const file$7 = "src/Roadmapv2.svelte";
 
-    function create_fragment$6(ctx) {
+    function create_fragment$7(ctx) {
     	let div16;
-    	let div0;
-    	let p;
-    	let t1;
-    	let div3;
+    	let div2;
     	let h30;
-    	let t3;
-    	let div1;
+    	let t1;
+    	let div0;
     	let img0;
     	let img0_src_value;
-    	let t4;
-    	let div2;
+    	let t2;
+    	let div1;
     	let ul0;
     	let li0;
-    	let t6;
+    	let t4;
     	let li1;
-    	let t8;
+    	let t6;
     	let li2;
-    	let t10;
+    	let t8;
     	let li3;
-    	let t12;
-    	let div6;
+    	let t10;
+    	let div5;
     	let h31;
-    	let t14;
-    	let div4;
+    	let t12;
+    	let div3;
     	let img1;
     	let img1_src_value;
-    	let t15;
-    	let div5;
+    	let t13;
+    	let div4;
     	let ul1;
     	let li4;
-    	let t17;
+    	let t15;
     	let li5;
-    	let t19;
+    	let t17;
     	let li6;
-    	let t21;
+    	let t19;
     	let li7;
-    	let t23;
+    	let t21;
     	let li8;
-    	let t25;
+    	let t23;
     	let li9;
-    	let t27;
+    	let t25;
     	let li10;
-    	let t29;
-    	let div9;
+    	let t27;
+    	let div8;
     	let h32;
-    	let t31;
-    	let div7;
+    	let t29;
+    	let div6;
     	let img2;
     	let img2_src_value;
-    	let t32;
-    	let div8;
+    	let t30;
+    	let div7;
     	let ul2;
     	let li11;
-    	let t34;
+    	let t32;
     	let li12;
-    	let t36;
+    	let t34;
     	let li13;
-    	let t38;
+    	let t36;
     	let li14;
-    	let t40;
+    	let t38;
     	let li15;
-    	let t42;
+    	let t40;
     	let li16;
-    	let t44;
+    	let t42;
     	let li17;
+    	let t44;
+    	let li18;
     	let t46;
-    	let div12;
+    	let div11;
     	let h33;
     	let t48;
-    	let div10;
+    	let div9;
     	let img3;
     	let img3_src_value;
     	let t49;
-    	let div11;
+    	let div10;
     	let ul3;
-    	let li18;
-    	let t51;
     	let li19;
-    	let t53;
+    	let t51;
     	let li20;
+    	let t53;
+    	let li21;
     	let t55;
-    	let div15;
-    	let h34;
+    	let li22;
     	let t57;
-    	let div13;
+    	let div14;
+    	let h34;
+    	let t59;
+    	let div12;
     	let img4;
     	let img4_src_value;
-    	let t58;
-    	let div14;
-    	let ul4;
-    	let li21;
     	let t60;
-    	let li22;
-    	let t62;
+    	let div13;
+    	let ul4;
     	let li23;
-    	let t64;
+    	let t62;
     	let li24;
+    	let t64;
+    	let li25;
+    	let t66;
+    	let li26;
+    	let t68;
+    	let div15;
+    	let p;
 
     	const block = {
     		c: function create() {
     			div16 = element("div");
-    			div0 = element("div");
-    			p = element("p");
-    			p.textContent = "Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat.";
-    			t1 = space();
-    			div3 = element("div");
+    			div2 = element("div");
     			h30 = element("h3");
     			h30.textContent = "2019 - 2020";
-    			t3 = space();
-    			div1 = element("div");
+    			t1 = space();
+    			div0 = element("div");
     			img0 = element("img");
-    			t4 = space();
-    			div2 = element("div");
+    			t2 = space();
+    			div1 = element("div");
     			ul0 = element("ul");
     			li0 = element("li");
     			li0.textContent = "Ideation";
-    			t6 = space();
+    			t4 = space();
     			li1 = element("li");
     			li1.textContent = "Business plan";
-    			t8 = space();
+    			t6 = space();
     			li2 = element("li");
     			li2.textContent = "Feasibility study";
-    			t10 = space();
+    			t8 = space();
     			li3 = element("li");
     			li3.textContent = "Olympic skater Charles Hamelin joins project";
-    			t12 = space();
-    			div6 = element("div");
+    			t10 = space();
+    			div5 = element("div");
     			h31 = element("h3");
     			h31.textContent = "2021";
-    			t14 = space();
-    			div4 = element("div");
+    			t12 = space();
+    			div3 = element("div");
     			img1 = element("img");
-    			t15 = space();
-    			div5 = element("div");
+    			t13 = space();
+    			div4 = element("div");
     			ul1 = element("ul");
     			li4 = element("li");
     			li4.textContent = "Markest research";
-    			t17 = space();
+    			t15 = space();
     			li5 = element("li");
     			li5.textContent = "Acquired advisors & CTO";
-    			t19 = space();
+    			t17 = space();
     			li6 = element("li");
     			li6.textContent = "Backed by PME Montreal";
-    			t21 = space();
+    			t19 = space();
     			li7 = element("li");
     			li7.textContent = "Finalists in NBA Launchpad";
-    			t23 = space();
+    			t21 = space();
     			li8 = element("li");
     			li8.textContent = "Pivot towards NFT platform";
-    			t25 = space();
+    			t23 = space();
     			li9 = element("li");
     			li9.textContent = "Launch website";
-    			t27 = space();
+    			t25 = space();
     			li10 = element("li");
     			li10.textContent = "Release whitepaper and tokenomics";
-    			t29 = space();
-    			div9 = element("div");
+    			t27 = space();
+    			div8 = element("div");
     			h32 = element("h3");
     			h32.textContent = "Q1 2022";
-    			t31 = space();
-    			div7 = element("div");
+    			t29 = space();
+    			div6 = element("div");
     			img2 = element("img");
-    			t32 = space();
-    			div8 = element("div");
+    			t30 = space();
+    			div7 = element("div");
     			ul2 = element("ul");
     			li11 = element("li");
     			li11.textContent = "Announce partners";
-    			t34 = space();
+    			t32 = space();
     			li12 = element("li");
     			li12.textContent = "Setup social accounts";
-    			t36 = space();
+    			t34 = space();
     			li13 = element("li");
     			li13.textContent = "Release marketing plan";
-    			t38 = space();
+    			t36 = space();
     			li14 = element("li");
-    			li14.textContent = "Mint governance token";
-    			t40 = space();
+    			li14.textContent = "Reveal plan for Ambassador program";
+    			t38 = space();
     			li15 = element("li");
-    			li15.textContent = "Release plan for Ambassador program";
-    			t42 = space();
+    			li15.textContent = "Reveal first AllSkills Ambassadors";
+    			t40 = space();
     			li16 = element("li");
-    			li16.textContent = "Trailer";
-    			t44 = space();
+    			li16.textContent = "Mint governance token";
+    			t42 = space();
     			li17 = element("li");
-    			li17.textContent = "Token presale";
+    			li17.textContent = "Trailer";
+    			t44 = space();
+    			li18 = element("li");
+    			li18.textContent = "Token presale";
     			t46 = space();
-    			div12 = element("div");
+    			div11 = element("div");
     			h33 = element("h3");
     			h33.textContent = "Q2 2022";
     			t48 = space();
-    			div10 = element("div");
+    			div9 = element("div");
     			img3 = element("img");
     			t49 = space();
-    			div11 = element("div");
+    			div10 = element("div");
     			ul3 = element("ul");
-    			li18 = element("li");
-    			li18.textContent = "Mint stablecoin Vote token";
-    			t51 = space();
     			li19 = element("li");
-    			li19.textContent = "Launch closed beta";
-    			t53 = space();
+    			li19.textContent = "Mint stablecoin Vote token";
+    			t51 = space();
     			li20 = element("li");
-    			li20.textContent = "Full release of challenge system and marketplace";
+    			li20.textContent = "Launch closed beta";
+    			t53 = space();
+    			li21 = element("li");
+    			li21.textContent = "Full release of challenge system and marketplace";
     			t55 = space();
-    			div15 = element("div");
+    			li22 = element("li");
+    			li22.textContent = "Release of ambassador program";
+    			t57 = space();
+    			div14 = element("div");
     			h34 = element("h3");
     			h34.textContent = "Q3+ 2022";
-    			t57 = space();
-    			div13 = element("div");
+    			t59 = space();
+    			div12 = element("div");
     			img4 = element("img");
-    			t58 = space();
-    			div14 = element("div");
-    			ul4 = element("ul");
-    			li21 = element("li");
-    			li21.textContent = "Add video editing features";
     			t60 = space();
-    			li22 = element("li");
-    			li22.textContent = "Unique Tap-to-Record feature";
-    			t62 = space();
+    			div13 = element("div");
+    			ul4 = element("ul");
     			li23 = element("li");
-    			li23.textContent = "Release of ambassador program";
-    			t64 = space();
+    			li23.textContent = "Release unique Tap-to-Record feature";
+    			t62 = space();
     			li24 = element("li");
-    			li24.textContent = "Release of GM mode";
-    			attr_dev(p, "class", "svelte-6ys767");
-    			add_location(p, file$6, 2, 8, 63);
-    			attr_dev(div0, "class", "info svelte-6ys767");
-    			add_location(div0, file$6, 1, 4, 36);
+    			li24.textContent = "Release Scout mode";
+    			t64 = space();
+    			li25 = element("li");
+    			li25.textContent = "Add more cosmetics and editing features";
+    			t66 = space();
+    			li26 = element("li");
+    			li26.textContent = "Release GM mode";
+    			t68 = space();
+    			div15 = element("div");
+    			p = element("p");
+    			p.textContent = "Join our Discord and follow our Twitter to get access to the latest announcements and enter raffles to earn prizes from our Ambassadors";
     			set_style(h30, "color", "white");
-    			attr_dev(h30, "class", "svelte-6ys767");
-    			add_location(h30, file$6, 5, 8, 372);
+    			attr_dev(h30, "class", "svelte-1wphpvc");
+    			add_location(h30, file$7, 2, 8, 91);
     			attr_dev(img0, "alt", "Idea");
     			if (!src_url_equal(img0.src, img0_src_value = "images/idea_sw.png")) attr_dev(img0, "src", img0_src_value);
-    			attr_dev(img0, "class", "svelte-6ys767");
-    			add_location(img0, file$6, 7, 12, 496);
-    			attr_dev(div1, "class", "header svelte-6ys767");
-    			set_style(div1, "border-bottom", "5px solid #363636");
-    			add_location(div1, file$6, 6, 8, 422);
-    			attr_dev(li0, "class", "cleared");
-    			add_location(li0, file$6, 11, 16, 615);
-    			attr_dev(li1, "class", "cleared");
-    			add_location(li1, file$6, 12, 16, 665);
-    			attr_dev(li2, "class", "cleared");
-    			add_location(li2, file$6, 13, 16, 720);
-    			attr_dev(li3, "class", "cleared");
-    			add_location(li3, file$6, 14, 16, 779);
-    			attr_dev(ul0, "class", "svelte-6ys767");
-    			add_location(ul0, file$6, 10, 12, 594);
-    			attr_dev(div2, "class", "text svelte-6ys767");
-    			add_location(div2, file$6, 9, 8, 563);
-    			attr_dev(div3, "class", "roadmap-card svelte-6ys767");
-    			set_style(div3, "height", "60%");
-    			add_location(div3, file$6, 4, 4, 317);
+    			attr_dev(img0, "class", "svelte-1wphpvc");
+    			add_location(img0, file$7, 4, 12, 215);
+    			attr_dev(div0, "class", "header svelte-1wphpvc");
+    			set_style(div0, "border-bottom", "5px solid #363636");
+    			add_location(div0, file$7, 3, 8, 141);
+    			attr_dev(li0, "class", "cleared svelte-1wphpvc");
+    			add_location(li0, file$7, 8, 16, 334);
+    			attr_dev(li1, "class", "cleared svelte-1wphpvc");
+    			add_location(li1, file$7, 9, 16, 384);
+    			attr_dev(li2, "class", "cleared svelte-1wphpvc");
+    			add_location(li2, file$7, 10, 16, 439);
+    			attr_dev(li3, "class", "cleared svelte-1wphpvc");
+    			add_location(li3, file$7, 11, 16, 498);
+    			attr_dev(ul0, "class", "svelte-1wphpvc");
+    			add_location(ul0, file$7, 7, 12, 313);
+    			attr_dev(div1, "class", "text svelte-1wphpvc");
+    			add_location(div1, file$7, 6, 8, 282);
+    			attr_dev(div2, "class", "roadmap-card svelte-1wphpvc");
+    			set_style(div2, "height", "60%");
+    			add_location(div2, file$7, 1, 4, 36);
     			set_style(h31, "color", "#852ee7");
-    			attr_dev(h31, "class", "svelte-6ys767");
-    			add_location(h31, file$6, 19, 8, 952);
+    			attr_dev(h31, "class", "svelte-1wphpvc");
+    			add_location(h31, file$7, 16, 8, 671);
     			attr_dev(img1, "alt", "New Direction");
     			if (!src_url_equal(img1.src, img1_src_value = "images/leadership_sw.png")) attr_dev(img1, "src", img1_src_value);
-    			attr_dev(img1, "class", "svelte-6ys767");
-    			add_location(img1, file$6, 21, 12, 1070);
-    			attr_dev(div4, "class", "header svelte-6ys767");
-    			set_style(div4, "border-bottom", "5px solid #852ee7");
-    			add_location(div4, file$6, 20, 8, 996);
-    			attr_dev(li4, "class", "cleared");
-    			add_location(li4, file$6, 25, 16, 1204);
-    			attr_dev(li5, "class", "cleared");
-    			add_location(li5, file$6, 26, 16, 1262);
-    			attr_dev(li6, "class", "cleared");
-    			add_location(li6, file$6, 27, 16, 1327);
-    			attr_dev(li7, "class", "cleared");
-    			add_location(li7, file$6, 28, 16, 1392);
-    			attr_dev(li8, "class", "cleared");
-    			add_location(li8, file$6, 29, 16, 1460);
-    			add_location(li9, file$6, 30, 16, 1528);
-    			add_location(li10, file$6, 31, 16, 1568);
-    			attr_dev(ul1, "class", "svelte-6ys767");
-    			add_location(ul1, file$6, 24, 12, 1183);
-    			attr_dev(div5, "class", "text svelte-6ys767");
-    			add_location(div5, file$6, 23, 8, 1152);
-    			attr_dev(div6, "class", "roadmap-card svelte-6ys767");
-    			set_style(div6, "height", "70%");
-    			add_location(div6, file$6, 18, 4, 897);
+    			attr_dev(img1, "class", "svelte-1wphpvc");
+    			add_location(img1, file$7, 18, 12, 789);
+    			attr_dev(div3, "class", "header svelte-1wphpvc");
+    			set_style(div3, "border-bottom", "5px solid #852ee7");
+    			add_location(div3, file$7, 17, 8, 715);
+    			attr_dev(li4, "class", "cleared svelte-1wphpvc");
+    			add_location(li4, file$7, 22, 16, 923);
+    			attr_dev(li5, "class", "cleared svelte-1wphpvc");
+    			add_location(li5, file$7, 23, 16, 981);
+    			attr_dev(li6, "class", "cleared svelte-1wphpvc");
+    			add_location(li6, file$7, 24, 16, 1046);
+    			attr_dev(li7, "class", "cleared svelte-1wphpvc");
+    			add_location(li7, file$7, 25, 16, 1111);
+    			attr_dev(li8, "class", "cleared svelte-1wphpvc");
+    			add_location(li8, file$7, 26, 16, 1179);
+    			attr_dev(li9, "class", "cleared svelte-1wphpvc");
+    			add_location(li9, file$7, 27, 16, 1247);
+    			attr_dev(li10, "class", "cleared svelte-1wphpvc");
+    			add_location(li10, file$7, 28, 16, 1303);
+    			attr_dev(ul1, "class", "svelte-1wphpvc");
+    			add_location(ul1, file$7, 21, 12, 902);
+    			attr_dev(div4, "class", "text svelte-1wphpvc");
+    			add_location(div4, file$7, 20, 8, 871);
+    			attr_dev(div5, "class", "roadmap-card svelte-1wphpvc");
+    			set_style(div5, "height", "70%");
+    			add_location(div5, file$7, 15, 4, 616);
     			set_style(h32, "color", "#e0573f");
-    			attr_dev(h32, "class", "svelte-6ys767");
-    			add_location(h32, file$6, 36, 8, 1714);
+    			attr_dev(h32, "class", "svelte-1wphpvc");
+    			add_location(h32, file$7, 33, 8, 1465);
     			attr_dev(img2, "alt", "Pre-launch plan");
     			if (!src_url_equal(img2.src, img2_src_value = "images/planning_sw.png")) attr_dev(img2, "src", img2_src_value);
-    			attr_dev(img2, "class", "svelte-6ys767");
-    			add_location(img2, file$6, 38, 12, 1835);
-    			attr_dev(div7, "class", "header svelte-6ys767");
-    			set_style(div7, "border-bottom", "5px solid #e0573f");
-    			add_location(div7, file$6, 37, 8, 1761);
-    			add_location(li11, file$6, 42, 16, 1969);
-    			add_location(li12, file$6, 43, 16, 2012);
-    			add_location(li13, file$6, 44, 16, 2059);
-    			add_location(li14, file$6, 45, 16, 2107);
-    			add_location(li15, file$6, 46, 16, 2154);
-    			add_location(li16, file$6, 47, 16, 2215);
-    			add_location(li17, file$6, 48, 16, 2248);
-    			attr_dev(ul2, "class", "svelte-6ys767");
-    			add_location(ul2, file$6, 41, 12, 1948);
-    			attr_dev(div8, "class", "text svelte-6ys767");
-    			add_location(div8, file$6, 40, 8, 1917);
-    			attr_dev(div9, "class", "roadmap-card svelte-6ys767");
-    			set_style(div9, "height", "80%");
-    			add_location(div9, file$6, 35, 4, 1659);
+    			attr_dev(img2, "class", "svelte-1wphpvc");
+    			add_location(img2, file$7, 35, 12, 1586);
+    			attr_dev(div6, "class", "header svelte-1wphpvc");
+    			set_style(div6, "border-bottom", "5px solid #e0573f");
+    			add_location(div6, file$7, 34, 8, 1512);
+    			add_location(li11, file$7, 39, 16, 1720);
+    			attr_dev(li12, "class", "cleared svelte-1wphpvc");
+    			add_location(li12, file$7, 40, 16, 1763);
+    			attr_dev(li13, "class", "cleared svelte-1wphpvc");
+    			add_location(li13, file$7, 41, 16, 1826);
+    			add_location(li14, file$7, 42, 16, 1890);
+    			add_location(li15, file$7, 43, 16, 1950);
+    			add_location(li16, file$7, 44, 16, 2010);
+    			add_location(li17, file$7, 45, 16, 2057);
+    			add_location(li18, file$7, 46, 16, 2090);
+    			attr_dev(ul2, "class", "svelte-1wphpvc");
+    			add_location(ul2, file$7, 38, 12, 1699);
+    			attr_dev(div7, "class", "text svelte-1wphpvc");
+    			add_location(div7, file$7, 37, 8, 1668);
+    			attr_dev(div8, "class", "roadmap-card svelte-1wphpvc");
+    			set_style(div8, "height", "80%");
+    			add_location(div8, file$7, 32, 4, 1410);
     			set_style(h33, "color", "#ecec37");
-    			attr_dev(h33, "class", "svelte-6ys767");
-    			add_location(h33, file$6, 53, 8, 2374);
+    			attr_dev(h33, "class", "svelte-1wphpvc");
+    			add_location(h33, file$7, 51, 8, 2216);
     			attr_dev(img3, "alt", "Launch plans");
     			if (!src_url_equal(img3.src, img3_src_value = "images/launch_sw.png")) attr_dev(img3, "src", img3_src_value);
-    			attr_dev(img3, "class", "svelte-6ys767");
-    			add_location(img3, file$6, 55, 12, 2496);
-    			attr_dev(div10, "class", "header svelte-6ys767");
-    			set_style(div10, "border-bottom", "5px solid #ecec37");
-    			add_location(div10, file$6, 54, 8, 2422);
-    			add_location(li18, file$6, 59, 16, 2625);
-    			add_location(li19, file$6, 60, 16, 2677);
-    			add_location(li20, file$6, 61, 16, 2721);
-    			attr_dev(ul3, "class", "svelte-6ys767");
-    			add_location(ul3, file$6, 58, 12, 2604);
-    			attr_dev(div11, "class", "text svelte-6ys767");
-    			add_location(div11, file$6, 57, 8, 2573);
-    			attr_dev(div12, "class", "roadmap-card svelte-6ys767");
-    			set_style(div12, "height", "90%");
-    			add_location(div12, file$6, 52, 4, 2319);
+    			attr_dev(img3, "class", "svelte-1wphpvc");
+    			add_location(img3, file$7, 53, 12, 2338);
+    			attr_dev(div9, "class", "header svelte-1wphpvc");
+    			set_style(div9, "border-bottom", "5px solid #ecec37");
+    			add_location(div9, file$7, 52, 8, 2264);
+    			add_location(li19, file$7, 57, 16, 2467);
+    			add_location(li20, file$7, 58, 16, 2519);
+    			add_location(li21, file$7, 59, 16, 2563);
+    			add_location(li22, file$7, 60, 16, 2637);
+    			attr_dev(ul3, "class", "svelte-1wphpvc");
+    			add_location(ul3, file$7, 56, 12, 2446);
+    			attr_dev(div10, "class", "text svelte-1wphpvc");
+    			add_location(div10, file$7, 55, 8, 2415);
+    			attr_dev(div11, "class", "roadmap-card svelte-1wphpvc");
+    			set_style(div11, "height", "90%");
+    			add_location(div11, file$7, 50, 4, 2161);
     			set_style(h34, "color", "aqua");
-    			attr_dev(h34, "class", "svelte-6ys767");
-    			add_location(h34, file$6, 66, 8, 2883);
+    			attr_dev(h34, "class", "svelte-1wphpvc");
+    			add_location(h34, file$7, 65, 8, 2780);
     			attr_dev(img4, "alt", "Post launch plans");
     			if (!src_url_equal(img4.src, img4_src_value = "images/globalization_sw.png")) attr_dev(img4, "src", img4_src_value);
-    			attr_dev(img4, "class", "svelte-6ys767");
-    			add_location(img4, file$6, 68, 12, 3001);
-    			attr_dev(div13, "class", "header svelte-6ys767");
-    			set_style(div13, "border-bottom", "5px solid aqua");
-    			add_location(div13, file$6, 67, 8, 2930);
-    			add_location(li21, file$6, 72, 16, 3142);
-    			add_location(li22, file$6, 73, 16, 3194);
-    			add_location(li23, file$6, 74, 16, 3248);
-    			add_location(li24, file$6, 75, 16, 3303);
-    			attr_dev(ul4, "class", "svelte-6ys767");
-    			add_location(ul4, file$6, 71, 12, 3121);
-    			attr_dev(div14, "class", "text svelte-6ys767");
-    			add_location(div14, file$6, 70, 8, 3090);
-    			attr_dev(div15, "class", "roadmap-card svelte-6ys767");
-    			set_style(div15, "height", "100%");
-    			add_location(div15, file$6, 65, 4, 2827);
-    			attr_dev(div16, "class", "roadmap-container svelte-6ys767");
-    			add_location(div16, file$6, 0, 0, 0);
+    			attr_dev(img4, "class", "svelte-1wphpvc");
+    			add_location(img4, file$7, 67, 12, 2898);
+    			attr_dev(div12, "class", "header svelte-1wphpvc");
+    			set_style(div12, "border-bottom", "5px solid aqua");
+    			add_location(div12, file$7, 66, 8, 2827);
+    			add_location(li23, file$7, 71, 16, 3039);
+    			add_location(li24, file$7, 72, 16, 3101);
+    			add_location(li25, file$7, 73, 16, 3145);
+    			add_location(li26, file$7, 74, 16, 3210);
+    			attr_dev(ul4, "class", "svelte-1wphpvc");
+    			add_location(ul4, file$7, 70, 12, 3018);
+    			attr_dev(div13, "class", "text svelte-1wphpvc");
+    			add_location(div13, file$7, 69, 8, 2987);
+    			attr_dev(div14, "class", "roadmap-card svelte-1wphpvc");
+    			set_style(div14, "height", "100%");
+    			add_location(div14, file$7, 64, 4, 2724);
+    			attr_dev(p, "class", "svelte-1wphpvc");
+    			add_location(p, file$7, 79, 8, 3310);
+    			attr_dev(div15, "class", "info svelte-1wphpvc");
+    			add_location(div15, file$7, 78, 4, 3283);
+    			attr_dev(div16, "class", "roadmap-container svelte-1wphpvc");
+    			add_location(div16, file$7, 0, 0, 0);
     		},
     		l: function claim(nodes) {
     			throw new Error("options.hydrate only works if the component was compiled with the `hydratable: true` option");
     		},
     		m: function mount(target, anchor) {
     			insert_dev(target, div16, anchor);
-    			append_dev(div16, div0);
-    			append_dev(div0, p);
-    			append_dev(div16, t1);
-    			append_dev(div16, div3);
-    			append_dev(div3, h30);
-    			append_dev(div3, t3);
-    			append_dev(div3, div1);
-    			append_dev(div1, img0);
-    			append_dev(div3, t4);
-    			append_dev(div3, div2);
-    			append_dev(div2, ul0);
+    			append_dev(div16, div2);
+    			append_dev(div2, h30);
+    			append_dev(div2, t1);
+    			append_dev(div2, div0);
+    			append_dev(div0, img0);
+    			append_dev(div2, t2);
+    			append_dev(div2, div1);
+    			append_dev(div1, ul0);
     			append_dev(ul0, li0);
-    			append_dev(ul0, t6);
+    			append_dev(ul0, t4);
     			append_dev(ul0, li1);
-    			append_dev(ul0, t8);
+    			append_dev(ul0, t6);
     			append_dev(ul0, li2);
-    			append_dev(ul0, t10);
+    			append_dev(ul0, t8);
     			append_dev(ul0, li3);
-    			append_dev(div16, t12);
-    			append_dev(div16, div6);
-    			append_dev(div6, h31);
-    			append_dev(div6, t14);
-    			append_dev(div6, div4);
-    			append_dev(div4, img1);
-    			append_dev(div6, t15);
-    			append_dev(div6, div5);
-    			append_dev(div5, ul1);
+    			append_dev(div16, t10);
+    			append_dev(div16, div5);
+    			append_dev(div5, h31);
+    			append_dev(div5, t12);
+    			append_dev(div5, div3);
+    			append_dev(div3, img1);
+    			append_dev(div5, t13);
+    			append_dev(div5, div4);
+    			append_dev(div4, ul1);
     			append_dev(ul1, li4);
-    			append_dev(ul1, t17);
+    			append_dev(ul1, t15);
     			append_dev(ul1, li5);
-    			append_dev(ul1, t19);
+    			append_dev(ul1, t17);
     			append_dev(ul1, li6);
-    			append_dev(ul1, t21);
+    			append_dev(ul1, t19);
     			append_dev(ul1, li7);
-    			append_dev(ul1, t23);
+    			append_dev(ul1, t21);
     			append_dev(ul1, li8);
-    			append_dev(ul1, t25);
+    			append_dev(ul1, t23);
     			append_dev(ul1, li9);
-    			append_dev(ul1, t27);
+    			append_dev(ul1, t25);
     			append_dev(ul1, li10);
-    			append_dev(div16, t29);
-    			append_dev(div16, div9);
-    			append_dev(div9, h32);
-    			append_dev(div9, t31);
-    			append_dev(div9, div7);
-    			append_dev(div7, img2);
-    			append_dev(div9, t32);
-    			append_dev(div9, div8);
-    			append_dev(div8, ul2);
+    			append_dev(div16, t27);
+    			append_dev(div16, div8);
+    			append_dev(div8, h32);
+    			append_dev(div8, t29);
+    			append_dev(div8, div6);
+    			append_dev(div6, img2);
+    			append_dev(div8, t30);
+    			append_dev(div8, div7);
+    			append_dev(div7, ul2);
     			append_dev(ul2, li11);
-    			append_dev(ul2, t34);
+    			append_dev(ul2, t32);
     			append_dev(ul2, li12);
-    			append_dev(ul2, t36);
+    			append_dev(ul2, t34);
     			append_dev(ul2, li13);
-    			append_dev(ul2, t38);
+    			append_dev(ul2, t36);
     			append_dev(ul2, li14);
-    			append_dev(ul2, t40);
+    			append_dev(ul2, t38);
     			append_dev(ul2, li15);
-    			append_dev(ul2, t42);
+    			append_dev(ul2, t40);
     			append_dev(ul2, li16);
-    			append_dev(ul2, t44);
+    			append_dev(ul2, t42);
     			append_dev(ul2, li17);
+    			append_dev(ul2, t44);
+    			append_dev(ul2, li18);
     			append_dev(div16, t46);
-    			append_dev(div16, div12);
-    			append_dev(div12, h33);
-    			append_dev(div12, t48);
-    			append_dev(div12, div10);
-    			append_dev(div10, img3);
-    			append_dev(div12, t49);
-    			append_dev(div12, div11);
-    			append_dev(div11, ul3);
-    			append_dev(ul3, li18);
-    			append_dev(ul3, t51);
+    			append_dev(div16, div11);
+    			append_dev(div11, h33);
+    			append_dev(div11, t48);
+    			append_dev(div11, div9);
+    			append_dev(div9, img3);
+    			append_dev(div11, t49);
+    			append_dev(div11, div10);
+    			append_dev(div10, ul3);
     			append_dev(ul3, li19);
-    			append_dev(ul3, t53);
+    			append_dev(ul3, t51);
     			append_dev(ul3, li20);
-    			append_dev(div16, t55);
-    			append_dev(div16, div15);
-    			append_dev(div15, h34);
-    			append_dev(div15, t57);
-    			append_dev(div15, div13);
-    			append_dev(div13, img4);
-    			append_dev(div15, t58);
-    			append_dev(div15, div14);
-    			append_dev(div14, ul4);
-    			append_dev(ul4, li21);
-    			append_dev(ul4, t60);
-    			append_dev(ul4, li22);
-    			append_dev(ul4, t62);
+    			append_dev(ul3, t53);
+    			append_dev(ul3, li21);
+    			append_dev(ul3, t55);
+    			append_dev(ul3, li22);
+    			append_dev(div16, t57);
+    			append_dev(div16, div14);
+    			append_dev(div14, h34);
+    			append_dev(div14, t59);
+    			append_dev(div14, div12);
+    			append_dev(div12, img4);
+    			append_dev(div14, t60);
+    			append_dev(div14, div13);
+    			append_dev(div13, ul4);
     			append_dev(ul4, li23);
-    			append_dev(ul4, t64);
+    			append_dev(ul4, t62);
     			append_dev(ul4, li24);
+    			append_dev(ul4, t64);
+    			append_dev(ul4, li25);
+    			append_dev(ul4, t66);
+    			append_dev(ul4, li26);
+    			append_dev(div16, t68);
+    			append_dev(div16, div15);
+    			append_dev(div15, p);
     		},
     		p: noop,
     		i: noop,
@@ -6612,7 +6233,7 @@ var app = (function () {
 
     	dispatch_dev("SvelteRegisterBlock", {
     		block,
-    		id: create_fragment$6.name,
+    		id: create_fragment$7.name,
     		type: "component",
     		source: "",
     		ctx
@@ -6621,7 +6242,7 @@ var app = (function () {
     	return block;
     }
 
-    function instance$6($$self, $$props) {
+    function instance$7($$self, $$props) {
     	let { $$slots: slots = {}, $$scope } = $$props;
     	validate_slots('Roadmapv2', slots, []);
     	const writable_props = [];
@@ -6636,22 +6257,22 @@ var app = (function () {
     class Roadmapv2 extends SvelteComponentDev {
     	constructor(options) {
     		super(options);
-    		init(this, options, instance$6, create_fragment$6, safe_not_equal, {});
+    		init(this, options, instance$7, create_fragment$7, safe_not_equal, {});
 
     		dispatch_dev("SvelteRegisterComponent", {
     			component: this,
     			tagName: "Roadmapv2",
     			options,
-    			id: create_fragment$6.name
+    			id: create_fragment$7.name
     		});
     	}
     }
 
     /* src/Carousel.svelte generated by Svelte v3.44.3 */
 
-    const file$5 = "src/Carousel.svelte";
+    const file$6 = "src/Carousel.svelte";
 
-    function create_fragment$5(ctx) {
+    function create_fragment$6(ctx) {
     	let div2;
     	let div1;
     	let input0;
@@ -6697,47 +6318,47 @@ var app = (function () {
     			attr_dev(input0, "id", "item-1");
     			input0.checked = true;
     			attr_dev(input0, "class", "svelte-1rxlozd");
-    			add_location(input0, file$5, 2, 8, 69);
+    			add_location(input0, file$6, 2, 8, 69);
     			attr_dev(input1, "type", "radio");
     			attr_dev(input1, "name", "slider");
     			attr_dev(input1, "id", "item-2");
     			attr_dev(input1, "class", "svelte-1rxlozd");
-    			add_location(input1, file$5, 3, 8, 132);
+    			add_location(input1, file$6, 3, 8, 132);
     			attr_dev(input2, "type", "radio");
     			attr_dev(input2, "name", "slider");
     			attr_dev(input2, "id", "item-3");
     			attr_dev(input2, "class", "svelte-1rxlozd");
-    			add_location(input2, file$5, 4, 8, 187);
+    			add_location(input2, file$6, 4, 8, 187);
     			if (!src_url_equal(img0.src, img0_src_value = "images/bass.webp")) attr_dev(img0, "src", img0_src_value);
     			attr_dev(img0, "alt", "NFT Trading Card");
     			attr_dev(img0, "class", "svelte-1rxlozd");
-    			add_location(img0, file$5, 7, 8, 320);
+    			add_location(img0, file$6, 7, 8, 320);
     			attr_dev(label0, "class", "card svelte-1rxlozd");
     			attr_dev(label0, "for", "item-1");
     			attr_dev(label0, "id", "card-1");
-    			add_location(label0, file$5, 6, 8, 266);
+    			add_location(label0, file$6, 6, 8, 266);
     			if (!src_url_equal(img1.src, img1_src_value = "images/Dunk.webp")) attr_dev(img1, "src", img1_src_value);
     			attr_dev(img1, "alt", "NFT Trading Card");
     			attr_dev(img1, "class", "svelte-1rxlozd");
-    			add_location(img1, file$5, 10, 8, 451);
+    			add_location(img1, file$6, 10, 8, 451);
     			attr_dev(label1, "class", "card svelte-1rxlozd");
     			attr_dev(label1, "for", "item-2");
     			attr_dev(label1, "id", "card-2");
-    			add_location(label1, file$5, 9, 8, 397);
+    			add_location(label1, file$6, 9, 8, 397);
     			if (!src_url_equal(img2.src, img2_src_value = "images/skateboard.webp")) attr_dev(img2, "src", img2_src_value);
     			attr_dev(img2, "alt", "NFT Trading Card");
     			attr_dev(img2, "class", "svelte-1rxlozd");
-    			add_location(img2, file$5, 13, 8, 582);
+    			add_location(img2, file$6, 13, 8, 582);
     			attr_dev(label2, "class", "card svelte-1rxlozd");
     			attr_dev(label2, "for", "item-3");
     			attr_dev(label2, "id", "card-3");
-    			add_location(label2, file$5, 12, 8, 528);
+    			add_location(label2, file$6, 12, 8, 528);
     			attr_dev(div0, "class", "cards svelte-1rxlozd");
-    			add_location(div0, file$5, 5, 4, 238);
+    			add_location(div0, file$6, 5, 4, 238);
     			attr_dev(div1, "class", "container svelte-1rxlozd");
-    			add_location(div1, file$5, 1, 4, 37);
+    			add_location(div1, file$6, 1, 4, 37);
     			attr_dev(div2, "class", "carousel-container svelte-1rxlozd");
-    			add_location(div2, file$5, 0, 0, 0);
+    			add_location(div2, file$6, 0, 0, 0);
     		},
     		l: function claim(nodes) {
     			throw new Error("options.hydrate only works if the component was compiled with the `hydratable: true` option");
@@ -6771,7 +6392,7 @@ var app = (function () {
 
     	dispatch_dev("SvelteRegisterBlock", {
     		block,
-    		id: create_fragment$5.name,
+    		id: create_fragment$6.name,
     		type: "component",
     		source: "",
     		ctx
@@ -6780,7 +6401,7 @@ var app = (function () {
     	return block;
     }
 
-    function instance$5($$self, $$props) {
+    function instance$6($$self, $$props) {
     	let { $$slots: slots = {}, $$scope } = $$props;
     	validate_slots('Carousel', slots, []);
     	const writable_props = [];
@@ -6795,22 +6416,22 @@ var app = (function () {
     class Carousel extends SvelteComponentDev {
     	constructor(options) {
     		super(options);
-    		init(this, options, instance$5, create_fragment$5, safe_not_equal, {});
+    		init(this, options, instance$6, create_fragment$6, safe_not_equal, {});
 
     		dispatch_dev("SvelteRegisterComponent", {
     			component: this,
     			tagName: "Carousel",
     			options,
-    			id: create_fragment$5.name
+    			id: create_fragment$6.name
     		});
     	}
     }
 
     /* src/Table.svelte generated by Svelte v3.44.3 */
 
-    const file$4 = "src/Table.svelte";
+    const file$5 = "src/Table.svelte";
 
-    function create_fragment$4(ctx) {
+    function create_fragment$5(ctx) {
     	let div8;
     	let div1;
     	let div0;
@@ -6879,7 +6500,7 @@ var app = (function () {
     			h32.textContent = "NFT Collectibles";
     			t12 = space();
     			p2 = element("p");
-    			p2.textContent = "Collect unique moments from talented creators. Winning challenge videos are minted into NFT collectibles that can be traded on our NFT marketplace.";
+    			p2.textContent = "Collect unique moments from talented creators. Winning challenge videos have the opportunity to be minted into NFT collectibles that can be traded on our NFT marketplace.";
     			t14 = space();
     			div7 = element("div");
     			div6 = element("div");
@@ -6893,54 +6514,54 @@ var app = (function () {
     			attr_dev(img0, "alt", "Handshake");
     			set_style(img0, "width", "100%");
     			if (!src_url_equal(img0.src, img0_src_value = "images/handshake.png")) attr_dev(img0, "src", img0_src_value);
-    			add_location(img0, file$4, 2, 32, 99);
+    			add_location(img0, file$5, 2, 32, 99);
     			attr_dev(div0, "class", "table-icon svelte-19ztz97");
-    			add_location(div0, file$4, 2, 8, 75);
+    			add_location(div0, file$5, 2, 8, 75);
     			attr_dev(h30, "class", "svelte-19ztz97");
-    			add_location(h30, file$4, 3, 8, 181);
+    			add_location(h30, file$5, 3, 8, 181);
     			attr_dev(p0, "class", "svelte-19ztz97");
-    			add_location(p0, file$4, 4, 8, 217);
+    			add_location(p0, file$5, 4, 8, 217);
     			attr_dev(div1, "class", "grid-item svelte-19ztz97");
-    			add_location(div1, file$4, 1, 4, 43);
+    			add_location(div1, file$5, 1, 4, 43);
     			attr_dev(img1, "alt", "Earnings");
     			set_style(img1, "width", "100%");
     			if (!src_url_equal(img1.src, img1_src_value = "images/earn.png")) attr_dev(img1, "src", img1_src_value);
-    			add_location(img1, file$4, 7, 32, 553);
+    			add_location(img1, file$5, 7, 32, 553);
     			attr_dev(div2, "class", "table-icon svelte-19ztz97");
-    			add_location(div2, file$4, 7, 8, 529);
+    			add_location(div2, file$5, 7, 8, 529);
     			attr_dev(h31, "class", "svelte-19ztz97");
-    			add_location(h31, file$4, 8, 8, 629);
+    			add_location(h31, file$5, 8, 8, 629);
     			attr_dev(p1, "class", "svelte-19ztz97");
-    			add_location(p1, file$4, 9, 8, 664);
+    			add_location(p1, file$5, 9, 8, 664);
     			attr_dev(div3, "class", "grid-item svelte-19ztz97");
-    			add_location(div3, file$4, 6, 4, 497);
+    			add_location(div3, file$5, 6, 4, 497);
     			attr_dev(img2, "alt", "Collectibles");
     			set_style(img2, "width", "100%");
     			if (!src_url_equal(img2.src, img2_src_value = "images/stamps.png")) attr_dev(img2, "src", img2_src_value);
-    			add_location(img2, file$4, 12, 32, 944);
+    			add_location(img2, file$5, 12, 32, 944);
     			attr_dev(div4, "class", "table-icon svelte-19ztz97");
-    			add_location(div4, file$4, 12, 8, 920);
+    			add_location(div4, file$5, 12, 8, 920);
     			attr_dev(h32, "class", "svelte-19ztz97");
-    			add_location(h32, file$4, 13, 8, 1026);
+    			add_location(h32, file$5, 13, 8, 1026);
     			attr_dev(p2, "class", "svelte-19ztz97");
-    			add_location(p2, file$4, 14, 8, 1060);
+    			add_location(p2, file$5, 14, 8, 1060);
     			attr_dev(div5, "class", "grid-item svelte-19ztz97");
-    			add_location(div5, file$4, 11, 4, 888);
+    			add_location(div5, file$5, 11, 4, 888);
     			attr_dev(img3, "alt", "Marketplace");
     			set_style(img3, "width", "100%");
     			if (!src_url_equal(img3.src, img3_src_value = "images/auction.png")) attr_dev(img3, "src", img3_src_value);
-    			add_location(img3, file$4, 17, 32, 1286);
+    			add_location(img3, file$5, 17, 32, 1309);
     			attr_dev(div6, "class", "table-icon svelte-19ztz97");
-    			add_location(div6, file$4, 17, 8, 1262);
+    			add_location(div6, file$5, 17, 8, 1285);
     			attr_dev(h33, "class", "svelte-19ztz97");
-    			add_location(h33, file$4, 18, 8, 1368);
+    			add_location(h33, file$5, 18, 8, 1391);
     			attr_dev(p3, "class", "svelte-19ztz97");
-    			add_location(p3, file$4, 19, 8, 1401);
+    			add_location(p3, file$5, 19, 8, 1424);
     			attr_dev(div7, "class", "grid-item svelte-19ztz97");
-    			add_location(div7, file$4, 16, 4, 1230);
+    			add_location(div7, file$5, 16, 4, 1253);
     			attr_dev(div8, "class", "table-content svelte-19ztz97");
     			attr_dev(div8, "id", "Table");
-    			add_location(div8, file$4, 0, 0, 0);
+    			add_location(div8, file$5, 0, 0, 0);
     		},
     		l: function claim(nodes) {
     			throw new Error("options.hydrate only works if the component was compiled with the `hydratable: true` option");
@@ -6989,7 +6610,7 @@ var app = (function () {
 
     	dispatch_dev("SvelteRegisterBlock", {
     		block,
-    		id: create_fragment$4.name,
+    		id: create_fragment$5.name,
     		type: "component",
     		source: "",
     		ctx
@@ -6998,7 +6619,7 @@ var app = (function () {
     	return block;
     }
 
-    function instance$4($$self, $$props) {
+    function instance$5($$self, $$props) {
     	let { $$slots: slots = {}, $$scope } = $$props;
     	validate_slots('Table', slots, []);
     	const writable_props = [];
@@ -7013,20 +6634,20 @@ var app = (function () {
     class Table extends SvelteComponentDev {
     	constructor(options) {
     		super(options);
-    		init(this, options, instance$4, create_fragment$4, safe_not_equal, {});
+    		init(this, options, instance$5, create_fragment$5, safe_not_equal, {});
 
     		dispatch_dev("SvelteRegisterComponent", {
     			component: this,
     			tagName: "Table",
     			options,
-    			id: create_fragment$4.name
+    			id: create_fragment$5.name
     		});
     	}
     }
 
     /* src/News.svelte generated by Svelte v3.44.3 */
 
-    const file$3 = "src/News.svelte";
+    const file$4 = "src/News.svelte";
 
     function get_each_context(ctx, list, i) {
     	const child_ctx = ctx.slice();
@@ -7067,17 +6688,17 @@ var app = (function () {
     			t3 = text(t3_value);
     			t4 = space();
     			if (!src_url_equal(img.src, img_src_value = "images/profile-bg-1.jpg")) attr_dev(img, "src", img_src_value);
-    			attr_dev(img, "class", "svelte-nl2vjr");
-    			add_location(img, file$3, 4, 16, 146);
-    			attr_dev(div0, "class", "image svelte-nl2vjr");
-    			add_location(div0, file$3, 3, 12, 110);
-    			attr_dev(h2, "class", "title svelte-nl2vjr");
-    			add_location(h2, file$3, 6, 12, 215);
-    			add_location(p, file$3, 8, 16, 296);
-    			attr_dev(div1, "class", "content svelte-nl2vjr");
-    			add_location(div1, file$3, 7, 12, 258);
-    			attr_dev(div2, "class", "card svelte-nl2vjr");
-    			add_location(div2, file$3, 2, 8, 79);
+    			attr_dev(img, "class", "svelte-1r78on7");
+    			add_location(img, file$4, 4, 16, 146);
+    			attr_dev(div0, "class", "image svelte-1r78on7");
+    			add_location(div0, file$4, 3, 12, 110);
+    			attr_dev(h2, "class", "title svelte-1r78on7");
+    			add_location(h2, file$4, 6, 12, 215);
+    			add_location(p, file$4, 8, 16, 296);
+    			attr_dev(div1, "class", "content svelte-1r78on7");
+    			add_location(div1, file$4, 7, 12, 258);
+    			attr_dev(div2, "class", "card svelte-1r78on7");
+    			add_location(div2, file$4, 2, 8, 79);
     		},
     		m: function mount(target, anchor) {
     			insert_dev(target, div2, anchor);
@@ -7109,7 +6730,7 @@ var app = (function () {
     	return block;
     }
 
-    function create_fragment$3(ctx) {
+    function create_fragment$4(ctx) {
     	let div;
     	let each_value = /*news*/ ctx[0];
     	validate_each_argument(each_value);
@@ -7127,8 +6748,8 @@ var app = (function () {
     				each_blocks[i].c();
     			}
 
-    			attr_dev(div, "class", "news-container svelte-nl2vjr");
-    			add_location(div, file$3, 0, 0, 0);
+    			attr_dev(div, "class", "news-container svelte-1r78on7");
+    			add_location(div, file$4, 0, 0, 0);
     		},
     		l: function claim(nodes) {
     			throw new Error("options.hydrate only works if the component was compiled with the `hydratable: true` option");
@@ -7175,7 +6796,7 @@ var app = (function () {
 
     	dispatch_dev("SvelteRegisterBlock", {
     		block,
-    		id: create_fragment$3.name,
+    		id: create_fragment$4.name,
     		type: "component",
     		source: "",
     		ctx
@@ -7184,7 +6805,7 @@ var app = (function () {
     	return block;
     }
 
-    function instance$3($$self, $$props, $$invalidate) {
+    function instance$4($$self, $$props, $$invalidate) {
     	let { $$slots: slots = {}, $$scope } = $$props;
     	validate_slots('News', slots, []);
 
@@ -7192,6 +6813,16 @@ var app = (function () {
     		{
     			img: "",
     			title: "Soft Launch!",
+    			content: "Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat."
+    		},
+    		{
+    			img: "",
+    			title: "First videoshoot with local hockey phenom",
+    			content: "Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat."
+    		},
+    		{
+    			img: "",
+    			title: "Charles Hammelin leaves for Olympics",
     			content: "Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat."
     		}
     	];
@@ -7209,11 +6840,493 @@ var app = (function () {
     class News extends SvelteComponentDev {
     	constructor(options) {
     		super(options);
-    		init(this, options, instance$3, create_fragment$3, safe_not_equal, {});
+    		init(this, options, instance$4, create_fragment$4, safe_not_equal, {});
 
     		dispatch_dev("SvelteRegisterComponent", {
     			component: this,
     			tagName: "News",
+    			options,
+    			id: create_fragment$4.name
+    		});
+    	}
+    }
+
+    /* src/NFT.svelte generated by Svelte v3.44.3 */
+
+    const file$3 = "src/NFT.svelte";
+
+    // (31:4) {#if modalShowing}
+    function create_if_block$1(ctx) {
+    	let div0;
+    	let h2;
+    	let t0;
+    	let t1;
+    	let p;
+    	let t2;
+    	let t3;
+    	let div1;
+    	let mounted;
+    	let dispose;
+
+    	const block = {
+    		c: function create() {
+    			div0 = element("div");
+    			h2 = element("h2");
+    			t0 = text(/*modalTitle*/ ctx[1]);
+    			t1 = space();
+    			p = element("p");
+    			t2 = text(/*modalDescription*/ ctx[2]);
+    			t3 = space();
+    			div1 = element("div");
+    			add_location(h2, file$3, 32, 8, 1908);
+    			add_location(p, file$3, 33, 8, 1938);
+    			attr_dev(div0, "class", "modal svelte-yhurek");
+    			add_location(div0, file$3, 31, 1, 1880);
+    			attr_dev(div1, "id", "overlay");
+    			attr_dev(div1, "class", "svelte-yhurek");
+    			add_location(div1, file$3, 35, 4, 1976);
+    		},
+    		m: function mount(target, anchor) {
+    			insert_dev(target, div0, anchor);
+    			append_dev(div0, h2);
+    			append_dev(h2, t0);
+    			append_dev(div0, t1);
+    			append_dev(div0, p);
+    			append_dev(p, t2);
+    			insert_dev(target, t3, anchor);
+    			insert_dev(target, div1, anchor);
+
+    			if (!mounted) {
+    				dispose = listen_dev(div1, "click", /*click_handler_8*/ ctx[12], false, false, false);
+    				mounted = true;
+    			}
+    		},
+    		p: function update(ctx, dirty) {
+    			if (dirty & /*modalTitle*/ 2) set_data_dev(t0, /*modalTitle*/ ctx[1]);
+    			if (dirty & /*modalDescription*/ 4) set_data_dev(t2, /*modalDescription*/ ctx[2]);
+    		},
+    		d: function destroy(detaching) {
+    			if (detaching) detach_dev(div0);
+    			if (detaching) detach_dev(t3);
+    			if (detaching) detach_dev(div1);
+    			mounted = false;
+    			dispose();
+    		}
+    	};
+
+    	dispatch_dev("SvelteRegisterBlock", {
+    		block,
+    		id: create_if_block$1.name,
+    		type: "if",
+    		source: "(31:4) {#if modalShowing}",
+    		ctx
+    	});
+
+    	return block;
+    }
+
+    function create_fragment$3(ctx) {
+    	let div7;
+    	let div2;
+    	let div0;
+    	let img0;
+    	let img0_src_value;
+    	let t0;
+    	let div1;
+    	let ul0;
+    	let h40;
+    	let t1;
+    	let a0;
+    	let t3;
+    	let h41;
+    	let t4;
+    	let a1;
+    	let t6;
+    	let t7;
+    	let h42;
+    	let t8;
+    	let a2;
+    	let t10;
+    	let t11;
+    	let h43;
+    	let t12;
+    	let a3;
+    	let t14;
+    	let t15;
+    	let div6;
+    	let div3;
+    	let h1;
+    	let t17;
+    	let img1;
+    	let img1_src_value;
+    	let t18;
+    	let div5;
+    	let div4;
+    	let ul1;
+    	let h44;
+    	let t19;
+    	let a4;
+    	let t21;
+    	let h45;
+    	let t22;
+    	let a5;
+    	let t24;
+    	let h46;
+    	let t25;
+    	let a6;
+    	let t27;
+    	let h47;
+    	let t28;
+    	let a7;
+    	let t30;
+    	let mounted;
+    	let dispose;
+    	let if_block = /*modalShowing*/ ctx[0] && create_if_block$1(ctx);
+
+    	const block = {
+    		c: function create() {
+    			div7 = element("div");
+    			div2 = element("div");
+    			div0 = element("div");
+    			img0 = element("img");
+    			t0 = space();
+    			div1 = element("div");
+    			ul0 = element("ul");
+    			h40 = element("h4");
+    			t1 = text("Level up by winning challenges and unlock ");
+    			a0 = element("a");
+    			a0.textContent = "exclusive benefits.";
+    			t3 = space();
+    			h41 = element("h4");
+    			t4 = text("Reach level 7 to unlock ");
+    			a1 = element("a");
+    			a1.textContent = "NFT minting";
+    			t6 = text(" for all your challenge wins.");
+    			t7 = space();
+    			h42 = element("h4");
+    			t8 = text("All winning challenge videos that end in the daily ");
+    			a2 = element("a");
+    			a2.textContent = "top 10% of votes";
+    			t10 = text(" received get minted.");
+    			t11 = space();
+    			h43 = element("h4");
+    			t12 = text("Purchase a ");
+    			a3 = element("a");
+    			a3.textContent = "Mint Token";
+    			t14 = text(" to automatically mint one of your challenge wins as an NFT.");
+    			t15 = space();
+    			div6 = element("div");
+    			div3 = element("div");
+    			h1 = element("h1");
+    			h1.textContent = "Coming soon";
+    			t17 = space();
+    			img1 = element("img");
+    			t18 = space();
+    			div5 = element("div");
+    			div4 = element("div");
+    			ul1 = element("ul");
+    			h44 = element("h4");
+    			t19 = text("Users can chose to mint to ");
+    			a4 = element("a");
+    			a4.textContent = "Ethereum, Polygon, Tezos, NEAR, or Flow.";
+    			t21 = space();
+    			h45 = element("h4");
+    			t22 = text("Tradeable on our marketplace as well as other top NFT marketplaces like ");
+    			a5 = element("a");
+    			a5.textContent = "OpenSea and Rarible";
+    			t24 = space();
+    			h46 = element("h4");
+    			t25 = text("Challenge videos will be stored using decentralized cloud storage providers and the ");
+    			a6 = element("a");
+    			a6.textContent = "IPFS.";
+    			t27 = space();
+    			h47 = element("h4");
+    			t28 = text("All minted challenge videos are also backed-up forever using ");
+    			a7 = element("a");
+    			a7.textContent = "arweave and ardive.";
+    			t30 = space();
+    			if (if_block) if_block.c();
+    			if (!src_url_equal(img0.src, img0_src_value = "images/frame.png")) attr_dev(img0, "src", img0_src_value);
+    			attr_dev(img0, "class", "svelte-yhurek");
+    			add_location(img0, file$3, 3, 12, 100);
+    			attr_dev(div0, "class", "image first svelte-yhurek");
+    			add_location(div0, file$3, 2, 8, 62);
+    			add_location(a0, file$3, 7, 62, 262);
+    			attr_dev(h40, "class", "svelte-yhurek");
+    			add_location(h40, file$3, 7, 16, 216);
+    			add_location(a1, file$3, 8, 44, 377);
+    			attr_dev(h41, "class", "svelte-yhurek");
+    			add_location(h41, file$3, 8, 16, 349);
+    			add_location(a2, file$3, 9, 71, 539);
+    			attr_dev(h42, "class", "svelte-yhurek");
+    			add_location(h42, file$3, 9, 16, 484);
+    			add_location(a3, file$3, 10, 31, 662);
+    			attr_dev(h43, "class", "svelte-yhurek");
+    			add_location(h43, file$3, 10, 16, 647);
+    			attr_dev(ul0, "class", "svelte-yhurek");
+    			add_location(ul0, file$3, 6, 12, 195);
+    			attr_dev(div1, "class", "content second svelte-yhurek");
+    			add_location(div1, file$3, 5, 8, 154);
+    			attr_dev(div2, "class", "section svelte-yhurek");
+    			add_location(div2, file$3, 1, 4, 32);
+    			set_style(h1, "position", "absolute");
+    			set_style(h1, "top", "40%");
+    			set_style(h1, "z-index", "2");
+    			set_style(h1, "font-size", "2rem");
+    			set_style(h1, "font-family", "'Oswald'");
+    			add_location(h1, file$3, 16, 12, 898);
+    			attr_dev(img1, "class", "blurred svelte-yhurek");
+    			if (!src_url_equal(img1.src, img1_src_value = "images/frame.png")) attr_dev(img1, "src", img1_src_value);
+    			add_location(img1, file$3, 17, 12, 1019);
+    			attr_dev(div3, "class", "image second svelte-yhurek");
+    			add_location(div3, file$3, 15, 8, 859);
+    			add_location(a4, file$3, 22, 51, 1207);
+    			attr_dev(h44, "class", "svelte-yhurek");
+    			add_location(h44, file$3, 22, 20, 1176);
+    			add_location(a5, file$3, 23, 96, 1398);
+    			attr_dev(h45, "class", "svelte-yhurek");
+    			add_location(h45, file$3, 23, 20, 1322);
+    			add_location(a6, file$3, 24, 108, 1581);
+    			attr_dev(h46, "class", "svelte-yhurek");
+    			add_location(h46, file$3, 24, 20, 1493);
+    			add_location(a7, file$3, 25, 85, 1719);
+    			attr_dev(h47, "class", "svelte-yhurek");
+    			add_location(h47, file$3, 25, 20, 1654);
+    			attr_dev(ul1, "class", "svelte-yhurek");
+    			add_location(ul1, file$3, 21, 16, 1151);
+    			add_location(div4, file$3, 20, 12, 1129);
+    			attr_dev(div5, "class", "content first svelte-yhurek");
+    			add_location(div5, file$3, 19, 8, 1089);
+    			attr_dev(div6, "class", "section svelte-yhurek");
+    			add_location(div6, file$3, 14, 4, 829);
+    			attr_dev(div7, "class", "NFT-container svelte-yhurek");
+    			add_location(div7, file$3, 0, 0, 0);
+    		},
+    		l: function claim(nodes) {
+    			throw new Error("options.hydrate only works if the component was compiled with the `hydratable: true` option");
+    		},
+    		m: function mount(target, anchor) {
+    			insert_dev(target, div7, anchor);
+    			append_dev(div7, div2);
+    			append_dev(div2, div0);
+    			append_dev(div0, img0);
+    			append_dev(div2, t0);
+    			append_dev(div2, div1);
+    			append_dev(div1, ul0);
+    			append_dev(ul0, h40);
+    			append_dev(h40, t1);
+    			append_dev(h40, a0);
+    			append_dev(ul0, t3);
+    			append_dev(ul0, h41);
+    			append_dev(h41, t4);
+    			append_dev(h41, a1);
+    			append_dev(h41, t6);
+    			append_dev(ul0, t7);
+    			append_dev(ul0, h42);
+    			append_dev(h42, t8);
+    			append_dev(h42, a2);
+    			append_dev(h42, t10);
+    			append_dev(ul0, t11);
+    			append_dev(ul0, h43);
+    			append_dev(h43, t12);
+    			append_dev(h43, a3);
+    			append_dev(h43, t14);
+    			append_dev(div7, t15);
+    			append_dev(div7, div6);
+    			append_dev(div6, div3);
+    			append_dev(div3, h1);
+    			append_dev(div3, t17);
+    			append_dev(div3, img1);
+    			append_dev(div6, t18);
+    			append_dev(div6, div5);
+    			append_dev(div5, div4);
+    			append_dev(div4, ul1);
+    			append_dev(ul1, h44);
+    			append_dev(h44, t19);
+    			append_dev(h44, a4);
+    			append_dev(ul1, t21);
+    			append_dev(ul1, h45);
+    			append_dev(h45, t22);
+    			append_dev(h45, a5);
+    			append_dev(ul1, t24);
+    			append_dev(ul1, h46);
+    			append_dev(h46, t25);
+    			append_dev(h46, a6);
+    			append_dev(ul1, t27);
+    			append_dev(ul1, h47);
+    			append_dev(h47, t28);
+    			append_dev(h47, a7);
+    			append_dev(div7, t30);
+    			if (if_block) if_block.m(div7, null);
+
+    			if (!mounted) {
+    				dispose = [
+    					listen_dev(a0, "click", /*click_handler*/ ctx[4], false, false, false),
+    					listen_dev(a1, "click", /*click_handler_1*/ ctx[5], false, false, false),
+    					listen_dev(a2, "click", /*click_handler_2*/ ctx[6], false, false, false),
+    					listen_dev(a3, "click", /*click_handler_3*/ ctx[7], false, false, false),
+    					listen_dev(a4, "click", /*click_handler_4*/ ctx[8], false, false, false),
+    					listen_dev(a5, "click", /*click_handler_5*/ ctx[9], false, false, false),
+    					listen_dev(a6, "click", /*click_handler_6*/ ctx[10], false, false, false),
+    					listen_dev(a7, "click", /*click_handler_7*/ ctx[11], false, false, false)
+    				];
+
+    				mounted = true;
+    			}
+    		},
+    		p: function update(ctx, [dirty]) {
+    			if (/*modalShowing*/ ctx[0]) {
+    				if (if_block) {
+    					if_block.p(ctx, dirty);
+    				} else {
+    					if_block = create_if_block$1(ctx);
+    					if_block.c();
+    					if_block.m(div7, null);
+    				}
+    			} else if (if_block) {
+    				if_block.d(1);
+    				if_block = null;
+    			}
+    		},
+    		i: noop,
+    		o: noop,
+    		d: function destroy(detaching) {
+    			if (detaching) detach_dev(div7);
+    			if (if_block) if_block.d();
+    			mounted = false;
+    			run_all(dispose);
+    		}
+    	};
+
+    	dispatch_dev("SvelteRegisterBlock", {
+    		block,
+    		id: create_fragment$3.name,
+    		type: "component",
+    		source: "",
+    		ctx
+    	});
+
+    	return block;
+    }
+
+    function instance$3($$self, $$props, $$invalidate) {
+    	let { $$slots: slots = {}, $$scope } = $$props;
+    	validate_slots('NFT', slots, []);
+    	let modalShowing = false;
+    	let modalTitle = "modal";
+    	let modalDescription = "";
+
+    	let descriptions = {
+    		benefits: {
+    			title: "Level Rewards",
+    			description: "List of rewards users can earn from leveling up"
+    		},
+    		minting: {
+    			title: "Minting",
+    			description: "Description of minting process and NFTs"
+    		},
+    		leaderboard: {
+    			title: "Leaderboards",
+    			description: "Description of our various leaderboards"
+    		},
+    		token: {
+    			title: "Mint Token",
+    			description: "After you purchase a Mint Token, you can apply it to a challenge video you've already won to mint it into an NFT, or you can apply it to your next challenge making your next win a guaranteed mint."
+    		},
+    		blockchains: {
+    			title: "Blockchains",
+    			description: "We want to give our users the freedom to use the blockchain and NFT marketplaces of their choice. Mint your winning challenge videos directly to either Ethereum, Polygon, NEAR, Tezos, or Flow blockchains."
+    		},
+    		marketplaces: {
+    			title: "Marketplaces",
+    			description: "The option to mint to so many blockchains opens users up to selling their NFT on the worlds biggest NFT marketplaces like OpenSea and Rarible, on top of our own."
+    		},
+    		ipfs: {
+    			title: "IPFS",
+    			description: "The InterPlanetary File System is a protocol and peer-to-peer network for storing and sharing data in a distributed file system. IPFS uses content-addressing to uniquely identify each file in a global namespace connecting all computing devices."
+    		},
+    		arweave: {
+    			title: "arweave",
+    			description: "Arweave is a new type of storage that backs data with sustainable and perpetual endowments, allowing users and developers to truly store data forever – for the very first time. As a collectively owned hard drive that never forgets, Arweave allows us to remember and preserve valuable information, apps, and history indefinitely. By preserving history, it prevents others from rewriting it."
+    		},
+    		ardrive: {
+    			title: "ardrive",
+    			description: "description"
+    		}
+    	};
+
+    	function showModal(title) {
+    		$$invalidate(0, modalShowing = true);
+    		$$invalidate(1, modalTitle = descriptions[title].title);
+    		$$invalidate(2, modalDescription = descriptions[title].description);
+    	} //document.getElementById(target).style.display = "block";
+    	//document.getElementById("overlay").style.visibility = "visible";
+
+    	function closeModal() {
+    		$$invalidate(0, modalShowing = false);
+    	}
+
+    	const writable_props = [];
+
+    	Object.keys($$props).forEach(key => {
+    		if (!~writable_props.indexOf(key) && key.slice(0, 2) !== '$$' && key !== 'slot') console.warn(`<NFT> was created with unknown prop '${key}'`);
+    	});
+
+    	const click_handler = () => showModal("benefits");
+    	const click_handler_1 = () => showModal("minting");
+    	const click_handler_2 = () => showModal("leaderboard");
+    	const click_handler_3 = () => showModal("token");
+    	const click_handler_4 = () => showModal("blockchains");
+    	const click_handler_5 = () => showModal("marketplaces");
+    	const click_handler_6 = () => showModal("ipfs");
+    	const click_handler_7 = () => showModal("arweave");
+    	const click_handler_8 = () => $$invalidate(0, modalShowing = false);
+
+    	$$self.$capture_state = () => ({
+    		modalShowing,
+    		modalTitle,
+    		modalDescription,
+    		descriptions,
+    		showModal,
+    		closeModal
+    	});
+
+    	$$self.$inject_state = $$props => {
+    		if ('modalShowing' in $$props) $$invalidate(0, modalShowing = $$props.modalShowing);
+    		if ('modalTitle' in $$props) $$invalidate(1, modalTitle = $$props.modalTitle);
+    		if ('modalDescription' in $$props) $$invalidate(2, modalDescription = $$props.modalDescription);
+    		if ('descriptions' in $$props) descriptions = $$props.descriptions;
+    	};
+
+    	if ($$props && "$$inject" in $$props) {
+    		$$self.$inject_state($$props.$$inject);
+    	}
+
+    	return [
+    		modalShowing,
+    		modalTitle,
+    		modalDescription,
+    		showModal,
+    		click_handler,
+    		click_handler_1,
+    		click_handler_2,
+    		click_handler_3,
+    		click_handler_4,
+    		click_handler_5,
+    		click_handler_6,
+    		click_handler_7,
+    		click_handler_8
+    	];
+    }
+
+    class NFT extends SvelteComponentDev {
+    	constructor(options) {
+    		super(options);
+    		init(this, options, instance$3, create_fragment$3, safe_not_equal, {});
+
+    		dispatch_dev("SvelteRegisterComponent", {
+    			component: this,
+    			tagName: "NFT",
     			options,
     			id: create_fragment$3.name
     		});
@@ -7226,7 +7339,7 @@ var app = (function () {
     function create_fragment$2(ctx) {
     	let carousel;
     	let t0;
-    	let div11;
+    	let div4;
     	let h20;
     	let t2;
     	let table;
@@ -7239,47 +7352,55 @@ var app = (function () {
     	let t7;
     	let span2;
     	let t9;
-    	let div1;
+    	let section0;
     	let h21;
     	let t11;
     	let challenge;
     	let t12;
-    	let div2;
+    	let section1;
     	let h22;
     	let t14;
     	let votetoken;
     	let t15;
-    	let div3;
+    	let section2;
     	let h23;
     	let t17;
-    	let roadmap;
+    	let nft;
     	let t18;
-    	let div5;
+    	let section3;
     	let h24;
     	let t20;
-    	let div4;
-    	let tokenomics;
+    	let roadmap;
     	let t21;
-    	let div6;
+    	let section4;
     	let h25;
     	let t23;
-    	let teamcards;
+    	let div1;
+    	let tokenomics;
     	let t24;
-    	let div8;
-    	let div7;
-    	let t25;
-    	let div9;
+    	let section5;
     	let h26;
+    	let t26;
+    	let teamcards;
     	let t27;
-    	let div10;
+    	let div3;
+    	let div2;
+    	let t28;
+    	let section6;
     	let h27;
-    	let t29;
+    	let t30;
+    	let p;
+    	let t32;
+    	let section7;
+    	let h28;
+    	let t34;
     	let news;
     	let current;
     	carousel = new Carousel({ $$inline: true });
     	table = new Table({ $$inline: true });
     	challenge = new Challenge({ $$inline: true });
     	votetoken = new VoteToken({ $$inline: true });
+    	nft = new NFT({ $$inline: true });
     	roadmap = new Roadmapv2({ $$inline: true });
     	tokenomics = new Tokenomics({ $$inline: true });
     	teamcards = new TeamCards({ $$inline: true });
@@ -7289,7 +7410,7 @@ var app = (function () {
     		c: function create() {
     			create_component(carousel.$$.fragment);
     			t0 = space();
-    			div11 = element("div");
+    			div4 = element("div");
     			h20 = element("h2");
     			h20.textContent = "What We Provide";
     			t2 = space();
@@ -7306,118 +7427,148 @@ var app = (function () {
     			span2 = element("span");
     			span2.textContent = "incentives for everyone involved.";
     			t9 = space();
-    			div1 = element("div");
+    			section0 = element("section");
     			h21 = element("h2");
     			h21.textContent = "Challenge System";
     			t11 = space();
     			create_component(challenge.$$.fragment);
     			t12 = space();
-    			div2 = element("div");
+    			section1 = element("section");
     			h22 = element("h2");
     			h22.textContent = "AllSkills $Vote Token";
     			t14 = space();
     			create_component(votetoken.$$.fragment);
     			t15 = space();
-    			div3 = element("div");
+    			section2 = element("section");
     			h23 = element("h2");
-    			h23.textContent = "Buildup to Launch & Beyond";
+    			h23.textContent = "AllSkills NFTs";
     			t17 = space();
-    			create_component(roadmap.$$.fragment);
+    			create_component(nft.$$.fragment);
     			t18 = space();
-    			div5 = element("div");
+    			section3 = element("section");
     			h24 = element("h2");
-    			h24.textContent = "Tokenomics";
+    			h24.textContent = "Buildup to Launch & Beyond";
     			t20 = space();
-    			div4 = element("div");
-    			create_component(tokenomics.$$.fragment);
+    			create_component(roadmap.$$.fragment);
     			t21 = space();
-    			div6 = element("div");
+    			section4 = element("section");
     			h25 = element("h2");
-    			h25.textContent = "The Team";
+    			h25.textContent = "Tokenomics";
     			t23 = space();
-    			create_component(teamcards.$$.fragment);
+    			div1 = element("div");
+    			create_component(tokenomics.$$.fragment);
     			t24 = space();
-    			div8 = element("div");
-    			div7 = element("div");
-    			t25 = space();
-    			div9 = element("div");
+    			section5 = element("section");
     			h26 = element("h2");
-    			h26.textContent = "Partners";
+    			h26.textContent = "The Team";
+    			t26 = space();
+    			create_component(teamcards.$$.fragment);
     			t27 = space();
-    			div10 = element("div");
+    			div3 = element("div");
+    			div2 = element("div");
+    			t28 = space();
+    			section6 = element("section");
     			h27 = element("h2");
-    			h27.textContent = "News";
-    			t29 = space();
+    			h27.textContent = "Partners";
+    			t30 = space();
+    			p = element("p");
+    			p.textContent = "Announcements coming soon";
+    			t32 = space();
+    			section7 = element("section");
+    			h28 = element("h2");
+    			h28.textContent = "News";
+    			t34 = space();
     			create_component(news.$$.fragment);
-    			attr_dev(h20, "class", "svelte-yk5na5");
-    			add_location(h20, file$2, 15, 4, 444);
+    			attr_dev(h20, "class", "svelte-1xbvdfq");
+    			add_location(h20, file$2, 16, 4, 481);
     			set_style(span0, "color", "aqua");
-    			add_location(span0, file$2, 18, 12, 527);
+    			add_location(span0, file$2, 19, 12, 564);
     			set_style(span1, "background-color", "aqua");
     			set_style(span1, "color", "rgb(30,30,30)");
-    			add_location(span1, file$2, 18, 91, 606);
+    			add_location(span1, file$2, 19, 91, 643);
     			set_style(span2, "background-color", "aqua");
     			set_style(span2, "color", "rgb(30,30,30)");
-    			add_location(span2, file$2, 18, 321, 836);
-    			attr_dev(h3, "class", "svelte-yk5na5");
-    			add_location(h3, file$2, 18, 8, 523);
-    			attr_dev(div0, "class", "powered-by svelte-yk5na5");
-    			add_location(div0, file$2, 17, 4, 489);
+    			add_location(span2, file$2, 19, 321, 873);
+    			attr_dev(h3, "class", "svelte-1xbvdfq");
+    			add_location(h3, file$2, 19, 8, 560);
+    			attr_dev(div0, "class", "powered-by svelte-1xbvdfq");
+    			add_location(div0, file$2, 18, 4, 526);
     			set_style(h21, "text-decoration", "underline red");
-    			attr_dev(h21, "class", "svelte-yk5na5");
-    			add_location(h21, file$2, 21, 8, 998);
-    			attr_dev(div1, "id", "Challenge");
-    			attr_dev(div1, "class", "section svelte-yk5na5");
-    			add_location(div1, file$2, 20, 4, 952);
+    			set_style(h21, "-webkit-text-decoration-line", "underline");
+    			set_style(h21, "-webkit-text-decoration-color", "red");
+    			attr_dev(h21, "class", "svelte-1xbvdfq");
+    			add_location(h21, file$2, 22, 8, 1039);
+    			attr_dev(section0, "id", "Challenge");
+    			attr_dev(section0, "class", "section svelte-1xbvdfq");
+    			add_location(section0, file$2, 21, 4, 989);
     			set_style(h22, "text-align", "center");
     			set_style(h22, "text-decoration", "underline aqua");
-    			attr_dev(h22, "class", "svelte-yk5na5");
-    			add_location(h22, file$2, 25, 8, 1144);
-    			attr_dev(div2, "id", "Vote");
-    			attr_dev(div2, "class", "section svelte-yk5na5");
-    			add_location(div2, file$2, 24, 4, 1103);
-    			set_style(h23, "text-decoration", "underline blueviolet");
-    			set_style(h23, "margin-bottom", "75px");
-    			attr_dev(h23, "class", "svelte-yk5na5");
-    			add_location(h23, file$2, 29, 8, 1319);
-    			attr_dev(div3, "id", "Roadmap");
-    			attr_dev(div3, "class", "section svelte-yk5na5");
-    			add_location(div3, file$2, 28, 4, 1275);
-    			set_style(h24, "text-align", "center");
-    			set_style(h24, "text-decoration", "underline gold");
-    			attr_dev(h24, "class", "svelte-yk5na5");
-    			add_location(h24, file$2, 33, 8, 1507);
-    			attr_dev(div4, "class", "section svelte-yk5na5");
-    			add_location(div4, file$2, 34, 8, 1597);
-    			attr_dev(div5, "id", "Tokenomics");
-    			attr_dev(div5, "class", "section svelte-yk5na5");
-    			add_location(div5, file$2, 32, 4, 1460);
-    			set_style(h25, "text-decoration", "underline white");
-    			attr_dev(h25, "class", "svelte-yk5na5");
-    			add_location(h25, file$2, 39, 8, 1720);
-    			attr_dev(div6, "id", "Team");
-    			attr_dev(div6, "class", "section svelte-yk5na5");
-    			add_location(div6, file$2, 38, 4, 1679);
-    			attr_dev(div7, "class", "triangle svelte-yk5na5");
-    			add_location(div7, file$2, 43, 8, 1846);
-    			attr_dev(div8, "class", "top svelte-yk5na5");
-    			add_location(div8, file$2, 42, 4, 1819);
-    			set_style(h26, "margin-left", "7%");
-    			attr_dev(h26, "class", "svelte-yk5na5");
-    			add_location(h26, file$2, 46, 8, 1956);
-    			attr_dev(div9, "id", "Partners");
-    			attr_dev(div9, "class", "white svelte-yk5na5");
-    			set_style(div9, "width", "100%");
-    			add_location(div9, file$2, 45, 4, 1892);
+    			set_style(h22, "-webkit-text-decoration-line", "underline");
+    			set_style(h22, "-webkit-text-decoration-color", "aqua");
+    			attr_dev(h22, "class", "svelte-1xbvdfq");
+    			add_location(h22, file$2, 26, 8, 1270);
+    			attr_dev(section1, "id", "Vote");
+    			attr_dev(section1, "class", "section svelte-1xbvdfq");
+    			add_location(section1, file$2, 25, 4, 1225);
+    			set_style(h23, "text-align", "center");
+    			set_style(h23, "text-decoration", "underline #004D0D");
+    			set_style(h23, "-webkit-text-decoration-line", "underline");
+    			set_style(h23, "-webkit-text-decoration-color", "#004D0D");
+    			attr_dev(h23, "class", "svelte-1xbvdfq");
+    			add_location(h23, file$2, 30, 8, 1527);
+    			attr_dev(section2, "id", "NFT");
+    			attr_dev(section2, "class", "section svelte-1xbvdfq");
+    			add_location(section2, file$2, 29, 4, 1483);
+    			set_style(h24, "text-decoration", "underline blueviolet");
+    			set_style(h24, "-webkit-text-decoration-line", "underline");
+    			set_style(h24, "-webkit-text-decoration-color", "blueviolet");
+    			set_style(h24, "margin-bottom", "75px");
+    			attr_dev(h24, "class", "svelte-1xbvdfq");
+    			add_location(h24, file$2, 34, 8, 1781);
+    			attr_dev(section3, "id", "Roadmap");
+    			attr_dev(section3, "class", "section svelte-1xbvdfq");
+    			add_location(section3, file$2, 33, 4, 1733);
+    			set_style(h25, "text-align", "center");
+    			set_style(h25, "text-decoration", "underline gold");
+    			set_style(h25, "-webkit-text-decoration-line", "underline");
+    			set_style(h25, "-webkit-text-decoration-color", "gold");
+    			attr_dev(h25, "class", "svelte-1xbvdfq");
+    			add_location(h25, file$2, 38, 8, 2061);
+    			attr_dev(div1, "class", "section svelte-1xbvdfq");
+    			add_location(div1, file$2, 39, 8, 2229);
+    			attr_dev(section4, "id", "Tokenomics");
+    			attr_dev(section4, "class", "section svelte-1xbvdfq");
+    			add_location(section4, file$2, 37, 4, 2010);
+    			set_style(h26, "text-decoration", "underline white");
+    			set_style(h26, "-webkit-text-decoration-line", "underline");
+    			attr_dev(h26, "class", "svelte-1xbvdfq");
+    			add_location(h26, file$2, 44, 8, 2360);
+    			attr_dev(section5, "id", "Team");
+    			attr_dev(section5, "class", "section svelte-1xbvdfq");
+    			add_location(section5, file$2, 43, 4, 2315);
+    			attr_dev(div2, "class", "triangle svelte-1xbvdfq");
+    			add_location(div2, file$2, 48, 8, 2531);
+    			attr_dev(div3, "class", "top svelte-1xbvdfq");
+    			add_location(div3, file$2, 47, 4, 2504);
     			set_style(h27, "margin-left", "7%");
-    			attr_dev(h27, "class", "svelte-yk5na5");
-    			add_location(h27, file$2, 49, 8, 2075);
-    			attr_dev(div10, "id", "News");
-    			attr_dev(div10, "class", "white svelte-yk5na5");
-    			set_style(div10, "width", "100%");
-    			add_location(div10, file$2, 48, 4, 2014);
-    			attr_dev(div11, "class", "text-content svelte-yk5na5");
-    			add_location(div11, file$2, 14, 0, 412);
+    			attr_dev(h27, "class", "svelte-1xbvdfq");
+    			add_location(h27, file$2, 51, 8, 2645);
+    			set_style(p, "margin-left", "7%");
+    			set_style(p, "font-size", "1.5rem");
+    			add_location(p, file$2, 52, 8, 2697);
+    			attr_dev(section6, "id", "Partners");
+    			attr_dev(section6, "class", "white svelte-1xbvdfq");
+    			set_style(section6, "width", "100%");
+    			add_location(section6, file$2, 50, 4, 2577);
+    			set_style(h28, "margin-left", "7%");
+    			attr_dev(h28, "class", "svelte-1xbvdfq");
+    			add_location(h28, file$2, 55, 8, 2859);
+    			attr_dev(section7, "id", "News");
+    			attr_dev(section7, "class", "white svelte-1xbvdfq");
+    			set_style(section7, "width", "100%");
+    			add_location(section7, file$2, 54, 4, 2794);
+    			attr_dev(div4, "class", "text-content svelte-1xbvdfq");
+    			add_location(div4, file$2, 15, 0, 449);
     		},
     		l: function claim(nodes) {
     			throw new Error("options.hydrate only works if the component was compiled with the `hydratable: true` option");
@@ -7425,55 +7576,62 @@ var app = (function () {
     		m: function mount(target, anchor) {
     			mount_component(carousel, target, anchor);
     			insert_dev(target, t0, anchor);
-    			insert_dev(target, div11, anchor);
-    			append_dev(div11, h20);
-    			append_dev(div11, t2);
-    			mount_component(table, div11, null);
-    			append_dev(div11, t3);
-    			append_dev(div11, div0);
+    			insert_dev(target, div4, anchor);
+    			append_dev(div4, h20);
+    			append_dev(div4, t2);
+    			mount_component(table, div4, null);
+    			append_dev(div4, t3);
+    			append_dev(div4, div0);
     			append_dev(div0, h3);
     			append_dev(h3, span0);
     			append_dev(h3, t5);
     			append_dev(h3, span1);
     			append_dev(h3, t7);
     			append_dev(h3, span2);
-    			append_dev(div11, t9);
-    			append_dev(div11, div1);
-    			append_dev(div1, h21);
-    			append_dev(div1, t11);
-    			mount_component(challenge, div1, null);
-    			append_dev(div11, t12);
-    			append_dev(div11, div2);
-    			append_dev(div2, h22);
-    			append_dev(div2, t14);
-    			mount_component(votetoken, div2, null);
-    			append_dev(div11, t15);
-    			append_dev(div11, div3);
-    			append_dev(div3, h23);
-    			append_dev(div3, t17);
-    			mount_component(roadmap, div3, null);
-    			append_dev(div11, t18);
-    			append_dev(div11, div5);
-    			append_dev(div5, h24);
-    			append_dev(div5, t20);
-    			append_dev(div5, div4);
-    			mount_component(tokenomics, div4, null);
-    			append_dev(div11, t21);
-    			append_dev(div11, div6);
-    			append_dev(div6, h25);
-    			append_dev(div6, t23);
-    			mount_component(teamcards, div6, null);
-    			append_dev(div11, t24);
-    			append_dev(div11, div8);
-    			append_dev(div8, div7);
-    			append_dev(div11, t25);
-    			append_dev(div11, div9);
-    			append_dev(div9, h26);
-    			append_dev(div11, t27);
-    			append_dev(div11, div10);
-    			append_dev(div10, h27);
-    			append_dev(div10, t29);
-    			mount_component(news, div10, null);
+    			append_dev(div4, t9);
+    			append_dev(div4, section0);
+    			append_dev(section0, h21);
+    			append_dev(section0, t11);
+    			mount_component(challenge, section0, null);
+    			append_dev(div4, t12);
+    			append_dev(div4, section1);
+    			append_dev(section1, h22);
+    			append_dev(section1, t14);
+    			mount_component(votetoken, section1, null);
+    			append_dev(div4, t15);
+    			append_dev(div4, section2);
+    			append_dev(section2, h23);
+    			append_dev(section2, t17);
+    			mount_component(nft, section2, null);
+    			append_dev(div4, t18);
+    			append_dev(div4, section3);
+    			append_dev(section3, h24);
+    			append_dev(section3, t20);
+    			mount_component(roadmap, section3, null);
+    			append_dev(div4, t21);
+    			append_dev(div4, section4);
+    			append_dev(section4, h25);
+    			append_dev(section4, t23);
+    			append_dev(section4, div1);
+    			mount_component(tokenomics, div1, null);
+    			append_dev(div4, t24);
+    			append_dev(div4, section5);
+    			append_dev(section5, h26);
+    			append_dev(section5, t26);
+    			mount_component(teamcards, section5, null);
+    			append_dev(div4, t27);
+    			append_dev(div4, div3);
+    			append_dev(div3, div2);
+    			append_dev(div4, t28);
+    			append_dev(div4, section6);
+    			append_dev(section6, h27);
+    			append_dev(section6, t30);
+    			append_dev(section6, p);
+    			append_dev(div4, t32);
+    			append_dev(div4, section7);
+    			append_dev(section7, h28);
+    			append_dev(section7, t34);
+    			mount_component(news, section7, null);
     			current = true;
     		},
     		p: noop,
@@ -7483,6 +7641,7 @@ var app = (function () {
     			transition_in(table.$$.fragment, local);
     			transition_in(challenge.$$.fragment, local);
     			transition_in(votetoken.$$.fragment, local);
+    			transition_in(nft.$$.fragment, local);
     			transition_in(roadmap.$$.fragment, local);
     			transition_in(tokenomics.$$.fragment, local);
     			transition_in(teamcards.$$.fragment, local);
@@ -7494,6 +7653,7 @@ var app = (function () {
     			transition_out(table.$$.fragment, local);
     			transition_out(challenge.$$.fragment, local);
     			transition_out(votetoken.$$.fragment, local);
+    			transition_out(nft.$$.fragment, local);
     			transition_out(roadmap.$$.fragment, local);
     			transition_out(tokenomics.$$.fragment, local);
     			transition_out(teamcards.$$.fragment, local);
@@ -7503,10 +7663,11 @@ var app = (function () {
     		d: function destroy(detaching) {
     			destroy_component(carousel, detaching);
     			if (detaching) detach_dev(t0);
-    			if (detaching) detach_dev(div11);
+    			if (detaching) detach_dev(div4);
     			destroy_component(table);
     			destroy_component(challenge);
     			destroy_component(votetoken);
+    			destroy_component(nft);
     			destroy_component(roadmap);
     			destroy_component(tokenomics);
     			destroy_component(teamcards);
@@ -7542,7 +7703,8 @@ var app = (function () {
     		Roadmap: Roadmapv2,
     		Carousel,
     		Table,
-    		News
+    		News,
+    		NFT
     	});
 
     	return [];
@@ -7622,8 +7784,6 @@ var app = (function () {
     	let div6;
     	let img4;
     	let img4_src_value;
-    	let t25;
-    	let h3;
     	let current;
 
     	newslettersignup = new NewsletterSignup({
@@ -7694,104 +7854,104 @@ var app = (function () {
     			t24 = space();
     			div6 = element("div");
     			img4 = element("img");
-    			t25 = space();
-    			h3 = element("h3");
-    			h3.textContent = "AllSkills";
+    			attr_dev(h40, "class", "svelte-amrbo");
     			add_location(h40, file$1, 7, 12, 202);
     			attr_dev(a0, "href", "#Trailer");
-    			attr_dev(a0, "class", "svelte-dsezie");
+    			attr_dev(a0, "class", "svelte-amrbo");
     			add_location(a0, file$1, 9, 20, 276);
-    			attr_dev(li0, "class", "svelte-dsezie");
+    			attr_dev(li0, "class", "svelte-amrbo");
     			add_location(li0, file$1, 9, 16, 272);
     			attr_dev(a1, "href", "#Challenge");
-    			attr_dev(a1, "class", "svelte-dsezie");
+    			attr_dev(a1, "class", "svelte-amrbo");
     			add_location(a1, file$1, 10, 20, 333);
-    			attr_dev(li1, "class", "svelte-dsezie");
+    			attr_dev(li1, "class", "svelte-amrbo");
     			add_location(li1, file$1, 10, 16, 329);
     			attr_dev(a2, "href", "#Vote");
-    			attr_dev(a2, "class", "svelte-dsezie");
+    			attr_dev(a2, "class", "svelte-amrbo");
     			add_location(a2, file$1, 11, 20, 401);
-    			attr_dev(li2, "class", "svelte-dsezie");
+    			attr_dev(li2, "class", "svelte-amrbo");
     			add_location(li2, file$1, 11, 16, 397);
     			attr_dev(a3, "href", "#Roadmap");
-    			attr_dev(a3, "class", "svelte-dsezie");
+    			attr_dev(a3, "class", "svelte-amrbo");
     			add_location(a3, file$1, 12, 20, 463);
-    			attr_dev(li3, "class", "svelte-dsezie");
+    			attr_dev(li3, "class", "svelte-amrbo");
     			add_location(li3, file$1, 12, 16, 459);
     			attr_dev(a4, "href", "#Tokenomics");
-    			attr_dev(a4, "class", "svelte-dsezie");
+    			attr_dev(a4, "class", "svelte-amrbo");
     			add_location(a4, file$1, 13, 20, 520);
-    			attr_dev(li4, "class", "svelte-dsezie");
+    			attr_dev(li4, "class", "svelte-amrbo");
     			add_location(li4, file$1, 13, 16, 516);
     			attr_dev(a5, "href", "#Team");
-    			attr_dev(a5, "class", "svelte-dsezie");
+    			attr_dev(a5, "class", "svelte-amrbo");
     			add_location(a5, file$1, 14, 20, 583);
-    			attr_dev(li5, "class", "svelte-dsezie");
+    			attr_dev(li5, "class", "svelte-amrbo");
     			add_location(li5, file$1, 14, 16, 579);
     			attr_dev(a6, "href", "#News");
-    			attr_dev(a6, "class", "svelte-dsezie");
+    			attr_dev(a6, "class", "svelte-amrbo");
     			add_location(a6, file$1, 15, 20, 634);
-    			attr_dev(li6, "class", "svelte-dsezie");
+    			attr_dev(li6, "class", "svelte-amrbo");
     			add_location(li6, file$1, 15, 16, 630);
-    			attr_dev(ul, "class", "col-content svelte-dsezie");
+    			attr_dev(ul, "class", "col-content svelte-amrbo");
     			add_location(ul, file$1, 8, 12, 230);
-    			attr_dev(div0, "class", "footer-col svelte-dsezie");
+    			attr_dev(div0, "class", "footer-col svelte-amrbo");
     			attr_dev(div0, "id", "links");
     			add_location(div0, file$1, 6, 8, 153);
+    			attr_dev(h41, "id", "links");
+    			attr_dev(h41, "class", "svelte-amrbo");
     			add_location(h41, file$1, 19, 12, 760);
-    			attr_dev(div1, "class", "col-content svelte-dsezie");
-    			add_location(div1, file$1, 20, 12, 806);
-    			attr_dev(div2, "class", "footer-col svelte-dsezie");
+    			attr_dev(div1, "class", "col-content svelte-amrbo");
+    			add_location(div1, file$1, 20, 12, 817);
+    			attr_dev(div2, "class", "footer-col svelte-amrbo");
     			attr_dev(div2, "id", "register");
     			add_location(div2, file$1, 18, 8, 708);
-    			add_location(h42, file$1, 26, 12, 993);
+    			attr_dev(h42, "id", "links");
+    			attr_dev(h42, "class", "svelte-amrbo");
+    			add_location(h42, file$1, 26, 12, 1004);
     			attr_dev(img0, "alt", "Email");
     			if (!src_url_equal(img0.src, img0_src_value = "images/email.png")) attr_dev(img0, "src", img0_src_value);
-    			attr_dev(img0, "class", "svelte-dsezie");
-    			add_location(img0, file$1, 28, 51, 1153);
+    			attr_dev(img0, "class", "svelte-amrbo");
+    			add_location(img0, file$1, 28, 51, 1175);
     			attr_dev(a7, "href", "mailto:info@allskills.ca");
-    			attr_dev(a7, "class", "svelte-dsezie");
-    			add_location(a7, file$1, 28, 16, 1118);
+    			attr_dev(a7, "class", "svelte-amrbo");
+    			add_location(a7, file$1, 28, 16, 1140);
     			attr_dev(img1, "alt", "Discord");
     			if (!src_url_equal(img1.src, img1_src_value = "images/discord.png")) attr_dev(img1, "src", img1_src_value);
-    			attr_dev(img1, "class", "svelte-dsezie");
-    			add_location(img1, file$1, 29, 19, 1218);
-    			attr_dev(a8, "class", "svelte-dsezie");
-    			add_location(a8, file$1, 29, 16, 1215);
+    			attr_dev(img1, "class", "svelte-amrbo");
+    			add_location(img1, file$1, 29, 19, 1240);
+    			attr_dev(a8, "class", "svelte-amrbo");
+    			add_location(a8, file$1, 29, 16, 1237);
     			attr_dev(img2, "alt", "Instagram");
     			if (!src_url_equal(img2.src, img2_src_value = "images/instagram.png")) attr_dev(img2, "src", img2_src_value);
-    			attr_dev(img2, "class", "svelte-dsezie");
-    			add_location(img2, file$1, 30, 63, 1331);
+    			attr_dev(img2, "class", "svelte-amrbo");
+    			add_location(img2, file$1, 30, 63, 1353);
     			attr_dev(a9, "href", "https:www.instagram.com/AllSkillsNFT");
-    			attr_dev(a9, "class", "svelte-dsezie");
-    			add_location(a9, file$1, 30, 16, 1284);
+    			attr_dev(a9, "class", "svelte-amrbo");
+    			add_location(a9, file$1, 30, 16, 1306);
     			attr_dev(img3, "alt", "Twitter");
     			if (!src_url_equal(img3.src, img3_src_value = "images/twitter.png")) attr_dev(img3, "src", img3_src_value);
-    			attr_dev(img3, "class", "svelte-dsezie");
-    			add_location(img3, file$1, 31, 64, 1449);
+    			attr_dev(img3, "class", "svelte-amrbo");
+    			add_location(img3, file$1, 31, 64, 1471);
     			attr_dev(a10, "href", "https://www.twitter.com/@AllSkillsNFT");
-    			attr_dev(a10, "class", "svelte-dsezie");
-    			add_location(a10, file$1, 31, 16, 1401);
-    			attr_dev(div3, "class", "col-content svelte-dsezie");
+    			attr_dev(a10, "class", "svelte-amrbo");
+    			add_location(a10, file$1, 31, 16, 1423);
+    			attr_dev(div3, "class", "col-content svelte-amrbo");
     			set_style(div3, "display", "flex");
     			set_style(div3, "justify-content", "space-between");
-    			add_location(div3, file$1, 27, 12, 1023);
-    			attr_dev(div4, "class", "footer-col svelte-dsezie");
+    			add_location(div3, file$1, 27, 12, 1045);
+    			attr_dev(div4, "class", "footer-col svelte-amrbo");
     			attr_dev(div4, "id", "connect");
-    			add_location(div4, file$1, 25, 8, 942);
-    			attr_dev(div5, "class", "footer-content svelte-dsezie");
+    			add_location(div4, file$1, 25, 8, 953);
+    			attr_dev(div5, "class", "footer-content svelte-amrbo");
     			add_location(div5, file$1, 5, 4, 115);
     			attr_dev(img4, "alt", "Logo");
     			set_style(img4, "margin-right", "12px");
-    			if (!src_url_equal(img4.src, img4_src_value = "images/logo-dark.png")) attr_dev(img4, "src", img4_src_value);
-    			attr_dev(img4, "class", "svelte-dsezie");
-    			add_location(img4, file$1, 36, 8, 1576);
-    			attr_dev(h3, "class", "svelte-dsezie");
-    			add_location(h3, file$1, 37, 8, 1659);
+    			if (!src_url_equal(img4.src, img4_src_value = "images/logo-dark-bottom.png")) attr_dev(img4, "src", img4_src_value);
+    			attr_dev(img4, "class", "svelte-amrbo");
+    			add_location(img4, file$1, 36, 8, 1598);
     			attr_dev(div6, "id", "logo");
-    			attr_dev(div6, "class", "svelte-dsezie");
-    			add_location(div6, file$1, 35, 4, 1551);
-    			attr_dev(footer, "class", "footer svelte-dsezie");
+    			attr_dev(div6, "class", "svelte-amrbo");
+    			add_location(div6, file$1, 35, 4, 1573);
+    			attr_dev(footer, "class", "footer svelte-amrbo");
     			add_location(footer, file$1, 4, 0, 86);
     		},
     		l: function claim(nodes) {
@@ -7849,8 +8009,6 @@ var app = (function () {
     			append_dev(footer, t24);
     			append_dev(footer, div6);
     			append_dev(div6, img4);
-    			append_dev(div6, t25);
-    			append_dev(div6, h3);
     			current = true;
     		},
     		p: noop,
@@ -7909,9 +8067,11 @@ var app = (function () {
 
     /* src/App.svelte generated by Svelte v3.44.3 */
 
+    const { document: document_1 } = globals;
+
     const file = "src/App.svelte";
 
-    // (56:0) {:else}
+    // (59:0) {:else}
     function create_else_block(ctx) {
     	let main;
     	let navbar;
@@ -7938,7 +8098,7 @@ var app = (function () {
     			t2 = space();
     			create_component(footer.$$.fragment);
     			attr_dev(main, "class", "svelte-1n09gwf");
-    			add_location(main, file, 56, 1, 1442);
+    			add_location(main, file, 59, 1, 1562);
     		},
     		m: function mount(target, anchor) {
     			insert_dev(target, main, anchor);
@@ -7979,14 +8139,14 @@ var app = (function () {
     		block,
     		id: create_else_block.name,
     		type: "else",
-    		source: "(56:0) {:else}",
+    		source: "(59:0) {:else}",
     		ctx
     	});
 
     	return block;
     }
 
-    // (54:0) {#if $isLoading}
+    // (57:0) {#if $isLoading}
     function create_if_block(ctx) {
     	let p;
 
@@ -7994,7 +8154,7 @@ var app = (function () {
     		c: function create() {
     			p = element("p");
     			p.textContent = "Loading";
-    			add_location(p, file, 54, 2, 1418);
+    			add_location(p, file, 57, 2, 1538);
     		},
     		m: function mount(target, anchor) {
     			insert_dev(target, p, anchor);
@@ -8010,7 +8170,7 @@ var app = (function () {
     		block,
     		id: create_if_block.name,
     		type: "if",
-    		source: "(54:0) {#if $isLoading}",
+    		source: "(57:0) {#if $isLoading}",
     		ctx
     	});
 
@@ -8049,27 +8209,27 @@ var app = (function () {
     			t1 = space();
     			if_block.c();
     			if_block_anchor = empty();
-    			add_location(style, file, 25, 1, 526);
+    			add_location(style, file, 28, 1, 646);
     			script.defer = true;
     			attr_dev(script, "data-domain", "allskills.ca");
     			if (!src_url_equal(script.src, script_src_value = "https://plausible.io/js/plausible.js")) attr_dev(script, "src", script_src_value);
-    			add_location(script, file, 47, 1, 995);
+    			add_location(script, file, 50, 1, 1115);
     			attr_dev(link, "rel", "canonical");
     			attr_dev(link, "href", "https://allskills.ca/");
-    			add_location(link, file, 48, 1, 1090);
-    			document.title = "AllSkills - Competition based NFT Platform for showcasing all skills.";
+    			add_location(link, file, 51, 1, 1210);
+    			document_1.title = "AllSkills - Competition based NFT Platform for showcasing all skills.";
     			attr_dev(meta, "name", "description");
     			attr_dev(meta, "content", "AllSkills is a competition based NFT platform where both talented creators and consumers of content can earn money.");
-    			add_location(meta, file, 50, 1, 1231);
+    			add_location(meta, file, 53, 1, 1351);
     		},
     		l: function claim(nodes) {
     			throw new Error("options.hydrate only works if the component was compiled with the `hydratable: true` option");
     		},
     		m: function mount(target, anchor) {
-    			append_dev(document.head, style);
-    			append_dev(document.head, script);
-    			append_dev(document.head, link);
-    			append_dev(document.head, meta);
+    			append_dev(document_1.head, style);
+    			append_dev(document_1.head, script);
+    			append_dev(document_1.head, link);
+    			append_dev(document_1.head, meta);
     			insert_dev(target, t1, anchor);
     			if_blocks[current_block_type_index].m(target, anchor);
     			insert_dev(target, if_block_anchor, anchor);
@@ -8138,11 +8298,16 @@ var app = (function () {
     	y("en", () => Promise.resolve().then(function () { return en$1; }));
     	y("es", () => Promise.resolve().then(function () { return es$1; }));
     	y("fr", () => Promise.resolve().then(function () { return fr$1; }));
+    	let page = document.location.hash;
 
     	$({
     		fallbackLocale: "en",
     		initialLocale: I()
     	});
+
+    	window.onpopstate = function (event) {
+    		page = document.location.hash;
+    	};
 
     	const writable_props = [];
 
@@ -8161,8 +8326,17 @@ var app = (function () {
     		register: y,
     		init: $,
     		locale: M,
+    		page,
     		$isLoading
     	});
+
+    	$$self.$inject_state = $$props => {
+    		if ('page' in $$props) page = $$props.page;
+    	};
+
+    	if ($$props && "$$inject" in $$props) {
+    		$$self.$inject_state($$props.$$inject);
+    	}
 
     	return [$isLoading];
     }

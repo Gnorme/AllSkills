@@ -1,0 +1,82 @@
+<hmtl>
+    <head>
+        <style>
+            @font-face {
+                font-family: "Raleway";
+                src: url("./fonts/Raleway-Medium.ttf");
+                font-display: swap;
+            }	
+            #message {
+                max-width:600px;
+                text-align: center; 
+                font-size: 60px; 
+                color: white; 
+                font-family: 'Raleway'        
+            }
+            input {
+                margin-top:60px;
+                padding:15px;
+                font-size: 40px;
+                width: 80%;
+                background-color:rgb(54,54,54);
+                border: 2px solid aqua;
+                border-radius: 5px;
+                color:white;
+            }
+            p {
+                margin:auto;
+                text-align: center;
+            }
+            label {
+                 color: white;
+                 font-family: "Raleway";
+                 font-size: 1.5rem;
+            }
+            button {
+                margin-top:60px;
+                font-size:2rem;
+                border-radius: 5px; 
+                font-family: "Raleway";
+                padding:1rem;
+                font-weight: 500;
+                align-items: center;
+                color:aqua;
+                background-color:transparent;
+                border: 2px solid;
+                background-image: none;
+                /* color:black; */
+                text-align: center;
+                cursor: pointer;
+            }
+            #signup {
+                margin:auto;
+                display: flex;
+                justify-content: center;
+                align-items: center;
+                width: 100%;
+                height: 100%;
+            }
+            body {
+                background-image: url("images/black_bg_s.webp");
+            }
+        </style>
+    </head>
+    <body>
+        <div id="signup">
+            <form name="contact" method="POST" data-netlify="true" action="/pages/success">
+                
+                <p id="message">Let us know how to contact you to be a part of <span style="color:aqua;">AllSkills</span></p>
+                <p>
+                    <input type="name" name="name" placeholder="Name"/>
+                </p>                
+                <p>
+                    <input type="email" name="email" placeholder="Email"/>
+                </p>
+                <p>
+                    <button type="submit">Send</button>
+                </p>
+            </form>
+        </div>
+    </body>
+</hmtl>
+
