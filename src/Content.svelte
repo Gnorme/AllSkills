@@ -41,18 +41,20 @@ import { onMount } from 'svelte';
                     try {
                         setTimeout(() => {
                             player1.play();
-                        }, 1000);
+                        }, 2000);
                         
-                        if (player1.getPlayerState() == 1) {
+                        /*if (player1.getPlayerState() == 1) {
                             console.log("disconnecting")
-                            videoObserver.disconnect()
-                        }
+                            //videoObserver.disconnect()
+                        }*/
                         
                     } catch (e) {
                         console.log(e)
                     }                   
                 } else {
-                    player1.pause();
+                    setTimeout(() => {
+                        player1.pause();
+                    }, 1000);
                 }               
                     //observer.disconnect()
             })

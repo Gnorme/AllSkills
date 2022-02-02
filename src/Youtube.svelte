@@ -33,6 +33,7 @@
         height: "710",
         width: "400",
         videoId,
+        playerVars: { 'autoplay': 1, 'controls': 0, 'enablejsapi': 1, 'modestbranding': 1, 'rel': 0 },
         events: {
           onReady: playerIsReady,
           onStateChange: playerStateChange
@@ -56,7 +57,7 @@
     }
     function playerIsReady() {
       dispatch("Ready");
-      //player.play();
+      player.play();
       setInterval(() => {
         dispatch("currentPlayTime", player.getCurrentTime());
         
