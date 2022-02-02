@@ -16,7 +16,13 @@
     let divId = "player-1";
     export function play(){
         console.log("trying to play");
-        if (player.getPlayerState() !== 1) player.playVideo();
+        player.playVideo();
+    }
+    export function stop() {
+        player.stopVideo()
+    }
+    export function pause() {
+        player.pauseVideo()
     }
     export function getPlayerState() {
         return player.getPlayerState()

@@ -51,7 +51,9 @@ import { onMount } from 'svelte';
                     } catch (e) {
                         console.log(e)
                     }                   
-                }                 
+                } else {
+                    player1.pause();
+                }               
                     //observer.disconnect()
             })
         
