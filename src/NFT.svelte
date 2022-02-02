@@ -5,10 +5,10 @@
         </div>
         <div class="content second">
             <ul>
-                <h4>Level up by winning challenges and unlock <a on:click={() => showModal("benefits")}>exclusive benefits.</a></h4>
-                <h4>Reach level 7 to unlock <a on:click={() => showModal("minting")}>NFT minting</a> for all your challenge wins.</h4>
-                <h4>All winning challenge videos that end in the daily <a on:click={() => showModal("leaderboard")}>top 10% of votes</a> received get minted.</h4>
-                <h4>Purchase a <a on:click={() => showModal("token")}>Mint Token</a> to automatically mint one of your challenge wins as an NFT.</h4>
+                <h4 class="info right">Level up by winning challenges and unlock <a on:click={() => showModal("benefits")}>exclusive benefits.</a></h4>
+                <h4 class="info right">Reach level 7 to unlock <a on:click={() => showModal("minting")}>NFT minting</a> for all your challenge wins.</h4>
+                <h4 class="info right">All winning challenge videos that end in the daily <a on:click={() => showModal("leaderboard")}>top 10% of votes</a> received get minted.</h4>
+                <h4 class="info right">Purchase a <a on:click={() => showModal("token")}>Mint Token</a> to automatically mint one of your challenge wins as an NFT.</h4>
             </ul>
         </div>
     </div>
@@ -20,10 +20,10 @@
         <div class="content first">
             <div>
                 <ul>
-                    <h4>Users can chose to mint to <a on:click={() => showModal("blockchains")}>Ethereum, Polygon, Tezos, NEAR, or Flow.</a></h4>
-                    <h4>Tradeable on our marketplace as well as other top NFT marketplaces like <a on:click={() => showModal("marketplaces")}>OpenSea and Rarible</a></h4>
-                    <h4>Challenge videos will be stored using decentralized cloud storage providers and the <a on:click={() => showModal("ipfs")}>IPFS.</a></h4>
-                    <h4>All minted challenge videos are also backed-up forever using <a on:click={() => showModal("arweave")}>arweave and ardive.</a></h4>
+                    <h4 class="info left">Users can chose to mint to <a on:click={() => showModal("blockchains")}>Ethereum, Polygon, Tezos, NEAR, or Flow.</a></h4>
+                    <h4 class="info left">Tradeable on our marketplace as well as other top NFT marketplaces like <a on:click={() => showModal("marketplaces")}>OpenSea and Rarible</a></h4>
+                    <h4 class="info left">Challenge videos will be stored using decentralized cloud storage providers and the <a on:click={() => showModal("ipfs")}>IPFS.</a></h4>
+                    <h4 class="info left">All minted challenge videos are also backed-up forever using <a on:click={() => showModal("arweave")}>arweave and ardive.</a></h4>
                 </ul>
             </div>
         </div>
@@ -43,6 +43,27 @@
 </div>
 
 <script>
+import { onMount } from 'svelte';
+    onMount(() => {
+        const observer = new IntersectionObserver(entries => {
+            // Loop over the entries
+            let showing = 0;
+            entries.forEach(entry => {
+                // If the element is visible
+                if (entry.isIntersecting) {
+                    // Add the animation class
+                    entry.target.classList.add('slide-in');
+                    showing += 1;
+                }
+            });
+            if (showing >= cards.length) {
+                observer.disconnect()
+            }
+        });
+        const cards = document.querySelectorAll('.info')
+        console.log(cards.length)
+        cards.forEach(card => observer.observe(card));
+    })
     let modalShowing = false;
     let modalTitle = "modal";
     let modalDescription = "";
@@ -75,6 +96,10 @@
 </script>
 
 <style>
+    .card {
+        display:block;
+    }
+
     #overlay {
         position:fixed;
         z-index: 9;
@@ -107,13 +132,17 @@
         border: 3px solid rgba(0,255,255,0.5);
         box-shadow: 0px 10px 5px 3px rgb(0,0,0,0.5);       
     }
-    li {
-        padding:20px;
-        background-color: rgb(14,14,14);
-        margin-bottom: 20px; 
-        text-align:center;
-        border: 3px solid rgba(0,255,255,0.5);
-        box-shadow: 0px 10px 5px 3px rgb(0,0,0,0.5);
+    .left {
+        transform: translateX(-300px);  
+    }
+    .right {
+        transform: translateX(300px); 
+    }
+    :global(.slide-in) {
+        animation: slide 0.5s forwards linear;  
+    }
+    @keyframes slide {
+        to {transform:translateX(0);}
     }
     ul {
         font-size: 1.5rem;
@@ -158,6 +187,7 @@
     }
     .content{
         flex: 0 0 50%;
+        overflow:hidden;
     }
     @media screen and (max-width: 820px) {
         .section {

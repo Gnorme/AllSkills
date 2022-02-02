@@ -28,6 +28,16 @@
 <svelte:head>
 	<style>
 		@font-face {
+			font-family: "Roboto Mono";
+			src: url("./fonts/RobotoMono.ttf");
+			font-display: swap;
+		}	
+		@font-face {
+			font-family: "Consolate Elf";
+			src: url("./fonts/ConsolateElf.ttf");
+			font-display: swap;
+		}	
+		@font-face {
 			font-family: "Oswald";
 			src: url("./fonts/Oswald-Regular.ttf");
 			font-display: swap;
@@ -71,6 +81,7 @@
 {/if}
 
 <style>
+
 	:global(body) { 
 		margin:0;
 		padding: 0;

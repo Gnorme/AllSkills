@@ -51,7 +51,19 @@
     <div class="roadmap-card" style="height:90%;">
         <h3 style="color:#ecec37;">Q2 2022</h3>
         <div class="header" style="border-bottom: 5px solid #ecec37">
-            <img alt="Launch plans" src="images/launch_sw.png" />
+            <div style="position:relative; display:inline-grid;">
+                <img style="max-height:100px;" alt="Launch plans" src="images/launch_no_ex.png" />
+                <div class="test" style="transform: rotate(-140deg) scale(0.7) translate(70px,0px); z-index: -1;">
+                    <div class="container">
+                        <div class="red flame"></div>
+                        <div class="orange flame"></div>
+                        <div class="yellow flame"></div>
+                        <div class="white flame"></div>
+                        <div class="blue circle"></div>
+                        <div class="black circle"></div>
+                    </div>
+                </div>
+            </div>  
         </div>
         <div class="text">
             <ul>
@@ -82,6 +94,104 @@
 </div>
 
 <style>
+    /* <img alt="Launch plans" src="images/launch_sw.png" />*/
+    .rocket {
+        background-image: url("../images/launch_sw.png");
+        background-size: 45% 45%;
+        background-repeat: no-repeat;
+        background-position-x: center;
+    }
+.container::after {
+    content: '';
+    background-image: url("../images/launch_sw.png");
+        background-size: 45% 45%;
+        background-repeat: no-repeat;
+        background-position-x: center;    
+}
+.container{
+  position:relative;
+  transform-origin:center bottom;
+  animation-name: flicker;
+  animation-duration:3ms;
+  animation-delay:200ms;
+  animation-timing-function: ease-in;
+  animation-iteration-count: infinite;
+  animation-direction: alternate;
+}
+.flame{
+  bottom:0;
+  position:absolute;
+  border-bottom-right-radius: 50%;
+  border-bottom-left-radius: 50%;
+  border-top-left-radius: 50%;
+  transform:rotate(-45deg);
+}
+
+.yellow{
+  left:15px; 
+  width: 30px;
+  height: 30px;
+  background:gold;
+  box-shadow: 0px 0px 9px 4px gold;
+}
+
+.orange{
+  left:10px; 
+  width: 40px;
+  height: 40px;
+  background:orange;
+  box-shadow: 0px 0px 9px 4px orange;
+}
+
+.red{
+  left:5px;
+  width: 50px;
+  height: 50px;
+  background:OrangeRed;
+  box-shadow: 0px 0px 5px 4px OrangeRed;
+}
+
+.white{
+  left:15px; 
+  bottom:-4px;
+  width: 30px;
+  height: 30px;
+  background:white;
+  box-shadow: 0px 0px 9px 4px white;
+}
+
+.circle{
+  border-radius: 50%;
+  position:absolute;  
+  transform:rotate(180deg) 
+}
+
+.blue{
+  width: 10px;
+  height: 10px;
+  left:25px;
+  bottom:-25px; 
+  background: SlateBlue;
+  box-shadow: 0px 0px 15px 10px SlateBlue;
+}
+
+.black{
+  width: 40px;
+  height: 40px;
+  left:10px;
+  bottom:-60px;  
+  background: black;
+  box-shadow: 0px 0px 15px 10px black;
+}
+
+@keyframes flicker{
+  0%   {transform: rotate(-1deg);}
+  20%  {transform: rotate(1deg);}
+  40%  {transform: rotate(-1deg);}
+  60%  {transform: rotate(1deg) scaleY(1.04);}
+  80%  {transform: rotate(-2deg) scaleY(0.92);}
+  100% {transform: rotate(1deg);}
+}
     .cleared::after {
         margin-left: 10px;
         font-weight: 600;

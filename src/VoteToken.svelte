@@ -22,7 +22,8 @@
     </div>
     <div class="column middle">
         <h1 id="value">1 $Vote ≈ $0.10</h1>
-        <img id="token" alt="Vote Token" src="images/token.png" />
+        <div class="coin"></div>
+        <!--<img id="token" alt="Vote Token" src="images/token.png" />-->
     </div>
         <div class="section right">
             <span class="title">
@@ -48,11 +49,115 @@
 </div>
 
 <style>
-    .middle:hover h1 {
-        text-decoration: underline aqua;
-        -webkit-text-decoration-line: underline;
-        -webkit-text-decoration-color: aqua;
-    }
+:root {
+  --face: #be9d66;
+  --lowlight: #111;
+  --side: #896c3b;
+  --side-dark: #120e08;
+  --coin-size: 15rem;
+  --coin-face: url('../images/token.png');
+}
+
+
+/*
+  everything above is positioning and variables.
+  this is where the real fun begins...
+*/
+
+.coin {
+  height: var(--coin-size);
+  width: var(--coin-size);
+  margin: 0.5rem;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+}
+
+.coin::before {
+  content: '';
+  display: block;
+  position: relative;
+  height: var(--coin-size);
+  width: var(--coin-size);
+  border-radius: 50%;
+  background-color: var(--face);
+  animation: spin 1.5s linear infinite;
+  -webkit-animation: spin 1.5s linear infinite;
+  background-image: var(--coin-face);
+  background-size: 100% 100%;
+  background-position: center;
+  background-blend-mode: overlay;
+  -webkit-transform-style: preserve-3d;
+}
+
+
+@keyframes spin {
+  0% {
+    width: var(--coin-size);
+    box-shadow:
+      0 0 0 var(--side-dark);
+    animation-timing-function: ease-in;
+    -webkit-animation-timing-function: ease-in;
+  }
+  
+  49.999% {
+    width: 0.1rem;
+    box-shadow:
+      0.05rem 0 0 var(--side),
+      0.1rem 0 0 var(--side),
+      0.15rem 0 0 var(--side),
+      0.2rem 0 0 var(--side),
+      0.25rem 0 0 var(--side),
+      0.3rem 0 0 var(--side),
+      0.35rem 0 0 var(--side),
+      0.4rem 0 0 var(--side),
+      0.45rem 0 0 var(--side),
+      0.5rem 0 0 var(--side),
+      0.55rem 0 0 var(--side),
+      0.6rem 0 0 var(--side),
+      0.65rem 0 0 var(--side),
+      0.7rem 0 0 var(--side),
+      0.75rem 0 0 var(--side);
+      transform: translate3d(-0.375rem, 0, 0);
+    -webkit-transform: translate3d(-0.375rem, 0, 0);
+    background-color: var(--lowlight);
+    animation-timing-function: linear;
+    -webkit-animation-timing-function: linear;
+  }
+  
+  50.001% {
+    width: 0.1rem;
+    box-shadow:
+      -0.05rem 0 0 var(--side),
+      -0.1rem 0 0 var(--side),
+      -0.15rem 0 0 var(--side),
+      -0.2rem 0 0 var(--side),
+      -0.25rem 0 0 var(--side),
+      -0.3rem 0 0 var(--side),
+      -0.35rem 0 0 var(--side),
+      -0.4rem 0 0 var(--side),
+      -0.45rem 0 0 var(--side),
+      -0.5rem 0 0 var(--side),
+      -0.55rem 0 0 var(--side),
+      -0.6rem 0 0 var(--side),
+      -0.65rem 0 0 var(--side),
+      -0.7rem 0 0 var(--side),
+      -0.75rem 0 0 var(--side);
+    transform: translate3d(0.375rem, 0, 0);
+    -webkit-transform: translate3d(0.375rem, 0, 0);
+    background-color: var(--lowlight);
+    animation-timing-function: ease-out;
+    -webkit-animation-timing-function: ease-out;
+  }
+  
+  100% {
+    width: var(--coin-size);
+    box-shadow:
+      0 0 0 var(--side-dark);
+  }
+}
+
     .section:hover h3 {
         text-decoration: underline aqua;
         -webkit-text-decoration-line: underline;
@@ -123,7 +228,7 @@
     .vote-container{
         display:grid;
         min-height:525px;
-        margin-bottom:300px;
+        margin-bottom:200px;
         margin-left:auto;
         margin-right:auto;
         grid-template-rows: 33% !important;

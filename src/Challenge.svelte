@@ -1,4 +1,6 @@
+
 <div class="challenge-container">
+    
     <div class="section">
         <div class="image first">
             <img src="images/Edit_sw.webp" />
@@ -12,7 +14,7 @@
         </div>
         <div class="content second">
             <div>
-            <h3 style="border-bottom: 2px solid aqua;">Take videos showcasing your skills</h3>
+            <h3 class="title" style="background-image: linear-gradient(aqua, aqua);">Take videos showcasing your skills</h3>
             <p>No matter if your skill is  <span style="color:aqua;">athletic, artistic, musical,  strategic,  incredibly precise, or even one-of-a-kind,</span> we want to see it. Set your camera up to capture your finest moment and use our custom editing features to make it stand out even more.</p>
             </div>
         </div>
@@ -31,7 +33,7 @@
             </div>
         </div>
         <div class="content first">
-            <h3 style="border-bottom: 2px solid red;">Put videos up for Challenge</h3>
+            <h3 class="title" style="background-image: linear-gradient(red,red);">Put videos up for Challenge</h3>
             <p>After you’re satisfied with your video, it’s time to put it up for Challenge.  <span style="color:red;">Winning a challenge round is how your video becomes eligible for minting.</span> Choose between putting your video up for Open Challenge or directly challenging another video or user. Rounds last 72h.</p>
         </div>
     </div>
@@ -43,7 +45,7 @@
             </div>
         </div>
         <div class="content second">
-            <h3 style="border-bottom: 2px solid blueviolet;">Users vote to determine winner</h3>
+            <h3 class="title" style="background-image: linear-gradient(blueviolet,blueviolet);">Users vote to determine winner</h3>
             <p>Once the challenge starts, <span style="color:blueviolet;">the control is now in the voters hands.</span> Users can use Vote tokens to show their support and become part of the journey. Once the challenge is complete, the video with the most votes is declared the winner and has the opportunity to be minted as an NFT.</p>
         </div>
     </div>
@@ -52,18 +54,47 @@
             <img src="" />
         </div>
         <div class="content first">
-            <h3 style="border-bottom: 2px solid gold;">Earn money from voting and winning challenges</h3>
+            <h3 class="title" style="background-image: linear-gradient(gold,gold);">Earn money from voting and winning challenges</h3>
             <p>Get rewarded for showing off your skills. The creator of the winning video will receive between 1-25% of all vote tokens cast during the challenge while the rest is rewarded to all those who voted for the winning video. The creators cut changes based on how close the vote is. <span style="color: gold;">Closer vote count = bigger cut.</span></p>
         </div>
     </div>
-    <div id="Trailer" class="video-container">
-        <div class="video">
-            <iframe title="AllSkills Trailer Video" loading="lazy" src="https://www.youtube.com/embed/tgbNymZ7vqY"></iframe>
-        </div>
-    </div>
+
 </div>
 
+<script>
+import { onMount } from "svelte";
+
+onMount(() => {
+        const observer = new IntersectionObserver(entries => {
+            // Loop over the entries
+            let showing = 0;
+            entries.forEach(entry => {
+                // If the element is visible
+                if (entry.isIntersecting) {
+                    // Add the animation class
+                    entry.target.classList.add('underline');
+                    showing += 1;
+                }
+            });
+            if (showing >= importants.length) {
+                observer.disconnect()
+            }
+        });
+        const importants = document.querySelectorAll('.title')
+        importants.forEach(important => observer.observe(important));
+    })
+</script>
+
 <style>
+    .bg {
+        background-color:black repeat;
+        position: fixed;
+        width: 100%;
+        height: 300%;
+        top:0;
+        left:0;
+        z-index: -1;
+    }
     .tooltips {
         position:absolute;
         width:100%;
@@ -102,29 +133,22 @@
         margin-block-end:0.25rem;
         margin-block-start:0.25rem;
     }
-    iframe{
-        position:absolute;
-        top:0;
-        left:0;
-        width:100%;
-        height:100%;
-        border-radius: 0.5rem;
-    }
-    .video::after{
-        display:block;
-        content:"";
-        padding-top: 56.25%;
-    }
-    .video {
-        border-radius: 0.5rem;
-        position:relative;
-        width:100%;
-    }
     h3 {
         font-size: 2rem;
         padding-bottom:10px;
         font-family:"Oswald";
+        text-decoration: none;
+    background-position: 0% 100%;
+    background-size: 0% 2px;
+    background-repeat: no-repeat;
     }
+    :global(.underline) {
+        animation: t 0.7s linear forwards;
+    }
+    @keyframes t{
+        to {background-size: 100% 2px}
+    }
+
     p{
         font-family:"BentonSans";
     }
@@ -154,9 +178,9 @@
         width: 300px;
     }
     .challenge-container{
+        
         display:flex;
         width:100%;
-        margin-bottom:200px;
         flex-direction: column;
     }
     .section{

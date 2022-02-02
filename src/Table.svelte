@@ -76,6 +76,9 @@
             "a c c";
         padding: 2rem;
         border: 3px solid aqua;
+        background-size:100% 100%;
+        background-repeat: no-repeat;
+        background-image: url("../images/tags_bg_gradient.png")
     }
     .table-content{
         display:grid;
