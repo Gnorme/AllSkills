@@ -1,0 +1,62 @@
+
+  
+  <script>
+    import { createEventDispatcher, onMount } from "svelte";
+    onMount(() => {
+        var tag = document.createElement("script");
+        tag.src = "http://www.youtube.com/iframe_api";
+        var firstScriptTag = document.getElementsByTagName("script")[0];
+        firstScriptTag.parentNode.insertBefore(tag, firstScriptTag);
+    
+        window.onYouTubeIframeAPIReady = () =>
+        window.dispatchEvent(new Event("iframeApiReady"));
+    })
+    export let videoId;
+    let player;
+    let divId = "player-1";
+    export function play(){
+        console.log("trying to play");
+        if (player.getPlayerState() !== 1) player.playVideo();
+    }
+    export function getPlayerState() {
+        return player.getPlayerState()
+    }
+    const dispatch = createEventDispatcher();
+    window.addEventListener("iframeApiReady", function(e) {
+      player = new YT.Player(divId, {
+        height: "710",
+        width: "400",
+        videoId,
+        events: {
+          onReady: playerIsReady,
+          onStateChange: playerStateChange
+        }
+      });
+    });
+    function playerStateChange({data}){
+      dispatch("PlayerStateChange", data)
+      console.log(data)
+      let strReturn = "";
+      if(data== -1){ strReturn = "(unstarted)"}
+      if(data== 0 ){ strReturn = "(ended)"}
+      if(data== 1 ){ strReturn = "(playing)"}
+      if(data== 2 ){ strReturn = "(paused)"}
+      if(data== 3 ){ 
+          strReturn = "(buffering)"
+          player.playVideo()
+        }
+      if(data== 5 ){ strReturn = "(video cued)."}
+      dispatch("PlayerStateChangeString", strReturn)
+    }
+    function playerIsReady() {
+      dispatch("Ready");
+      //player.play();
+      setInterval(() => {
+        dispatch("currentPlayTime", player.getCurrentTime());
+        
+        //console.log(player.getCurrentTime())
+      }, 1000);
+    }
+  </script>
+  
+  <div style="border-radius:40px; padding-top:15px;" id={divId} />

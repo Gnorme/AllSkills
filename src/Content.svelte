@@ -8,7 +8,10 @@
     import Table from './Table.svelte';
     import News from './News.svelte';
     import NFT from './NFT.svelte';
+    import Youtube from "./Youtube.svelte";
 import { onMount } from 'svelte';
+    let player1;
+    
     onMount(() => {
         const observer = new IntersectionObserver(entries => {
             // Loop over the entries
@@ -21,13 +24,44 @@ import { onMount } from 'svelte';
                     showing += 1;
                 }
             });
-            if (showing >= importants.length) {
+            if (showing >= 2) {
                 observer.disconnect()
             }
         });
         const importants = document.querySelectorAll('.important')
-        importants.forEach(important => observer.observe(important));
+            importants.forEach(important => observer.observe(important));
+            
+
     })
+    function addObservers() {
+        const videoObserver = new IntersectionObserver(entries => {
+            
+            entries.forEach(entry => {
+                if (entry.isIntersecting) {
+                    try {
+                        setTimeout(() => {
+                            player1.play();
+                        }, 1000);
+                        
+                        if (player1.getPlayerState() == 1) {
+                            console.log("disconnecting")
+                            videoObserver.disconnect()
+                        }
+                        
+                    } catch (e) {
+                        console.log(e)
+                    }                   
+                }                 
+                    //observer.disconnect()
+            })
+        
+    });
+    
+    
+    const players = document.querySelectorAll(".video");
+    players.forEach(p => videoObserver.observe(p));
+
+    }
 </script>
 
 <div id="background">
@@ -48,9 +82,12 @@ import { onMount } from 'svelte';
 <Carousel />-->
 
 <div id="Trailer" class="video-container">
+    <div class="img-frame"><img src="images/iphone_frame.png"></div>
     <div class="video">
-        <iframe title="AllSkills Trailer Video" loading="lazy" src="https://www.youtube.com/embed/O2A5MIWsCFI"></iframe>
+        <Youtube bind:this={player1} videoId="O2A5MIWsCFI" on:Ready={() => addObservers()}></Youtube>
+            <!--<iframe allow="autoplay" title="AllSkills Trailer Video" loading="lazy" src="https://www.youtube.com/embed/O2A5MIWsCFI?rel=0&amp;autoplay=1&amp;controls=0&amp;showinfo=0&amp;mute=1" frameborder="0" allowfullscreen></iframe>-->
     </div>
+    
 </div>
 
 
@@ -90,7 +127,7 @@ import { onMount } from 'svelte';
         <polygon style="fill: #004D0D;" points="500.159 16.553 432.482 24.328 392.825 93.844 409.667 93.703 443.069 37.609 499.889 30.393"/>
         <polygon style="fill: #004D0D;" points="352.106 94.674 335.059 94.797 363.621 47.452 -1.746 94.183 -1.798 80.123 390.963 29.985"/>
       </svg>
-    <section class="bMargin" id="Ambassador Program" class="section">
+    <section id="Ambassador Program" class="section bMargin">
         <h2 style="text-decoration: underline #004D0D; -webkit-text-decoration-line: underline; -webkit-text-decoration-color: #004D0D;">Ambassador Program</h2>
     </section>
     <svg viewBox="-0.35 0 500.35 78.328" xmlns="http://www.w3.org/2000/svg">
@@ -148,7 +185,19 @@ import { onMount } from 'svelte';
     t 1s forwards,
     b 1s 1s forwards;
 }
-
+.img-frame {
+    position:relative;
+}
+.img-frame img {
+    position:absolute;
+    top:50%;
+    left: 50%;
+    width:460px;
+    height:750px;
+    margin-left:-230px;
+    z-index:1000;
+    pointer-events: none;
+}
 @keyframes t{
   from {background-size:0 95%,0 100%}
 }
@@ -161,8 +210,14 @@ import { onMount } from 'svelte';
 iframe{
     width:400px;
     height:710px;
-    border-radius: 0.5rem;
+    border-radius: 45px;
+    padding-top:15px;
+    position:relative;
+    pointer-events: auto !important;
+    position:relative;
+    border:none;
 }
+
 .video {
     border-radius: 0.5rem;
     display:flex;
@@ -236,6 +291,19 @@ iframe{
         font-family: "Oswald";
     }
     @media screen and (max-width: 820px) {
+        .img-frame img {
+            display:none;
+        }
+        iframe{
+            width:338px;
+            height:600px;
+            border-radius: 45px;
+            position:relative;
+            pointer-events: auto !important;
+            position:relative;
+            border:none;
+            z-index:1;
+        }
         .bMargin {
             margin-bottom: 50px !important;
         }
