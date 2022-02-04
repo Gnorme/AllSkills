@@ -224,6 +224,11 @@
         flex: 0 0 50%;
         overflow:hidden;
     }
+    a {
+        color: blueviolet;
+        text-decoration: underline;
+        cursor: pointer;
+    }
     @media screen and (max-width: 820px) {
         .section {
             width: 100%;

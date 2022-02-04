@@ -12,7 +12,7 @@
                 <li><a href="#Challenge">Challenge System</a></li>
                 <li><a href="#Vote">Vote Token</a></li>
                 <li><a href="#NFT">NFTs</a></li>
-                <li><a href="#Ambassador">Ambassador Program</a></li>
+                <li><a href="#Ambassadors">Ambassador Program</a></li>
                 <li><a href="#Roadmap">Roadmap</a></li>
                 <li><a href="#Tokenomics">Tokenomics</a></li>
             </ul>

@@ -18,7 +18,7 @@
 
 <style>
     .info-container {
-        margin-top:125px;
+        margin-top:175px;
         text-align:center;
         overflow:hidden;
     }
@@ -64,5 +64,8 @@
         animation-delay: 4s;
     }
     @media screen and (max-width: 820px) {
+        .info-container {
+            margin-top: 75px;
+        }
     }
 </style>
