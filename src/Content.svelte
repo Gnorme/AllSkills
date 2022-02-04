@@ -11,6 +11,7 @@
     import Youtube from "./Youtube.svelte";
     import Ambassador from "./Ambassador.svelte";
     import Observers from "./Observers.svelte";
+    import { _ } from 'svelte-i18n'
 import { onMount } from 'svelte';
     let player1;
     let startingToPlay = false;
@@ -77,7 +78,7 @@ import { onMount } from 'svelte';
     <h2>What We Provide</h2>
     <Table />
     <div class="powered-by">
-        <h3><span style="color:aqua;">AllSkills</span> is powered by cryptocurrency, using future-proof blockchain & smart contract technology to <span class="important">connect talented people & audiences</span>, and foster skill development through competition, all while providing <span class="important">incentives for everyone involved.</span></h3>
+        <h3><span style="color:aqua;">{$_('home.highlighted.company')}</span> {$_('home.highlighted.start')} <span class="important">{$_('home.highlighted.highlight1')}</span>{$_('home.highlighted.middle')} <span class="important">{$_('home.highlighted.highlight2')}</span></h3>
     </div>
     <svg viewBox="-0.35 0 500.35 78.328" xmlns="http://www.w3.org/2000/svg">
         <polygon style="fill: rgb(255, 0, 0);" points="70.086 0.382 53.904 51.969 -0.944 61.327 -1.27 75.069 63.124 65.518 83.649 -0.101"/>
@@ -125,7 +126,7 @@ import { onMount } from 'svelte';
       </svg>
     <section id="Tokenomics" class="section">
         <h2 style="text-align: center; text-decoration: underline gold; -webkit-text-decoration-line: underline; -webkit-text-decoration-color: gold;">Tokenomics</h2>
-        <div class="section">
+        <div>
             <Tokenomics/>
         </div>
     </section>

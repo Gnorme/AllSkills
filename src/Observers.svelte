@@ -62,7 +62,7 @@
                 if (entry.isIntersecting) {
                     entry.target.classList.add ('growshrink')
                     var styleElem = document.head.appendChild(document.createElement("style"));
-                    styleElem.innerHTML = ".cleared::after {animation: appear 2s forwards ease}";
+                    styleElem.innerHTML = ".cleared::after {animation: appear 4s forwards ease}";
                     cardsShowing += 1;
                     //checksObserver.disconnect()
                 }
@@ -97,7 +97,7 @@
         animation: grow 2s 0.2s ease;
     }
     :global(.grow) {
-        transform: scale(1.11);
+        transform: scale(1.33);
         z-index: -1;
     } 
     :global(.underline) {
@@ -137,7 +137,7 @@
     }
     @keyframes -global-grow {
         0% {}
-        50% {transform:scale(1.1)}
+        50% {transform:scale(1.2)}
         100% {transform:scale(1)}
     }
 </style>

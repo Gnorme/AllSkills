@@ -14,8 +14,8 @@
         </div>
         <div class="content second">
             <div>
-            <h3 class="title" style="background-image: linear-gradient(aqua, aqua);">Take videos showcasing your skills</h3>
-            <p>No matter if your skill is  <span style="color:aqua;">athletic, artistic, musical,  strategic,  incredibly precise, or even one-of-a-kind,</span> we want to see it. Set your camera up to capture your finest moment and use our custom editing features to make it stand out even more.</p>
+            <h3 class="title" style="background-image: linear-gradient(aqua, aqua);">{$_('home.challenges.videos.title')}</h3>
+            <p>{$_('home.challenges.videos.pStart')} <span style="color:aqua;">{$_('home.challenges.videos.highlighted')}</span>{$_('home.challenges.videos.pEnd')}</p>
             </div>
         </div>
     </div>
@@ -33,8 +33,8 @@
             </div>
         </div>
         <div class="content first">
-            <h3 class="title" style="background-image: linear-gradient(red,red);">Put videos up for Challenge</h3>
-            <p>After you’re satisfied with your video, it’s time to put it up for Challenge.  <span style="color:red;">Winning a challenge round is how your video becomes eligible for minting.</span> Choose between putting your video up for Open Challenge or directly challenging another video or user. Rounds last 72h.</p>
+            <h3 class="title" style="background-image: linear-gradient(red,red);">{$_('home.challenges.challenges.title')}</h3>
+            <p>{$_('home.challenges.challenges.pStart')}  <span style="color:red;">{$_('home.challenges.challenges.highlighted')}</span> {$_('home.challenges.challenges.pEnd')}</p>
         </div>
     </div>
     <div class="section">
@@ -45,8 +45,8 @@
             </div>
         </div>
         <div class="content second">
-            <h3 class="title" style="background-image: linear-gradient(blueviolet,blueviolet);">Users vote to determine winner</h3>
-            <p>Once the challenge starts, <span style="color:blueviolet;">the control is now in the voters hands.</span> Users can use Vote tokens to show their support and become part of the journey. Once the challenge is complete, the video with the most votes is declared the winner and has the opportunity to be minted as an NFT.</p>
+            <h3 class="title" style="background-image: linear-gradient(blueviolet,blueviolet);">{$_('home.challenges.votes.title')}</h3>
+            <p>{$_('home.challenges.votes.pStart')} <span style="color:blueviolet;">{$_('home.challenges.votes.highlighted')}</span> {$_('home.challenges.votes.pEnd')}</p>
         </div>
     </div>
     <div class="section">
@@ -54,13 +54,16 @@
             <img src="" />
         </div>
         <div class="content first">
-            <h3 class="title" style="background-image: linear-gradient(gold,gold);">Earn money from voting and winning challenges</h3>
-            <p>Get rewarded for showing off your skills. The creator of the winning video will receive between 1-25% of all vote tokens cast during the challenge while the rest is rewarded to all those who voted for the winning video. The creators cut changes based on how close the vote is. <span style="color: gold;">Closer vote count = bigger cut.</span></p>
+            <h3 class="title" style="background-image: linear-gradient(gold,gold);">{$_('home.challenges.earn.title')}</h3>
+            <p>{$_('home.challenges.earn.pStart')}<span style="color: gold;"> {$_('home.challenges.earn.highlighted')}</span></p>
         </div>
     </div>
 
 </div>
 
+<script>
+    import { _ } from 'svelte-i18n'
+</script>
 
 <style>
     .title {

@@ -2,33 +2,33 @@
        <div class="section left">
            <span class="title">
             <img alt="Vote" src="images/vote.png" />
-                <h3>Cast your vote</h3>
+                <h3>{$_('home.vote.cast.title')}</h3>
             </span>
-           <p>Show your support by voting for the challenge video you like most. All votes form a <span class="highlight">reward pool</span> and decide the winning video.</p>
+           <p>{$_('home.vote.cast.pStart')} <span class="highlight">{$_('home.vote.cast.highlighted')}</span> {$_('home.vote.cast.pEnd')}</p>
        </div>
        <div class="section left">
         <span class="title">
             <img alt="Earnings" src="images/earnings.png" />
-             <h3>Earn through voting</h3>
+             <h3>{$_('home.vote.earn.title')}</h3>
          </span>
-        <p>The reward pool is split between the winner and all those who voted for them. <span class="highlight">Earn up to 145%</span> back for votes cast on winning videos.</p>
+        <p>{$_('home.vote.earn.pStart')} <span class="highlight">{$_('home.vote.earn.highlighted')}</span> {$_('home.vote.earn.pEnd')}</p>
     </div>
     <div class="section left">
         <span class="title">
             <img alt="Royalties" src="images/revenue.png" />
-             <h3>Share in the success</h3>
+             <h3>{$_('home.vote.success.title')}</h3>
          </span>
-        <p>Voters continue to share in the success by <span class="highlight">earning royalties</span> everytime a video they voted for is sold on any marketplace.</p>
+        <p>{$_('home.vote.success.pStart')} <span class="highlight">{$_('home.vote.success.highlighted')}</span> {$_('home.vote.success.pEnd')}</p>
     </div>
     <div class="column middle">
         <h1 id="value">1 $Vote ≈ $0.10</h1>
         <div class='coin'>
             <div class='front jump'>
               <div class='star'></div>
-              <span class='currency'>10c</span>
+              <span class='currency'></span>
               <div class='shapes'>
-                <div class='shape_l'></div>
-                <div class='shape_r'></div>
+                <div class='shape_l'>10¢</div>
+                <div class='shape_r'>10¢</div>
                 <span class='top'>Vote</span>
                 <span class='bottom'>Token</span>
               </div>
@@ -41,137 +41,29 @@
         <div class="section right">
             <span class="title">
                 <img alt="Stable value" src="images/stable.png" />
-                 <h3>Stablecoin for all skills</h3>
+                 <h3>{$_('home.vote.stable.title')}</h3>
              </span>
-            <p>$Vote tokens are <span class="highlight">backed by fiat reserves</span> at 1:1 ratio and will always be redeemable at a stable value.</p>
+            <p>{$_('home.vote.stable.pStart')} <span class="highlight">{$_('home.vote.stable.highlighted')}</span> {$_('home.vote.stable.pEnd')}</p>
         </div>
         <div class="section right">
             <span class="title">
                 <img alt="Stake" src="images/stake.png" />
-                 <h3>Stake to earn more</h3>
+                 <h3>{$_('home.vote.stake.title')}</h3>
              </span>
-            <p>Staking your $Skills tokens allows you to <span class="highlight">earn $Vote tokens.</span> $Skills tokens can also be used to participate in raffles, pay gas fees, and to declare how you think AllSkills should operate.</p>
+            <p>{$_('home.vote.stake.pStart')}. <span class="highlight">{$_('home.vote.stake.highlighted')}</span> {$_('home.vote.stake.pEnd')}</p>
         </div>
         <div class="section right">
             <span class="title">
                 <img alt="Replenish" src="images/replenish.png" />
-                 <h3>Easily replenish your wallet</h3>
+                 <h3>{$_('home.vote.replenish.title')}</h3>
              </span>
-             <p>If you run out of Vote tokens, you can <span class="highlight">watch sponsored videos to earn more</span> and get right back in the game. </p>
+             <p>{$_('home.vote.replenish.pStart')} <span class="highlight">{$_('home.vote.replenish.highlighted')}</span> {$_('home.vote.replenish.pEnd')}</p>
         </div>
 </div>
-
+<script>
+    import { _ } from 'svelte-i18n'
+</script>
 <style>
-:root {
-  --face: #be9d66;
-  --lowlight: #111;
-  --side: #896c3b;
-  --side-dark: #120e08;
-  --coin-size: 15rem;
-  --coin-face: url('../images/token.png');
-}
-
-
-/*
-  everything above is positioning and variables.
-  this is where the real fun begins...
-*/
-
-/*.coin {
-  height: var(--coin-size);
-  width: var(--coin-size);
-  margin: 0.5rem;
-  display: flex;
-  flex-direction: column;
-  justify-content: center;
-  align-items: center;
-}
-
-.coin::before {
-  content: '';
-  display: block;
-  position: relative;
-  height: var(--coin-size);
-  width: var(--coin-size);
-  border-radius: 50%;
-  background-color: var(--face);
-  animation: spin 1.5s linear infinite;
-  -webkit-animation: spin 1.5s linear infinite;
-  background-image: var(--coin-face);
-  background-size: 100% 100%;
-  background-position: center;
-  background-blend-mode: overlay;
-  -webkit-transform-style: preserve-3d;
-  transform-style: preserve-3d;
-}*/
-
-
-@keyframes spin {
-  0% {
-    width: var(--coin-size);
-    box-shadow:
-      0 0 0 var(--side-dark);
-    animation-timing-function: ease-in;
-    -webkit-animation-timing-function: ease-in;
-  }
-  
-  49.999% {
-    width: 0.1rem;
-    box-shadow:
-      0.05rem 0 0 var(--side),
-      0.1rem 0 0 var(--side),
-      0.15rem 0 0 var(--side),
-      0.2rem 0 0 var(--side),
-      0.25rem 0 0 var(--side),
-      0.3rem 0 0 var(--side),
-      0.35rem 0 0 var(--side),
-      0.4rem 0 0 var(--side),
-      0.45rem 0 0 var(--side),
-      0.5rem 0 0 var(--side),
-      0.55rem 0 0 var(--side),
-      0.6rem 0 0 var(--side),
-      0.65rem 0 0 var(--side),
-      0.7rem 0 0 var(--side),
-      0.75rem 0 0 var(--side);
-      transform: translate3d(-0.375rem, 0, 0);
-    -webkit-transform: translate3d(-0.375rem, 0, 0);
-    background-color: var(--lowlight);
-    animation-timing-function: linear;
-    -webkit-animation-timing-function: linear;
-  }
-  
-  50.001% {
-    width: 0.1rem;
-    box-shadow:
-      -0.05rem 0 0 var(--side),
-      -0.1rem 0 0 var(--side),
-      -0.15rem 0 0 var(--side),
-      -0.2rem 0 0 var(--side),
-      -0.25rem 0 0 var(--side),
-      -0.3rem 0 0 var(--side),
-      -0.35rem 0 0 var(--side),
-      -0.4rem 0 0 var(--side),
-      -0.45rem 0 0 var(--side),
-      -0.5rem 0 0 var(--side),
-      -0.55rem 0 0 var(--side),
-      -0.6rem 0 0 var(--side),
-      -0.65rem 0 0 var(--side),
-      -0.7rem 0 0 var(--side),
-      -0.75rem 0 0 var(--side);
-    transform: translate3d(0.375rem, 0, 0);
-    -webkit-transform: translate3d(0.375rem, 0, 0);
-    background-color: var(--lowlight);
-    animation-timing-function: ease-out;
-    -webkit-animation-timing-function: ease-out;
-  }
-  
-  100% {
-    width: var(--coin-size);
-    box-shadow:
-      0 0 0 var(--side-dark);
-  }
-}
-
     .section:hover h3 {
         text-decoration: underline aqua;
         -webkit-text-decoration-line: underline;
@@ -330,19 +222,19 @@ span {
   font-size: 32px;
   transform: rotate(-44deg);
   line-height: 4.5;
-  width: 100%;
-  height: 100%;
+  width: 97%;
+  height: 99%;
   text-align: center;
   text-shadow: 0 3px 0 #cb7407;
   z-index: 3;
   border-radius: 50%;
 }
-/*.currency {
+.currency {
     background-repeat: no-repeat;
-    background-size: 69%;
+    background-size: 30%;
     background-position: center;
-    background-image: url("../images/coin.png")
-}*/
+    background-image: url("../images/logo-yellow-s.png")
+}
 .coin .front .currency:after, .coin .back .currency:after {
   content: "";
   position: absolute;
@@ -373,13 +265,11 @@ span {
   height: 100%;
 }
 .coin .front .shapes div, .coin .back .shapes div {
-  width: 20px;
-  height: 4px;
-  background: #d57e08;
-  border-top: 2px solid #c47207;
-  margin: 75px 7px;
+  margin: 63px 0px;
+  font-size: 20px;
+  color: #cb7407;
 }
-.coin .front .shapes div:before, .coin .back .shapes div:before {
+/*.coin .front .shapes div:before, .coin .back .shapes div:before {
   content: "";
   position: absolute;
   width: 20px;
@@ -396,7 +286,7 @@ span {
   background: #d57e08;
   border-top: 2px solid #c47207;
   margin: 8px 0;
-}
+}*/
 .coin .front .shape_l, .coin .back .shape_l {
   float: left;
 }
@@ -409,6 +299,8 @@ span {
   text-align: center;
   width: 100%;
   position: absolute;
+  top: 0;
+  font-family:"Oswald";
   left: 0;
 }
 .coin .front .bottom, .coin .back .bottom {
@@ -417,8 +309,9 @@ span {
   text-align: center;
   width: 100%;
   position: absolute;
+  font-family:"Oswald";
   left: 0;
-  bottom: 0;
+  bottom: 5px;
 }
 
 .coin .shadow {

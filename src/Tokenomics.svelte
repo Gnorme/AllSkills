@@ -1,8 +1,8 @@
 <div class="tokenomics-container">
     <div class="list" style="width:30%; display: flex;">
-        <div style="align-self:center;">
-            <h2>100,000,000 Tokens</h2>
-            <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat.</p>
+        <div id="left-container">
+            <h2>100,000,000 $Skills Tokens</h2>
+            <p>With a max supply of 100,000,000 our <span class="highlight">$Skills token</span> will be used for voting on how you think AllSkills should operate, getting access to our beta and early access to new features, entering raffles to earn exclusive prizes, staking to earn $Vote tokens, and paying gas fees.</p>
         </div>
     </div>
     <div class="svg-container">
@@ -28,22 +28,39 @@
     </div>
     <div class="list" style="width:30%; display:flex;">
         <ul style="align-self:center;">
-            <li class:highlight={selected === 0} class="team"><span>Team 10%</span></li>
-            <li class:highlight={selected === 1} class="advisors"><span>Advisors & Partners 10%</span></li>
-            <li class:highlight={selected === 2} class="private"><span>Private Sale 15%</span></li>
-            <li class:highlight={selected === 3} class="public"><span>Public Sale 20%</span></li>
-            <li class:highlight={selected === 4} class="liquidity"><span>Liquidity Pool 15%</span></li>
-            <li class:highlight={selected === 5} class="foundation"><span>Foundation 30%</span></li>
+            <li class:box={selected === 0} class="team"><span>Team 10%</span></li>
+            <li class:box={selected === 1} class="advisors"><span>Advisors & Partners 10%</span></li>
+            <li class:box={selected === 2} class="private"><span>Private Sale 15%</span></li>
+            <li class:box={selected === 3} class="public"><span>Public Sale 20%</span></li>
+            <li class:box={selected === 4} class="liquidity"><span>Liquidity Pool 15%</span></li>
+            <li class:box={selected === 5} class="foundation"><span>Foundation 30%</span></li>
         </ul>
     </div>
+    <div id="notice">The presale is scheduled to take place a week before the launch of our beta. Beta access will be granted to users with $Skills tokens in their wallet. The public sale of the $Skills token is scheduled for 1 month after the release of our beta.</div>
 </div>
+
 <div id="tooltip" display="none" style="position: absolute; display: none;"></div>
 
 
 <style>
-    :global(.grow) {
-        transform: scale(1.11);
-        z-index: -1;
+    .highlight {
+        color: aqua;
+    }
+    #notice {
+        position:absolute;
+        width: 50%;
+        text-align:center;
+        bottom:-20%;
+    }
+    #left-container {
+        align-self:center;
+    }
+    h2 {
+        font-family: "Oswald";
+        font-size:2rem;
+    }
+    p {
+        font-size:1.2rem;
     }
     path {
         stroke: rgb(34,34,34);
@@ -52,11 +69,13 @@
     }
     #coin {
         position:absolute;
-        width: 60%;
-        left: 20%;
-        top:20%;
-        z-index:0;
-        transition: all 0.5s;
+        width: 50%;
+        left: 25%;
+        top:25%;
+        z-index:-1;
+        transition-delay:1s;
+        transition-timing-function: ease;
+        transition: all 1.5s;
     }
 
     .svg-container {
@@ -76,23 +95,22 @@
     }
     ul {
         list-style:none;
+        font-size:1.2rem;
     }
-    .highlight{
+    .box{
         margin: -2px;
         border: 2px solid gold;
     }
     ul li:before{
-        margin: 0 0.2em 0 -0.5em;
         content:"\2022";
-        font-size: 4rem;
-        vertical-align: middle;
-        line-height: 0.5em;
+        font-size: 5rem;
+        vertical-align: text-bottom;
+        line-height: 0.4em;
     }
     span {
         font-weight:100;
         letter-spacing: 0.5px;
-        font-size: 1rem;
-        font-family: 'BentonSans';
+        font-size: 1.4rem;
         margin-left:10px !important;
         padding-right:10px;
     }
@@ -127,6 +145,7 @@
     }
 
     .tokenomics-container{
+        position:relative;
         display:flex;
         margin-top:-50px;
         margin-bottom:200px;
@@ -135,6 +154,12 @@
         justify-content: space-evenly;
     }
     @media screen and (max-width: 820px) {
+        #notice {
+            width: 100%;
+        }
+        #left-container {
+            text-align:center;
+        }
         .tokenomics-container {
             flex-direction: column;
         }

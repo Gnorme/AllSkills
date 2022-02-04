@@ -5,10 +5,10 @@
         </div>
         <div class="content second">
             <ul>
-                <h4 class="info right">Level up by winning challenges and unlock <a on:click={() => showModal("benefits")}>exclusive benefits.</a></h4>
-                <h4 class="info right">Reach level 7 to unlock <a on:click={() => showModal("minting")}>NFT minting</a> for all your challenge wins.</h4>
-                <h4 class="info right">All winning challenge videos that end in the daily <a on:click={() => showModal("leaderboard")}>top 10% of votes</a> received get minted.</h4>
-                <h4 class="info right">Purchase a <a on:click={() => showModal("token")}>Mint Token</a> to automatically mint one of your challenge wins as an NFT.</h4>
+                <h4 class="info right">{$_('home.nft.1.pStart')} <a on:click={() => showModal("benefits")}>{$_('home.nft.1.link')}</a></h4>
+                <h4 class="info right">{$_('home.nft.2.pStart')} <a on:click={() => showModal("minting")}>{$_('home.nft.2.link')}</a> {$_('home.nft.2.pEnd')}</h4>
+                <h4 class="info right">{$_('home.nft.3.pStart')} <a on:click={() => showModal("leaderboard")}>{$_('home.nft.3.link')}</a> {$_('home.nft.3.pEnd')}</h4>
+                <h4 class="info right">{$_('home.nft.4.pStart')} <a on:click={() => showModal("token")}>{$_('home.nft.4.link')}</a> {$_('home.nft.4.pEnd')}</h4>
             </ul>
         </div>
     </div>
@@ -20,10 +20,10 @@
         <div class="content first">
             <div>
                 <ul>
-                    <h4 class="info left">Users can chose to mint to <a on:click={() => showModal("blockchains")}>Ethereum, Polygon, Tezos, NEAR, or Flow.</a></h4>
-                    <h4 class="info left">Tradeable on our marketplace as well as other top NFT marketplaces like <a on:click={() => showModal("marketplaces")}>OpenSea and Rarible</a></h4>
-                    <h4 class="info left">Challenge videos will be stored using decentralized cloud storage providers and the <a on:click={() => showModal("ipfs")}>IPFS.</a></h4>
-                    <h4 class="info left">All minted challenge videos are also backed-up forever using <a on:click={() => showModal("arweave")}>arweave and ardive.</a></h4>
+                    <h4 class="info left">{$_('home.nft.5.pStart')} <a on:click={() => showModal("blockchains")}>{$_('home.nft.5.link')}</a></h4>
+                    <h4 class="info left">{$_('home.nft.6.pStart')} <a on:click={() => showModal("marketplaces")}>{$_('home.nft.6.link')}</a></h4>
+                    <h4 class="info left">{$_('home.nft.7.pStart')} <a on:click={() => showModal("ipfs")}>{$_('home.nft.7.link')}</a></h4>
+                    <h4 class="info left">{$_('home.nft.8.pStart')} <a on:click={() => showModal("arweave")}>{$_('home.nft.8.link')}</a></h4>
                 </ul>
             </div>
         </div>
@@ -43,8 +43,7 @@
 </div>
 
 <script>
-import { onMount } from 'svelte';
-
+    import { _ } from 'svelte-i18n'
     let modalShowing = false;
     let modalTitle = "modal";
     let modalDescription = "";
@@ -172,6 +171,9 @@ import { onMount } from 'svelte';
             margin:0;
             gap:0;
             height:auto;
+        }
+        .modal {
+            width: 100% !important;
         }
         .image {
             order:1 !important;

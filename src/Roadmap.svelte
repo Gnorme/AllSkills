@@ -6,10 +6,12 @@
         </div>
         <div class="text">
             <ul>
-                <li class="cleared">Ideation</li>
-                <li class="cleared">Business plan</li>
+                {#each $json('home.roadmap.idea.cleared') as step}
+                    <li class="cleared">{step}</li>
+                {/each}
+                <!--<li class="cleared">Business plan</li>
                 <li class="cleared">Feasibility study</li>
-                <li class="cleared">Olympic skater Charles Hamelin joins project</li>
+                <li class="cleared">Olympic skater Charles Hamelin joins project</li>-->
             </ul>
         </div>
     </div>
@@ -20,13 +22,9 @@
         </div>
         <div class="text">
             <ul>
-                <li class="cleared">Markest research</li>
-                <li class="cleared">Acquired advisors & CTO</li>
-                <li class="cleared">Backed by PME Montreal </li>
-                <li class="cleared">Finalists in NBA Launchpad</li>
-                <li class="cleared">Pivot towards NFT platform</li>
-                <li class="cleared">Launch website</li>
-                <li class="cleared">Release whitepaper and tokenomics</li>
+                {#each $json('home.roadmap.research.cleared') as step}
+                    <li class="cleared">{step}</li>
+                {/each}
             </ul>
         </div>
     </div>
@@ -37,14 +35,12 @@
         </div>
         <div class="text">
             <ul>
-                <li>Announce partners</li>
-                <li class="cleared">Setup social accounts</li>
-                <li class="cleared">Release marketing plan</li>
-                <li>Reveal plan for Ambassador program</li>
-                <li>Reveal first AllSkills Ambassadors</li>
-                <li>Mint governance token</li>
-                <li>Trailer</li>
-                <li>Token presale</li>
+                {#each $json('home.roadmap.plan.cleared') as step}
+                    <li class="cleared">{step}</li>
+                {/each}
+                {#each $json('home.roadmap.plan.uncleared') as step}
+                    <li>{step}</li>
+                {/each}
             </ul>
         </div>
     </div>
@@ -67,10 +63,9 @@
         </div>
         <div class="text">
             <ul>
-                <li>Mint stablecoin Vote token</li>
-                <li>Launch closed beta</li>
-                <li>Full release of challenge system and marketplace</li>
-                <li>Release of ambassador program</li>
+                {#each $json('home.roadmap.launch.uncleared') as step}
+                    <li>{step}</li>
+                {/each}
             </ul>
         </div>
     </div>
@@ -81,18 +76,19 @@
         </div>
         <div class="text">
             <ul>
-                <li>Release unique Tap-to-Record feature</li>
-                <li>Release Scout mode</li>
-                <li>Add more cosmetics and editing features</li>
-                <li>Release GM mode</li>
+                {#each $json('home.roadmap.post.uncleared') as step}
+                    <li>{step}</li>
+                {/each}
             </ul>
         </div>
     </div>
     <div class="info">
-        <p>Join our Discord and follow our Twitter to get access to the latest announcements and enter raffles to earn prizes from our Ambassadors</p>
+        <p>{$_('home.roadmap.socials')}</p>
     </div>
 </div>
-
+<script>
+    import { _ , json } from 'svelte-i18n'
+</script>
 <style>
     /* <img alt="Launch plans" src="images/launch_sw.png" />*/
     .rocket {

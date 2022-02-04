@@ -1,9 +1,9 @@
 <div class="ambassador-container">
     <Carousel/>
     <div class="info-container">
-        <h4 class="ambassador-info slidedown">Compete in new Ambassador Challenges every week hosted by different athletes</h4>
-        <h4 class="ambassador-info slidedown">Chance to win an NFT of Ambassador’s Challenge video + additional prizes</h4>
-        <h4 style="text-decoration: underline white; -webkit-text-decoration: underline white;" class="ambassador-info slidedown">Stay tuned for more details.</h4>
+        <h4 class="ambassador-info slidedown">{$_('home.ambassador.line1')}</h4>
+        <h4 class="ambassador-info slidedown">{$_('home.ambassador.line2')}</h4>
+        <h4 style="text-decoration: underline white; -webkit-text-decoration: underline white;" class="ambassador-info slidedown">{$_('home.ambassador.line3')}</h4>
         <!--<h4 class="ambassador-info slidedown">Ambassadors release a Challenge video for the community to try and replicate</h4>
         <h4 class="ambassador-info slidedown">Watch them perform and submit your own attempts at outdoing the pros</h4>
         <h4 class="ambassador-info slidedown">Every submission has a chance to win an NFT of Ambassador’s Challenge + additional prizes</h4>
@@ -12,33 +12,8 @@
 </div>
 
 <script>
-    import { onMount } from 'svelte';
     import Carousel from './Carousel.svelte';
-    /*onMount(() => {
-        const infoObserver = new IntersectionObserver(entries => {
-            // Loop over the entries
-            let showing = 0;
-            console.log("ambassadors")
-            console.log(entries.length)
-            let carousel = document.querySelector(".carousel-container")
-            entries.forEach(entry => {
-                // If the element is visible
-                if (carousel.isIntersecting) {
-                    // Add the animation class
-                    entry.target.classList.add('slidedown');
-                    showing += 1;
-                }
-            });
-            if (showing >= 5) {
-                observer.disconnect()
-            }
-        });
-        const infos = document.querySelectorAll('.ambassador-info')
-        console.log(infos.length)
-        infos.forEach(info => infoObserver.observe(info));
-            
-
-    })*/
+    import { _ } from 'svelte-i18n'
 </script>
 
 <style>
