@@ -82,7 +82,7 @@
         border: 3px solid aqua;
         background-size:100% 100%;
         background-repeat: no-repeat;
-        background-image: url("../images/tags_bg_gradient.png")
+        background-image: url("../images/black_bg_s.png")
     }
     .table-content{
         display:grid;
