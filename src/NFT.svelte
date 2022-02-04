@@ -44,26 +44,7 @@
 
 <script>
 import { onMount } from 'svelte';
-    onMount(() => {
-        const observer = new IntersectionObserver(entries => {
-            // Loop over the entries
-            let showing = 0;
-            entries.forEach(entry => {
-                // If the element is visible
-                if (entry.isIntersecting) {
-                    // Add the animation class
-                    entry.target.classList.add('slide-in');
-                    showing += 1;
-                }
-            });
-            if (showing >= cards.length) {
-                observer.disconnect()
-            }
-        });
-        const cards = document.querySelectorAll('.info')
-        console.log(cards.length)
-        cards.forEach(card => observer.observe(card));
-    })
+
     let modalShowing = false;
     let modalTitle = "modal";
     let modalDescription = "";
@@ -138,15 +119,10 @@ import { onMount } from 'svelte';
     .right {
         transform: translateX(300px); 
     }
-    :global(.slide-in) {
-        animation: slide 0.5s forwards linear;  
-    }
-    @keyframes slide {
-        to {transform:translateX(0);}
-    }
+
     ul {
         font-size: 1.5rem;
-        font-family: "Oswald";
+        /*font-family: "Oswald";*/
         list-style: none;
         padding-inline-start:0;
     }
@@ -222,5 +198,6 @@ import { onMount } from 'svelte';
         .tooltips {
             display: none;
         }
+        
     }
 </style>

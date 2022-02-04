@@ -22,7 +22,20 @@
     </div>
     <div class="column middle">
         <h1 id="value">1 $Vote ≈ $0.10</h1>
-        <div class="coin"></div>
+        <div class='coin'>
+            <div class='front jump'>
+              <div class='star'></div>
+              <span class='currency'>10c</span>
+              <div class='shapes'>
+                <div class='shape_l'></div>
+                <div class='shape_r'></div>
+                <span class='top'>Vote</span>
+                <span class='bottom'>Token</span>
+              </div>
+            </div>
+            <div class='shadow'></div>
+          </div>
+          
         <!--<img id="token" alt="Vote Token" src="images/token.png" />-->
     </div>
         <div class="section right">
@@ -64,7 +77,7 @@
   this is where the real fun begins...
 */
 
-.coin {
+/*.coin {
   height: var(--coin-size);
   width: var(--coin-size);
   margin: 0.5rem;
@@ -89,7 +102,8 @@
   background-position: center;
   background-blend-mode: overlay;
   -webkit-transform-style: preserve-3d;
-}
+  transform-style: preserve-3d;
+}*/
 
 
 @keyframes spin {
@@ -175,16 +189,7 @@
     .highlight {
         color: aqua;
     }
-    .middle img {
-        width: 80%;
-        margin-left: auto;
-        margin-right: auto;
-        margin-top: 50px;
-        margin-bottom: 50px;
-        height: auto;
-    }
     .middle {
-        text-align:center; 
         display:flex; 
         flex-direction: column;
         align-items:center;
@@ -262,4 +267,181 @@
             font-size: 1.75rem !important;
         }
     }
+span {
+  font-family: "Montserrat", sans-serif;
+}
+
+.jump {
+  animation: jump 1.5s infinite ease;
+}
+@keyframes jump {
+  0% {
+    top: 0;
+  }
+  50% {
+    top: -40px;
+  }
+  100% {
+    top: 0;
+  }
+}
+
+.coin {
+  margin: auto;
+  position: relative;
+  bottom: 0;
+  left: 0;
+  right: 0;
+  top: 50px;
+  height: 300px;
+  width: 150px;
+}
+
+.coin .front, .coin .back {
+  position: absolute;
+  height: 150px;
+  width: 150px;
+  background: #ffbd0b;
+  border-radius: 50%;
+  border-top: 7px solid #ffd84c;
+  border-left: 7px solid #ffd84c;
+  border-right: 7px solid #d57e08;
+  border-bottom: 7px solid #d57e08;
+  transform: rotate(44deg);
+}
+.coin .front:before, .coin .back:before {
+  content: "";
+  margin: 35.5px 35.5px;
+  position: absolute;
+  width: 70px;
+  height: 70px;
+  background: #f0a608;
+  border-radius: 50%;
+  border-bottom: 5px solid #ffd84c;
+  border-right: 5px solid #ffd84c;
+  border-left: 5px solid #d57e08;
+  border-top: 5px solid #d57e08;
+  z-index: 2;
+}
+.coin .front .currency, .coin .back .currency {
+  overflow: hidden;
+  position: absolute;
+  color: #ffbd0b;
+  font-size: 32px;
+  transform: rotate(-44deg);
+  line-height: 4.5;
+  width: 100%;
+  height: 100%;
+  text-align: center;
+  text-shadow: 0 3px 0 #cb7407;
+  z-index: 3;
+  border-radius: 50%;
+}
+/*.currency {
+    background-repeat: no-repeat;
+    background-size: 69%;
+    background-position: center;
+    background-image: url("../images/coin.png")
+}*/
+.coin .front .currency:after, .coin .back .currency:after {
+  content: "";
+  position: absolute;
+  height: 200px;
+  width: 40px;
+  margin: 20px -65px;
+  box-shadow: 50px -23px 0 -10px rgba(255, 255, 255, 0.22), 85px -10px 0 -16px rgba(255, 255, 255, 0.19);
+  transform: rotate(-50deg);
+  animation: shine 1.5s infinite ease;
+}
+@keyframes shine {
+  0% {
+    margin: 20px -65px;
+  }
+  50% {
+    margin: 70px -85px;
+  }
+  100% {
+    margin: 20px -65px;
+  }
+}
+.coin .front .shapes, .coin .back .shapes {
+  transform: rotate(-44deg);
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+}
+.coin .front .shapes div, .coin .back .shapes div {
+  width: 20px;
+  height: 4px;
+  background: #d57e08;
+  border-top: 2px solid #c47207;
+  margin: 75px 7px;
+}
+.coin .front .shapes div:before, .coin .back .shapes div:before {
+  content: "";
+  position: absolute;
+  width: 20px;
+  height: 4px;
+  background: #d57e08;
+  border-top: 2px solid #c47207;
+  margin: -10px 0;
+}
+.coin .front .shapes div:after, .coin .back .shapes div:after {
+  content: "";
+  position: absolute;
+  width: 20px;
+  height: 4px;
+  background: #d57e08;
+  border-top: 2px solid #c47207;
+  margin: 8px 0;
+}
+.coin .front .shape_l, .coin .back .shape_l {
+  float: left;
+}
+.coin .front .shape_r, .coin .back .shape_r {
+  float: right;
+}
+.coin .front .top, .coin .back .top {
+  font-size: 24px;
+  color: #d67f08;
+  text-align: center;
+  width: 100%;
+  position: absolute;
+  left: 0;
+}
+.coin .front .bottom, .coin .back .bottom {
+  font-size: 24px;
+  color: #d67f08;
+  text-align: center;
+  width: 100%;
+  position: absolute;
+  left: 0;
+  bottom: 0;
+}
+
+.coin .shadow {
+  width: 100%;
+  height: 20px;
+  background: rgba(0, 0, 0, 0.4);
+  left: 0;
+  bottom: -50px;
+  border-radius: 50%;
+  z-index: -1;
+  margin: 185px 7px 0 7px;
+  animation: swift 1.5s infinite ease;
+}
+@keyframes swift {
+  0% {
+    opacity: 0.8;
+  }
+  50% {
+    opacity: 0.4;
+    transform: scale(0.8);
+  }
+  100% {
+    opacity: 0.8;
+  }
+}
 </style>

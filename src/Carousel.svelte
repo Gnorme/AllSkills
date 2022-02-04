@@ -63,8 +63,7 @@
         width: 75%; 
         margin-right:auto; 
         margin-left:auto; 
-        margin-top: 1rem; 
-        margin-bottom: 10rem;
+        margin-bottom: 3rem;
     }
 
 input[type=radio] {
@@ -86,7 +85,7 @@ input[type=radio] {
   width: 100%;
   max-width: 800px;
   max-height: 600px;
-  height: 70vh;
+  height: 30vh;
   margin-left:auto;
   margin-right:auto;
   transform-style: preserve-3d;
@@ -105,9 +104,8 @@ input[type=radio] {
 
 img {
   width: 100%;
-  height: 100%;
   border-radius: 10px;
-  object-fit: cover;
+  object-fit: contain;
 }
 
 #item-1:checked ~ .cards #card-3, #item-2:checked ~ .cards #card-1, #item-3:checked ~ .cards #card-2 {

@@ -54,7 +54,7 @@
         grid-area: b;
     }
     p {
-        font-size: 1rem;
+        font-size: 1.2rem;
         line-height: 1.5rem;
         font-weight:100;
         font-family: "BentonSans";

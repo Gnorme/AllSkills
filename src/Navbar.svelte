@@ -11,12 +11,16 @@
     </button>
     <div id="sidenav">
         <a href="javascript:void(0)" class="closebtn" on:click={closeNav}>&times;</a>
+        <a href="#Trailer">Trailer</a>
         <a href="#Table">About</a>
         <a href="#Challenge">Challenge System</a>
-        <a href="#Trailer">Trailer</a>
         <a href="#Vote">Vote Token</a>
+        <a href="#NFT">NFTs</a>
+        <a href="#Ambassadors">Ambassador Program</a>
         <a href="#Roadmap">Roadmap</a>
+        <a href="#Tokenomics">Tokenomics</a>
         <a href="#Team">Team</a>
+        <a href="#News">News</a>
         <a href="#Contact">Contact</a>
         <div class="locale-selector">
             <div class="select">

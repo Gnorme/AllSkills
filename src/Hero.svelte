@@ -101,10 +101,7 @@
 .countdown a {
     color: aqua;
 }
-.left-content{
-    font-family: "BentonSans";
-    font-family: "Oswald";
-}
+
 .content {
     text-align: right;
     font-size: 64px;
@@ -137,7 +134,7 @@
 
 #hero {
     position: relative;
-    width: 100vw;
+    width: 100%;
     height: 100vh;
     display: grid;
     grid-template-columns: 55% 45%;
@@ -186,12 +183,10 @@
 }
 
 .hero-split {
-  font-family: "Roboto", "Lato", sans-serif;
    color: white;
 }
 
 p {
-    font-family: "BentonSans";
     font-size: 1.6rem;
     line-height: 2.25rem;
   display:inline;
@@ -233,7 +228,7 @@ ul li {
 }
 
 @keyframes change {
-    100% {margin-top: -2688px;}
+    100% {margin-top: -2694px;}
 
 }
 

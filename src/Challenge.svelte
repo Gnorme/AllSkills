@@ -61,39 +61,10 @@
 
 </div>
 
-<script>
-import { onMount } from "svelte";
-
-onMount(() => {
-        const observer = new IntersectionObserver(entries => {
-            // Loop over the entries
-            let showing = 0;
-            entries.forEach(entry => {
-                // If the element is visible
-                if (entry.isIntersecting) {
-                    // Add the animation class
-                    entry.target.classList.add('underline');
-                    showing += 1;
-                }
-            });
-            if (showing >= importants.length) {
-                observer.disconnect()
-            }
-        });
-        const importants = document.querySelectorAll('.title')
-        importants.forEach(important => observer.observe(important));
-    })
-</script>
 
 <style>
-    .bg {
-        background-color:black repeat;
-        position: fixed;
-        width: 100%;
-        height: 300%;
-        top:0;
-        left:0;
-        z-index: -1;
+    .title {
+        background-size: 0% 5px;
     }
     .tooltips {
         position:absolute;
@@ -142,12 +113,6 @@ onMount(() => {
     background-size: 0% 2px;
     background-repeat: no-repeat;
     }
-    :global(.underline) {
-        animation: t 0.7s linear forwards;
-    }
-    @keyframes t{
-        to {background-size: 100% 2px}
-    }
 
     p{
         font-family:"BentonSans";
@@ -160,7 +125,7 @@ onMount(() => {
         order:2;
     }
     .content p {
-        font-size: 1rem;
+        font-size: 1.2rem;
         line-height: 1.8rem;
     }
     .content{

@@ -16,7 +16,9 @@
     let divId = "player-1";
     export function play(){
         console.log("trying to play");
-        player.playVideo();
+        if (player.getPlayerState() !== 1) {
+            player.playVideo();
+        }
     }
     export function stop() {
         player.stopVideo()
@@ -33,7 +35,7 @@
         height: "710",
         width: "400",
         videoId,
-        playerVars: { 'autoplay': 1, 'controls': 0, 'enablejsapi': 1, 'modestbranding': 1, 'rel': 0 },
+        playerVars: { 'autoplay': 1, 'controls': 0, 'enablejsapi': 1, 'modestbranding': 1, 'rel': 0 , 'playsinline':1},
         events: {
           onReady: playerIsReady,
           onStateChange: playerStateChange
@@ -44,25 +46,27 @@
       dispatch("PlayerStateChange", data)
       console.log(data)
       let strReturn = "";
-      if(data== -1){ strReturn = "(unstarted)"}
+      if(data== -1){ 
+          strReturn = "(unstarted)";
+          //console.log("playing because unstarted")
+          //player.playVideo()
+        }
       if(data== 0 ){ strReturn = "(ended)"}
       if(data== 1 ){ strReturn = "(playing)"}
       if(data== 2 ){ strReturn = "(paused)"}
       if(data== 3 ){ 
           strReturn = "(buffering)"
+          //console.log("playing because of buffer")
           player.playVideo()
         }
       if(data== 5 ){ strReturn = "(video cued)."}
       dispatch("PlayerStateChangeString", strReturn)
     }
-    function playerIsReady() {
-      dispatch("Ready");
-      player.play();
-      setInterval(() => {
-        dispatch("currentPlayTime", player.getCurrentTime());
-        
-        //console.log(player.getCurrentTime())
-      }, 1000);
+    function playerIsReady(event) {
+        dispatch("Ready");
+        console.log("playing because ready")
+        event.target.mute();
+        event.target.playVideo();
     }
   </script>
   

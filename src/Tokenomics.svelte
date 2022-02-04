@@ -152,21 +152,7 @@ import { onMount } from "svelte";
     function sleep(ms) {
     return new Promise(resolve => setTimeout(resolve, ms));
     }
-    onMount(() => {
-        const observer = new IntersectionObserver(entries => {
-            // Loop over the entries
-            entries.forEach(entry => {
-                // If the element is visible
-                if (entry.isIntersecting) {
-                    // Add the animation class
-                    grow()
-                    observer.disconnect()
-                }
-            });
-        });
-        const importants = document.querySelectorAll('#coin')
-        importants.forEach(important => observer.observe(important));
-    })
+2
     async function grow(e) {
         await sleep(500);
         let coin = document.getElementById("coin");
