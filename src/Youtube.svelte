@@ -26,6 +26,12 @@
     export function pause() {
         player.pauseVideo()
     }
+    export function unmute() {
+        player.unMute()
+    }
+    export function mute() {
+        player.mute()
+    }
     export function getPlayerState() {
         return player.getPlayerState()
     }

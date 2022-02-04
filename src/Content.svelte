@@ -16,14 +16,13 @@ import { onMount } from 'svelte';
     let player1;
     let startingToPlay = false;
     let tryingToPause = false;
+    let muted = true;
 
     function addObservers() {
-        const videoObserver = new IntersectionObserver(entries => {
-            
+        const videoObserver = new IntersectionObserver(entries => {       
             entries.forEach(entry => {
                 if (entry.isIntersecting) {
                     try {
-                        //startingToPlay = true
                         console.log("Trying to playyyyy")
                             setTimeout(() => {
                                 console.log(tryingToPause)
@@ -32,11 +31,6 @@ import { onMount } from 'svelte';
                                 }
                                 tryingToPause = false;
                             }, 1000);
-                        /*if (player1.getPlayerState() == 1) {
-                            console.log("disconnecting")
-                            //videoObserver.disconnect()
-                        }*/
-                        
                     } catch (e) {
                         console.log(e)
                     }                   
@@ -62,11 +56,23 @@ import { onMount } from 'svelte';
     } 
     function start() {
         player1.play();
+        player1.unmute();
+    }
+    function unmute(e) {
+        if (muted) {
+            player1.unmute()
+            e.target.style.backgroundImage = "url('../images/volume.png')";
+        } else {
+            player1.mute()
+            e.target.style.backgroundImage = "url('../images/volume-mute.png')";
+        }
+        muted = !muted;
     }
 </script>
 <Observers/>
 
 <div id="Trailer" class="video-container">
+    <div id="mute" on:click={unmute}></div>
     <div class="img-frame"><img src="images/iphone_frame.png"></div>
     <div class="video">
         <Youtube bind:this={player1} videoId="O2A5MIWsCFI" on:End={() => start()} on:Ready={() => addObservers()}></Youtube>
@@ -153,7 +159,18 @@ import { onMount } from 'svelte';
 
 
 <style>   /* rgb(143,255,238) #00DFFC*/
-
+#mute {
+    position:absolute;
+    width: 50px;
+    height:50px;
+    top: -12%;
+    z-index:9999;
+    left: calc(50% - 25px);
+    background-image: url("../images/volume-mute.png");
+}
+.video-container {
+    position:relative;
+}
 .img-frame {
     position:relative;
 }
