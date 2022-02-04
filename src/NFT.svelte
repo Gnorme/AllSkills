@@ -5,10 +5,34 @@
         </div>
         <div class="content second">
             <ul>
-                <h4 class="info right">{$_('home.nft.1.pStart')} <a on:click={() => showModal("benefits")}>{$_('home.nft.1.link')}</a></h4>
-                <h4 class="info right">{$_('home.nft.2.pStart')} <a on:click={() => showModal("minting")}>{$_('home.nft.2.link')}</a> {$_('home.nft.2.pEnd')}</h4>
-                <h4 class="info right">{$_('home.nft.3.pStart')} <a on:click={() => showModal("leaderboard")}>{$_('home.nft.3.link')}</a> {$_('home.nft.3.pEnd')}</h4>
-                <h4 class="info right">{$_('home.nft.4.pStart')} <a on:click={() => showModal("token")}>{$_('home.nft.4.link')}</a> {$_('home.nft.4.pEnd')}</h4>
+                <div class="info right">
+                    <svg viewBox="3 30 500.35 50.328" xmlns="http://www.w3.org/2000/svg">
+                        <polygon style="fill: rgba(0,255,255,0.5);" points="70.086 0.382 53.904 51.969 -0.944 61.327 -1.27 75.069 63.124 65.518 83.649 -0.101"/>
+                        <polygon style="fill: rgba(0,255,255,0.5);" points="120.568 -0.003 99.057 64.191 500.785 2.143 499.522 0.721 117.904 49.127 134.741 0.134"/>
+                      </svg>
+                    <h4>{$_('home.nft.1.pStart')} <a on:click={() => showModal("benefits")}>{$_('home.nft.1.link')}</a></h4>
+                </div>
+                <div class="info right">
+                    <svg viewBox="3 30 500.35 50.328" xmlns="http://www.w3.org/2000/svg">
+                        <polygon style="fill: rgba(0,255,255,0.5);" points="70.086 0.382 53.904 51.969 -0.944 61.327 -1.27 75.069 63.124 65.518 83.649 -0.101"/>
+                        <polygon style="fill: rgba(0,255,255,0.5);" points="120.568 -0.003 99.057 64.191 500.785 2.143 499.522 0.721 117.904 49.127 134.741 0.134"/>
+                      </svg>    
+                    <h4>{$_('home.nft.2.pStart')} <a on:click={() => showModal("minting")}>{$_('home.nft.2.link')}</a> {$_('home.nft.2.pEnd')}</h4>
+                </div>
+                <div class="info right">
+                    <svg viewBox="3 30 500.35 50.328" xmlns="http://www.w3.org/2000/svg">
+                        <polygon style="fill: rgba(0,255,255,0.5);" points="70.086 0.382 53.904 51.969 -0.944 61.327 -1.27 75.069 63.124 65.518 83.649 -0.101"/>
+                        <polygon style="fill: rgba(0,255,255,0.5);" points="120.568 -0.003 99.057 64.191 500.785 2.143 499.522 0.721 117.904 49.127 134.741 0.134"/>
+                      </svg> 
+                    <h4>{$_('home.nft.3.pStart')} <a on:click={() => showModal("leaderboard")}>{$_('home.nft.3.link')}</a> {$_('home.nft.3.pEnd')}</h4>
+                </div>
+                <div class="info right">
+                    <svg viewBox="3 30 500.35 50.328" xmlns="http://www.w3.org/2000/svg">
+                        <polygon style="fill: rgba(0,255,255,0.5);" points="70.086 0.382 53.904 51.969 -0.944 61.327 -1.27 75.069 63.124 65.518 83.649 -0.101"/>
+                        <polygon style="fill: rgba(0,255,255,0.5);" points="120.568 -0.003 99.057 64.191 500.785 2.143 499.522 0.721 117.904 49.127 134.741 0.134"/>
+                      </svg> 
+                    <h4>{$_('home.nft.4.pStart')} <a on:click={() => showModal("token")}>{$_('home.nft.4.link')}</a> {$_('home.nft.4.pEnd')}</h4>
+                </div>
             </ul>
         </div>
     </div>
@@ -20,10 +44,34 @@
         <div class="content first">
             <div>
                 <ul>
-                    <h4 class="info left">{$_('home.nft.5.pStart')} <a on:click={() => showModal("blockchains")}>{$_('home.nft.5.link')}</a></h4>
-                    <h4 class="info left">{$_('home.nft.6.pStart')} <a on:click={() => showModal("marketplaces")}>{$_('home.nft.6.link')}</a></h4>
-                    <h4 class="info left">{$_('home.nft.7.pStart')} <a on:click={() => showModal("ipfs")}>{$_('home.nft.7.link')}</a></h4>
-                    <h4 class="info left">{$_('home.nft.8.pStart')} <a on:click={() => showModal("arweave")}>{$_('home.nft.8.link')}</a></h4>
+                    <div class="info left">
+                        <h4>{$_('home.nft.5.pStart')} <a on:click={() => showModal("blockchains")}>{$_('home.nft.5.link')}</a></h4>
+                        <svg style="margin-bottom:-6px; margin-right:-7px; z-index:-1;" viewBox="3 10 501.79 50.114" xmlns="http://www.w3.org/2000/svg">
+                            <polygon style="fill: rgba(0,255,255,0.5);" points="500.159 16.553 432.482 24.328 392.825 93.844 409.667 93.703 443.069 37.609 499.889 30.393"/>
+                            <polygon style="fill: rgba(0,255,255,0.5);" points="352.106 94.674 335.059 94.797 363.621 47.452 -1.746 94.183 -1.798 80.123 390.963 29.985"/>
+                        </svg>
+                    </div>
+                    <div class="info left">
+                        <h4>{$_('home.nft.6.pStart')} <a on:click={() => showModal("marketplaces")}>{$_('home.nft.6.link')}</a></h4>
+                        <svg style="margin-bottom:-6px; margin-right:-7px; z-index:-1;" viewBox="3 10 501.79 50.114" xmlns="http://www.w3.org/2000/svg">
+                            <polygon style="fill: rgba(0,255,255,0.5);" points="500.159 16.553 432.482 24.328 392.825 93.844 409.667 93.703 443.069 37.609 499.889 30.393"/>
+                            <polygon style="fill: rgba(0,255,255,0.5);" points="352.106 94.674 335.059 94.797 363.621 47.452 -1.746 94.183 -1.798 80.123 390.963 29.985"/>
+                        </svg>
+                    </div>
+                    <div class="info left">
+                        <h4>{$_('home.nft.7.pStart')} <a on:click={() => showModal("ipfs")}>{$_('home.nft.7.link')}</a></h4>
+                        <svg style="margin-bottom:-6px; margin-right:-7px; z-index:-1;" viewBox="3 10 501.79 50.114" xmlns="http://www.w3.org/2000/svg">
+                            <polygon style="fill: rgba(0,255,255,0.5);" points="500.159 16.553 432.482 24.328 392.825 93.844 409.667 93.703 443.069 37.609 499.889 30.393"/>
+                            <polygon style="fill: rgba(0,255,255,0.5);" points="352.106 94.674 335.059 94.797 363.621 47.452 -1.746 94.183 -1.798 80.123 390.963 29.985"/>
+                        </svg>
+                    </div>
+                    <div class="info left">
+                        <h4>{$_('home.nft.8.pStart')} <a on:click={() => showModal("arweave")}>{$_('home.nft.8.link')}</a></h4>
+                        <svg style="margin-bottom:-6px; margin-right:-7px; z-index:-1;" viewBox="3 10 501.79 50.114" xmlns="http://www.w3.org/2000/svg">
+                            <polygon style="fill: rgba(0,255,255,0.5);" points="500.159 16.553 432.482 24.328 392.825 93.844 409.667 93.703 443.069 37.609 499.889 30.393"/>
+                            <polygon style="fill: rgba(0,255,255,0.5);" points="352.106 94.674 335.059 94.797 363.621 47.452 -1.746 94.183 -1.798 80.123 390.963 29.985"/>
+                        </svg>
+                    </div>
                 </ul>
             </div>
         </div>
@@ -105,12 +153,24 @@
         display:block;
     }
     h4 {
-        padding:20px;
+        padding-left:20px;
+        padding-right:20px;
+        line-height:30px;
+    }
+    .right h4 {
+        margin-top:0;
+        margin-bottom:20px;    
+    }
+    .left h4 {
+        margin-top:20px;
+        margin-bottom:0px;
+    }
+    .info {
         background-color: rgb(14,14,14);
         margin-bottom: 20px; 
         text-align:center;
         border: 3px solid rgba(0,255,255,0.5);
-        box-shadow: 0px 10px 5px 3px rgb(0,0,0,0.5);       
+        box-shadow: 0px 10px 5px 3px rgb(0,0,0,0.5);  
     }
     .left {
         transform: translateX(-300px);  

@@ -8,12 +8,13 @@
             <h4>Links</h4>
             <ul class="col-content">
                 <li><a href="#Trailer">Trailer</a></li>
+                <li><a href="#Table">About</a></li>
                 <li><a href="#Challenge">Challenge System</a></li>
-                <li><a href="#Vote">Vote Stablecoin</a></li>
+                <li><a href="#Vote">Vote Token</a></li>
+                <li><a href="#NFT">NFTs</a></li>
+                <li><a href="#Ambassador">Ambassador Program</a></li>
                 <li><a href="#Roadmap">Roadmap</a></li>
                 <li><a href="#Tokenomics">Tokenomics</a></li>
-                <li><a href="#Team">Team</a></li>
-                <li><a href="#News">Blog</a></li>
             </ul>
         </div>
         <div class="footer-col" id="register">
@@ -28,7 +29,7 @@
             <div class="col-content" style="display:flex; justify-content:space-between">
                 <a href="mailto:info@allskills.ca"><img alt="Email" src="images/email.png"></a>
                 <a><img alt="Discord" src="images/discord.png"></a>
-                <a href="https:www.instagram.com/AllSkillsNFT"><img alt="Instagram" src="images/instagram.png"></a>
+                <a href="https://www.instagram.com/AllSkillsNFT"><img alt="Instagram" src="images/instagram.png"></a>
                 <a href="https://www.twitter.com/@AllSkillsNFT"><img alt="Twitter" src="images/twitter.png"></a>
             </div>
         </div>
