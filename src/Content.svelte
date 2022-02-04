@@ -178,6 +178,7 @@ import { onMount } from 'svelte';
     justify-content: center;
     position:relative;
     width:100%;
+    height:710px;
     margin-top:10rem;
     margin-bottom:10rem;
 }
