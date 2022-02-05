@@ -20,9 +20,9 @@
                 
             </div>
             {#if selected === i}
-            <a class="info" on:click={toggleMoreInfo} data-card-id={i}>Less Info</a>
+            <a class="more-info" on:click={toggleMoreInfo} data-card-id={i}>Less Info</a>
             {:else}
-            <a class="info" on:click={toggleMoreInfo} data-card-id={i}>More Info</a>
+            <a class="more-info" on:click={toggleMoreInfo} data-card-id={i}>More Info</a>
             {/if}
         </div>
         </figcaption>
@@ -238,7 +238,7 @@ a:hover {
 
 }
 
-.info {
+.more-info {
   padding: 5px;
   border: 1px solid #ffffff;
   color: #ffffff;

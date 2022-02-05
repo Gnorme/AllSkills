@@ -27,12 +27,6 @@
 }
 
 @media screen and (max-width: 820px) { 
-    .card {
-        width: 100% !important;
-    }
-    .cards {
-        width: 80% !important;
-    }
     .container {
         overflow-x: hidden;
     }
@@ -56,6 +50,9 @@
   height: 100%;
   text-align:center;
 }
+label {
+  display:inline-table;
+}
 .blurred {
   filter: blur(10px);
 }
@@ -63,7 +60,6 @@
         width: 75%; 
         margin-right:auto; 
         margin-left:auto; 
-        margin-bottom: 3rem;
     }
 
 input[type=radio] {
@@ -72,8 +68,8 @@ input[type=radio] {
 
 .card {
   position: absolute;
-  width: 60%;
-  height: 100%;
+  max-width:80%;
+  height: 300px;
   left: 0;
   right: 0;
   margin: auto;
@@ -84,26 +80,22 @@ input[type=radio] {
 .container {
   width: 100%;
   max-width: 800px;
-  max-height: 600px;
-  height: 30vh;
   margin-left:auto;
   margin-right:auto;
-  transform-style: preserve-3d;
-  display: flex;
-  justify-content: center;
-  flex-direction: column;
-  align-items: center;
+  justify-content:center;
+  display:flex;
 }
 
 .cards {
   position: relative;
   width: 100%;
-  height: 100%;
+  height:300px;
   margin-bottom: 20px;
 }
 
 img {
   width: 100%;
+  height:300px;
   border-radius: 10px;
   object-fit: contain;
 }

@@ -1,14 +1,17 @@
 <div class="ambassador-container">
+
     <Carousel/>
-    <div class="info-container">
-        <h4 class="ambassador-info slidedown">{$_('home.ambassador.line1')}</h4>
-        <h4 class="ambassador-info slidedown">{$_('home.ambassador.line2')}</h4>
-        <h4 style="text-decoration: underline white; -webkit-text-decoration: underline white;" class="ambassador-info slidedown">{$_('home.ambassador.line3')}</h4>
+    <div class="info-container full-highlight">
+        <div class="ambassador-info"><h4 class="slidedown">{$_('home.ambassador.line1')}</h4></div>
+        <div class="ambassador-info"><h4 class="slidedown">{$_('home.ambassador.line2')}</h4></div>
+        <div class="ambassador-info"><h4 style="text-decoration: underline white; -webkit-text-decoration: underline white;" class="slidedown">{$_('home.ambassador.line3')}</h4></div>
         <!--<h4 class="ambassador-info slidedown">Ambassadors release a Challenge video for the community to try and replicate</h4>
         <h4 class="ambassador-info slidedown">Watch them perform and submit your own attempts at outdoing the pros</h4>
         <h4 class="ambassador-info slidedown">Every submission has a chance to win an NFT of Ambassador’s Challenge + additional prizes</h4>
         <h4 class="ambassador-info slidedown">Top 10 submissions get minted as their own unique NFT and the creators receive a split of the reward pool</h4>-->
+
     </div>
+
 </div>
 
 <script>
@@ -17,13 +20,25 @@
 </script>
 
 <style>
+    .full-highlight {
+        background: url(../images/green-brush4.svg);
+        background-position: center;
+        background-repeat:no-repeat;
+        margin: -2px -6px;
+        padding:  50px  6px;
+    }
     .info-container {
-        margin-top:175px;
         text-align:center;
         overflow:hidden;
+        margin-top:50px;
     }
     h4 {
-        font-size: 24px;
+        font-size: 30px;
+        font-family: 'Bebas Neue';
+        animation-fill-mode: forwards;
+        animation-timing-function: ease;
+        animation-duration: 1s;
+        text-shadow: 3px 5px rgba(0,0,0,0.5);
     }
     @keyframes slidedown{
         to {transform: translateY(0)}
@@ -33,11 +48,6 @@
         margin-left: auto;
         margin-right:auto;
         margin-bottom:200px;
-    }
-    h4 {
-        animation-fill-mode: forwards;
-        animation-timing-function: ease;
-        animation-duration: 1s;
     }
     :global(.slidedown) {
         display:block;
@@ -49,11 +59,11 @@
     }
     h4:nth-of-type(2) {
         transform: translateY(-500px);
-        animation-delay: 1s;
+        animation-delay: 1s !important;
     }
     h4:nth-of-type(3) {
         transform: translateY(-500px);
-        animation-delay: 2s;
+        animation-delay: 2s !important;
     }
     h4:nth-of-type(4) {
         transform: translateY(-500px);
@@ -65,7 +75,17 @@
     }
     @media screen and (max-width: 820px) {
         .info-container {
-            margin-top: 75px;
+            margin-top: 0px;
+        }
+        .ambassador-info {
+            background: url(../images/green-brush4.png);
+            background-size: 100% 80%;
+            background-position: center;
+            background-repeat:no-repeat;
+            padding:  50px  20px;
+        }
+        .full-highlight {
+            background:none;
         }
     }
 </style>

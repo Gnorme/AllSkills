@@ -50,7 +50,7 @@
                 <img alt="Stake" src="images/stake.png" />
                  <h3>{$_('home.vote.stake.title')}</h3>
              </span>
-            <p>{$_('home.vote.stake.pStart')}. <span class="highlight">{$_('home.vote.stake.highlighted')}</span> {$_('home.vote.stake.pEnd')}</p>
+            <p>{$_('home.vote.stake.pStart')} <span class="highlight">{$_('home.vote.stake.highlighted')}</span>. {$_('home.vote.stake.pEnd')}</p>
         </div>
         <div class="section right">
             <span class="title">

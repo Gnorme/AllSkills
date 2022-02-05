@@ -71,7 +71,7 @@ import { onMount } from 'svelte';
 </script>
 <Observers/>
 
-<div id="Trailer" class="video-container">
+<div id="Trailer" class="video-container marker-highlight">
     <div id="mute" on:click={unmute}></div>
     <div class="img-frame"><img src="images/iphone_frame.png"></div>
     <div class="video">
@@ -148,11 +148,11 @@ import { onMount } from 'svelte';
         <div class="triangle"></div>
     </div>
     <section id="Partners" class="white" style="width: 100%;">
-        <h2 style="margin-left:7%">Partners</h2>  
+        <h2 style="margin-left:7%; text-shadow:none;">Partners</h2>  
         <p style="margin-left:7%; font-size: 1.5rem;">Announcements coming soon</p>
     </section>
     <section id="News" class="white" style="width: 100%; ">
-        <h2 style="margin-left:7%">News</h2>
+        <h2 style="margin-left:7%; text-shadow:none;">News</h2>
         <News />
     </section>
 </div>
@@ -168,6 +168,12 @@ import { onMount } from 'svelte';
     left: calc(50% - 25px);
     background-image: url("../images/volume-mute.png");
 }
+.marker-highlight {
+        background: url(../images/aqua-brush4-v.png);
+        background-position: center;
+        background-repeat:no-repeat;
+        background-size: 50% 90%;
+    }
 .video-container {
     position:relative;
 }
@@ -286,6 +292,7 @@ import { onMount } from 'svelte';
             font-size: 2.5rem !important;
         }
         h2 {
+            font-size: 4rem !important; 
             text-align:center !important;
         }
         .white {
@@ -302,6 +309,7 @@ import { onMount } from 'svelte';
         margin-left:auto; 
         margin-right:auto; 
         max-width: 1200px;
+        text-shadow: 5px 5px rgba(0,0,0,0.5);
         text-align:left;
         min-width:50%;
         font-size: 4.5rem;

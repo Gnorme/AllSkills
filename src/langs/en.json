@@ -103,17 +103,17 @@
                 "pEnd":"to automatically mint one of your challenge wins as an NFT."
             },
             "5": {
-                "pStart":"User can choose to mint to",
+                "pStart":"Users can choose to mint to either",
                 "link":"Ethereum, Polygon, Tezos, NEAR, or Flow.",
                 "pEnd":""
             },
             "6": {
-                "pStart":"Tradeable on our marketplace as well as other top NFT marketplaces like",
+                "pStart":"Minted videos are tradeable on our marketplace as well as other top NFT marketplaces like",
                 "link":"OpenSea and Rarible.",
                 "pEnd":""
             },
             "7": {
-                "pStart":"Challenge videos will be stored using decentralized cloud storage providers and the",
+                "pStart":"NFT videos will be stored using decentralized cloud storage providers and the",
                 "link":"IPFS",
                 "pEnd":""
             },

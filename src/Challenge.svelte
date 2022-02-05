@@ -78,14 +78,14 @@
     .extra-info {
         position:absolute;
         display:inline-block;
-        width: 20%;
+        width: 100px;
         font-size: 11px;
-        left:0%;
         text-align: right;
     }
     .info-left {
         text-align: left;
-        left:70%;
+        width: 100px;
+        left: 400px;
     }
     #music {
         top:-20%;
@@ -96,8 +96,11 @@
     #gifs {
         top:-20%;
     }
+    #crop {
+        margin-top:30px;
+    }
     #name {
-        top: 15%;
+        top: 12%;
     }
     #tags {
         top: 25%; 
@@ -142,7 +145,7 @@
     .image img {
         position:relative;
         top: -125px;
-        left: 20%;
+        left: 100px;
         width: 300px;
     }
     .challenge-container{

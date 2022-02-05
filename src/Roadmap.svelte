@@ -48,8 +48,8 @@
         <h3 style="color:#ecec37;">Q2 2022</h3>
         <div class="header" style="border-bottom: 5px solid #ecec37">
             <div style="position:relative; display:inline-grid;">
-                <img style="max-height:100px;" alt="Launch plans" src="images/launch_no_ex.png" />
-                <div class="test" style="transform: rotate(-140deg) scale(0.7) translate(70px,0px); z-index: -1;">
+                <img style="max-height:100px; position:relative;" alt="Launch plans" src="images/launch_no_ex.png" />
+                <div class="exhaust">
                     <div class="container">
                         <div class="red flame"></div>
                         <div class="orange flame"></div>
@@ -82,7 +82,7 @@
             </ul>
         </div>
     </div>
-    <div class="info">
+    <div class="social-info">
         <p>{$_('home.roadmap.socials')}</p>
     </div>
 </div>
@@ -91,12 +91,15 @@
 </script>
 <style>
     /* <img alt="Launch plans" src="images/launch_sw.png" />*/
-    .rocket {
-        background-image: url("../images/launch_sw.png");
-        background-size: 45% 45%;
-        background-repeat: no-repeat;
-        background-position-x: center;
-    }
+.exhaust {
+    transform: rotate(-140deg) scale(0.7);
+    -webkit-transform: rotate(-140deg) scale(0.7);
+    z-index: -1; 
+    top: -80px;
+    width:70px;
+    height:70px; 
+    position:relative;
+}
 .container::after {
     content: '';
     background-image: url("../images/launch_sw.png");
@@ -196,14 +199,14 @@
         content: '\2713';
         color: aqua;
     }
-    .info {
+    .social-info {
         position:absolute;
         color: #852ee7 ;
         top:0%;
         left:2%;
         width: 30%;
     }
-    .info p {
+    .social-info p {
         padding: 10px;
         font-weight: 600;
         font-size: 13px;
@@ -276,12 +279,12 @@
         ul {
             font-size: 1rem;
         }
-        .info {
+        .social-info {
             position:relative;
             width:auto;
             margin-top: 30px;
         }
-        .info p {
+        .social-info p {
             font-size:16px !important;
         }
     }

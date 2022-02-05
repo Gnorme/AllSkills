@@ -1,6 +1,6 @@
 <div class="NFT-container">
     <div class="section">
-        <div class="image first">
+        <div class="image first marker-highlight">
             <img src="images/frame.png" />
         </div>
         <div class="content second">
@@ -97,7 +97,7 @@
     let modalDescription = "";
     let descriptions = {
         benefits: {title:"Level Rewards", description: "List of rewards users can earn from leveling up"},
-        minting: {title:"Minting", description: "Description of minting process and NFTs"},
+        minting: {title:"Minting", description: "Minting of challenge videos allows our users to truly own their content. Non-Fungible Tokens (NFTs) and smart-contracts are used to wrap ownership of something in rules governed by programmable logic that allows it to be easily traded to others or brought to other platforms in a way that doesn’t rely on centralized control or servers and means your videos will last beyond AllSkills."},
         leaderboard: {title:"Leaderboards", description: "Description of our various leaderboards"},
         token: {title:"Mint Token", description: "After you purchase a Mint Token, you can apply it to a challenge video you've already won to mint it into an NFT, or you can apply it to your next challenge making your next win a guaranteed mint."},
         blockchains: {title:"Blockchains", description: "We want to give our users the freedom to use the blockchain and NFT marketplaces of their choice. Mint your winning challenge videos directly to either Ethereum, Polygon, NEAR, Tezos, or Flow blockchains."},
@@ -127,7 +127,12 @@
     .card {
         display:block;
     }
-
+    .marker-highlight {
+        background: url('../images/purple-brush4-v2.png');
+        background-position: center;
+        background-repeat:no-repeat;
+        background-size: 80% 80%;
+    }
     #overlay {
         position:fixed;
         z-index: 9;
@@ -156,6 +161,7 @@
         padding-left:20px;
         padding-right:20px;
         line-height:30px;
+        font-family:"Oswald";
     }
     .right h4 {
         margin-top:0;
@@ -173,10 +179,10 @@
         box-shadow: 0px 10px 5px 3px rgb(0,0,0,0.5);  
     }
     .left {
-        transform: translateX(-300px);  
+        transform: translateX(-290px);  
     }
     .right {
-        transform: translateX(300px); 
+        transform: translateX(290px); 
     }
 
     ul {
@@ -197,7 +203,7 @@
         position:relative;
         align-self:center;
         width: 300px;
-        
+        box-shadow: 0px 5px 10px rgba(0,0,0,0.5);
     }
     .blurred {
         filter: blur(20px);
@@ -240,6 +246,9 @@
         .modal {
             width: 100% !important;
         }
+        .marker-highlight {
+            background-size: 100%;
+        }
         .image {
             order:1 !important;
             width:auto;
@@ -251,6 +260,7 @@
         .image img {
             top: 0;
             left: 0;
+            width: 75%;
         }
         .second {
             order: 1;

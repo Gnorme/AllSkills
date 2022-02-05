@@ -79,7 +79,7 @@
         coinObserver.observe(coin);
 
         const cards = document.querySelectorAll('.info')
-        console.log(cards.length)
+        console.log("cards: " + cards.length.toString())
         cards.forEach(card => cardObserver.observe(card));
 
         const importants = document.querySelectorAll('.important')
