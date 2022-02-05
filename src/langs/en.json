@@ -138,11 +138,11 @@
             },
             "plan": {
                 "cleared": ["Setup social community", "Release marketing plan", "Trailer"],
-                "uncleared": ["Announce partners", "Reveal plan for Ambassador program", "Reveal first AllSkills Ambassadors", "Mint $Skills token", "Token presale"]
+                "uncleared": ["Announce partners", "Reveal plan for Ambassador program", "Reveal first AllSkills Ambassadors", "Mint $Skills token"]
             },
             "launch": {
                 "cleared": [],
-                "uncleared": ["Mint stablecoin Vote token", "Launch closed beta", "Full release of challenge system and marketplace", "Start Ambassador program"]
+                "uncleared": ["Token presale", "Mint stablecoin Vote token", "Launch closed beta", "Public sale","Full release of challenge system and marketplace", "Start Ambassador program"]
             },
             "post": {
                 "cleared": [],
