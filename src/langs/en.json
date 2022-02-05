@@ -45,7 +45,7 @@
             "earn":  {
                 "title": "Earn money from voting and winning challenges", 
                 "pStart":"Get rewarded for showing off your skills. The creator of the winning video will receive between 1-25% of all vote tokens cast during the challenge while the rest is rewarded to all those who voted for the winning video. The creators cut changes based on how close the vote is.",
-                "highlighted": "Closer vote count = bigger cut.",
+                "highlighted": " Closer vote count = bigger cut.",
                 "pEnd": "",
                 "tooltips": []}
         },
