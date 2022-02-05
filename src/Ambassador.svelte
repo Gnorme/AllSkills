@@ -21,7 +21,7 @@
 
 <style>
     .full-highlight {
-        background: url(../images/green-brush4.svg);
+        background: url(../images/green-brush4.png);
         background-position: center;
         background-repeat:no-repeat;
         margin: -2px -6px;
