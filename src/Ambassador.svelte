@@ -11,7 +11,6 @@
         <h4 class="ambassador-info slidedown">Top 10 submissions get minted as their own unique NFT and the creators receive a split of the reward pool</h4>-->
 
     </div>
-
 </div>
 
 <script>
@@ -20,8 +19,8 @@
 </script>
 
 <style>
-    .full-highlight {
-        background: url(../images/green-brush4.png);
+    .full-highlight {/*#292ecc, 2368cf, 19ac00 */
+        background: url(https://s2.svgbox.net/pen-brushes.svg?ic=brush-4&color=19ac00);
         background-position: center;
         background-repeat:no-repeat;
         margin: -2px -6px;

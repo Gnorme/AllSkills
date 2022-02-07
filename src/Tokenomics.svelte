@@ -13,9 +13,9 @@
             <path on:mouseover={bringToFront} on:focus={showTooltip} on:mousemove={showTooltip} data-value="Private Sale 15,000,000" on:mouseleave={deselect} id="2" fill="#FF3333" d="M289.62924038982374, 95.19420442908603 A150,150 0 0 1 279.9081736709546,224.99244237572935 L236.60544911396977,199.99496158381956 A100,100 0 0 0 243.0861602598825,113.46280295272402 Z"></path>
             <path on:mouseover={bringToFront} on:focus={showTooltip} on:mousemove={showTooltip} data-value="Public Sale 20,000,000" on:mouseleave={deselect} id="3" fill="#FFDD33" d="M279.9081736709546, 224.99244237572935 A150,150 0 0 1 127.65722030200284,298.32666717541645 L135.10481353466855,248.88444478361097 A100,100 0 0 0 236.60544911396977,199.99496158381956 Z"></path>
             <path on:mouseover={bringToFront} on:focus={showTooltip} on:mousemove={showTooltip} data-value="Liquidity Pool 15,000,000" on:mouseleave={deselect} id="4" fill="#00ddff" d="M127.65722030200284, 298.32666717541645 A150,150 0 0 1 3.7649754408533056,183.39637094334898 L52.50998362723553,172.26424729556598 A100,100 0 0 0 135.10481353466855,248.88444478361097 Z"></path>
-            <path on:mouseover={bringToFront} on:focus={showTooltip} on:mousemove={showTooltip} data-value="Foundation 30,000,000" on:mouseleave={deselect} id="5" fill="#004D0D" d="M3.7649754408533056, 183.39637094334898 A150,150 0 0 1 149.97382006135282,0.000002284630625126738 L149.98254670756856,50.00000152308709 A100,100 0 0 0 52.50998362723553,172.26424729556598 Z"></path>
+            <path on:mouseover={bringToFront} on:focus={showTooltip} on:mousemove={showTooltip} data-value="Foundation 30,000,000" on:mouseleave={deselect} id="5" fill="{color}" d="M3.7649754408533056, 183.39637094334898 A150,150 0 0 1 149.97382006135282,0.000002284630625126738 L149.98254670756856,50.00000152308709 A100,100 0 0 0 52.50998362723553,172.26424729556598 Z"></path>
         </svg>
-        <!--<p style="display:inline; font-weight: 200; font-family: 'Montserrat'; width: 30%; position:relative; top:50%; z-index:4; font-size: 1.5em; margin-left: auto; margin-right:auto">100,000,000 Tokens</p>-->
+        <!--#004D0D<p style="display:inline; font-weight: 200; font-family: 'Montserrat'; width: 30%; position:relative; top:50%; z-index:4; font-size: 1.5em; margin-left: auto; margin-right:auto">100,000,000 Tokens</p>-->
         <!--<svg xmlns="http://www.w3.org/2000/svg" id="sv" viewBox="-50 -50 400 400">
             <path on:mouseover={bringToFront} on:mousemove={showTooltip} data-value="Team 10,000,000" on:mouseleave={deselect} class="section" id="0" fill="#003f5c" d="M150, 0 A150,150 0 0 1 238.1656698289039,28.64591204404894 L214.6548245411962,61.007002165635896 A110,110 0 0 0 150,40 Z"></path>
             <path on:mouseover={bringToFront} on:mousemove={showTooltip} data-value="Advisors 5,000,000" on:mouseleave={deselect} class="section" id="1" fill="#374c80" d="M238.1656698289039, 28.64591204404894 A150,150 0 0 1 271.3502408873674,61.82903518403633 L238.9901766507361,85.3412924682933 A110,110 0 0 0 214.6548245411962,61.007002165635896 Z"></path>
@@ -36,6 +36,7 @@
             <li class:box={selected === 5} class="foundation"><span>Foundation 30%</span></li>
         </ul>
     </div>
+    <input type="color" bind:value={color} style="height: 50px;">
     <div id="notice">The presale is scheduled to take place a week before the launch of our beta. Beta access will be granted to users with $Skills tokens in their wallet. The public sale of the $Skills token is scheduled for 1 month after the release of our beta.</div>
 </div>
 
@@ -174,6 +175,7 @@
 
 <script>
 import { onMount } from "svelte";
+let color = '#ff3e00';
     function sleep(ms) {
     return new Promise(resolve => setTimeout(resolve, ms));
     }

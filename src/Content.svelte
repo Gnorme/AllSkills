@@ -111,11 +111,11 @@ import { onMount } from 'svelte';
         <NFT/>
     </section>
     <svg class="bMargin" viewBox="-1.79 0 501.79 94.114" xmlns="http://www.w3.org/2000/svg">
-        <polygon style="fill: #004D0D;" points="500.159 16.553 432.482 24.328 392.825 93.844 409.667 93.703 443.069 37.609 499.889 30.393"/>
-        <polygon style="fill: #004D0D;" points="352.106 94.674 335.059 94.797 363.621 47.452 -1.746 94.183 -1.798 80.123 390.963 29.985"/>
+        <polygon style="fill: #19ac00;" points="500.159 16.553 432.482 24.328 392.825 93.844 409.667 93.703 443.069 37.609 499.889 30.393"/>
+        <polygon style="fill: #19ac00;" points="352.106 94.674 335.059 94.797 363.621 47.452 -1.746 94.183 -1.798 80.123 390.963 29.985"/>
       </svg>
     <section id="Ambassadors" class="section bMargin">
-        <h2 style="text-decoration: underline #004D0D; -webkit-text-decoration-line: underline; -webkit-text-decoration-color: #004D0D;">Ambassador Program</h2>
+        <h2 style="text-decoration: underline #19ac00; -webkit-text-decoration-line: underline; -webkit-text-decoration-color: #19ac00;">Ambassador Program</h2>
         <Ambassador/>
     </section>
     <svg viewBox="-0.35 0 500.35 78.328" xmlns="http://www.w3.org/2000/svg">

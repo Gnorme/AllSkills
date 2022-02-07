@@ -55,7 +55,7 @@
         </div>
         <div class="content first">
             <h3 class="title" style="background-image: linear-gradient(gold,gold);">{$_('home.challenges.earn.title')}</h3>
-            <p>{$_('home.challenges.earn.pStart')}<span style="color: gold;"> {$_('home.challenges.earn.highlighted')}</span></p>
+            <p>{$_('home.challenges.earn.pStart')}<span style="color: gold;">{$_('home.challenges.earn.highlighted')}</span></p>
         </div>
     </div>
 
