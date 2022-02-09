@@ -161,6 +161,7 @@
         #hero {
             display:block;
             height: auto;
+            min-height:100vh;
         }
         .description {
             display: table-cell;
