@@ -60,7 +60,7 @@
             let cardsShowing = 0;
             entries.forEach(entry => {
                 if (entry.isIntersecting) {
-                    entry.target.classList.add ('growshrink')
+                    entry.target.classList.add('growshrink')
                     var styleElem = document.head.appendChild(document.createElement("style"));
                     styleElem.innerHTML = ".cleared::after {animation: appear 4s forwards ease}";
                     cardsShowing += 1;

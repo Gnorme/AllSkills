@@ -171,7 +171,7 @@ span {
     top: 0;
   }
   50% {
-    top: -40px;
+    top: -15px;
   }
   100% {
     top: 0;
@@ -238,7 +238,7 @@ span {
 .coin .front .currency:after, .coin .back .currency:after {
   content: "";
   position: absolute;
-  height: 200px;
+  height: 210px;
   width: 40px;
   margin: 20px -65px;
   box-shadow: 50px -23px 0 -10px rgba(255, 255, 255, 0.22), 85px -10px 0 -16px rgba(255, 255, 255, 0.19);
@@ -250,7 +250,7 @@ span {
     margin: 20px -65px;
   }
   50% {
-    margin: 70px -85px;
+    margin: 45px -75px;
   }
   100% {
     margin: 20px -65px;

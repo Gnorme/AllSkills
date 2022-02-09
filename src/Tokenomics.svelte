@@ -175,7 +175,7 @@
 
 <script>
 import { onMount } from "svelte";
-let color = '#ff3e00';
+let color = '#19ac00';
     function sleep(ms) {
     return new Promise(resolve => setTimeout(resolve, ms));
     }

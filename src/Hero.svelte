@@ -69,6 +69,7 @@
         </div>
     </div>
     <span class="countdown">Big news coming soon...<a href="https://twitter.com/@AllSkillsNFT">@AllSkillsNFT</a></span>
+    
 </div>
 <style>
      @import url('https://fonts.googleapis.com/css2?family=Roboto&display=swap');
@@ -87,7 +88,10 @@
     position:absolute;
     top:2%;
     left:10%;
-    filter:blur(10px) brightness(60%);
+    width: 600px;
+    height: 600px;
+    background-repeat: no-repeat;
+    background-image: url('../images/logo-border-2.png');
 }
 .countdown {
     position:absolute;
@@ -142,6 +146,10 @@
     align-items: center;
 }
 @media screen and (max-width: 820px) {
+    #hero::before { 
+        background-image: url('../images/mobile_hero_logo.png') !important;
+        height: 100% !important;
+    }
         .countdown {
             display:table;
             margin-left:auto;
@@ -241,13 +249,13 @@ ul li {
     top: 0;
     left: 0;
     width: 100%;
-    height: 100%;
-    background-size: 150% !important;
-    background-image: url('../images/logo_bg.webp');
+    height: auto;
+    background-size: 100% 100%;
+    background-image: url('../images/black_bg_logo.png');
+    min-height: -webkit-fill-available;
     background-repeat: no-repeat;
-    background-size: cover;
     background-position: center center;
-    filter: brightness(60%) blur(12px);
+    filter: brightness(90%);
 }
 
 </style>

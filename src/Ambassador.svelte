@@ -20,7 +20,7 @@
 
 <style>
     .full-highlight {/*#292ecc, 2368cf, 19ac00 */
-        background: url(https://s2.svgbox.net/pen-brushes.svg?ic=brush-4&color=19ac00);
+        background: url(https://s2.svgbox.net/pen-brushes.svg?ic=brush-4&color=ff0000);
         background-position: center;
         background-repeat:no-repeat;
         margin: -2px -6px;
@@ -77,7 +77,7 @@
             margin-top: 0px;
         }
         .ambassador-info {
-            background: url(../images/green-brush4.png);
+            background: url(https://s2.svgbox.net/pen-brushes.svg?ic=brush-4&color=ff0000);
             background-size: 100% 80%;
             background-position: center;
             background-repeat:no-repeat;
