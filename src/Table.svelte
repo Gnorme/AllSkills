@@ -43,9 +43,7 @@
             border: 2px solid aqua !important;
         }
         .table-icon {
-            padding-right:1.25rem !important;
-            height:100px !important;
-            min-width: 50px !important;
+            width:50% !important;
         }
     }
     h3 {
