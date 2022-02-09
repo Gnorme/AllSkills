@@ -159,9 +159,12 @@
             left:0;
         }
         #hero {
-            display:block;
+            display: flex;
+            flex-direction: column;
             height: auto;
-            min-height:100vh;
+            align-items: center;
+            justify-content: center;
+            min-height: 100vh;
         }
         .description {
             display: table-cell;
