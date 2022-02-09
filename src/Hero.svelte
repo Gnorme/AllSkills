@@ -48,6 +48,7 @@
 
 </script>
 <div id="hero">
+   <img id="hero-logo" src="images/logo-border-2.png">
    <div class="left-content">
         <div class="content">{$_('home.hero.title')}</div>
         <div class='scrolling-content'>
@@ -73,6 +74,14 @@
 </div>
 <style>
      @import url('https://fonts.googleapis.com/css2?family=Roboto&display=swap');
+     #hero-logo {
+        position: absolute;
+        left: 50%;
+        transform: translateX(-50%);
+        height: 50%;
+        max-width: 100%;
+        mix-blend-mode: soft-light;
+     }
      .scrolling-content{
     margin-left: 10px;
         font-size: 64px;
@@ -147,8 +156,11 @@
 }
 @media screen and (max-width: 820px) {
     #hero::before { 
-        background-image: url('../images/mobile_hero_logo.png') !important;
+        background-image: url('../images/mobile_hero.png') !important;
         height: 100% !important;
+    }
+    #hero-logo {
+        height:auto !important;
     }
         .countdown {
             display:table;
@@ -255,7 +267,7 @@ ul li {
     width: 100%;
     height: auto;
     background-size: 100% 100%;
-    background-image: url('../images/black_bg_logo.png');
+    background-image: url('../images/tags_hero_bg.png');
     min-height: -webkit-fill-available;
     background-repeat: no-repeat;
     background-position: center center;
