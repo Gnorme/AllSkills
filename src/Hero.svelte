@@ -157,7 +157,6 @@
 @media screen and (max-width: 820px) {
     #hero::before { 
         background-image: url('../images/mobile_hero.png') !important;
-        height: 100% !important;
     }
     #hero-logo {
         height:auto !important;
@@ -265,7 +264,7 @@ ul li {
     top: 0;
     left: 0;
     width: 100%;
-    height: auto;
+    height: 100%;
     background-size: 100% 100%;
     background-image: url('../images/tags_hero_bg.png');
     min-height: -webkit-fill-available;
