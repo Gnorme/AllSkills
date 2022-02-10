@@ -163,9 +163,9 @@ import { onMount } from 'svelte';
     position:absolute;
     width: 50px;
     height:50px;
-    top: -12%;
+    bottom: 8%;
     z-index:9999;
-    left: calc(50% - 25px);
+    left: calc(50% - 150px);
     background-image: url("../images/volume-mute.png");
 }
 .marker-highlight {
@@ -184,9 +184,9 @@ import { onMount } from 'svelte';
     position:absolute;
     top:50%;
     left: 50%;
-    width:460px;
-    height:750px;
-    margin-left:-230px;
+    width:400px;
+    height:700px;
+    margin-left:-200px;
     z-index:1000;
     pointer-events: none;
 }

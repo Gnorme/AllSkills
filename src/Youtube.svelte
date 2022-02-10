@@ -38,8 +38,8 @@
     const dispatch = createEventDispatcher();
     window.addEventListener("iframeApiReady", function(e) {
       player = new YT.Player(divId, {
-        height: "710",
-        width: "400",
+        height: "645",
+        width: "345",
         videoId,
         playerVars: { 'autoplay': 1, 'controls': 0, 'enablejsapi': 1, 'modestbranding': 1, 'rel': 0 , 'playsinline':1},
         events: {
@@ -76,4 +76,4 @@
     }
   </script>
   
-  <div style="border-radius:40px; padding-top:15px;" id={divId} />
+  <div style="border-radius:40px; padding-top:19px; padding-left: 5px;" id={divId} />

@@ -13,7 +13,7 @@
             <path on:mouseover={bringToFront} on:focus={showTooltip} on:mousemove={showTooltip} data-value="Private Sale 15,000,000" on:mouseleave={deselect} id="2" fill="#FF3333" d="M289.62924038982374, 95.19420442908603 A150,150 0 0 1 279.9081736709546,224.99244237572935 L236.60544911396977,199.99496158381956 A100,100 0 0 0 243.0861602598825,113.46280295272402 Z"></path>
             <path on:mouseover={bringToFront} on:focus={showTooltip} on:mousemove={showTooltip} data-value="Public Sale 20,000,000" on:mouseleave={deselect} id="3" fill="#FFDD33" d="M279.9081736709546, 224.99244237572935 A150,150 0 0 1 127.65722030200284,298.32666717541645 L135.10481353466855,248.88444478361097 A100,100 0 0 0 236.60544911396977,199.99496158381956 Z"></path>
             <path on:mouseover={bringToFront} on:focus={showTooltip} on:mousemove={showTooltip} data-value="Liquidity Pool 15,000,000" on:mouseleave={deselect} id="4" fill="#00ddff" d="M127.65722030200284, 298.32666717541645 A150,150 0 0 1 3.7649754408533056,183.39637094334898 L52.50998362723553,172.26424729556598 A100,100 0 0 0 135.10481353466855,248.88444478361097 Z"></path>
-            <path on:mouseover={bringToFront} on:focus={showTooltip} on:mousemove={showTooltip} data-value="Foundation 30,000,000" on:mouseleave={deselect} id="5" fill="{color}" d="M3.7649754408533056, 183.39637094334898 A150,150 0 0 1 149.97382006135282,0.000002284630625126738 L149.98254670756856,50.00000152308709 A100,100 0 0 0 52.50998362723553,172.26424729556598 Z"></path>
+            <path on:mouseover={bringToFront} on:focus={showTooltip} on:mousemove={showTooltip} data-value="Foundation 30,000,000" on:mouseleave={deselect} id="5" fill="#78FF78" d="M3.7649754408533056, 183.39637094334898 A150,150 0 0 1 149.97382006135282,0.000002284630625126738 L149.98254670756856,50.00000152308709 A100,100 0 0 0 52.50998362723553,172.26424729556598 Z"></path>
         </svg>
         <!--#004D0D<p style="display:inline; font-weight: 200; font-family: 'Montserrat'; width: 30%; position:relative; top:50%; z-index:4; font-size: 1.5em; margin-left: auto; margin-right:auto">100,000,000 Tokens</p>-->
         <!--<svg xmlns="http://www.w3.org/2000/svg" id="sv" viewBox="-50 -50 400 400">
@@ -135,7 +135,7 @@
         color:#4dFFFF;
     }
     .foundation:before {
-        color:#004D0D;
+        color:#78FF78;
     }
     li {
         list-style-type:none;
@@ -175,7 +175,7 @@
 
 <script>
 import { onMount } from "svelte";
-let color = '#19ac00';
+let color = '#78FF78';
     function sleep(ms) {
     return new Promise(resolve => setTimeout(resolve, ms));
     }
