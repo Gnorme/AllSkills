@@ -1,7 +1,14 @@
 <div class="cards-container">
   {#each staff as {name, position, descr, email, twitter, img, bg}, i}
     <figure class="card">
-        <img class="background" src={bg} alt="sample87" />
+        <!--<img class="background" src={bg} alt="sample87" />-->
+        <div style="height:200px;">
+          <svg viewBox="-0.35 0 500.35 78.328" xmlns="http://www.w3.org/2000/svg">
+            <polygon style="fill: {bg};" points="70.086 0.382 53.904 51.969 -0.944 61.327 -1.27 75.069 63.124 65.518 83.649 -0.101"/>
+            <polygon style="fill: {bg};" points="120.568 -0.003 99.057 64.191 500.785 2.143 499.522 0.721 117.904 49.127 134.741 0.134"/>
+          </svg>  
+        </div>
+      
         <figcaption class="slanted-bg" class:bgselected={selected === i} >
           <img src={img} alt="profile-sample4" class="profile" class:selected={selected === i}/>
           <h2>{name}<span>{position}</span></h2>
@@ -20,12 +27,16 @@
                 
             </div>
             {#if selected === i}
-            <a class="more-info" on:click={toggleMoreInfo} data-card-id={i}>Less Info</a>
+            <a class="more-info" style="border-color: {bg}" on:click={toggleMoreInfo} data-card-id={i}>Less Info</a>
             {:else}
-            <a class="more-info" on:click={toggleMoreInfo} data-card-id={i}>More Info</a>
+            <a class="more-info" style="border-color: {bg}" on:click={toggleMoreInfo} data-card-id={i}>More Info</a>
             {/if}
         </div>
         </figcaption>
+        <svg viewBox="-1.79 0 501.79 94.114" xmlns="http://www.w3.org/2000/svg">
+          <polygon style="fill: {bg};" points="500.159 16.553 432.482 24.328 392.825 93.844 409.667 93.703 443.069 37.609 499.889 30.393"/>
+          <polygon style="fill: {bg}" points="352.106 94.674 335.059 94.797 363.621 47.452 -1.746 94.183 -1.798 80.123 390.963 29.985"/>
+        </svg>
       </figure>
       {/each}
 </div>
@@ -40,7 +51,7 @@
 		email: "ngoren@allskills.ca",
     twitter:"https://twitter.com/@NoGoren",
 		img: "images/Noah_s.webp",	
-    bg: "images/summer_bg_s.webp"
+    bg: "aqua"
 	},
   {
 	  id: 0,
@@ -50,7 +61,7 @@
 		email: "fsammut@allskills.ca",
     twitter:"https://twitter.com/@Sammut_frank",
 		img: "images/Frank_s.webp",	
-    bg: "images/fall_bg_s.webp"	
+    bg: "#FF3333"	
 	},
   {
 	  id: 0,
@@ -60,7 +71,7 @@
 		email: "cthompson@allskills.ca",
     twitter:"",
 		img: "images/Christopher_s.webp",	
-    bg: "images/winter_bg_s.webp"	
+    bg: "blueviolet"	
 	},
   {
 	  id: 0,
@@ -70,7 +81,7 @@
 		email: "chamelin@allskills.ca",
     twitter:"https://twitter.com/@Speedskater01",
 		img: "images/Charles_s.webp",	
-    bg: "images/rings_s.webp"	
+    bg: "gold"	
 	},
   ]
   let selected
@@ -176,6 +187,7 @@
 }
 .card figcaption {
   padding: 25px;
+  padding-bottom: 0px;
   position: relative;
   transition: all 0.25s ease !important;
 }

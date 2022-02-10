@@ -36,7 +36,6 @@
             <li class:box={selected === 5} class="foundation"><span>Foundation 30%</span></li>
         </ul>
     </div>
-    <input type="color" bind:value={color} style="height: 50px;">
     <div id="notice">The presale is scheduled to take place a week before the launch of our beta. Beta access will be granted to users with $Skills tokens in their wallet. The public sale of the $Skills token is scheduled for 1 month after the release of our beta.</div>
 </div>
 
