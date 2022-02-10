@@ -31,7 +31,7 @@
             </div>
         </div>
     </div>
-    <div id="overlay"></div>
+    <div on:click={closeNav} id="overlay"></div>
     
 </nav>
 
