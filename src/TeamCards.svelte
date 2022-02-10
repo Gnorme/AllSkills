@@ -10,7 +10,7 @@
         </div>
       
         <figcaption class="slanted-bg" class:bgselected={selected === i} >
-          <img src={img} alt="profile-sample4" class="profile" class:selected={selected === i}/>
+          <img src={img} alt="profile-sample4" style="border: 3px solid {bg}" class="profile" class:selected={selected === i}/>
           <h2>{name}<span>{position}</span></h2>
           <p class:hidden={selected != i}>{descr}</p>
           <div style="max-width:100%; display:flex; justify-content:space-around; max-height:60px; ">
