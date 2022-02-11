@@ -76,4 +76,4 @@
     }
   </script>
   
-  <div style="border-radius:40px; padding-top:19px; padding-left: 5px;" id={divId} />
+  <div loading="lazy" style="border-radius:40px; padding-top:19px; padding-left: 5px;" id={divId} />
