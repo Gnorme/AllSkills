@@ -72,6 +72,23 @@
             }
 
         })
+        const videoObserver = new IntersectionObserver(entries => {
+            entries.forEach(entry => {
+                if (entry.isIntersecting) {
+                    var tag = document.createElement("script");
+                    tag.src = "https://www.youtube.com/iframe_api";
+                    var firstScriptTag = document.getElementsByTagName("script")[0];
+                    firstScriptTag.parentNode.insertBefore(tag, firstScriptTag);
+                
+                    window.onYouTubeIframeAPIReady = () =>
+                    window.dispatchEvent(new Event("iframeApiReady"));
+                    videoObserver.disconnect()
+                }
+            })
+        })
+        const video = document.getElementById("placeholder")
+        videoObserver.observe(video)
+
         const checks = document.querySelectorAll(".header");
         checks.forEach(check => checksObserver.observe(check))
 

@@ -3,6 +3,19 @@
   <script>
     import { createEventDispatcher, onMount } from "svelte";
     onMount(() => {
+        /*document.getElementById("placeholder").addEventListener("click", function(){
+            this.style.display = 'none';
+            loadYT()
+        });
+        var tag = document.createElement("script");
+        tag.src = "https://www.youtube.com/iframe_api";
+        var firstScriptTag = document.getElementsByTagName("script")[0];
+        firstScriptTag.parentNode.insertBefore(tag, firstScriptTag);
+    
+        window.onYouTubeIframeAPIReady = () =>
+        window.dispatchEvent(new Event("iframeApiReady"));*/
+    })
+    function loadYT() {
         var tag = document.createElement("script");
         tag.src = "https://www.youtube.com/iframe_api";
         var firstScriptTag = document.getElementsByTagName("script")[0];
@@ -10,7 +23,7 @@
     
         window.onYouTubeIframeAPIReady = () =>
         window.dispatchEvent(new Event("iframeApiReady"));
-    })
+    }
     export let videoId;
     let player;
     let divId = "player-1";
@@ -73,7 +86,13 @@
         console.log("playing because ready")
         event.target.mute();
         event.target.playVideo();
+        document.getElementById("placeholder").style.display = "none";
+        //entry.target.style.display = 'none';
     }
+
   </script>
   
-  <div loading="lazy" style="border-radius:40px; padding-top:19px; padding-left: 5px;" id={divId} />
+  <div style="width:380px; height:690px; background-color:black; border-radius: 50px; position:absolute;" id="placeholder">
+    
+</div>
+  <div style="border-radius:40px; padding-top:19px; padding-left: 5px;" id={divId} />
