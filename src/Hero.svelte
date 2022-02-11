@@ -228,8 +228,8 @@ ul {
   position:relative;
   text-align:left;
   list-style:none;
-  animation: change 5s cubic-bezier(0.5, 0.2, 0.5, 1.0) 0.5s 1 normal forwards;
-  -webkit-animation: change 5s cubic-bezier(0.5, 0.2, 0.5, 1.0) 0.5s 1 normal forwards;
+  animation: change 3.5s cubic-bezier(0.5, 0.2, 0.5, 1.0) 0.5s 1 normal forwards;
+  -webkit-animation: change 3.5s cubic-bezier(0.8, 0.3, 0.3, 1.0) 0.5s 1 normal forwards;
 }
 
 ul li {
