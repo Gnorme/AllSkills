@@ -188,6 +188,32 @@ span {
   width: 150px;
 }
 
+.coin .front, .coin .back {
+  position: absolute;
+  height: 150px;
+  width: 150px;
+  background: #ffbd0b;
+  border-radius: 50%;
+  border-top: 7px solid #ffd84c;
+  border-left: 7px solid #ffd84c;
+  border-right: 7px solid #d57e08;
+  border-bottom: 7px solid #d57e08;
+  transform: rotate(44deg);
+}
+.coin .front:before, .coin .back:before {
+  content: "";
+  margin: 35.5px 35.5px;
+  position: absolute;
+  width: 70px;
+  height: 70px;
+  background: #f0a608;
+  border-radius: 50%;
+  border-bottom: 5px solid #ffd84c;
+  border-right: 5px solid #ffd84c;
+  border-left: 5px solid #d57e08;
+  border-top: 5px solid #d57e08;
+  z-index: 2;
+}
 .coin .front .currency, .coin .back .currency {
   overflow: hidden;
   position: absolute;
