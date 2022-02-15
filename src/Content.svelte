@@ -4,7 +4,7 @@
     import Challenge from './Challenge.svelte';
     import VoteToken from './VoteToken.svelte';
     import Roadmap from './Roadmap.svelte';
-    import Carousel from './Carousel.svelte';
+    import Partners from './Partners.svelte';
     import Table from './Table.svelte';
     import News from './News.svelte';
     import NFT from './NFT.svelte';
@@ -87,19 +87,19 @@ import { onMount } from 'svelte';
         <h3><span style="color:aqua;">{$_('home.highlighted.company')}</span> {$_('home.highlighted.start')} <span class="important">{$_('home.highlighted.highlight1')}</span>{$_('home.highlighted.middle')} <span class="important">{$_('home.highlighted.highlight2')}</span></h3>
     </div>
     <svg viewBox="-0.35 0 500.35 78.328" xmlns="http://www.w3.org/2000/svg">
-        <polygon style="fill: rgb(255, 0, 0);" points="70.086 0.382 53.904 51.969 -0.944 61.327 -1.27 75.069 63.124 65.518 83.649 -0.101"/>
-        <polygon style="fill: rgb(255, 0, 0);" points="120.568 -0.003 99.057 64.191 500.785 2.143 499.522 0.721 117.904 49.127 134.741 0.134"/>
+        <polygon style="fill: aqua;" points="70.086 0.382 53.904 51.969 -0.944 61.327 -1.27 75.069 63.124 65.518 83.649 -0.101"/>
+        <polygon style="fill: aqua;" points="120.568 -0.003 99.057 64.191 500.785 2.143 499.522 0.721 117.904 49.127 134.741 0.134"/>
       </svg>
     <section id="Challenge" class="section">
-        <h2 style="text-decoration: underline red; -webkit-text-decoration-line: underline; -webkit-text-decoration-color: red;">Challenge System</h2>
+        <h2 style="text-decoration: underline aqua; -webkit-text-decoration-line: underline; -webkit-text-decoration-color: aqua;">Challenge System</h2>
         <Challenge/>
     </section>
     <svg class="bMargin" viewBox="-1.79 0 501.79 94.114" xmlns="http://www.w3.org/2000/svg">
-        <polygon style="fill: rgb(0, 255, 255);" points="500.159 16.553 432.482 24.328 392.825 93.844 409.667 93.703 443.069 37.609 499.889 30.393"/>
-        <polygon style="fill: rgb(0, 255, 255);" points="352.106 94.674 335.059 94.797 363.621 47.452 -1.746 94.183 -1.798 80.123 390.963 29.985"/>
+        <polygon style="fill: gold;" points="500.159 16.553 432.482 24.328 392.825 93.844 409.667 93.703 443.069 37.609 499.889 30.393"/>
+        <polygon style="fill: gold;" points="352.106 94.674 335.059 94.797 363.621 47.452 -1.746 94.183 -1.798 80.123 390.963 29.985"/>
       </svg>
     <section id="Vote" class="section">
-        <h2 style="text-align: center; text-decoration: underline aqua; -webkit-text-decoration-line: underline; -webkit-text-decoration-color: aqua;"><span style="font-family: 'Bebas Neue';">AllSkills</span> $Vote Token</h2>
+        <h2 style="text-align: center; text-decoration: underline gold; -webkit-text-decoration-line: underline; -webkit-text-decoration-color: gold;"><span style="font-family: 'Bebas Neue';">AllSkills</span> $Vote Token</h2>
         <VoteToken/>
     </section>
     <svg viewBox="-0.35 0 500.35 78.328" xmlns="http://www.w3.org/2000/svg">
@@ -127,11 +127,11 @@ import { onMount } from 'svelte';
         <Roadmap/>
     </section>
     <svg class="bMargin" viewBox="-1.79 0 501.79 94.114" xmlns="http://www.w3.org/2000/svg">
-        <polygon style="fill: gold;" points="500.159 16.553 432.482 24.328 392.825 93.844 409.667 93.703 443.069 37.609 499.889 30.393"/>
-        <polygon style="fill: gold;" points="352.106 94.674 335.059 94.797 363.621 47.452 -1.746 94.183 -1.798 80.123 390.963 29.985"/>
+        <polygon style="fill: #78FF78;" points="500.159 16.553 432.482 24.328 392.825 93.844 409.667 93.703 443.069 37.609 499.889 30.393"/>
+        <polygon style="fill: #78FF78;" points="352.106 94.674 335.059 94.797 363.621 47.452 -1.746 94.183 -1.798 80.123 390.963 29.985"/>
       </svg>
     <section id="Tokenomics" class="section">
-        <h2 style="text-align: center; text-decoration: underline gold; -webkit-text-decoration-line: underline; -webkit-text-decoration-color: gold;">Tokenomics</h2>
+        <h2 style="text-align: center; text-decoration: underline #78FF78; -webkit-text-decoration-line: underline; -webkit-text-decoration-color: #78FF78;">Tokenomics</h2>
         <div>
             <Tokenomics/>
         </div>
@@ -149,7 +149,8 @@ import { onMount } from 'svelte';
     </div>
     <section id="Partners" class="white" style="width: 100%;">
         <h2 style="margin-left:7%; text-shadow:none;">Partners</h2>  
-        <p style="margin-left:7%; font-size: 1.5rem;">Announcements coming soon</p>
+        <Partners />
+        <!--<p style="margin-left:7%; font-size: 1.5rem;">Announcements coming soon</p>-->
     </section>
     <section id="News" class="white" style="width: 100%; ">
         <h2 style="margin-left:7%; text-shadow:none;">News</h2>

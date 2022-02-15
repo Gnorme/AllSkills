@@ -65,9 +65,9 @@
 </script>
 <style>
     .section:hover h3 {
-        text-decoration: underline aqua;
+        text-decoration: underline gold;
         -webkit-text-decoration-line: underline;
-        -webkit-text-decoration-color: aqua;
+        -webkit-text-decoration-color: gold;
     }
     #token {
         grid-area: token;
@@ -77,6 +77,7 @@
         font-family: 'Asphaltic'; 
         font-family: 'Oswald';
         grid-area: value;
+        color: aqua;
     }
     .highlight {
         color: aqua;

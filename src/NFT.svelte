@@ -37,7 +37,7 @@
         </div>
     </div>
     <div class="section">
-        <div class="image second">
+        <div class="image second marker-highlight">
             <h1 style="position: absolute; top: 40%; z-index:2; font-size: 2rem; font-family: 'Oswald'">Coming soon</h1>
             <img class="blurred" src="images/frame.png" />
         </div>

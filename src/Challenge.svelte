@@ -52,9 +52,9 @@
     <div class="section">
         <div class="image second">
             <div id="winModal" style="display:none;">
-                <div id="prizes">
+                <!--<div id="prizes">
                 </div>
-                <!--<h4>CONGRATS on your Challenge win!</h4>
+                <h4>CONGRATS on your Challenge win!</h4>
                 <p>Total votes cast: 1148</p>
                 <p>Votes you received: 746 (65%)</p>
                 <p>Calculated cut: 15.6%</p>
@@ -162,7 +162,9 @@
     #winModal {
         position:absolute;
         background-color: rgba(0,0,0,0.5) !important;
-        background: url('../images/win_bg-2.png');
+        background-position-y: center !important;
+        background-size: contain !important;
+        background: url('../images/win_screen.png');
         background-repeat: no-repeat;
         border-radius:20px;
         width: 250px;

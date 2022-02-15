@@ -44,7 +44,7 @@
 
 <style>
     .highlight {
-        color: aqua;
+        color: #78FF78;
     }
     #notice {
         position:absolute;
