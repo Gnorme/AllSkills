@@ -1,7 +1,7 @@
 
 <div class="challenge-container">
     
-    <div class="section">
+    <div class="info-section">
         <div class="image first">
             <img alt="Edit videos" class="phone" src="images/challenge_edit.webp" />
             <div class="tooltips" style="color:rgb(200,255,255)">
@@ -19,7 +19,7 @@
             </div>
         </div>
     </div>
-    <div class="section">
+    <div class="info-section">
         <div class="image second">
             <img alt="Upload videos" class="phone" src="images/challenge_upload.webp" />
             <div class="tooltips" style="color:rgb(255,150,150)">
@@ -37,7 +37,7 @@
             <p>{$_('home.challenges.challenges.pStart')}  <span style="color:red;">{$_('home.challenges.challenges.highlighted')}</span> {$_('home.challenges.challenges.pEnd')}</p>
         </div>
     </div>
-    <div class="section">
+    <div class="info-section">
         <div class="image first">
             <img alt="Users vote for winner" class="phone" src="images/challenge_current.webp" />
             <div class="tooltips" style="color:rgb(225,175,255)">
@@ -49,7 +49,7 @@
             <p>{$_('home.challenges.votes.pStart')} <span style="color:blueviolet;">{$_('home.challenges.votes.highlighted')}</span> {$_('home.challenges.votes.pEnd')}</p>
         </div>
     </div>
-    <div class="section">
+    <div class="info-section">
         <div class="image second">
             <div id="winModal" style="display:none;">
                 <!--<div id="prizes">
@@ -252,14 +252,14 @@
         width:100%;
         flex-direction: column;
     }
-    .section{
+    .info-section{
         display:flex;
         gap:50px;
-        margin-top: 80px;
+        margin-top: 250px;
         height: 500px;
     }
     @media screen and (max-width: 820px) {
-        .section {
+        .info-section {
             width: 100%;
             flex-direction: column;
             margin:0;

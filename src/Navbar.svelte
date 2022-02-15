@@ -1,6 +1,6 @@
 <nav class="navbar">
     <img alt="Logo" class="logo" src="images/logo.png"/>
-    <button class="hamburger" on:click={openNav}>
+    <button class="hamburger" aria-label="Navigation button" on:click={openNav}>
         <svg width="48px" height="48px" viewBox="0 0 48 48" fill="none" xmlns="http://www.w3.org/2000/svg">
             <rect width="48" height="48" fill="white" fill-opacity="0"/>
             <path d="M7.94977 11.9498H39.9498" stroke="white" stroke-width="4" stroke-linecap="round" stroke-linejoin="round"/>
