@@ -267,6 +267,10 @@ import { onMount } from 'svelte';
         font-family: "Oswald";
     }
     @media screen and (max-width: 820px) {
+        .powered-by{
+            margin-top:20rem !important;
+            margin-bottom:20rem !important;
+        }
         .img-frame img {
             display:none;
         }
