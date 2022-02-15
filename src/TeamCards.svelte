@@ -241,9 +241,7 @@ a:hover {
     flex-wrap: wrap;
     align-items:flex-start;
     justify-content: space-between;
-    padding-bottom:100px;
     margin-top:100px;
-
 }
 
 .more-info {

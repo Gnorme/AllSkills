@@ -1,5 +1,5 @@
 <div class="NFT-container">
-    <div class="section">
+    <div class="nft-section" style="margin-bottom:150px;">
         <div class="image first marker-highlight">
             <img alt="NFT card" src="images/frame.png" />
         </div>
@@ -36,7 +36,7 @@
             </ul>
         </div>
     </div>
-    <div class="section">
+    <div class="nft-section">
         <div class="image second marker-highlight">
             <h1 style="position: absolute; top: 40%; z-index:2; font-size: 2rem; font-family: 'Oswald'">Coming soon</h1>
             <img class="blurred" src="images/frame.png" />
@@ -214,7 +214,7 @@
         margin-bottom:200px;
         flex-direction: column;
     }
-    .section{
+    .nft-section{
         display:flex;
         gap:50px;
         margin-top: 80px;
@@ -236,7 +236,7 @@
         cursor: pointer;
     }
     @media screen and (max-width: 820px) {
-        .section {
+        .nft-section {
             width: 100%;
             flex-direction: column;
             margin:0;
@@ -247,7 +247,7 @@
             width: 100% !important;
         }
         .marker-highlight {
-            background-size: 100%;
+            background-size: 100% 100%;
         }
         .image {
             order:1 !important;
@@ -264,9 +264,6 @@
         }
         .second {
             order: 1;
-        }
-        .second img {
-            margin-top: 75px;
         }
         .first{
             order:1;

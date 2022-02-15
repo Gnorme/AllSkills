@@ -22,6 +22,7 @@
         padding: 15px;
         border: 2px solid blueviolet;
         border-radius: 20px;
+        cursor: pointer;
     }
     #partner-form {
         display:none;

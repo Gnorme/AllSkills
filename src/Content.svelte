@@ -86,7 +86,7 @@ import { onMount } from 'svelte';
     <div class="powered-by">
         <h3><span style="color:aqua;">{$_('home.highlighted.company')}</span> {$_('home.highlighted.start')} <span class="important">{$_('home.highlighted.highlight1')}</span>{$_('home.highlighted.middle')} <span class="important">{$_('home.highlighted.highlight2')}</span></h3>
     </div>
-    <svg viewBox="-0.35 0 500.35 78.328" xmlns="http://www.w3.org/2000/svg">
+    <svg class="bMargin" viewBox="-0.35 0 500.35 78.328" xmlns="http://www.w3.org/2000/svg">
         <polygon style="fill: aqua;" points="70.086 0.382 53.904 51.969 -0.944 61.327 -1.27 75.069 63.124 65.518 83.649 -0.101"/>
         <polygon style="fill: aqua;" points="120.568 -0.003 99.057 64.191 500.785 2.143 499.522 0.721 117.904 49.127 134.741 0.134"/>
       </svg>
@@ -102,7 +102,7 @@ import { onMount } from 'svelte';
         <h2 style="text-align: center; text-decoration: underline gold; -webkit-text-decoration-line: underline; -webkit-text-decoration-color: gold;"><span style="font-family: 'Bebas Neue';">AllSkills</span> $Vote Token</h2>
         <VoteToken/>
     </section>
-    <svg viewBox="-0.35 0 500.35 78.328" xmlns="http://www.w3.org/2000/svg">
+    <svg class="bMargin" viewBox="-0.35 0 500.35 78.328" xmlns="http://www.w3.org/2000/svg">
         <polygon style="fill: blueviolet;" points="70.086 0.382 53.904 51.969 -0.944 61.327 -1.27 75.069 63.124 65.518 83.649 -0.101"/>
         <polygon style="fill: blueviolet;" points="120.568 -0.003 99.057 64.191 500.785 2.143 499.522 0.721 117.904 49.127 134.741 0.134"/>
       </svg>
@@ -114,11 +114,11 @@ import { onMount } from 'svelte';
         <polygon style="fill: #FF3333;" points="500.159 16.553 432.482 24.328 392.825 93.844 409.667 93.703 443.069 37.609 499.889 30.393"/>
         <polygon style="fill: #FF3333;" points="352.106 94.674 335.059 94.797 363.621 47.452 -1.746 94.183 -1.798 80.123 390.963 29.985"/>
       </svg>
-    <section id="Ambassadors" class="section bMargin">
+    <section id="Ambassadors" class="section">
         <h2 style="text-decoration: underline #FF3333; -webkit-text-decoration-line: underline; -webkit-text-decoration-color: #FF3333;">Ambassador Program</h2>
         <Ambassador/>
     </section>
-    <svg viewBox="-0.35 0 500.35 78.328" xmlns="http://www.w3.org/2000/svg">
+    <svg class="bMargin" viewBox="-0.35 0 500.35 78.328" xmlns="http://www.w3.org/2000/svg">
         <polygon style="fill: white;" points="70.086 0.382 53.904 51.969 -0.944 61.327 -1.27 75.069 63.124 65.518 83.649 -0.101"/>
         <polygon style="fill: white;" points="120.568 -0.003 99.057 64.191 500.785 2.143 499.522 0.721 117.904 49.127 134.741 0.134"/>
       </svg>
@@ -136,7 +136,7 @@ import { onMount } from 'svelte';
             <Tokenomics/>
         </div>
     </section>
-    <svg viewBox="-0.35 0 500.35 78.328" xmlns="http://www.w3.org/2000/svg">
+    <svg class="bMargin" viewBox="-0.35 0 500.35 78.328" xmlns="http://www.w3.org/2000/svg">
         <polygon style="fill: white;" points="70.086 0.382 53.904 51.969 -0.944 61.327 -1.27 75.069 63.124 65.518 83.649 -0.101"/>
         <polygon style="fill: white;" points="120.568 -0.003 99.057 64.191 500.785 2.143 499.522 0.721 117.904 49.127 134.741 0.134"/>
       </svg>
@@ -160,6 +160,12 @@ import { onMount } from 'svelte';
 
 
 <style>   /* rgb(143,255,238) #00DFFC*/
+.section {
+    margin-bottom:15rem;
+}
+#Roadmap {
+    margin-bottom: 10rem !important;
+}
 #mute {
     position:absolute;
     width: 50px;
@@ -193,7 +199,7 @@ import { onMount } from 'svelte';
 }
 
 .bMargin {
-    margin-bottom: 100px;
+    margin-bottom: 7.5rem;
 }
 
 .video {
@@ -203,8 +209,8 @@ import { onMount } from 'svelte';
     position:relative;
     width:100%;
     height:710px;
-    margin-top:10rem;
-    margin-bottom:10rem;
+    margin-top:15rem;
+    margin-bottom:15rem;
 }
 #nftTitle {
     margin-bottom: 1rem; 
@@ -250,9 +256,9 @@ import { onMount } from 'svelte';
     margin:auto;
 }
     .powered-by{
-        margin-top: 20rem;
+        margin-top: 27rem;
         max-width: 1200px;
-        margin-bottom: 20rem;
+        margin-bottom: 27rem;
         width:85%;
         margin-left:auto;
         margin-right:auto;
