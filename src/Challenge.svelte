@@ -3,7 +3,7 @@
     
     <div class="section">
         <div class="image first">
-            <img class="phone" src="images/challenge_edit.png" />
+            <img alt="Edit videos" class="phone" src="images/challenge_edit.webp" />
             <div class="tooltips" style="color:rgb(200,255,255)">
                 <p id="music" class="extra-info"><span style="text-decoration:underline;">Music</span><br>Users will get to chose from a variety of song clips to add to their videos</p>
                 <p id="filters" class="extra-info"><span style="text-decoration:underline;">Filters</span><br>Users will have access to a number of filters to put over their videos</p>
@@ -21,7 +21,7 @@
     </div>
     <div class="section">
         <div class="image second">
-            <img class="phone" src="images/challenge_upload.png" />
+            <img alt="Upload videos" class="phone" src="images/challenge_upload.webp" />
             <div class="tooltips" style="color:rgb(255,150,150)">
                 <p id="music" class="extra-info info-left">Users will have the option to save their video to their camera roll.</p>
                 <p id="name" class="extra-info info-left">Choose a unique name for your trickshot.</p>
@@ -39,7 +39,7 @@
     </div>
     <div class="section">
         <div class="image first">
-            <img class="phone" src="images/challenge_current.png" />
+            <img alt="Users vote for winner" class="phone" src="images/challenge_current.webp" />
             <div class="tooltips" style="color:rgb(225,175,255)">
                 <p id="music" class="extra-info">Users will see freezeframe of the 2 videos and they can tap on the Play button to watch each video.</p>
             </div>
@@ -61,7 +61,7 @@
                 <div id="prizes"><img src="images/vote_token.png"></div>-->
             </div>
             <div id="doneModal"><button on:click={showResults} class="shake" id="resButton">View Results</button></div>
-            <img class="phone" src="images/challenge_win.png" />
+            <img alt="Rewards" class="phone" src="images/challenge_win.webp" />
         </div>
         <div class="content first">
             <h3 class="title" style="background-image: linear-gradient(gold,gold);">{$_('home.challenges.earn.title')}</h3>
@@ -87,15 +87,6 @@
 </script>
 
 <style>
-    #prizes {
-        position:relative;
-        width: 100%;
-        top:300px;
-        height: 110px;
-    }
-    #prizes img {
-        width: 30%;
-    }
     #resButton {
         position: absolute;
         background-color: blueviolet;
@@ -267,9 +258,6 @@
         margin-top: 80px;
         height: 500px;
     }
-    .video-container{
-        margin: 200px 100px 150px 100px;
-    }
     @media screen and (max-width: 820px) {
         .section {
             width: 100%;
@@ -303,9 +291,6 @@
         .first{
             order:1;
             margin-left:auto;
-        }
-        .video-container{
-            margin: 50px 0 0 0;
         }
         .tooltips {
             display: none;

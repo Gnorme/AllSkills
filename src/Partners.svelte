@@ -6,8 +6,8 @@
     </div>
     <div id="partner-form">
         <form>
-            <label></label>
-            <input>
+            <label for="name">Test</label>
+            <input name="name">
         </form>
     </div>
 </div>

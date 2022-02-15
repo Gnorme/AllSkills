@@ -24,34 +24,6 @@
 	window.onpopstate = function(event) {
         page = document.location.hash;
     };
-
-			(function(w,d,s,a,m,t) {
-		  a = d.createElement(s);m = d.getElementsByTagName(s)[0];a.defer = true;a.id = 'auditor_app';a.src = 'https://auditor.sitelint.com/auditor.bundle.js?tokenId=db251422c5b58829a1106ab18a32994e3d9ac3f4c04029c5c0e72e75a2065822-allskills';
-	function onPageLoaded() {
-		w.clearTimeout(t);
-		w.removeEventListener('DOMContentLoaded', onPageLoaded);
-	
-		function loadSiteLintAuditor() {
-		  m.parentNode.insertBefore(a, m);
-		}
-		w.setTimeout(loadSiteLintAuditor, 3500);
-	  }
-	  function onAuditorLoaded(){
-		auditor.config({
-		  includeHidden: true,
-		  stripTextFromReport: false
-		}).run();
-	  }
-	
-	  a.addEventListener('load', onAuditorLoaded);
-	
-	  if (d.readyState !== 'loading') {
-		onPageLoaded();
-		return;
-	  }
-	
-	  w.addEventListener('DOMContentLoaded', onPageLoaded);
-	})(window, document, 'script');
 </script>
 
 <svelte:head>

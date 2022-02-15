@@ -8,7 +8,6 @@
             <polygon style="fill: {bg};" points="120.568 -0.003 99.057 64.191 500.785 2.143 499.522 0.721 117.904 49.127 134.741 0.134"/>
           </svg>  
         </div>
-      
         <figcaption class="slanted-bg" class:bgselected={selected === i} >
           <img src={img} alt="profile-sample4" style="border: 3px solid {bg}" class="profile" class:selected={selected === i}/>
           <h2>{name}<span>{position}</span></h2>
@@ -27,9 +26,9 @@
                 
             </div>
             {#if selected === i}
-            <a class="more-info" style="border-color: {bg}" on:click={toggleMoreInfo} data-card-id={i}>Less Info</a>
+            <button class="more-info" style="border-color: {bg}" on:click={toggleMoreInfo} data-card-id={i}>Less Info</button>
             {:else}
-            <a class="more-info" style="border-color: {bg}" on:click={toggleMoreInfo} data-card-id={i}>More Info</a>
+            <button class="more-info" style="border-color: {bg}" on:click={toggleMoreInfo} data-card-id={i}>More Info</button>
             {/if}
         </div>
         </figcaption>
@@ -126,9 +125,6 @@
 </script>
 
 <style>
-  .background {
-    height:200px;
-  }
   a {
     cursor:pointer;
   }
@@ -251,8 +247,9 @@ a:hover {
 }
 
 .more-info {
-  padding: 5px;
-  border: 1px solid #ffffff;
+  padding: 10px;
+  background-color: transparent;
+  border: 2px solid;
   color: #ffffff;
   font-size: 0.7em;
   text-transform: uppercase;

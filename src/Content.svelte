@@ -73,7 +73,7 @@ import { onMount } from 'svelte';
 
 <div id="Trailer" class="video-container marker-highlight">
     <div id="mute" on:click={unmute}></div>
-    <div class="img-frame"><img src="images/iphone_frame.png"></div>
+    <div class="img-frame"><img alt="Phone frame" src="images/iphone_frame.png"></div>
     <div class="video">
         <Youtube bind:this={player1} videoId="O2A5MIWsCFI" on:End={() => start()} on:Ready={() => addObservers()}></Youtube>
         <!--<iframe allow="autoplay" title="AllSkills Trailer Video" loading="lazy" src="https://www.youtube.com/embed/O2A5MIWsCFI?rel=0&amp;autoplay=1&amp;controls=0&amp;showinfo=0&amp;mute=1" frameborder="0" allowfullscreen></iframe>-->
@@ -206,20 +206,11 @@ import { onMount } from 'svelte';
     margin-top:10rem;
     margin-bottom:10rem;
 }
-
-#background {
-    position:fixed;
-    width: 100%;
-    height: 100vh;
-    z-index:-1;
-    top:50%;
-    font-family:"Oswald";
-    display:none;
-}
 #nftTitle {
     margin-bottom: 1rem; 
     margin-left: 6rem; 
-    text-decoration: underline blueviolet; 
+    text-decoration-line: underline;
+    text-decoration-color: blueviolet;
     -webkit-text-decoration-line: underline; 
     -webkit-text-decoration-color: blueviolet;
 }
@@ -273,16 +264,6 @@ import { onMount } from 'svelte';
         .img-frame img {
             display:none;
         }
-        iframe{
-            width:338px;
-            height:600px;
-            border-radius: 45px;
-            position:relative;
-            pointer-events: auto !important;
-            position:relative;
-            border:none;
-            z-index:1;
-        }
         .bMargin {
             margin-bottom: 50px !important;
         }
@@ -301,9 +282,6 @@ import { onMount } from 'svelte';
         }
         .white h2 {
             margin-left: 0!important;
-        }
-        p {
-            text-align: center !important;
         }
     }
     h2 {

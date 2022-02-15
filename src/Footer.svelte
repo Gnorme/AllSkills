@@ -28,7 +28,7 @@
             <h4 id="links">Connect</h4>
             <div class="col-content" style="display:flex; justify-content:space-between">
                 <a href="mailto:info@allskills.ca"><img alt="Email" src="images/email.png"></a>
-                <a><img alt="Discord" src="images/discord.png"></a>
+                <a href="https://www.twitter.com/@AllSkillsNFT"><img alt="Discord" src="images/discord.png"></a>
                 <a href="https://www.instagram.com/AllSkillsNFT"><img alt="Instagram" src="images/instagram.png"></a>
                 <a href="https://www.twitter.com/@AllSkillsNFT"><img alt="Twitter" src="images/twitter.png"></a>
             </div>
@@ -77,11 +77,6 @@ h4 {
 }
 a > img {
     width:100%;
-}
-h3 {
-    font-family: "Asphaltic";
-    font-size: 5rem;
-    letter-spacing:1px;
 }
 #logo {
     display:none;

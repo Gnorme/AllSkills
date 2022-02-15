@@ -48,7 +48,7 @@
 
 </script>
 <div id="hero">
-   <img id="hero-logo" src="images/logo-border-2.png">
+   <img alt="AllSkills logo" id="hero-logo" src="images/logo-border-2.png">
    <div class="left-content">
         <div class="content">{$_('home.hero.title')}</div>
         <div class='scrolling-content'>
@@ -92,15 +92,6 @@
     white-space:nowrap;
     color:white;
 
-}
-.logo {
-    position:absolute;
-    top:2%;
-    left:10%;
-    width: 600px;
-    height: 600px;
-    background-repeat: no-repeat;
-    background-image: url('../images/logo-border-2.png');
 }
 .countdown {
     position:absolute;
@@ -156,7 +147,7 @@
 }
 @media screen and (max-width: 820px) {
     #hero::before { 
-        background-image: url('../images/mobile_hero.png') !important;
+        background-image: url('../images/mobile_hero.webp') !important;
     }
     #hero-logo {
         height:auto !important;
@@ -266,7 +257,7 @@ ul li {
     width: 100%;
     height: 100%;
     background-size: 100% 100%;
-    background-image: url('../images/tags_hero_bg.png');
+    background-image: url('../images/tags_hero_bg.webp');
     min-height: -webkit-fill-available;
     background-repeat: no-repeat;
     background-position: center center;

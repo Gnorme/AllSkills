@@ -4,7 +4,7 @@
     {#each news as {img, title, content}}
         <div class="card">
             <div class="image">
-                <img src="images/profile-bg-1.jpg" />
+                <img alt="Article header" src="images/profile-bg-1.jpg" />
             </div>
             <h2 class="title">{title}</h2>
             <div class="content">
@@ -50,21 +50,8 @@
 </script>
 
 <style>
-    .arrow {    
-        right: 10px;
-        top: 50%;
-        display: none;
-        position:absolute;
-        color: rgba(0,0,0,0.3);
-        font-size: 64px;
-    }
-    .arrow::after {
-        content: '\00BB';
-    }
+
     @media screen and (max-width: 820px) {
-        .arrow {
-            display: block;
-        }
         .image img {
             width: auto !important;
         }

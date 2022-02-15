@@ -1,7 +1,7 @@
 <div class="NFT-container">
     <div class="section">
         <div class="image first marker-highlight">
-            <img src="images/frame.png" />
+            <img alt="NFT card" src="images/frame.png" />
         </div>
         <div class="content second">
             <ul>
@@ -271,9 +271,6 @@
         .first{
             order:1;
             margin-left:auto;
-        }
-        .tooltips {
-            display: none;
         }
         
     }

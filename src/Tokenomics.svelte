@@ -6,7 +6,7 @@
         </div>
     </div>
     <div class="svg-container">
-        <img id="coin" src="images/coin.png" />
+        <img alt="$Skills Token" id="coin" src="images/coin.webp" />
         <svg xmlns="http://www.w3.org/2000/svg" id="sv" viewBox="-50 -50 400 400">
             <path on:mouseover={bringToFront} on:focus={showTooltip} on:mousemove={showTooltip} data-value="Team 10,000,000" on:mouseleave={deselect} id="0" class="test" fill="#ffffff" d="M150, 0 A150,150 0 0 1 234.49594861401022,26.062779328328688 L206.33063240934013,67.3751862188858 A100,100 0 0 0 150,50 Z"></path>
             <path on:mouseover={bringToFront} on:focus={showTooltip} on:mousemove={showTooltip} data-value="Partners 10,000,000" on:mouseleave={deselect} id="1" fill="#8a2be2" d="M234.49594861401022, 26.062779328328688 A150,150 0 0 1 289.62924038982374,95.19420442908603 L243.0861602598825,113.46280295272402 A100,100 0 0 0 206.33063240934013,67.3751862188858 Z"></path>
@@ -121,9 +121,6 @@
     .advisors:before{
         color:#8a2be2;
     }
-    .seed:before {
-        color:#FF3333;
-    }
     .private:before {
         color:#FF3333;
     }
@@ -139,11 +136,6 @@
     li {
         list-style-type:none;
     }
-    .section {
-        transform-origin: 50% 50%;
-        transform-box: fill-box;
-    }
-
     .tokenomics-container{
         position:relative;
         display:flex;
