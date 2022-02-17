@@ -18,7 +18,8 @@
           </svg>
           <span on:click="{hideForm}">X</span>
         <h2>Thank you for reaching out</h2>
-        <form>
+        <form name="partnerships" data-netlify-honeypot="bot-field" method="POST" data-netlify="true" netlify class="signup">
+            <input type="hidden" name="form-name" value="partnerships" />
             <label style="text-decoration-color: aqua;" for="name">Name</label>
             <input bind:value={nameValue} name="name">
             <label style="text-decoration-color: gold;" for="email">Email</label>
