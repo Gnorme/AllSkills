@@ -1,5 +1,5 @@
 <div class="cards-container">
-  {#each staff as {name, position, descr, email, twitter, img, bg}, i}
+  {#each staff as {name, position, descr, email, twitter, linkedin, img, bg}, i}
     <figure class="card">
         <!--<img class="background" src={bg} alt="sample87" />-->
         <div style="height:200px;">
@@ -18,10 +18,10 @@
                   <a href={twitter} class="twitter"><img alt="Twitter" src="images/twitter-aqua.png"></a>
                 </div>
                 <div class="socials-item">
-                    <img alt="Email" src="images/email-nocircle-aqua.png">
+                    <a href="mailto:{email}"><img alt="{email}" src="images/email-nocircle-aqua.png"><a></a>
                 </div>
                 <div class="socials-item">
-                    <img alt="LinkedIn" src="images/linkedin-aqua.png">
+                    <a href={linkedin}><img alt="LinkedIn" src="images/linkedin-aqua.png"></a>
                 </div>
                 
             </div>
@@ -49,6 +49,7 @@
 		descr: "Noah has been in and around the sport industry since he was 16. After graduating from Brock University’s Sport Management program, he began to focus his career on marketing. Through his experience in Junior Hockey, CFL, AHL and NHL, as well as freelance, Noah has learned the art of connecting with athletes. Noah’s passion for making sports and competition more accessible helps guide AllSkills and stems from his desire to improve the world around him. ",
 		email: "ngoren@allskills.ca",
     twitter:"https://twitter.com/@NoGoren",
+    linkedin:"https://www.linkedin.com/in/noahgoren/",
 		img: "images/Noah_s.webp",	
     bg: "aqua"
 	},
@@ -59,6 +60,7 @@
 		descr: "A director, conceptualist and creative, François, known as the Skating Cameraman, is quick to navigate and come up with new and forward ideas. A lover of all things skills, he has worked on honing his craft and meeting with people across multiple sectors for over 14 years. From musicians to athletes to editors, François has learned from them all and applies this knowledge and passion to AllSkills.",
 		email: "fsammut@allskills.ca",
     twitter:"https://twitter.com/@Sammut_frank",
+    linkedin:"https://www.linkedin.com/in/fsammut/",
 		img: "images/Frank_s.webp",	
     bg: "#FF3333"	
 	},
@@ -69,6 +71,7 @@
 		descr: "Christopher has a wide range of interests and knowledge.  On top of taking on the role of full-stack engineer and smart contract developer, Christopher is an all-round problem solver and helps out wherever he can. With 17 years experience in software development and 9 years being involved in the blockchain world, his vision of bringing AllSkills in to the emerging Web 3.0 space has brought out the true potential of AllSkills and his foresight continues to be invaluable.",
 		email: "cthompson@allskills.ca",
     twitter:"",
+    linkedin:"https://www.linkedin.com/in/christopher-thompson-b48b7b8b/",
 		img: "images/Christopher_s.webp",	
     bg: "blueviolet"	
 	},
@@ -79,6 +82,7 @@
 		descr: "A ﬁve-time Olympian and two-time Speed Skating World Champion, Charles has worked with some of the world’s biggest brands and brings a competitive edge to AllSkills. Charles not only has experience on the ice, but is also an avid gamer, which combined with his athletic background helps provides great insight in to the minds of athletes and gamers.",
 		email: "chamelin@allskills.ca",
     twitter:"https://twitter.com/@Speedskater01",
+    linkedin:"https://www.linkedin.com/in/charles-hamelin-70600816a/",
 		img: "images/Charles_s.webp",	
     bg: "gold"	
 	},

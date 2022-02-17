@@ -152,10 +152,10 @@
         <Partners />
         <!--<p style="margin-left:7%; font-size: 1.5rem;">Announcements coming soon</p>-->
     </section>
-    <section id="News" class="white" style="width: 100%; ">
+    <!--<section id="News" class="white" style="width: 100%; ">
         <h2 style="margin-left:7%; text-shadow:none;">News</h2>
         <News />
-    </section>
+    </section>-->
 </div>
 
 
