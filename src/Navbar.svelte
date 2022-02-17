@@ -86,7 +86,7 @@ select {
 }
 @media screen and (max-width: 820px) {
     .logo {
-        width: 40px;
+        visibility: hidden;
     }
 }
 .logo{
