@@ -48,6 +48,7 @@
 
 </script>
 <div id="hero">
+   <img alt="AllSkills logo" id="hero-logo" src="images/logo-border-2.png">
    <div class="left-content">
         <div class="content">{$_('home.hero.title')}</div>
         <div class='scrolling-content'>
@@ -56,7 +57,7 @@
                     {#each skills as skill}
                         <li>{skill}</li>
                     {/each}
-                    <li style="color:#00F3FF; font-weight: 600 !important;">AllSkills</li>
+                    <li style="color:#00F3FF; font-weight: 600 !important; font-family:'Bebas Neue'; margin-top:11px;">AllSkills</li>
                 </ul>
             </div>
         </div>
@@ -69,9 +70,18 @@
         </div>
     </div>
     <span class="countdown">Big news coming soon...<a href="https://twitter.com/@AllSkillsNFT">@AllSkillsNFT</a></span>
+    
 </div>
 <style>
      @import url('https://fonts.googleapis.com/css2?family=Roboto&display=swap');
+     #hero-logo {
+        position: absolute;
+        left: 50%;
+        transform: translateX(-50%);
+        height: 50%;
+        max-width: 100%;
+        mix-blend-mode: soft-light;
+     }
      .scrolling-content{
     margin-left: 10px;
         font-size: 64px;
@@ -82,12 +92,6 @@
     white-space:nowrap;
     color:white;
 
-}
-.logo {
-    position:absolute;
-    top:2%;
-    left:10%;
-    filter:blur(10px) brightness(60%);
 }
 .countdown {
     position:absolute;
@@ -101,10 +105,7 @@
 .countdown a {
     color: aqua;
 }
-.left-content{
-    font-family: "BentonSans";
-    font-family: "Oswald";
-}
+
 .content {
     text-align: right;
     font-size: 64px;
@@ -137,7 +138,7 @@
 
 #hero {
     position: relative;
-    width: 100vw;
+    width: 100%;
     height: 100vh;
     display: grid;
     grid-template-columns: 55% 45%;
@@ -145,6 +146,12 @@
     align-items: center;
 }
 @media screen and (max-width: 820px) {
+    #hero::before { 
+        background-image: url('../images/mobile_hero.webp') !important;
+    }
+    #hero-logo {
+        height:auto !important;
+    }
         .countdown {
             display:table;
             margin-left:auto;
@@ -154,8 +161,12 @@
             left:0;
         }
         #hero {
-            display:block;
+            display: flex;
+            flex-direction: column;
             height: auto;
+            align-items: center;
+            justify-content: center;
+            min-height: 100vh;
         }
         .description {
             display: table-cell;
@@ -186,12 +197,10 @@
 }
 
 .hero-split {
-  font-family: "Roboto", "Lato", sans-serif;
    color: white;
 }
 
 p {
-    font-family: "BentonSans";
     font-size: 1.6rem;
     line-height: 2.25rem;
   display:inline;
@@ -210,8 +219,8 @@ ul {
   position:relative;
   text-align:left;
   list-style:none;
-  animation: change 5s cubic-bezier(0.5, 0.2, 0.5, 1.0) 0.5s 1 normal forwards;
-  -webkit-animation: change 5s cubic-bezier(0.5, 0.2, 0.5, 1.0) 0.5s 1 normal forwards;
+  animation: change 3.5s cubic-bezier(0.5, 0.2, 0.5, 1.0) 0.5s 1 normal forwards;
+  -webkit-animation: change 3.5s cubic-bezier(0.8, 0.3, 0.3, 1.0) 0.5s 1 normal forwards;
 }
 
 ul li {
@@ -233,7 +242,7 @@ ul li {
 }
 
 @keyframes change {
-    100% {margin-top: -2688px;}
+    100% {margin-top: -2694px;}
 
 }
 
@@ -247,12 +256,12 @@ ul li {
     left: 0;
     width: 100%;
     height: 100%;
-    background-size: 150% !important;
-    background-image: url('../images/logo_bg.webp');
+    background-size: 100% 100%;
+    background-image: url('../images/tags_hero_bg.webp');
+    min-height: -webkit-fill-available;
     background-repeat: no-repeat;
-    background-size: cover;
     background-position: center center;
-    filter: brightness(60%) blur(12px);
+    filter: brightness(90%);
 }
 
 </style>

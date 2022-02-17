@@ -5,13 +5,15 @@
         <input type="radio" name="slider" id="item-3">
     <div class="cards">
         <label class="card" for="item-1" id="card-1">
-        <img src="images/bass.webp" alt="NFT Trading Card">
+        <img src="images/Chris_Boucher.jpeg" alt="NFT Trading Card">
         </label>
         <label class="card" for="item-2" id="card-2">
-        <img src="images/Dunk.webp" alt="NFT Trading Card">
+          <div class="text-holder"><h1 class="overlay-text">Coming soon</h1></div>
+          <img class="blurred" src="images/Dunk.webp" alt="NFT Trading Card">
         </label>
         <label class="card" for="item-3" id="card-3">
-        <img src="images/skateboard.webp" alt="NFT Trading Card">
+          <div class="text-holder"><h1 class="overlay-text">Coming soon</h1></div>
+          <img class="blurred" src="images/skateboard.webp" alt="NFT Trading Card">
         </label>
         
     </div>
@@ -25,12 +27,6 @@
 }
 
 @media screen and (max-width: 820px) { 
-    .card {
-        width: 100% !important;
-    }
-    .cards {
-        width: 80% !important;
-    }
     .container {
         overflow-x: hidden;
     }
@@ -38,12 +34,32 @@
         width: 100% !important;
     }
 }
+.overlay-text {
+  flex-grow: 1; 
+  position: relative; 
+  z-index:10; 
+  font-size: 2rem; 
+  font-family: 'Oswald'; 
+  color: white;
+}
+.text-holder {
+  display: flex;
+  position: absolute;
+  align-items:center;
+  width: 100%;
+  height: 100%;
+  text-align:center;
+}
+label {
+  display:inline-table;
+}
+.blurred {
+  filter: blur(10px);
+}
 .carousel-container {
         width: 75%; 
         margin-right:auto; 
         margin-left:auto; 
-        margin-top: 10rem; 
-        margin-bottom: 10rem;
     }
 
 input[type=radio] {
@@ -52,8 +68,8 @@ input[type=radio] {
 
 .card {
   position: absolute;
-  width: 60%;
-  height: 100%;
+  max-width:80%;
+  height: 300px;
   left: 0;
   right: 0;
   margin: auto;
@@ -64,29 +80,24 @@ input[type=radio] {
 .container {
   width: 100%;
   max-width: 800px;
-  max-height: 600px;
-  height: 70vh;
   margin-left:auto;
   margin-right:auto;
-  transform-style: preserve-3d;
-  display: flex;
-  justify-content: center;
-  flex-direction: column;
-  align-items: center;
+  justify-content:center;
+  display:flex;
 }
 
 .cards {
   position: relative;
   width: 100%;
-  height: 100%;
+  height:300px;
   margin-bottom: 20px;
 }
 
 img {
   width: 100%;
-  height: 100%;
+  height:300px;
   border-radius: 10px;
-  object-fit: cover;
+  object-fit: contain;
 }
 
 #item-1:checked ~ .cards #card-3, #item-2:checked ~ .cards #card-1, #item-3:checked ~ .cards #card-2 {

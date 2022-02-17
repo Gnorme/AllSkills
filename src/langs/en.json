@@ -5,6 +5,166 @@
             "description_start": "AllSkills is a platform that looks to bring",
             "description_highlight": "creativity, sustainable growth, and increased competition",
             "description_end": "to the talent world. Our platform provides an opportunity to witness people of all skills showcasing their talents and competing against others all while earning money through our carefully crafted token based Vote and Challenge system and NFT marketplace."
-        }
+        },
+        "table": {
+            "title1":"Skills Competition",
+            "p1":"Using our platform, creators can challenge others using a video showcasing their talents. Challenge winners are decided by a community vote and all votes enter a reward pool that gets distrubuted to the winning creator and all those who voted for it to win.",
+            "title2":"Earning Potential",
+            "p2": "Our carefully crafted royalties system and stablecoin Vote token will allow both creators and consumers of content to earn money. Creators can earn by winning challenges and viewers can earn by voting.",
+            "title3":"NFT Collectibles",
+            "p3": "Videos that win have the opportunity to be minted into NFT collectibles that can be traded on our Marketplace or any of the other top NFT marketplaces. Tokenizing challenge videos enables users to fully own and easily monetize their content, and each one is backed up forever using blockchain technology.",
+            "title4":"Ambassador Program",
+            "p4": "Have the opportunity to try and out-perform your favourite pros and earn prizes doing it. Every week top athletes from different domains submit a challenge to the community to try and replicate one of their iconic moves. Submit your best attempt to get entered into a raffle and earn prizes."
+        },
+        "highlighted": {
+            "company": "AllSkills",
+            "start": "uses future-proof blockchain & smart contract technology to",
+            "highlight1": "connect talented people & audiences",
+            "middle": ", and foster skill development through competition all while providing",
+            "highlight2":"incentives for everyone involved."
+        },
+        "challenges": {
+            "videos": {
+                "title": "Take videos showcasing your skills", 
+                "pStart": "No matter if your skill is", 
+                "highlighted": "athletic, artistic, musical,  strategic,  incredibly precise, or even one-of-a-kind",
+                "pEnd": ", we want to see it. Set your camera up to capture your finest moment and use our custom editing features to make it stand out even more.",
+                "tooltips": []},
+            "challenges": {
+                "title": "Put videos up for Challenge", 
+                "pStart":"After you’re satisfied with your video, it’s time to put it up for Challenge.",
+                "highlighted": "Winning a challenge round is how your video becomes eligible for minting.",
+                "pEnd": "Choose between putting your video up for Open Challenge or directly challenging another video or user. Rounds last 72h.",
+                "tooltips": []},
+            "votes":  {
+                "title": "Users vote to determine winner", 
+                "pStart":"Once the challenge starts,",
+                "highlighted": "the control is now in the voters hands.",
+                "pEnd": "Users can use Vote tokens to show their support and become part of the journey. Once the challenge is complete, the video with the most votes is declared the winner and has the opportunity to be minted as an NFT.",
+                "tooltips": []},
+            "earn":  {
+                "title": "Earn money from voting and winning challenges", 
+                "pStart":"Get rewarded for showing off your skills. The creator of the winning video will receive between 1-25% of all vote tokens cast during the challenge while the rest is rewarded to all those who voted for the winning video. The creators cut changes based on how close the vote is.",
+                "highlighted": " Closer vote count = bigger cut.",
+                "pEnd": "",
+                "tooltips": []}
+        },
+        "vote": {
+            "cast": {
+                "title": "Cast your vote",
+                "pStart":"Show your support by voting for the challenge video you like most. All votes form a",
+                "highlighted": "reward pool",
+                "pEnd": "and decide the winning video."},
+            "success": {
+                "title": "Share in the success",
+                "pStart":"Voters continue to share in the success by",
+                "highlighted": "earning royalties",
+                "pEnd": "everytime a video they voted for is sold on marketplaces."},
+            "stake": {
+                "title": "Stake to earn more",
+                "pStart":"Staking your $Skills tokens allows you to",
+                "highlighted": "earn $Vote tokens",
+                "pEnd": "$Skills tokens can also be used to participate in raffles, pay gas fees, and to declare how you think AllSkills should operate."},
+            "earn": {
+                "title": "Earn through voting",
+                "pStart":"The reward pool is split between the winner and all those who voted for them.",
+                "highlighted": "Earn up to 145%",
+                "pEnd": "back for votes cast on winning videos."},
+            "stable": {
+                "title": "Stablecoin for all skills",
+                "pStart":"$Vote tokens are",
+                "highlighted": "backed by fiat reserves",
+                "pEnd": "at 1:1 ratio and will always be redeemable at a stable value."},
+            "replenish": {
+                "title": "Easily replenish your wallet",
+                "pStart":"If you run out of Vote tokens, you can",
+                "highlighted": "watch sponsored videos to earn more",
+                "pEnd": "and get right back in the game."}
+        },
+        "nft": {
+            "1": {
+                "pStart":"Level up by winning challenges and unlock",
+                "link":"exclusive benefits.",
+                "pEnd":""
+            },
+            "2": {
+                "pStart":"Reach level 7 to unlock",
+                "link":"NFT minting",
+                "pEnd":"for all your challenge wins."
+            },
+            "3": {
+                "pStart":"All winning challenge videos that end in the daily",
+                "link":"top 10% of votes",
+                "pEnd":"received get minted."
+            },
+            "4": {
+                "pStart":"Purchase a",
+                "link":"Mint Token",
+                "pEnd":"to automatically mint one of your challenge wins as an NFT."
+            },
+            "5": {
+                "pStart":"Users can choose to mint to either",
+                "link":"Ethereum, Polygon, Tezos, NEAR, or Flow.",
+                "pEnd":""
+            },
+            "6": {
+                "pStart":"Minted videos are tradeable on our marketplace as well as other top NFT marketplaces like",
+                "link":"OpenSea and Rarible.",
+                "pEnd":""
+            },
+            "7": {
+                "pStart":"NFT videos will be stored using decentralized cloud storage providers and the",
+                "link":"IPFS",
+                "pEnd":""
+            },
+            "8": {
+                "pStart":"All minted challenge videos are also backed-up forever using",
+                "link":"arweave and ardrive.",
+                "pEnd":""
+            }
+        },
+        "ambassador": {
+            "line1": "Compete in new Ambassador Challenges every week hosted by different athletes",
+            "line2": "Chance to win an NFT of Ambassador's Challenge video + additional prizes.",
+            "line3": "Stay tuned for more details."
+        },
+        "roadmap": {
+            "socials": "Join our Discord and follow our Twitter to get access to the latest announcements and enter raffles to earn prizes from our Ambassadors",
+            "idea": {
+                "cleared": ["Ideation", "Business plan", "Feasability study", "Olympic skater Charles Hamelin joins project"]
+            },
+            "research": {
+                "cleared": ["Market research", "Acquired advisors & CTO", "Backed by PME Montreal", "Finalist in NBA Launchpad", "Pivot towards NFT platform", "Launch website", "Release whitepaper and tokenomics"]
+            },
+            "plan": {
+                "cleared": ["Setup social community", "Release marketing plan", "Trailer"],
+                "uncleared": ["Announce partners", "Reveal plan for Ambassador program", "Reveal first AllSkills Ambassadors", "Mint $Skills token"]
+            },
+            "launch": {
+                "cleared": [],
+                "uncleared": ["Token presale", "Mint stablecoin Vote token", "Launch closed beta", "Public sale","Full release of challenge system and marketplace", "Start Ambassador program"]
+            },
+            "post": {
+                "cleared": [],
+                "uncleared": ["Add unique Tap-to-Record", "Release Scout mode", "Release GM mode", "Add more cosmetics and editing features"]
+            }
+        },
+        "tokenomics": {
+            "pTitle": "100,000,000 Tokens",
+            "paragraph": "Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat.",
+            "list": ["Team 10%", "Advisors & Partners 10%", "Private Sale 10%", "Public Sale 20%", "Liquidity Pool 20%", "Foundation 30%"]
+        },
+        "team": {
+            "position": "Co-Founder",
+            "button": "MORE INFO",
+            "noah": "Noah has been in and around the sport industry since he was 16. After graduating from Brock University’s Sport Management program, he began to focus his career on marketing. Through his experience in Junior Hockey, CFL, AHL and NHL, as well as freelance, Noah has learned the art of connecting with athletes. Noah’s passion for making sports and competition more accessible helps guide AllSkills and stems from his desire to improve the world around him.",
+            "frank": "A director, conceptualist and creative, François, known as the Skating Cameraman, is quick to navigate and come up with new and forward ideas. A lover of all things skills, he has worked on honing his craft and meeting with people across multiple sectors for over 14 years. From musicians to athletes to editors, François has learned from them all and applies this knowledge and passion to AllSkills.",
+            "christopher": "Christopher has a wide range of interests and knowledge. On top of taking on the role of full-stack engineer and smart contract developer, Christopher is an all-round problem solver and helps out wherever he can. With 17 years experience in software development and 9 years being involved in the blockchain world, his vision of bringing AllSkills in to the emerging Web 3.0 space has brought out the true potential of AllSkills and his foresight continues to be invaluable.",
+            "charles": "A ﬁve-time Olympian and two-time Speed Skating World Champion, Charles has worked with some of the world’s biggest brands and brings a competitive edge to AllSkills. Charles not only has experience on the ice, but is also an avid gamer, which combined with his athletic background helps provides great insight in to the minds of athletes and gamers."
+        },
+        "partners": {
+            "soon": "Announcements coming soon"
+        },
+        "news": {}
     }
 }

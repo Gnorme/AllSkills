@@ -3,6 +3,7 @@
 	import Hero from './Hero.svelte';
 	import Content from './Content.svelte';
 	import Footer from './Footer.svelte';
+	
 	import {
 		_,
 		getLocaleFromNavigator,
@@ -14,19 +15,37 @@
 	register("en", () => import("./langs/en.json"));
 	register("es", () => import("./langs/es.json"));
 	register("fr", () => import("./langs/fr.json"));
+	let page = document.location.hash;
 
 	init({
 		fallbackLocale: "en",
 		initialLocale: getLocaleFromNavigator()
 	});
-
+	window.onpopstate = function(event) {
+        page = document.location.hash;
+    };
 </script>
 
 <svelte:head>
 	<style>
 		@font-face {
+			font-family: "Roboto Mono";
+			src: url("./fonts/RobotoMono.ttf");
+			font-display: swap;
+		}	
+		@font-face {
+			font-family: "Consolate Elf";
+			src: url("./fonts/ConsolateElf.ttf");
+			font-display: swap;
+		}	
+		@font-face {
 			font-family: "Oswald";
 			src: url("./fonts/Oswald-Regular.ttf");
+			font-display: swap;
+		}	
+		@font-face {
+			font-family: "Bebas Neue";
+			src: url("./fonts/BebasNeue-Regular.ttf");
 			font-display: swap;
 		}	
 		@font-face {
@@ -55,14 +74,15 @@
   <p>Loading</p>
 {:else}
 	<main>
-		<!--<Navbar/>-->
+		<Navbar/>
 		<Hero/>
-		<!--<Content/>
-		<Footer/>-->
+		<Content/>
+		<Footer/>
 	</main>
 {/if}
 
 <style>
+
 	:global(body) { 
 		margin:0;
 		padding: 0;

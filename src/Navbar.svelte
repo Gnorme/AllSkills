@@ -1,7 +1,6 @@
 <nav class="navbar">
-    <a class="logo" href="#"></a>
-    <!--<img alt="Logo" class="logo" src="images/logo.png"/>-->
-    <button class="hamburger" on:click={openNav}>
+    <img alt="Logo" class="logo" src="images/logo.png"/>
+    <button class="hamburger" aria-label="Navigation button" on:click={openNav}>
         <svg width="48px" height="48px" viewBox="0 0 48 48" fill="none" xmlns="http://www.w3.org/2000/svg">
             <rect width="48" height="48" fill="white" fill-opacity="0"/>
             <path d="M7.94977 11.9498H39.9498" stroke="white" stroke-width="4" stroke-linecap="round" stroke-linejoin="round"/>
@@ -11,12 +10,16 @@
     </button>
     <div id="sidenav">
         <a href="javascript:void(0)" class="closebtn" on:click={closeNav}>&times;</a>
+        <a href="#Trailer">Trailer</a>
         <a href="#Table">About</a>
         <a href="#Challenge">Challenge System</a>
-        <a href="#Trailer">Trailer</a>
         <a href="#Vote">Vote Token</a>
+        <a href="#NFT">NFTs</a>
+        <a href="#Ambassadors">Ambassador Program</a>
         <a href="#Roadmap">Roadmap</a>
+        <a href="#Tokenomics">Tokenomics</a>
         <a href="#Team">Team</a>
+        <a href="#News">News</a>
         <a href="#Contact">Contact</a>
         <div class="locale-selector">
             <div class="select">
@@ -27,7 +30,7 @@
             </div>
         </div>
     </div>
-    <div id="overlay"></div>
+    <div on:click={closeNav} id="overlay"></div>
     
 </nav>
 
@@ -80,6 +83,11 @@ select {
     background-color: transparent !important;
     color: aqua;
     border: none;
+}
+@media screen and (max-width: 820px) {
+    .logo {
+        width: 40px;
+    }
 }
 .logo{
     max-height:100%;

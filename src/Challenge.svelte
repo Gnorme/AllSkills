@@ -1,7 +1,9 @@
+
 <div class="challenge-container">
-    <div class="section">
+    
+    <div class="info-section">
         <div class="image first">
-            <img src="images/Edit_sw.webp" />
+            <img alt="Edit videos" class="phone" src="images/challenge_edit.webp" />
             <div class="tooltips" style="color:rgb(200,255,255)">
                 <p id="music" class="extra-info"><span style="text-decoration:underline;">Music</span><br>Users will get to chose from a variety of song clips to add to their videos</p>
                 <p id="filters" class="extra-info"><span style="text-decoration:underline;">Filters</span><br>Users will have access to a number of filters to put over their videos</p>
@@ -12,14 +14,14 @@
         </div>
         <div class="content second">
             <div>
-            <h3 style="border-bottom: 2px solid aqua;">Take videos showcasing your skills</h3>
-            <p>No matter if your skill is  <span style="color:aqua;">athletic, artistic, musical,  strategic,  incredibly precise, or even one-of-a-kind,</span> we want to see it. Set your camera up to capture your finest moment and use our custom editing features to make it stand out even more.</p>
+            <h3 class="title" style="background-image: linear-gradient(aqua, aqua);">{$_('home.challenges.videos.title')}</h3>
+            <p>{$_('home.challenges.videos.pStart')} <span style="color:aqua;">{$_('home.challenges.videos.highlighted')}</span>{$_('home.challenges.videos.pEnd')}</p>
             </div>
         </div>
     </div>
-    <div class="section">
+    <div class="info-section">
         <div class="image second">
-            <img src="images/upload_sw.webp" />
+            <img alt="Upload videos" class="phone" src="images/challenge_upload.webp" />
             <div class="tooltips" style="color:rgb(255,150,150)">
                 <p id="music" class="extra-info info-left">Users will have the option to save their video to their camera roll.</p>
                 <p id="name" class="extra-info info-left">Choose a unique name for your trickshot.</p>
@@ -31,39 +33,140 @@
             </div>
         </div>
         <div class="content first">
-            <h3 style="border-bottom: 2px solid red;">Put videos up for Challenge</h3>
-            <p>After you’re satisfied with your video, it’s time to put it up for Challenge.  <span style="color:red;">Winning a challenge round is how your video becomes eligible for minting.</span> Choose between putting your video up for Open Challenge or directly challenging another video or user. Round lengths can be either 24h or 72h.</p>
+            <h3 class="title" style="background-image: linear-gradient(red,red);">{$_('home.challenges.challenges.title')}</h3>
+            <p>{$_('home.challenges.challenges.pStart')}  <span style="color:red;">{$_('home.challenges.challenges.highlighted')}</span> {$_('home.challenges.challenges.pEnd')}</p>
         </div>
     </div>
-    <div class="section">
+    <div class="info-section">
         <div class="image first">
-            <img src="images/challenge_sw.webp" />
+            <img alt="Users vote for winner" class="phone" src="images/challenge_current.webp" />
             <div class="tooltips" style="color:rgb(225,175,255)">
                 <p id="music" class="extra-info">Users will see freezeframe of the 2 videos and they can tap on the Play button to watch each video.</p>
             </div>
         </div>
         <div class="content second">
-            <h3 style="border-bottom: 2px solid blueviolet;">Users vote to determine winner</h3>
-            <p>Once the challenge starts, <span style="color:blueviolet;">the control is now in the voters hands.</span> Users can use Vote tokens to show their support and become part of the journey. Once the challenge is complete, the video with the most votes is declared the winner and minted as an NFT.</p>
+            <h3 class="title" style="background-image: linear-gradient(blueviolet,blueviolet);">{$_('home.challenges.votes.title')}</h3>
+            <p>{$_('home.challenges.votes.pStart')} <span style="color:blueviolet;">{$_('home.challenges.votes.highlighted')}</span> {$_('home.challenges.votes.pEnd')}</p>
         </div>
     </div>
-    <div class="section">
+    <div class="info-section">
         <div class="image second">
-            <img src="" />
+            <div id="winModal" style="display:none;">
+                <!--<div id="prizes">
+                </div>
+                <h4>CONGRATS on your Challenge win!</h4>
+                <p>Total votes cast: 1148</p>
+                <p>Votes you received: 746 (65%)</p>
+                <p>Calculated cut: 15.6%</p>
+                <div id="prizes"><img src="images/vote_token.png"></div>-->
+            </div>
+            <div id="doneModal"><button on:click={showResults} class="shake" id="resButton">View Results</button></div>
+            <img alt="Rewards" class="phone" src="images/challenge_win.webp" />
         </div>
         <div class="content first">
-            <h3 style="border-bottom: 2px solid gold;">Earn money from voting and winning challenges</h3>
-            <p>Get rewarded for showing off your skills. The creator of the winning video will receive between 1-25% of all vote tokens cast during the challenge while the rest is rewarded to all those who voted for the winning video. The creators cut changes based on how close the vote is. <span style="color: gold;">Closer vote count = bigger cut.</span></p>
+            <h3 class="title" style="background-image: linear-gradient(gold,gold);">{$_('home.challenges.earn.title')}</h3>
+            <p>{$_('home.challenges.earn.pStart')}<span style="color: gold;">{$_('home.challenges.earn.highlighted')}</span></p>
         </div>
     </div>
-    <div id="Trailer" class="video-container">
-        <div class="video">
-            <iframe title="AllSkills Trailer Video" loading="lazy" src="https://www.youtube.com/embed/tgbNymZ7vqY"></iframe>
-        </div>
-    </div>
+
 </div>
 
+<script>
+    import { _ } from 'svelte-i18n'
+
+    function showResults(e) {
+        //e.target.style.zIndex = "5";
+        e.target.classList.remove('shake')
+        e.target.classList.add('open');
+        setTimeout(() => {
+            e.target.style.zIndex = "5";
+            document.getElementById("winModal").style.display = "block";
+        }, 2000);
+        //document.getElementById("winModal").style.display = "block";
+    }
+</script>
+
 <style>
+    #resButton {
+        position: absolute;
+        background-color: blueviolet;
+        border-radius: 20px;
+        color: white;
+        border: none;
+        font-family: 'Bebas Neue';
+        padding: 10px;
+        top: 330px;
+        left: 80px;
+        z-index: 11;
+        box-shadow: 0px 0px 15px 5px #0ff;
+    }
+    .shake {
+        animation: shake 1.8s cubic-bezier(.36,.07,.19,.97) infinite;
+        transform: translate3d(0, 0, 0);
+    }
+    :global(.open) {
+        animation: shakefast 0.5s linear;
+        animation-iteration-count: 4;
+    }
+    @keyframes shake {
+        0%, 70% {
+            transform: translate3d(-1px, 0, 0);
+        }
+        
+        5%, 60% {
+            transform: translate3d(2px, 0, 0);
+        }
+
+        10%, 30%, 50% {
+            transform: translate3d(-4px, 0, 0);
+        }
+
+        15%, 40% {
+            transform: translate3d(4px, 0, 0);
+        }
+        70%,100% {
+            transform: translate3d(0, 0, 0);
+        }
+    }
+    @keyframes shakefast {
+        0% { transform: translate(1px, 1px) rotate(0deg); }
+        10% { transform: translate(-1px, -2px) rotate(-1deg); }
+        20% { transform: translate(-3px, 0px) rotate(1deg); }
+        30% { transform: translate(3px, 2px) rotate(0deg); }
+        40% { transform: translate(1px, -1px) rotate(1deg); }
+        50% { transform: translate(-1px, 2px) rotate(-1deg); }
+        60% { transform: translate(-3px, 1px) rotate(0deg); }
+        70% { transform: translate(3px, 1px) rotate(-1deg); }
+        80% { transform: translate(-1px, -1px) rotate(1deg); }
+        90% { transform: translate(1px, 2px) rotate(0deg); }
+        100% { transform: translate(1px, -2px) rotate(-1deg); }    
+    }
+    #doneModal {
+        position:absolute;
+        background-color: rgba(0,0,0,0.5) !important;
+        width: 250px;
+        top:-58px;
+        left: 125px;
+        z-index:10;
+        height: 390px;       
+    }
+    #winModal {
+        position:absolute;
+        background-color: rgba(0,0,0,0.5) !important;
+        background-position-y: center !important;
+        background-size: contain !important;
+        background: url('../images/win_screen.png');
+        background-repeat: no-repeat;
+        border-radius:20px;
+        width: 250px;
+        top:-110px;
+        left: 125px;
+        z-index:11;
+        height: 490px;
+    }
+    .title {
+        background-size: 0% 5px;
+    }
     .tooltips {
         position:absolute;
         width:100%;
@@ -73,14 +176,14 @@
     .extra-info {
         position:absolute;
         display:inline-block;
-        width: 20%;
+        width: 100px;
         font-size: 11px;
-        left:0%;
         text-align: right;
     }
     .info-left {
         text-align: left;
-        left:70%;
+        width: 100px;
+        left: 400px;
     }
     #music {
         top:-20%;
@@ -91,8 +194,11 @@
     #gifs {
         top:-20%;
     }
+    #crop {
+        margin-top:30px;
+    }
     #name {
-        top: 15%;
+        top: 12%;
     }
     #tags {
         top: 25%; 
@@ -102,29 +208,16 @@
         margin-block-end:0.25rem;
         margin-block-start:0.25rem;
     }
-    iframe{
-        position:absolute;
-        top:0;
-        left:0;
-        width:100%;
-        height:100%;
-        border-radius: 0.5rem;
-    }
-    .video::after{
-        display:block;
-        content:"";
-        padding-top: 56.25%;
-    }
-    .video {
-        border-radius: 0.5rem;
-        position:relative;
-        width:100%;
-    }
     h3 {
         font-size: 2rem;
         padding-bottom:10px;
         font-family:"Oswald";
+        text-decoration: none;
+    background-position: 0% 100%;
+    background-size: 0% 2px;
+    background-repeat: no-repeat;
     }
+
     p{
         font-family:"BentonSans";
     }
@@ -136,7 +229,7 @@
         order:2;
     }
     .content p {
-        font-size: 1rem;
+        font-size: 1.2rem;
         line-height: 1.8rem;
     }
     .content{
@@ -147,29 +240,26 @@
         width: 50%;
         position: relative;
     }
-    .image img {
+    .phone {
         position:relative;
         top: -125px;
-        left: 20%;
+        left: 100px;
         width: 300px;
     }
     .challenge-container{
+        
         display:flex;
         width:100%;
-        margin-bottom:200px;
         flex-direction: column;
     }
-    .section{
+    .info-section{
         display:flex;
         gap:50px;
-        margin-top: 80px;
+        margin-top: 250px;
         height: 500px;
     }
-    .video-container{
-        margin: 200px 100px 150px 100px;
-    }
     @media screen and (max-width: 820px) {
-        .section {
+        .info-section {
             width: 100%;
             flex-direction: column;
             margin:0;
@@ -183,9 +273,17 @@
             margin-right:auto;
             margin-left:auto;
         }
-        .image img {
+        .phone{
             top: 0;
             left: 0;
+        }
+        #doneModal {
+            top:68px;
+            left:25px;
+        }
+        #winModal {
+            top:15px;
+            left:25px;
         }
         .second {
             order: 1;
@@ -193,9 +291,6 @@
         .first{
             order:1;
             margin-left:auto;
-        }
-        .video-container{
-            margin: 50px 0 0 0;
         }
         .tooltips {
             display: none;
