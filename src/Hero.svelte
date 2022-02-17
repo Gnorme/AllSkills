@@ -45,7 +45,7 @@
         "Guitar",
         "Trickshots",
     ]
-
+    let string = "<a>Twitter</a>";
 </script>
 <div id="hero">
    <img alt="AllSkills logo" id="hero-logo" src="images/logo-border-2.png">
@@ -69,11 +69,56 @@
             
         </div>
     </div>
-    <span class="countdown">Big news coming soon...<a href="https://twitter.com/@AllSkillsNFT">@AllSkillsNFT</a></span>
+    <div id="socials">
+        <div class="tooltip">
+            <ul id="social-links">
+                <a href="https://twitter.com/@AllSkillsNFT">Twitter</a>
+                <a href="https://www.instagram.com/AllSkillsNFT/">Instagram</a>
+                <a href="https://www.tiktok.com/@allskillsnft">TikTok</a>
+                <a href="https://www.facebook.com/AllSkillsNFT">Facebook</a>
+            </ul>
+          </div>
+          <span onclick="">Check us out <a>@AllSkillsNFT</a></span>
+    </div>
+    
     
 </div>
 <style>
      @import url('https://fonts.googleapis.com/css2?family=Roboto&display=swap');
+     #socials {
+        position:absolute;
+        top:90%;
+        z-index:10;
+        color:white;
+        font-family: "Oswald";
+        font-size: 24px;
+        left:42%;
+     }
+     #social-links {
+         list-style: none;
+         margin:0;
+         cursor:pointer;
+     }
+     .tooltip {
+        display: none;
+        position: absolute;
+        padding: 10px;
+        width: 150px;
+        right:0px;
+        font-size: 1.5rem;
+        background-color: rgb(34,34,34);
+        color:white;
+        font-family:"Oswald";
+        overflow: hidden;
+        }
+    #socials:active .tooltip,
+    .tooltip:active {
+        display: block;
+    }
+    #socials:hover .tooltip,
+    .tooltip:hover {
+    display: block;
+    }
      #hero-logo {
         position: absolute;
         left: 50%;
@@ -93,16 +138,7 @@
     color:white;
 
 }
-.countdown {
-    position:absolute;
-    top:90%;
-    z-index:10;
-    color:white;
-    font-family: "Oswald";
-    font-size: 24px;
-    left:42%;
-}
-.countdown a {
+#socials a {
     color: aqua;
 }
 
@@ -152,7 +188,7 @@
     #hero-logo {
         height:auto !important;
     }
-        .countdown {
+        #socials {
             display:table;
             margin-left:auto;
             margin-right:auto;
@@ -186,7 +222,7 @@
             text-align:center;
         }
         .scroll-animation {
-            text-align:center;
+            text-align:center !important;
         }
     }
 .description {
@@ -208,22 +244,22 @@ p {
   margin:0;
 }
 
-ul {
+.scroll-animation{
     min-height: 150px;
     max-height: 150px;
     margin: 0px;
     padding: 0px;
     background-size: contain;
     font-size:64px;
-  margin-top:0;
-  position:relative;
-  text-align:left;
-  list-style:none;
-  animation: change 3.5s cubic-bezier(0.5, 0.2, 0.5, 1.0) 0.5s 1 normal forwards;
-  -webkit-animation: change 3.5s cubic-bezier(0.8, 0.3, 0.3, 1.0) 0.5s 1 normal forwards;
+    margin-top:0;
+    position:relative;
+    text-align:left;
+    list-style:none;
+    animation: change 3.5s cubic-bezier(0.5, 0.2, 0.5, 1.0) 0.5s 1 normal forwards;
+    -webkit-animation: change 3.5s cubic-bezier(0.8, 0.3, 0.3, 1.0) 0.5s 1 normal forwards;
 }
 
-ul li {
+.scroll-animation li {
   margin:0;
 }
 
