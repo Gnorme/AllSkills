@@ -12,7 +12,7 @@
     import Ambassador from "./Ambassador.svelte";
     import Observers from "./Observers.svelte";
     import { _ } from 'svelte-i18n'
-import { onMount } from 'svelte';
+    import { onMount } from 'svelte';
     let player1;
     let startingToPlay = false;
     let tryingToPause = false;
