@@ -15,7 +15,7 @@
         <p>{$_('home.table.p3')}</p>
     </div>
     <div class="grid-item">
-        <div class="table-icon"><img alt="Marketplace" style="width:100%" src="images/auction.png"></div>
+        <div class="table-icon"><img alt="Marketplace" style="width:100%" src="images/ambassador.webp"></div>
         <h3>{$_('home.table.title4')}</h3>
         <p>{$_('home.table.p4')}</p>
     </div>
