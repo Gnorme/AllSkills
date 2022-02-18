@@ -1,4 +1,4 @@
 User-agent: * 
 Disallow: /AthleteOnePager.pdf
-Disallow: /Athletesignup.html
-Disallow: /pages/success.html
+Disallow: /athletesignup
+Disallow: /pages/success
