@@ -10,15 +10,15 @@
             "title1":"Skills Competition",
             "p1":"Using our platform, creators can challenge others using a video showcasing their talents. Challenge winners are decided by a community vote and all votes enter a reward pool that gets distrubuted to the winning creator and all those who voted for it to win.",
             "title2":"Earning Potential",
-            "p2": "Our carefully crafted royalties system and stablecoin Vote token will allow both creators and consumers of content to earn money. Creators can earn by winning challenges and viewers can earn by voting.",
+            "p2": "Our carefully crafted royalties system and Vote Token will allow both creators and consumers of content to earn money. Creators can earn by winning challenges and viewers can earn by voting.",
             "title3":"NFT Collectibles",
-            "p3": "Collect unique moments from talented creators. Winning challenge videos have the opportunity to be minted into NFT collectibles that can be traded on our NFT marketplace.",
-            "title4":"NFT Marketplace",
-            "p4": "Buy and Sell winning challenge moments on our NFT Marketplace to increase your collection. Royalties from collectible sales are distributed to the video creator and voters."
+            "p3": "Videos that win have the opportunity to be minted into NFT collectibles that can be traded on our Marketplace or any of the other top NFT marketplaces. Tokenizing challenge videos enables users to fully own and easily monetize their content, and each one is backed up forever using blockchain technology.",
+            "title4":"Ambassador Program",
+            "p4": "Have the opportunity to try and out-perform your favourite pros and earn prizes doing it. Every week top athletes from different domains submit a challenge to the community to try and replicate one of their iconic moves. Submit your best attempt to get entered into a raffle and earn prizes."
         },
         "highlighted": {
             "company": "AllSkills",
-            "start": "is powered by cryptocurrency, using future-proof blockchain & smart contract technology to",
+            "start": "uses future-proof blockchain & smart contract technology to",
             "highlight1": "connect talented people & audiences",
             "middle": ", and foster skill development through competition all while providing",
             "highlight2":"incentives for everyone involved."
@@ -45,7 +45,7 @@
             "earn":  {
                 "title": "Earn money from voting and winning challenges", 
                 "pStart":"Get rewarded for showing off your skills. The creator of the winning video will receive between 1-25% of all vote tokens cast during the challenge while the rest is rewarded to all those who voted for the winning video. The creators cut changes based on how close the vote is.",
-                "highlighted": "Closer vote count = bigger cut.",
+                "highlighted": " Closer vote count = bigger cut.",
                 "pEnd": "",
                 "tooltips": []}
         },
@@ -103,17 +103,17 @@
                 "pEnd":"to automatically mint one of your challenge wins as an NFT."
             },
             "5": {
-                "pStart":"User can choose to mint to",
+                "pStart":"Users can choose to mint to either",
                 "link":"Ethereum, Polygon, Tezos, NEAR, or Flow.",
                 "pEnd":""
             },
             "6": {
-                "pStart":"Tradeable on our marketplace as well as other top NFT marketplaces like",
+                "pStart":"Minted videos are tradeable on our marketplace as well as other top NFT marketplaces like",
                 "link":"OpenSea and Rarible.",
                 "pEnd":""
             },
             "7": {
-                "pStart":"Challenge videos will be stored using decentralized cloud storage providers and the",
+                "pStart":"NFT videos will be stored using decentralized cloud storage providers and the",
                 "link":"IPFS",
                 "pEnd":""
             },
@@ -126,7 +126,7 @@
         "ambassador": {
             "line1": "Compete in new Ambassador Challenges every week hosted by different athletes",
             "line2": "Chance to win an NFT of Ambassador's Challenge video + additional prizes.",
-            "line3": "Stay tune for more details."
+            "line3": "Stay tuned for more details."
         },
         "roadmap": {
             "socials": "Join our Discord and follow our Twitter to get access to the latest announcements and enter raffles to earn prizes from our Ambassadors",
@@ -138,11 +138,11 @@
             },
             "plan": {
                 "cleared": ["Setup social community", "Release marketing plan", "Trailer"],
-                "uncleared": ["Announce partners", "Reveal plan for Ambassador program", "Reveal first AllSkills Ambassadors", "Mint $Skills token", "Token presale"]
+                "uncleared": ["Announce partners", "Reveal plan for Ambassador program", "Reveal first AllSkills Ambassadors", "Mint $Skills token"]
             },
             "launch": {
                 "cleared": [],
-                "uncleared": ["Mint stablecoin Vote token", "Launch closed beta", "Full release of challenge system and marketplace", "Start Ambassador program"]
+                "uncleared": ["Token presale", "Mint stablecoin Vote token", "Launch closed beta", "Public sale","Full release of challenge system and marketplace", "Start Ambassador program"]
             },
             "post": {
                 "cleared": [],
