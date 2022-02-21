@@ -23,7 +23,7 @@
         background: url(https://s2.svgbox.net/pen-brushes.svg?ic=brush-4&color=FF3333);
         background-position: center;
         background-repeat:no-repeat;
-        padding:  50px  6px;
+        padding:  50px;
     }
     :global(.soft-mode) .full-highlight {
         background: none;
