@@ -92,7 +92,7 @@
             background-size: 100% 80%;
             background-position: center;
             background-repeat:no-repeat;
-            padding:  50px  20px;
+            padding:  60px  30px;
         }
         .full-highlight {
             background:none;
