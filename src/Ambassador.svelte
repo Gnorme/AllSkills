@@ -86,13 +86,14 @@
         }
         :global(.soft-mode) .ambassador-info {
             background: none;
+            padding: 0;
         }
         .ambassador-info {
             background: url(https://s2.svgbox.net/pen-brushes.svg?ic=brush-4&color=FF3333);
             background-size: 100% 80%;
             background-position: center;
             background-repeat:no-repeat;
-            padding:  60px  30px;
+            padding:  50px  20px;
         }
         .full-highlight {
             background:none;
