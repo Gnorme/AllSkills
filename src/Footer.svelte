@@ -82,7 +82,11 @@
 }
 h4 {
     font-size: 1.2rem;
+    color: black;
     margin-bottom:0;
+}
+:global(.soft-mode) h4 {
+    color: white;
 }
 .col-content a {
     width: 25%;
