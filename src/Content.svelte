@@ -163,6 +163,12 @@
 :global(.soft-mode) #Team h2 {
     text-decoration-color: blueviolet !important;
 }
+:global(.soft-mode) #Tokenomics h2 {
+    text-decoration-color: blueviolet !important;
+}
+:global(.soft-mode) #Roadmap h2 {
+    text-decoration-color: blueviolet !important;
+}
 :global(.soft-mode) .top {
     display: none;
 }

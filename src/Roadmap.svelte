@@ -197,7 +197,7 @@
         font-size:16px;
         opacity: 0;
         content: '\2713';
-        color: aqua;
+        color: var(--highlight);
     }
     .social-info {
         position:absolute;
@@ -245,6 +245,9 @@
     .text {
         flex-grow: 1;
         margin-top: 1rem;
+    }
+    :global(.soft-mode) .text {
+        color: #083B60;
     }
     .roadmap-container {
         display:flex;
