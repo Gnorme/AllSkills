@@ -139,10 +139,11 @@
     .tokenomics-container{
         position:relative;
         display:flex;
-        margin-top:-50px;
-        margin-bottom:200px;
+        max-width:1220px;
         margin-left:auto;
         margin-right:auto;
+        margin-top:-50px;
+        margin-bottom:200px;
         justify-content: space-evenly;
     }
     @media screen and (max-width: 820px) {

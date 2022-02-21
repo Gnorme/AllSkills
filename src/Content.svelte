@@ -81,28 +81,28 @@
 </div>
 
 <div class="text-content">
-    <h2>What We Provide</h2>
+    <h2 class="title">What We Provide</h2>
     <Table />
     <div class="powered-by">
-        <h3><span style="color:aqua;">{$_('home.highlighted.company')}</span> {$_('home.highlighted.start')} <span class="important">{$_('home.highlighted.highlight1')}</span>{$_('home.highlighted.middle')} <span class="important">{$_('home.highlighted.highlight2')}</span></h3>
+        <h3><span style="color:var(--highlight);">{$_('home.highlighted.company')}</span> {$_('home.highlighted.start')} <span class="important">{$_('home.highlighted.highlight1')}</span>{$_('home.highlighted.middle')} <span class="important">{$_('home.highlighted.highlight2')}</span></h3>
     </div>
-    <svg class="bMargin" viewBox="-0.35 0 500.35 78.328" xmlns="http://www.w3.org/2000/svg">
-        <polygon style="fill: aqua;" points="70.086 0.382 53.904 51.969 -0.944 61.327 -1.27 75.069 63.124 65.518 83.649 -0.101"/>
-        <polygon style="fill: aqua;" points="120.568 -0.003 99.057 64.191 500.785 2.143 499.522 0.721 117.904 49.127 134.741 0.134"/>
+    <svg class="bMargin lines" viewBox="-0.35 0 500.35 78.328" xmlns="http://www.w3.org/2000/svg">
+        <polygon style="fill: aqua" points="70.086 0.382 53.904 51.969 -0.944 61.327 -1.27 75.069 63.124 65.518 83.649 -0.101"/>
+        <polygon style="fill:aqua" points="120.568 -0.003 99.057 64.191 500.785 2.143 499.522 0.721 117.904 49.127 134.741 0.134"/>
       </svg>
     <section id="Challenge" class="section">
-        <h2 style="text-decoration: underline aqua; -webkit-text-decoration-line: underline; -webkit-text-decoration-color: aqua;">Challenge System</h2>
+        <h2 style="text-decoration: underline var(--highlight); -webkit-text-decoration-line: underline; -webkit-text-decoration-color: aqua;">Challenge System</h2>
         <Challenge/>
     </section>
-    <svg class="bMargin" viewBox="-1.79 0 501.79 94.114" xmlns="http://www.w3.org/2000/svg">
+    <svg class="bMargin lines" viewBox="-1.79 0 501.79 94.114" xmlns="http://www.w3.org/2000/svg">
         <polygon style="fill: gold;" points="500.159 16.553 432.482 24.328 392.825 93.844 409.667 93.703 443.069 37.609 499.889 30.393"/>
         <polygon style="fill: gold;" points="352.106 94.674 335.059 94.797 363.621 47.452 -1.746 94.183 -1.798 80.123 390.963 29.985"/>
-      </svg>
+      </svg>       
     <section id="Vote" class="section">
         <h2 style="text-align: center; text-decoration: underline gold; -webkit-text-decoration-line: underline; -webkit-text-decoration-color: gold;"><span style="font-family: 'Bebas Neue';">AllSkills</span> $Vote Token</h2>
         <VoteToken/>
     </section>
-    <svg class="bMargin" viewBox="-0.35 0 500.35 78.328" xmlns="http://www.w3.org/2000/svg">
+    <svg class="bMargin lines" viewBox="-0.35 0 500.35 78.328" xmlns="http://www.w3.org/2000/svg">
         <polygon style="fill: blueviolet;" points="70.086 0.382 53.904 51.969 -0.944 61.327 -1.27 75.069 63.124 65.518 83.649 -0.101"/>
         <polygon style="fill: blueviolet;" points="120.568 -0.003 99.057 64.191 500.785 2.143 499.522 0.721 117.904 49.127 134.741 0.134"/>
       </svg>
@@ -110,7 +110,7 @@
         <h2 id="nftTitle" ><span style="font-family: 'Bebas Neue';">AllSkills</span> NFTs</h2>
         <NFT/>
     </section>
-    <svg class="bMargin" viewBox="-1.79 0 501.79 94.114" xmlns="http://www.w3.org/2000/svg">
+    <svg class="bMargin lines" viewBox="-1.79 0 501.79 94.114" xmlns="http://www.w3.org/2000/svg">
         <polygon style="fill: #FF3333;" points="500.159 16.553 432.482 24.328 392.825 93.844 409.667 93.703 443.069 37.609 499.889 30.393"/>
         <polygon style="fill: #FF3333;" points="352.106 94.674 335.059 94.797 363.621 47.452 -1.746 94.183 -1.798 80.123 390.963 29.985"/>
       </svg>
@@ -118,25 +118,25 @@
         <h2 style="text-decoration: underline #FF3333; -webkit-text-decoration-line: underline; -webkit-text-decoration-color: #FF3333;">Ambassador Program</h2>
         <Ambassador/>
     </section>
-    <svg class="bMargin" viewBox="-0.35 0 500.35 78.328" xmlns="http://www.w3.org/2000/svg">
-        <polygon style="fill: white;" points="70.086 0.382 53.904 51.969 -0.944 61.327 -1.27 75.069 63.124 65.518 83.649 -0.101"/>
-        <polygon style="fill: white;" points="120.568 -0.003 99.057 64.191 500.785 2.143 499.522 0.721 117.904 49.127 134.741 0.134"/>
-      </svg>
-    <section id="Roadmap" class="section">
+   <section id="Roadmap" class="section">
+        <svg class="bMargin lines" viewBox="-0.35 0 500.35 78.328" xmlns="http://www.w3.org/2000/svg">
+            <polygon style="fill: white;" points="70.086 0.382 53.904 51.969 -0.944 61.327 -1.27 75.069 63.124 65.518 83.649 -0.101"/>
+            <polygon style="fill: white;" points="120.568 -0.003 99.057 64.191 500.785 2.143 499.522 0.721 117.904 49.127 134.741 0.134"/>
+          </svg>
         <h2 style="text-decoration: underline white; -webkit-text-decoration-line: underline; -webkit-text-decoration-color: white; margin-bottom: 75px;">Buildup to Launch & Beyond</h2>
         <Roadmap/>
     </section>
-    <svg class="bMargin" viewBox="-1.79 0 501.79 94.114" xmlns="http://www.w3.org/2000/svg">
-        <polygon style="fill: #78FF78;" points="500.159 16.553 432.482 24.328 392.825 93.844 409.667 93.703 443.069 37.609 499.889 30.393"/>
-        <polygon style="fill: #78FF78;" points="352.106 94.674 335.059 94.797 363.621 47.452 -1.746 94.183 -1.798 80.123 390.963 29.985"/>
-      </svg>
     <section id="Tokenomics" class="section">
+        <svg class="bMargin lines" viewBox="-1.79 0 501.79 94.114" xmlns="http://www.w3.org/2000/svg">
+            <polygon style="fill: #78FF78;" points="500.159 16.553 432.482 24.328 392.825 93.844 409.667 93.703 443.069 37.609 499.889 30.393"/>
+            <polygon style="fill: #78FF78;" points="352.106 94.674 335.059 94.797 363.621 47.452 -1.746 94.183 -1.798 80.123 390.963 29.985"/>
+          </svg>
         <h2 style="text-align: center; text-decoration: underline #78FF78; -webkit-text-decoration-line: underline; -webkit-text-decoration-color: #78FF78;">Tokenomics</h2>
         <div>
             <Tokenomics/>
         </div>
     </section>
-    <svg class="bMargin" viewBox="-0.35 0 500.35 78.328" xmlns="http://www.w3.org/2000/svg">
+    <svg class="bMargin lines" viewBox="-0.35 0 500.35 78.328" xmlns="http://www.w3.org/2000/svg">
         <polygon style="fill: white;" points="70.086 0.382 53.904 51.969 -0.944 61.327 -1.27 75.069 63.124 65.518 83.649 -0.101"/>
         <polygon style="fill: white;" points="120.568 -0.003 99.057 64.191 500.785 2.143 499.522 0.721 117.904 49.127 134.741 0.134"/>
       </svg>
@@ -160,6 +160,58 @@
 
 
 <style>   /* rgb(143,255,238) #00DFFC*/
+:global(.soft-mode) #Team h2 {
+    text-decoration-color: blueviolet !important;
+}
+:global(.soft-mode) .top {
+    display: none;
+}
+:global(.soft-mode) #Partners {
+    padding-top: 0;
+    background-color: rgb(225,225,255);
+}
+#Roadmap {
+    display:none;
+}
+:global(.reveal) {
+    display: block !important;
+}
+#Tokenomics {
+    display:none;
+}
+:global(.soft-mode) .lines{
+    display:none;
+}
+:global(h2) {
+    color: var(--headerColor);
+}
+:global(.soft-mode h3) {
+    color: var(--headerColor);
+}
+:global(body.soft-mode) h2 {
+		font-family: "Varela" !important;
+        text-shadow: none;
+        color: #20c8d4 !important
+	}
+    :global(body.soft-mode .important) {
+       color: #b061ff !important; 
+    }
+:global(.soft-mode) #Vote {
+    padding-top: 400px;
+    color: var(--fourthColor);
+}
+:global(.soft-mode) #Vote {
+    background-image: url("../images/bluewaves.svg");
+    background-size:cover;
+    background-repeat: no-repeat;
+}
+:global(.soft-mode) #Ambassadors {
+    background-image: url("../images/orangewaves_navy.svg");
+    background-size:cover;
+    background-repeat: no-repeat;
+    padding-top: 50px;
+    margin-bottom:0;
+}
 .section {
     margin-bottom:15rem;
 }
@@ -174,6 +226,12 @@
     z-index:9999;
     left: calc(50% - 150px);
     background-image: url("../images/volume-mute.png");
+}
+:global(.soft-mode) .marker-highlight {
+    background: url('../images/paint_splatter_notes.png');
+    background-position: center;
+    background-repeat:no-repeat;
+    background-size: 30% 100%;    
 }
 .marker-highlight {
         background: url(../images/aqua-brush4-v.png);
@@ -214,7 +272,6 @@
 }
 #nftTitle {
     margin-bottom: 1rem; 
-    margin-left: 6rem; 
     text-decoration-line: underline;
     text-decoration-color: blueviolet;
     -webkit-text-decoration-line: underline; 
@@ -232,10 +289,8 @@
     padding-top:200px;
 }
 .section {
-    width: 85%;
-    margin-left:auto;
-    margin-right:auto;
-    max-width:1220px
+    width: 100%;
+    position:relative;
 }
 .top {
     position: relative;
@@ -255,21 +310,34 @@
     left:0;right:0;
     margin:auto;
 }
-    .powered-by{
-        margin-top: 27rem;
+    :global(.soft-mode) .powered-by {
+        background-size:cover;
+        background-position:bottom;
+        background-repeat: no-repeat;
+        background-image: url("../images/orangewaves_navy_short.svg")
+    }
+    /*.powered-by {
+        position:relative;
+    }
+    .powered-by svg {
+        position:absolute;
+        z-index:-1;
+        top:0;
+    }*/
+    .powered-by h3{
+        padding-top: 25rem;
         max-width: 1200px;
-        margin-bottom: 27rem;
+        padding-bottom: 27rem;
         width:85%;
         margin-left:auto;
         margin-right:auto;
         text-align: center;
         font-size: 2.5rem;
-        font-family: "Oswald";
+        font-family: var(--headerFont);
     }
     @media screen and (max-width: 820px) {
-        .powered-by{
-            margin-top:20rem !important;
-            margin-bottom:20rem !important;
+        .marker-highlight {
+            background:none !important;
         }
         .img-frame img {
             display:none;
@@ -280,11 +348,17 @@
         #nftTitle {
             margin-left:0;
         }
-        h3 {
+        .powered-by h3 {
             font-size: 2.5rem !important;
+            padding-top: 10rem !important;
+            padding-bottom: 10rem !important;
+        }
+        :global(.soft-mode .powered-by) h3 {
+            padding-top: 10rem !important;
+            padding-bottom: 500px !important;
         }
         h2 {
-            font-size: 4rem !important; 
+            font-size: 3.5rem !important; 
             text-align:center !important;
         }
         .white {
@@ -293,6 +367,9 @@
         .white h2 {
             margin-left: 0!important;
         }
+        :global(.soft-mode) #Vote h2 {
+            padding-top:200px;
+        }
     }
     h2 {
         margin-left:auto; 
@@ -300,11 +377,12 @@
         max-width: 1200px;
         text-shadow: 5px 5px rgba(0,0,0,0.5);
         text-align:left;
-        min-width:50%;
+        min-width:40%;
         font-size: 4.5rem;
         line-height: 1;
         font-family:'Oswald';
         margin-bottom:125px;
+        color: var(--baseText);
         /*font-family: 'Lato', sans-serif !important;
         font-family: 'Roboto', sans-serif;*/
     }
@@ -313,7 +391,6 @@
         margin-right: auto;
         align-items: center; 
         /*font-family: "Roboto", "Lato", sans-serif;*/
-        color: white;
         box-sizing: border-box;
     }
 </style>

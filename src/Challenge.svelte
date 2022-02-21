@@ -4,25 +4,25 @@
     <div class="info-section">
         <div class="image first">
             <img alt="Edit videos" class="phone" src="images/challenge_edit.webp" />
-            <div class="tooltips" style="color:rgb(200,255,255)">
-                <p id="music" class="extra-info"><span style="text-decoration:underline;">Music</span><br>Users will get to chose from a variety of song clips to add to their videos</p>
-                <p id="filters" class="extra-info"><span style="text-decoration:underline;">Filters</span><br>Users will have access to a number of filters to put over their videos</p>
-                <p id="effects" class="extra-info"><span style="text-decoration:underline;">Effects</span><br>A number of video effects will be available to enhance the quality of the users videos.</p>
-                <p id="gifs" class="extra-info info-left"><span style="text-decoration:underline;">GIFs</span><br>To add a unique touch to your trickshots, add a GIF for a built-in reaction to the users skills.</p>
-                <p id="crop" class="extra-info info-left"><span style="text-decoration:underline;">Crop</span><br>To cut and crop their videos, users are invited to use the trimming feature.</p>
+            <div class="tooltips" style="color:var(--firstColor); ">
+                <p id="music" class="extra-info"><span style="text-decoration:underline; color:white;">Music</span><br>Users will get to chose from a variety of song clips to add to their videos</p>
+                <p id="filters" class="extra-info"><span style="text-decoration:underline;color:white;">Filters</span><br>Users will have access to a number of filters to put over their videos</p>
+                <p id="effects" class="extra-info"><span style="text-decoration:underline;color:white;">Effects</span><br>A number of video effects will be available to enhance the quality of the users videos.</p>
+                <p id="gifs" class="extra-info info-left"><span style="text-decoration:underline;color:white;">GIFs</span><br>To add a unique touch to your trickshots, add a GIF for a built-in reaction to the users skills.</p>
+                <p id="crop" class="extra-info info-left"><span style="text-decoration:underline;color:white;">Crop</span><br>To cut and crop their videos, users are invited to use the trimming feature.</p>
             </div>
         </div>
         <div class="content second">
-            <div>
-            <h3 class="title" style="background-image: linear-gradient(aqua, aqua);">{$_('home.challenges.videos.title')}</h3>
-            <p>{$_('home.challenges.videos.pStart')} <span style="color:aqua;">{$_('home.challenges.videos.highlighted')}</span>{$_('home.challenges.videos.pEnd')}</p>
+            <div style="background-color: var(--firstColor);" class="info-card">
+            <h3 class="title" style="background-image: linear-gradient(var(--firstColor), var(--firstColor));">{$_('home.challenges.videos.title')}</h3>
+            <p>{$_('home.challenges.videos.pStart')} <span style="color:var(--firstColor);">{$_('home.challenges.videos.highlighted')}</span>{$_('home.challenges.videos.pEnd')}</p>
             </div>
         </div>
     </div>
     <div class="info-section">
         <div class="image second">
             <img alt="Upload videos" class="phone" src="images/challenge_upload.webp" />
-            <div class="tooltips" style="color:rgb(255,150,150)">
+            <div class="tooltips" style="color:var(--secondColor)">
                 <p id="music" class="extra-info info-left">Users will have the option to save their video to their camera roll.</p>
                 <p id="name" class="extra-info info-left">Choose a unique name for your trickshot.</p>
                 <div id="tags" class="extra-info info-left">
@@ -33,20 +33,24 @@
             </div>
         </div>
         <div class="content first">
-            <h3 class="title" style="background-image: linear-gradient(red,red);">{$_('home.challenges.challenges.title')}</h3>
-            <p>{$_('home.challenges.challenges.pStart')}  <span style="color:red;">{$_('home.challenges.challenges.highlighted')}</span> {$_('home.challenges.challenges.pEnd')}</p>
+            <div class="info-card" style="background-color: var(--secondColor);">
+            <h3 class="title" style="background-image: linear-gradient(var(--secondColor),var(--secondColor));">{$_('home.challenges.challenges.title')}</h3>
+            <p>{$_('home.challenges.challenges.pStart')}  <span style="color:var(--secondColor);">{$_('home.challenges.challenges.highlighted')}</span> {$_('home.challenges.challenges.pEnd')}</p>
+            </div>
         </div>
     </div>
     <div class="info-section">
         <div class="image first">
             <img alt="Users vote for winner" class="phone" src="images/challenge_current.webp" />
-            <div class="tooltips" style="color:rgb(225,175,255)">
+            <div class="tooltips" style="color:var(--thirdColor)">
                 <p id="music" class="extra-info">Users will see freezeframe of the 2 videos and they can tap on the Play button to watch each video.</p>
             </div>
         </div>
         <div class="content second">
+            <div class="info-card" style="background-color: var(--thirdColor);">
             <h3 class="title" style="background-image: linear-gradient(blueviolet,blueviolet);">{$_('home.challenges.votes.title')}</h3>
             <p>{$_('home.challenges.votes.pStart')} <span style="color:blueviolet;">{$_('home.challenges.votes.highlighted')}</span> {$_('home.challenges.votes.pEnd')}</p>
+            </div>
         </div>
     </div>
     <div class="info-section">
@@ -64,8 +68,10 @@
             <img alt="Rewards" class="phone" src="images/challenge_win.webp" />
         </div>
         <div class="content first">
+            <div class="info-card" style="background-color: var(--fourthColor);">
             <h3 class="title" style="background-image: linear-gradient(gold,gold);">{$_('home.challenges.earn.title')}</h3>
             <p>{$_('home.challenges.earn.pStart')}<span style="color: gold;">{$_('home.challenges.earn.highlighted')}</span></p>
+            </div>
         </div>
     </div>
 
@@ -87,6 +93,31 @@
 </script>
 
 <style>
+    :global(.soft-mode .first) span {
+        color: blueviolet !important;
+    }
+    :global(.soft-mode) .first .title{
+        background-image:linear-gradient(gold,gold) !important;
+    }
+    :global(.soft-mode) .second .title{
+        background-image:linear-gradient(blueviolet, blueviolet) !important;
+    }
+    :global(.soft-mode .second) span {
+        color: blueviolet !important;
+    }
+    :global(.soft-mode .info-card) {
+        border-radius: 20px;
+        padding: 20px;
+        box-shadow: 0px 2px 10px rgba(0,0,0,0.1);
+        display: block !important;
+    }
+    :global(.soft-mode) h3, .info-card p{
+        color: white;
+    }
+    .info-card {
+        background-size: 0 !important;
+        display:contents;
+    }
     #resButton {
         position: absolute;
         background-color: blueviolet;
@@ -177,7 +208,7 @@
         position:absolute;
         display:inline-block;
         width: 100px;
-        font-size: 11px;
+        font-size: 13px;
         text-align: right;
     }
     .info-left {
@@ -189,7 +220,7 @@
         top:-20%;
     }
     #effects {
-        top: 20%;
+        top: 23%;
     }
     #gifs {
         top:-20%;
@@ -201,12 +232,12 @@
         top: 12%;
     }
     #tags {
-        top: 25%; 
+        top: 28%; 
         width: 25%;
     }
     #tags p {
-        margin-block-end:0.25rem;
-        margin-block-start:0.25rem;
+        margin-block-end:0.4rem;
+        margin-block-start:0.4rem;
     }
     h3 {
         font-size: 2rem;
@@ -216,10 +247,6 @@
     background-position: 0% 100%;
     background-size: 0% 2px;
     background-repeat: no-repeat;
-    }
-
-    p{
-        font-family:"BentonSans";
     }
     .first{
         order:1;
@@ -247,9 +274,11 @@
         width: 300px;
     }
     .challenge-container{
-        
+        max-width: 1220px;
+        margin-left:auto;
+        margin-right:auto;
         display:flex;
-        width:100%;
+        width:85%;
         flex-direction: column;
     }
     .info-section{

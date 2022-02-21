@@ -248,6 +248,9 @@
     }
     .roadmap-container {
         display:flex;
+        max-width:1220px;
+        margin-left:auto;
+        margin-right:auto;
         padding-top:20px;
         margin-bottom:200px;
         justify-content: space-between;

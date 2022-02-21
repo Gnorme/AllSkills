@@ -242,6 +242,10 @@ a:hover {
 }
 .cards-container{
     display:flex;
+    max-width: 1220px;
+    margin-left:auto;
+    margin-right:auto;
+    width:90%;
     flex-wrap: wrap;
     align-items:flex-start;
     justify-content: space-between;

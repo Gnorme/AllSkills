@@ -8,6 +8,17 @@
 </form>
 
 <style>
+:global(.soft-mode) input {
+    border-color: white !important;
+    color: white !important;
+}
+:global(.soft-mode) button {
+    border-color: white !important;
+    color: white !important;
+}
+:global(.soft-mode) input::placeholder {
+    color: white !important;
+}
 .signup {
     display:flex;
     width: 100%;
@@ -27,10 +38,7 @@ button {
     text-align: center;
     cursor: pointer;
 }
-input::placeholder {
-    color: white;
-    opacity: 0.5;
-}
+
 input {
     padding-left: 1.5rem;
     padding-right: 1.5rem;
@@ -52,6 +60,7 @@ input {
         padding-bottom:1rem;
     }
 }
+
 input::placeholder {
     color: var(--placeholder);
 }

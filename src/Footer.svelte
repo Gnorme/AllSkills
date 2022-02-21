@@ -27,10 +27,10 @@
         <div class="footer-col" id="connect">
             <h4 id="links">Connect</h4>
             <div class="col-content" style="display:flex; justify-content:space-between">
-                <a href="mailto:info@allskills.ca"><img alt="Email" src="images/email.png"></a>
-                <a href="https://www.twitter.com/@AllSkillsNFT"><img alt="Discord" src="images/discord.png"></a>
-                <a href="https://www.instagram.com/AllSkillsNFT"><img alt="Instagram" src="images/instagram.png"></a>
-                <a href="https://www.twitter.com/@AllSkillsNFT"><img alt="Twitter" src="images/twitter.png"></a>
+                <a href="mailto:info@allskills.ca"><img alt="Email" src="images/email.png" id="email"></a>
+                <a href="https://www.twitter.com/@AllSkillsNFT"><img alt="Discord" src="images/discord.png" id="discord"></a>
+                <a href="https://www.instagram.com/AllSkillsNFT"><img alt="Instagram" src="images/instagram.png" id="instagram"></a>
+                <a href="https://www.twitter.com/@AllSkillsNFT"><img alt="Twitter" src="images/twitter.png" id="twitter"></a>
             </div>
         </div>
     </div>
@@ -40,6 +40,19 @@
 </footer>
 
 <style>
+:global(.soft-mode) #discord{
+    content:url("../images/discord_white.png");
+}
+:global(.soft-mode) #twitter{
+    content:url("../images/twitter_white.png");
+}
+:global(.soft-mode) #instagram{
+    content:url("../images/instagram_white.png");
+}
+:global(.soft-mode) #email{
+    content:url("../images/email_white.png");
+}
+
 @media screen and (max-width: 820px) {
     .footer-content {
         grid-template: 
@@ -107,6 +120,9 @@ li{
 a{
     color: black;
 }
+:global(.soft-mode) a {
+    color: white;
+}
 ul{
     list-style: none;
     margin: 0px;
@@ -122,6 +138,10 @@ ul{
     height: 400px;
     background-color: aqua;
     border-top: 1px solid black;
+}
+:global(.soft-mode) .footer {
+    background-color: #001220;
+    color:white;
 }
 .footer-content{
     padding-top: 5rem;

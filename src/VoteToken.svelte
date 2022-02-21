@@ -71,14 +71,12 @@
         -webkit-text-decoration-color: gold;
     }
     #value{
-        font-family: 'Ultra'; 
-        font-family: 'Asphaltic'; 
         font-family: 'Oswald';
         grid-area: value;
-        color: aqua;
+        color: var(--highlight);
     }
     .highlight {
-        color: aqua;
+        color: var(--highlight);
     }
     .middle {
         display:flex; 
@@ -103,6 +101,12 @@
         line-height: 1.5vw;
         font-weight:100;
     }
+    :global(.soft-mode .section) p {
+        background-color: white;
+        border-radius: 15px;
+        font-size: 1.2rem !important;
+        padding: 15px;
+    }
     .section img{
         float:left;
         margin-right: 10px;
@@ -122,6 +126,10 @@
         width: 80%;
     }
     .vote-container{
+        max-width: 1220px;
+        padding-bottom:100px;
+        margin-left:auto;
+        margin-right:auto;
         display:grid;
         min-height:525px;
         margin-bottom:200px;
@@ -145,6 +153,7 @@
             display:flex;
             flex-direction: column;
             height: auto;
+            width: 90%;
             max-height: 100%;
         }
         .column{
@@ -156,6 +165,7 @@
         }
         h3 {
             font-size: 1.75rem !important;
+            
         }
     }
 span {

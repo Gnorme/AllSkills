@@ -173,4 +173,10 @@
         margin-right:7%;
         margin-top:100px;
     }
+    #partner-container h2 {
+        color: black;
+    }
+    :global(.soft-mode) #partner-container h2 {
+        color: var(--headerColor);
+    }
 </style>
