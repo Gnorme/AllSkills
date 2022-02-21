@@ -129,6 +129,9 @@
 </script>
 
 <style>
+  .card h2 {
+    color: white;
+  }
   a {
     cursor:pointer;
   }
