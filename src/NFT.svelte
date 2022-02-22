@@ -237,7 +237,7 @@
     :global(.soft-mode) .marker-highlight {
         background-position: center !important;
         background-repeat:no-repeat !important;
-        background-size: 80% 80% !important;
+        background-size: 70% 70% !important;
         background: url("../images/paint_splatter_notes.png");
     }
     :global(.soft-mode) .lines{
