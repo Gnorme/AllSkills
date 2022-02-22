@@ -287,6 +287,7 @@
         }
         .social-info {
             position:relative;
+            left:0;
             width:auto;
             margin-top: 30px;
         }
