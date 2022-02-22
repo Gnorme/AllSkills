@@ -370,6 +370,8 @@
             width: 100% !important;
         }
         :global(.soft-mode) .marker-highlight {
+            padding-top: 30px;
+            padding-bottom: 30px;
             background-size: 100% 100% !important;
         }
         .marker-highlight {
