@@ -172,9 +172,23 @@
 :global(.soft-mode) .top {
     display: none;
 }
+
 :global(.soft-mode) #Partners {
     padding-top: 0;
     background-color: rgb(225,225,255);
+}
+@media screen and (min-width: 820px) {
+    :global(.soft-mode) #Trailer {
+        padding-top:100px;
+        padding-bottom:50px;
+    }
+    :global(.soft-mode) #mute {
+        bottom:11%;
+    }
+}
+#Trailer {
+    margin-top:12rem;
+    margin-bottom:12rem;
 }
 #Roadmap {
     display:none;
@@ -273,8 +287,6 @@
     position:relative;
     width:100%;
     height:710px;
-    margin-top:15rem;
-    margin-bottom:15rem;
 }
 #nftTitle {
     margin-bottom: 1rem; 
