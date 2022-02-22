@@ -251,7 +251,7 @@
     background: url('../images/paint_splatter_notes.png');
     background-position: center;
     background-repeat:no-repeat;
-    background-size: 30% 100%;    
+    background-size: 35% 100%;    
 }
 .marker-highlight {
         background: url(../images/aqua-brush4-v.png);
