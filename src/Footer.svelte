@@ -35,7 +35,8 @@
         </div>
     </div>
     <div id="logo">
-        <img alt="Logo" style="margin-right: 12px;" src="images/logo-dark-bottom.png" />
+        <img class="soft" alt="Logo" style="margin-right: 12px;" src="images/logo-white-bottom.png" />
+        <img class="hard" alt="Logo" style="margin-right: 12px;" src="images/logo-dark-bottom.png" />
     </div>
 </footer>
 
@@ -51,6 +52,15 @@
 }
 :global(.soft-mode) #email{
     content:url("../images/email_white.png");
+}
+:global(.soft-mode) .soft {
+    display: block !important;
+}
+:global(.soft-mode) .hard {
+    display: none !important;
+}
+.soft {
+    display: none;
 }
 
 @media screen and (max-width: 820px) {
