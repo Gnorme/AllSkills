@@ -78,6 +78,7 @@
         <a href="#Ambassadors">Ambassador Program</a>
         <a on:click={revealRoadmap} href="#Roadmap">Roadmap</a>
         <a on:click={revealTokenomics} href="#Tokenomics">Tokenomics</a>
+        <a href="/whitepaper.pdf">Whitepaper</a>
         <a href="#Team">Team</a>
         <a href="#News">News</a>
         <a href="#Contact">Contact</a>
