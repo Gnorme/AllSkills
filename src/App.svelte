@@ -102,6 +102,7 @@
 		--fourthColor: #5497f0;
 		--baseText: #ff8b58;
 		--bgColor: rgb(225,225,255);
+		--extraColor: #f5cf03;
 		--headerFont: "Varela";
 		font-family: "Varela" !important;
 		background-color: var(--bgColor) !important;
@@ -112,6 +113,7 @@
 		--firstColor: aqua;
 		--secondColor: #FF3333;
 		--thirdColor: blueviolet;
+		--extraColor: rgb(236, 236, 55);
 		--fourthColor: gold;
 		--baseText: white;
 		--headerFont: "Oswald";

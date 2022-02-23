@@ -1,8 +1,9 @@
 <div class="roadmap-container">
     <div class="roadmap-card" style="height:60%;">
-        <h3 style="color:white;">2019 - 2020</h3>
-        <div class="header" style="border-bottom: 5px solid #363636">
-            <img alt="Idea" src="images/idea_sw.png" />
+        <h3 style="color:var(--baseText);">2019 - 2020</h3>
+        <div class="header" style="border-bottom: 5px solid var(--baseText)">
+            <img class="soft" alt="Idea" src="images/idea_soft.png" />
+            <img class="hard" alt="Idea" src="images/idea_sw.png" />
         </div>
         <div class="text">
             <ul>
@@ -18,7 +19,8 @@
     <div class="roadmap-card" style="height:70%;">
         <h3 style="color:#852ee7">2021</h3>
         <div class="header" style="border-bottom: 5px solid #852ee7">
-            <img alt="New Direction" src="images/leadership_sw.png" />
+            <img class="soft" alt="New Direction" src="images/leadership_soft.png" />
+            <img class="hard" alt="New Direction" src="images/leadership_sw.png" />
         </div>
         <div class="text">
             <ul>
@@ -29,9 +31,10 @@
         </div>
     </div>
     <div class="roadmap-card" style="height:80%;">
-        <h3 style="color:#e0573f">Q1 2022</h3>
-        <div class="header" style="border-bottom: 5px solid #e0573f">
-            <img alt="Pre-launch plan" src="images/planning_sw.png" />
+        <h3 style="color:var(--secondColor)">Q1 2022</h3>
+        <div class="header" style="border-bottom: 5px solid var(--secondColor)">
+            <img class="soft" alt="Pre-launch plan" src="images/planning_soft.png" />
+            <img class="hard" alt="Pre-launch plan" src="images/planning_sw.png" />
         </div>
         <div class="text">
             <ul>
@@ -45,10 +48,11 @@
         </div>
     </div>
     <div class="roadmap-card" style="height:90%;">
-        <h3 style="color:#ecec37;">Q2 2022</h3>
-        <div class="header" style="border-bottom: 5px solid #ecec37">
+        <h3 style="color:var(--extraColor);">Q2 2022</h3>
+        <div class="header" style="border-bottom: 5px solid var(--extraColor)">
             <div style="position:relative; display:inline-grid;">
-                <img style="max-height:100px; position:relative;" alt="Launch plans" src="images/launch_no_ex.png" />
+                <img class="soft" style="max-height:100px; position:relative;" alt="Launch plans" src="images/rocket_soft.png" />
+                <img class="hard" style="max-height:100px; position:relative;" alt="Launch plans" src="images/launch_no_ex.png" />
                 <div class="exhaust">
                     <div class="container">
                         <div class="red flame"></div>
@@ -70,9 +74,10 @@
         </div>
     </div>
     <div class="roadmap-card" style="height:100%;">
-        <h3 style="color: aqua;">Q3+ 2022</h3>
-        <div class="header" style="border-bottom: 5px solid aqua">
-            <img alt="Post launch plans" src="images/globalization_sw.png" />
+        <h3 style="color: var(--headerColor);">Q3+ 2022</h3>
+        <div class="header" style="border-bottom: 5px solid var(--headerColor)">
+            <img class="soft" alt="Post launch plans" src="images/globalization_soft.png" />
+            <img class="hard" alt="Post launch plans" src="images/globalization_sw.png" />
         </div>
         <div class="text">
             <ul>
@@ -91,6 +96,15 @@
 </script>
 <style>
     /* <img alt="Launch plans" src="images/launch_sw.png" />*/
+:global(.soft-mode) .soft {
+    display: inline-block !important;
+}
+:global(.soft-mode) .hard {
+    display: none !important;
+}
+.soft {
+    display: none;
+}
 .exhaust {
     transform: rotate(-140deg) scale(0.7);
     -webkit-transform: rotate(-140deg) scale(0.7);
@@ -236,6 +250,9 @@
         font-size:1.3em;
         font-weight:100;
         text-shadow: 0px 4px 3px black;
+    }
+    :global(.soft-mode) h3 {
+        text-shadow: 0px 0px 15px rgba(255,255,255,0.5);
     }
     .header {
         height: 100px;
