@@ -1,7 +1,8 @@
 <script>
     import { onMount } from "svelte";
-
     onMount(() => {
+        //window.document.body.classList.toggle('soft-mode')
+        
         const observer = new IntersectionObserver(entries => {
             // Loop over the entries
             let highlightShowing = 0;
@@ -120,11 +121,12 @@
     :global(.underline) {
         animation: ul 0.7s 0.2s linear forwards;
     } 
+
     :global(.type) {
         color:#0000;
         background:
-            linear-gradient(aqua 0 0) 0 50%/150% 95%,
-            linear-gradient(aqua 0 0) 0 0  /100% 100%;
+            linear-gradient(var(--highlight) 0 0) 0 50%/150% 95%,
+            linear-gradient(var(--highlight) 0 0) 0 0  /100% 100%;
         -webkit-background-clip:padding-box,text;
         background-clip:padding-box,text;
         background-repeat:no-repeat;

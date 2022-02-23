@@ -1,21 +1,21 @@
 <div class="table-content" id="Table">
     <div class="grid-item">
-        <div class="table-icon"><img alt="Handshake" style="width:100%" src="images/handshake.png"></div>
+        <div class="table-icon"><img alt="Handshake" style="width:100%" src="images/{softTableIcons[0]}"></div>
         <h3>{$_('home.table.title1')}</h3>
         <p>{$_('home.table.p1')}</p>
     </div>
     <div class="grid-item">
-        <div class="table-icon"><img alt="Earnings" style="width:100%" src="images/earn.png"></div>
+        <div class="table-icon"><img alt="Earnings" style="width:100%" src="images/{softTableIcons[1]}"></div>
         <h3>{$_('home.table.title2')}</h3>
         <p>{$_('home.table.p2')}</p>
     </div>
     <div class="grid-item">
-        <div class="table-icon"><img alt="Collectibles" style="width:100%" src="images/stamps.png"></div>
+        <div class="table-icon"><img alt="Collectibles" style="width:100%" src="images/{softTableIcons[2]}"></div>
         <h3>{$_('home.table.title3')}</h3>
         <p>{$_('home.table.p3')}</p>
     </div>
     <div class="grid-item">
-        <div class="table-icon"><img alt="Marketplace" style="width:100%" src="images/ambassador.webp"></div>
+        <div class="table-icon"><img alt="Marketplace" style="width:100%" src="images/{softTableIcons[3]}"></div>
         <h3>{$_('home.table.title4')}</h3>
         <p>{$_('home.table.p4')}</p>
     </div>
@@ -23,6 +23,9 @@
 
 <script>
     import { _ } from 'svelte-i18n'
+    let tableIcons = ["handshake.png", "earn.png", "stamps.png", "ambassador.webp"]
+    let softTableIcons = ["handshake_soft.webp", "earn_soft.webp", "stamps_soft.webp", "ambassador_soft.webp"]
+    
 </script>
 
 <style>
@@ -52,7 +55,7 @@
         margin-block-start:0;
         margin-block-end:0;
         font-weight: 500;
-        font-family: "Oswald";
+        font-family: var(--headerFont);
         grid-area: b;
     }
     p {
@@ -82,6 +85,17 @@
         background-repeat: no-repeat;
         background-image: url("../images/black_bg_s.webp")
     }
+    :global(.soft-mode .table-content, .soft-mode .grid-item) {
+        border: none !important;
+    }
+    :global(.soft-mode) .table-content {
+        background-color: white;
+        box-shadow: 0px 2px 10px rgba(0,0,0,0.3);
+    }
+    :global(.soft-mode) div{
+        border-radius: 30px !important;
+        background-image: none;
+    }
     .table-content{
         display:grid;
         margin-left:auto;
@@ -89,7 +103,6 @@
         max-width: 1180px;
         margin-top:3rem;
         margin-bottom:3rem;
-        color: white;
         border: 3px solid aqua;
         grid-template-columns: repeat(2,minmax(0,1fr));
     }

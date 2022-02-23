@@ -57,14 +57,14 @@
                     {#each skills as skill}
                         <li>{skill}</li>
                     {/each}
-                    <li style="color:#00F3FF; font-weight: 600 !important; font-family:'Bebas Neue'; margin-top:11px;">AllSkills</li>
+                    <li style="color:var(--highlight); font-weight: 600 !important; font-family:'Bebas Neue'; margin-top:11px;">AllSkills</li>
                 </ul>
             </div>
         </div>
     </div>
     <div class='hero-split'>
         <div class="description">
-            <p style="margin-bottom:2rem;">{$_('home.hero.description_start')} <span style="color:#00F3FF">{$_('home.hero.description_highlight')}</span> {$_('home.hero.description_end')}</p>
+            <p style="margin-bottom:2rem; color: white !important;">{$_('home.hero.description_start')} <span style="color:var(--highlight)">{$_('home.hero.description_highlight')}</span> {$_('home.hero.description_end')}</p>
             <NewsletterSignup color='white' />
             
         </div>
@@ -139,7 +139,7 @@
 
 }
 #socials a {
-    color: aqua;
+    color: var(--highlight);
 }
 
 .content {
@@ -182,8 +182,12 @@
     align-items: center;
 }
 @media screen and (max-width: 820px) {
+    :global(.soft-mode #hero::before) {
+        background-image:none !important;
+        background-color: #ffa666 !important;
+    }
     #hero::before { 
-        background-image: url('../images/mobile_hero.webp') !important;
+        background-image: url('../images/mobile_hero.webp');
     }
     #hero-logo {
         height:auto !important;
@@ -211,6 +215,7 @@
         }
         .left-content {
             padding-top: 100px;
+            width: 100%;
             display: flex;
             flex-direction:column;
             height: auto;
@@ -282,6 +287,10 @@ p {
 
 }
 
+:global(.soft-mode #hero::before) {
+    background-image:none !important;
+    background-color: #ffa666;
+}
 
 #hero::before {
     content: "";
@@ -299,6 +308,53 @@ p {
     background-position: center center;
     filter: brightness(90%);
 }
-
+@media screen and (max-width: 820px) {
+    :global(.soft-mode #hero::before) {
+        background-image:none !important;
+        background-color: #ffa666 !important;
+    }
+    #hero::before { 
+        background-image: url('../images/mobile_hero.webp');
+    }
+    #hero-logo {
+        height:auto !important;
+    }
+        #socials {
+            display:table;
+            margin-left:auto;
+            margin-right:auto;
+            padding-bottom:20px;
+            position:relative;
+            left:0;
+        }
+        #hero {
+            display: flex;
+            flex-direction: column;
+            height: auto;
+            align-items: center;
+            justify-content: center;
+            min-height: 100vh;
+        }
+        .description {
+            display: table-cell;
+            text-align: center;
+            padding: 20px;
+        }
+        .left-content {
+            padding-top: 100px;
+            display: flex;
+            flex-direction:column;
+            height: auto;
+        }
+        .scrolling-content {
+            margin-top:20px
+        }
+        .content {
+            text-align:center;
+        }
+        .scroll-animation {
+            text-align:center !important;
+        }
+    }
 </style>
 

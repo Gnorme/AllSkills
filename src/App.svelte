@@ -34,6 +34,11 @@
 			font-display: swap;
 		}	
 		@font-face {
+			font-family: "Varela";
+			src: url("./fonts/VarelaRound-Regular.ttf");
+			font-display: swap;
+		}	
+		@font-face {
 			font-family: "Consolate Elf";
 			src: url("./fonts/ConsolateElf.ttf");
 			font-display: swap;
@@ -80,13 +85,39 @@
 		<Footer/>
 	</main>
 {/if}
-
 <style>
 
 	:global(body) { 
 		margin:0;
 		padding: 0;
-		background-color: rgb(30,30,30);
+		color:var(--baseText);
+		background-color: var(--bgColor);
+	}
+	:global(body.soft-mode) {
+		--highlight: #b061ff;
+		--headerColor: #20c8d4;
+		--firstColor:#ff8b58;
+		--secondColor: #ff6680;
+		--thirdColor: #20c8d4;
+		--fourthColor: #5497f0;
+		--baseText: #ff8b58;
+		--bgColor: rgb(225,225,255);
+		--extraColor: #f5cf03;
+		--headerFont: "Varela";
+		font-family: "Varela" !important;
+		background-color: var(--bgColor) !important;
+	}
+	:root {
+		--highlight: aqua;
+		--headerColor: aqua;
+		--firstColor: aqua;
+		--secondColor: #FF3333;
+		--thirdColor: blueviolet;
+		--extraColor: rgb(236, 236, 55);
+		--fourthColor: gold;
+		--baseText: white;
+		--headerFont: "Oswald";
+		--bgColor: rgb(30,30,30);
 	}
 
 	main {

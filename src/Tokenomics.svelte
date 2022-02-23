@@ -46,6 +46,12 @@
     .highlight {
         color: #78FF78;
     }
+    :global(.soft-mode) .highlight {
+        color: var(--highlight);
+    }
+    :global(.soft-mode) .tokenomics-container{
+        color:#001E35;
+    }
     #notice {
         position:absolute;
         width: 50%;
@@ -61,6 +67,9 @@
     }
     p {
         font-size:1.2rem;
+    }
+    :global(.soft-mode) #left-container p {
+        color:#001E35 !important;
     }
     path {
         stroke: rgb(34,34,34);
@@ -97,6 +106,7 @@
         list-style:none;
         font-size:1.2rem;
     }
+
     .box{
         margin: -2px;
         border: 2px solid gold;
@@ -110,7 +120,7 @@
     span {
         font-weight:100;
         letter-spacing: 0.5px;
-        font-size: 1.4rem;
+        font-size: 1.3rem;
         margin-left:10px !important;
         padding-right:10px;
     }
@@ -139,10 +149,11 @@
     .tokenomics-container{
         position:relative;
         display:flex;
-        margin-top:-50px;
-        margin-bottom:200px;
+        max-width:1220px;
         margin-left:auto;
         margin-right:auto;
+        margin-top:-50px;
+        margin-bottom:200px;
         justify-content: space-evenly;
     }
     @media screen and (max-width: 820px) {

@@ -1,21 +1,24 @@
 <div class="vote-container">
        <div class="section left">
            <span class="title">
-            <img alt="Vote" src="images/vote.png" />
+            <img class="soft" alt="Vote" src="images/vote_soft.png" />
+            <img class="hard" alt="Vote" src="images/vote.png" />
                 <h3>{$_('home.vote.cast.title')}</h3>
             </span>
            <p>{$_('home.vote.cast.pStart')} <span class="highlight">{$_('home.vote.cast.highlighted')}</span> {$_('home.vote.cast.pEnd')}</p>
        </div>
        <div class="section left">
         <span class="title">
-            <img alt="Earnings" src="images/earnings.png" />
+            <img class="soft" alt="Earnings" src="images/earnings_soft.png" />
+            <img class="hard" alt="Earnings" src="images/earnings.png" />
              <h3>{$_('home.vote.earn.title')}</h3>
          </span>
         <p>{$_('home.vote.earn.pStart')} <span class="highlight">{$_('home.vote.earn.highlighted')}</span> {$_('home.vote.earn.pEnd')}</p>
     </div>
     <div class="section left">
         <span class="title">
-            <img alt="Royalties" src="images/revenue.png" />
+            <img class="soft" alt="Royalties" src="images/revenue_soft.png" />
+            <img class="hard" alt="Royalties" src="images/revenue.png" />
              <h3>{$_('home.vote.success.title')}</h3>
          </span>
         <p>{$_('home.vote.success.pStart')} <span class="highlight">{$_('home.vote.success.highlighted')}</span> {$_('home.vote.success.pEnd')}</p>
@@ -47,14 +50,16 @@
         </div>
         <div class="section right">
             <span class="title">
-                <img alt="Stake" src="images/stake.png" />
+                <img class="soft" alt="Stake" src="images/stake_soft.png" />
+                <img class="hard" alt="Stake" src="images/stake.png" />
                  <h3>{$_('home.vote.stake.title')}</h3>
              </span>
             <p>{$_('home.vote.stake.pStart')} <span class="highlight">{$_('home.vote.stake.highlighted')}</span>. {$_('home.vote.stake.pEnd')}</p>
         </div>
         <div class="section right">
             <span class="title">
-                <img alt="Replenish" src="images/replenish.png" />
+                <img class="soft" alt="Replenish" src="images/replenish_soft.png" />
+                <img class="hard" alt="Replenish" src="images/replenish.png" />
                  <h3>{$_('home.vote.replenish.title')}</h3>
              </span>
              <p>{$_('home.vote.replenish.pStart')} <span class="highlight">{$_('home.vote.replenish.highlighted')}</span> {$_('home.vote.replenish.pEnd')}</p>
@@ -64,6 +69,15 @@
     import { _ } from 'svelte-i18n'
 </script>
 <style>
+    .soft {
+        display: none;
+    }
+    :global(.soft-mode) .soft {
+        display: block !important;
+    }
+    :global(.soft-mode) .hard {
+        display: none;
+    }
     .section:hover h3 {
         text-decoration-line: underline;
         text-decoration-color:gold;
@@ -71,14 +85,12 @@
         -webkit-text-decoration-color: gold;
     }
     #value{
-        font-family: 'Ultra'; 
-        font-family: 'Asphaltic'; 
         font-family: 'Oswald';
         grid-area: value;
-        color: aqua;
+        color: var(--highlight);
     }
     .highlight {
-        color: aqua;
+        color: var(--highlight);
     }
     .middle {
         display:flex; 
@@ -103,6 +115,12 @@
         line-height: 1.5vw;
         font-weight:100;
     }
+    :global(.soft-mode .section) p {
+        background-color: white;
+        border-radius: 15px;
+        font-size: 1.2rem !important;
+        padding: 15px;
+    }
     .section img{
         float:left;
         margin-right: 10px;
@@ -122,6 +140,10 @@
         width: 80%;
     }
     .vote-container{
+        max-width: 1220px;
+        padding-bottom:100px;
+        margin-left:auto;
+        margin-right:auto;
         display:grid;
         min-height:525px;
         margin-bottom:200px;
@@ -145,6 +167,7 @@
             display:flex;
             flex-direction: column;
             height: auto;
+            width: 90%;
             max-height: 100%;
         }
         .column{
@@ -156,6 +179,7 @@
         }
         h3 {
             font-size: 1.75rem !important;
+            
         }
     }
 span {

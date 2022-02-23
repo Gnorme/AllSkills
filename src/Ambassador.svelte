@@ -23,8 +23,17 @@
         background: url(https://s2.svgbox.net/pen-brushes.svg?ic=brush-4&color=FF3333);
         background-position: center;
         background-repeat:no-repeat;
-        margin: -2px -6px;
-        padding:  50px  6px;
+        padding:  50px;
+    }
+    :global(.soft-mode) .full-highlight {
+        background: none;
+        border-radius: 30px;
+        margin:0;
+        padding-bottom: 500px;
+        color:white;
+    }
+    :global(.soft-mode) h4 {
+        font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, Oxygen-Sans, Ubuntu, Cantarell, "Helvetica Neue", sans-serif;        
     }
     .info-container {
         text-align:center;
@@ -46,7 +55,6 @@
         width:100%;
         margin-left: auto;
         margin-right:auto;
-        margin-bottom:200px;
     }
     :global(.slidedown) {
         display:block;
@@ -75,6 +83,10 @@
     @media screen and (max-width: 820px) {
         .info-container {
             margin-top: 0px;
+        }
+        :global(.soft-mode) .ambassador-info {
+            background: none;
+            padding: 0;
         }
         .ambassador-info {
             background: url(https://s2.svgbox.net/pen-brushes.svg?ic=brush-4&color=FF3333);
