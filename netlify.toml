@@ -1,3 +1,4 @@
 [[redirects]]
   from = "/AthleteOnePager.pdf"
   to = "/"
+  force=true
