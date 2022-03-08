@@ -1,3 +1,3 @@
 [[redirects]]
-  from = "/*"
-  to = "/blog/:splat"
+  from = "/AthleteOnePager.pdf"
+  to = "/"
