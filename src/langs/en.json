@@ -61,14 +61,14 @@
         "vote": {
             "win": {
                 "title": "Earn by winning",
-                "pStart":"Challenge winners earn a portion of all $VOTE tokens cast during the challenge, making it easier than ever to",
-                "highlighted": "monetize your skills",
-                "pEnd": "."},
+                "pStart":"Challenge winners earn a portion of all $VOTE tokens cast during the challenge, making it",
+                "highlighted": "easier than ever to monetize your skills.",
+                "pEnd": " "},
             "cast": {
                 "title": "Cast your vote",
                 "pStart":"Use $VOTE tokens to show your support by voting for the challenge videos you love. Vote for the winner and",
-                "highlighted": "get rewarded with $SKILL tokens",
-                "pEnd": "."},
+                "highlighted": "get rewarded with $SKILL tokens.",
+                "pEnd": " "},
             "marketplace": {
                 "title": "Collect Community Content",
                 "pStart":"Spend your $SKILL tokens on community content featured in our Marketplace like",
@@ -82,8 +82,8 @@
             "stable": {
                 "title": "Stablecoin for all skills",
                 "pStart":"Whether buying them to cast votes, or cashing out your hard-earned rewards, $VOTE tokens are guaranteed to be",
-                "highlighted": "always worth $0.10 each",
-                "pEnd": "."},
+                "highlighted": "always worth $0.10 each.",
+                "pEnd": " "},
             "utility": {
                 "title": "Platform Utility Token",
                 "pStart":"Posting a new challenge? Taking a shot at the Ambassador challenge? Selling on our Marketplace? Use $SKILL tokens and pay",
