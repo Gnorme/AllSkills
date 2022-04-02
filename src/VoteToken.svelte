@@ -9,17 +9,17 @@
     </div>
     <div class="section left">
       <span class="title">
-          <img class="soft" alt="Royalties" src="images/revenue_soft.png" />
-          <img class="hard" alt="Royalties" src="images/revenue.png" />
+          <img class="soft" alt="Vote" src="images/vote_soft.png" />
+          <img class="hard" alt="Vote" src="images/vote.png" />
            <h3>{$_('home.vote.cast.title')}</h3>
        </span>
       <p>{$_('home.vote.cast.pStart')} <span class="highlight">{$_('home.vote.cast.highlighted')}</span> {$_('home.vote.cast.pEnd')}</p>
   </div>
        <div class="section left">
            <span class="title">
-            <img class="soft" alt="Vote" src="images/vote_soft.png" />
-            <img class="hard" alt="Vote" src="images/vote.png" />
-                <h3>{$_('home.vote.win.title')}</h3>
+            <img class="soft" alt="Earnings" src="images/earnings_soft.png" />
+            <img class="hard" alt="Earnings" src="images/earnings.png" />
+            <h3>{$_('home.vote.win.title')}</h3>
             </span>
            <p>{$_('home.vote.win.pStart')} <span class="highlight">{$_('home.vote.win.highlighted')}</span> {$_('home.vote.win.pEnd')}</p>
        </div>
@@ -44,16 +44,16 @@
     <div class="column-header"><h2 style="color:blueviolet">$SKILL Token</h2></div>
     <div class="section right">
       <span class="title">
-          <img class="soft" alt="Earnings" src="images/earnings_soft.png" />
-          <img class="hard" alt="Earnings" src="images/earnings.png" />
+          <img class="soft" alt="Stake" src="images/stake_soft.png" />
+          <img class="hard" alt="Stake" src="images/stake.png" />
            <h3>{$_('home.vote.earn.title')}</h3>
        </span>
       <p>{$_('home.vote.earn.pStart')} <span class="highlight">{$_('home.vote.earn.highlighted')}</span> {$_('home.vote.earn.pEnd')}</p>
   </div>
         <div class="section right">
             <span class="title">
-                <img class="soft" alt="Stake" src="images/stake_soft.png" />
-                <img class="hard" alt="Stake" src="images/stake.png" />
+              <img class="soft" alt="Royalties" src="images/revenue_soft.png" />
+              <img class="hard" alt="Royalties" src="images/revenue.png" />
                  <h3>{$_('home.vote.marketplace.title')}</h3>
              </span>
             <p>{$_('home.vote.marketplace.pStart')} <span class="highlight">{$_('home.vote.marketplace.highlighted')}</span> {$_('home.vote.marketplace.pEnd')}</p>
