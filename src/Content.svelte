@@ -99,7 +99,7 @@
         <polygon style="fill: gold;" points="352.106 94.674 335.059 94.797 363.621 47.452 -1.746 94.183 -1.798 80.123 390.963 29.985"/>
       </svg>       
     <section id="Vote" class="section">
-        <h2 style="text-align: center; text-decoration: underline gold; -webkit-text-decoration-line: underline; -webkit-text-decoration-color: gold;"><span style="font-family: 'Bebas Neue';">AllSkills</span> $Vote Token</h2>
+        <h2 style="text-align: center; text-decoration: underline gold; -webkit-text-decoration-line: underline; -webkit-text-decoration-color: gold;"><span style="font-family: 'Bebas Neue'; color: aqua;">AllSkills</span> Token System</h2>
         <VoteToken/>
     </section>
     <svg class="bMargin lines" viewBox="-0.35 0 500.35 78.328" xmlns="http://www.w3.org/2000/svg">

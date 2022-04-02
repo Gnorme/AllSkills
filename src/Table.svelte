@@ -2,22 +2,22 @@
     <div class="grid-item">
         <div class="table-icon"><img alt="Handshake" style="width:100%" src="images/{softTableIcons[0]}"></div>
         <h3>{$_('home.table.title1')}</h3>
-        <p>{$_('home.table.p1')}</p>
+        <p>{$_('home.table.p1_start')} <span class="highlight">{$_('home.table.p1_highlight')}</span> {$_('home.table.p1_end')}</p>
     </div>
     <div class="grid-item">
         <div class="table-icon"><img alt="Earnings" style="width:100%" src="images/{softTableIcons[1]}"></div>
         <h3>{$_('home.table.title2')}</h3>
-        <p>{$_('home.table.p2')}</p>
+        <p><span class="highlight">{$_('home.table.p2_start')}</span> {$_('home.table.p2_middle')} <span class="highlight">{$_('home.table.p2_highlight')}</span> {$_('home.table.p2_end')}</p>
     </div>
     <div class="grid-item">
         <div class="table-icon"><img alt="Collectibles" style="width:100%" src="images/{softTableIcons[2]}"></div>
         <h3>{$_('home.table.title3')}</h3>
-        <p>{$_('home.table.p3')}</p>
+        <p>{$_('home.table.p3_start')} <span class="highlight">{$_('home.table.p3_highlight')}</span> {$_('home.table.p3_end')}</p>
     </div>
     <div class="grid-item">
         <div class="table-icon"><img alt="Marketplace" style="width:100%" src="images/{softTableIcons[3]}"></div>
         <h3>{$_('home.table.title4')}</h3>
-        <p>{$_('home.table.p4')}</p>
+        <p>{$_('home.table.p4_start')} <span class="highlight">{$_('home.table.p4_highlight')}</span> {$_('home.table.p4_end')}</p>
     </div>
 </div>
 
@@ -43,11 +43,16 @@
                 "c c c"
                 "c c c" !important;
             padding: 1.25rem !important;
+            grid-template-columns: 0.5fr 1fr !important;
             border: 2px solid aqua !important;
         }
         .table-icon {
-            width:50% !important;
+            width:75% !important;
+            padding:0 !important;
         }
+    }
+    .highlight {
+        color: var(--highlight);
     }
     h3 {
         font-size: 3rem;
@@ -79,6 +84,7 @@
             "a b b"
             "a c c"
             "a c c";
+        grid-template-columns: 0.35fr 1fr;
         padding: 2rem;
         border: 3px solid aqua;
         background-size:100% 100%;
