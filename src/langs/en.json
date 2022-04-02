@@ -66,9 +66,9 @@
                 "pEnd": " "},
             "cast": {
                 "title": "Cast your vote",
-                "pStart":"Use $VOTE tokens to show your support by voting for the challenge videos you love. Vote for the winner and",
-                "highlighted": "get rewarded with $SKILL tokens.",
-                "pEnd": " "},
+                "pStart":"Use $VOTE tokens to show your support and",
+                "highlighted": "vote for the challenge videos you love.",
+                "pEnd": "Vote for the winner and you'll get to share in their success."},
             "marketplace": {
                 "title": "Collect Community Content",
                 "pStart":"Spend your $SKILL tokens on community content featured in our Marketplace like",
@@ -76,9 +76,9 @@
                 "pEnd": "to use in GM Mode."},
             "earn": {
                 "title": "Earn through voting",
-                "pStart":"Use a keen eye and show your support to collect $SKILL tokens by",
-                "highlighted": "voting for successful winners",
-                "pEnd": "in our Challenge system."},
+                "pStart":"Use a keen eye and vote in our Challenge system to collect $SKILL tokens.",
+                "highlighted": "Voting for the winner of a challenge will earn you $SKILL tokens.",
+                "pEnd": " "},
             "stable": {
                 "title": "Stablecoin for all skills",
                 "pStart":"Whether buying them to cast votes, or cashing out your hard-earned rewards, $VOTE tokens are guaranteed to be",
