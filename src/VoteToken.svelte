@@ -161,7 +161,6 @@
         margin-bottom:200px;
         margin-left:auto;
         margin-right:auto;
-        grid-template-rows: 33% !important;
         grid-template-columns: 1fr 1.25fr 1fr !important;
         justify-content: space-evenly;
         grid-template:
