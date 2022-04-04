@@ -166,7 +166,7 @@
     }
 
     ul {
-        font-size: 1.2rem;
+        font-size: 1.3rem;
         /*font-family: "Oswald";*/
         list-style:none;
         text-align: left;
