@@ -3,6 +3,7 @@
         <a href="https://vantagesports.ca/"><img alt="Vantage Sports Management" src="images/vantage_logo.png" /></a>
         <a href="https://www.alliancemontreal.ca/"><img alt="Montreal Alliance Basketball" src="images/montreal_alliance.png" /></a>
         <a href="https://www.instagram.com/charlyiacono/"><img alt="Charly Iacono" src="images/charly_iacono.png" /></a>
+        <a href="https://imaginereplay.com/"><img alt="ReplayNow" src="images/replay_logo.png" /></a>
     </div>
     <h3 style="font-size: 1.7rem; font-weight: 400;">{$_('home.partners.reach')}</h3>
     <div>
@@ -78,6 +79,7 @@
     }
     #partner-images {
         display:flex;
+        gap: 60px;
         align-items: center;
         margin-bottom:100px;
     }
