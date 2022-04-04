@@ -4,7 +4,7 @@
             "title":"Built for",
             "description_start": "AllSkills is a platform that looks to bring",
             "description_highlight": "creativity, sustainable growth, and increased competition",
-            "description_end": "to the talent world. Our platform provides an opportunity to witness people of all skills showcasing their talents and competing against others all while earning money through our carefully crafted token based Vote and Challenge system and NFT marketplace."
+            "description_end": "to the talent world. Our platform provides an opportunity to witness people of all skills showcasing their talents and competing against others all while earning benefits through our carefully crafted token based Vote and Challenge system and NFT marketplace."
         },
         "table": {
             "title1":"Skills Competition",
@@ -165,7 +165,7 @@
             }
         },
         "tokenomics": {
-            "pTitle": "100,000,000 Tokens",
+            "pTitle": "10,000,000,000 Tokens",
             "paragraph": "Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat.",
             "list": ["Team 10%", "Advisors & Partners 10%", "Private Sale 10%", "Public Sale 20%", "Liquidity Pool 20%", "Foundation 30%"]
         },
