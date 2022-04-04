@@ -161,7 +161,7 @@
         transform: translateX(-290px);  
     }
     ul {
-        font-size: 1.5rem;
+        font-size: 1.2rem;
         /*font-family: "Oswald";*/
         text-align: left;
         list-style: none;

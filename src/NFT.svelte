@@ -23,7 +23,7 @@
                         <li><h4>{$_('home.nft.3.pStart')} <span style="color:blueviolet">{$_('home.nft.3.highlight')}</span></h4></li>  
                         <li><h4>{$_('home.nft.4.pStart')} <span style="color:blueviolet">{$_('home.nft.4.highlight')}</span> {$_('home.nft.4.pEnd')}</h4></li>  
                     </ul>
-                    <h4>{$_('home.nft.5.pStart')} <a on:click={() => showModal("arweave")}>{$_('home.nft.5.link')}</a></h4>
+                    <h4 style="font-size: 0.8rem; line-height:normal;">{$_('home.nft.5.pStart')} <a on:click={() => showModal("arweave")}>{$_('home.nft.5.link')}</a></h4>
                 </div>
         </div>
     </div>
@@ -166,7 +166,7 @@
     }
 
     ul {
-        font-size: 1.5rem;
+        font-size: 1.2rem;
         /*font-family: "Oswald";*/
         list-style:none;
         text-align: left;
