@@ -92,44 +92,50 @@
         },
         "nft": {
             "1": {
-                "pStart":"Level up by winning challenges and unlock",
-                "link":"exclusive benefits.",
-                "pEnd":""
+                "pStart":"All challenge wins that end in the daily",
+                "highlight":"top 10% of votes received",
+                "pEnd":"get minted."
             },
             "2": {
-                "pStart":"Reach level 7 to unlock",
-                "link":"NFT minting",
-                "pEnd":"for all your challenge wins."
+                "pStart": "To guarantee your wins get minted, purchase a",
+                "highlight": "Mint Token",
+                "pEnd":"on our Marketplace or"
             },
             "3": {
-                "pStart":"All winning challenge videos that end in the daily",
-                "link":"top 10% of votes",
-                "pEnd":"received get minted."
+                "pStart": "Level up by winning challenges and unlock exclusive benefits like NFT",
+                "highlight":"minting for all your challenge wins.",
+                "pEnd":""
             },
             "4": {
-                "pStart":"Purchase a",
-                "link":"Mint Token",
-                "pEnd":"to automatically mint one of your challenge wins as an NFT."
+                "pStart": "Sell your NFTs on our Marketplace for a quick payout or save them for",
+                "highlight":"GM Mode",
+                "pEnd":"to continue earning $VOTE tokens."
             },
             "5": {
-                "pStart":"Users can choose to mint to either",
-                "link":"Ethereum, Polygon, Tezos, NEAR, or Flow.",
+                "pStart":"Your NFTs are safely stored using decentralized cloud storage providers combined with the IPFS, and backed up forever using a “collectively owned hard drive that never forgets”, called",
+                "link":"arweave.",
                 "pEnd":""
+            }
+        },
+        "gm": {
+            "1": {
+                "pStart":"Build up a collection of amazing content and unlock GM Mode once you own",
+                "highlight":"at least 3 NFTs."
             },
-            "6": {
-                "pStart":"Minted videos are tradeable on our marketplace as well as other top NFT marketplaces like",
-                "link":"OpenSea and Rarible.",
-                "pEnd":""
+            "2": {
+                "pStart":"Save your own NFTs or",
+                "highlight":"collect NFTs of talented creators on our marketplace",
+                "pEnd":"using $SKILL tokens earned from voting."
             },
-            "7": {
-                "pStart":"NFT videos will be stored using decentralized cloud storage providers and the",
-                "link":"IPFS",
-                "pEnd":""
+            "3": {
+                "pStart":"Challenge other GMs to a 1on1 to",
+                "highlight":"earn $VOTE tokens",
+                "pEnd":"and level up your NFTs."
             },
-            "8": {
-                "pStart":"All minted challenge videos are also backed-up forever using",
-                "link":"arweave and ardrive.",
-                "pEnd":""
+            "4": {
+                "pStart": "Each level your NFT goes up",
+                "highlight": "increases the base cut",
+                "pEnd":"you receive for winning."
             }
         },
         "ambassador": {
