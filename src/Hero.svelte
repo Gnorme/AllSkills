@@ -48,7 +48,7 @@
     let string = "<a>Twitter</a>";
 </script>
 <div id="hero">
-   <img alt="AllSkills logo" id="hero-logo" src="images/logo-border-2.png">
+   <img loading="lazy" alt="AllSkills logo" id="hero-logo" src="images/logo-border-2.png">
    <div class="left-content">
         <div class="content">{$_('home.hero.title')}</div>
         <div class='scrolling-content'>

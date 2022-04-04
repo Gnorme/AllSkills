@@ -8,6 +8,7 @@
     import Table from './Table.svelte';
     import News from './News.svelte';
     import NFT from './NFT.svelte';
+    import GM from './GM.svelte';
     import Youtube from "./Youtube.svelte";
     import Ambassador from "./Ambassador.svelte";
     import Observers from "./Observers.svelte";
@@ -99,7 +100,7 @@
         <polygon style="fill: gold;" points="352.106 94.674 335.059 94.797 363.621 47.452 -1.746 94.183 -1.798 80.123 390.963 29.985"/>
       </svg>       
     <section id="Vote" class="section">
-        <h2 style="text-align: center; text-decoration: underline gold; -webkit-text-decoration-line: underline; -webkit-text-decoration-color: gold;"><span style="font-family: 'Bebas Neue';">AllSkills</span> $Vote Token</h2>
+        <h2 style="text-align: center; text-decoration: underline gold; -webkit-text-decoration-line: underline; -webkit-text-decoration-color: gold;"><span style="font-family: 'Bebas Neue'; color: aqua;">AllSkills</span> Token System</h2>
         <VoteToken/>
     </section>
     <svg class="bMargin lines" viewBox="-0.35 0 500.35 78.328" xmlns="http://www.w3.org/2000/svg">
@@ -109,6 +110,8 @@
     <section id="NFT" class="section">
         <h2 id="nftTitle" ><span style="font-family: 'Bebas Neue';">AllSkills</span> NFTs</h2>
         <NFT/>
+        <h2 style="text-align: left; margin-bottom: 1rem; text-decoration: underline aqua; -webkit-text-decoration-line: underline; -webkit-text-decoration-color: aqua;">GM Mode</h2>
+        <GM/>
     </section>
     <svg class="bMargin lines" viewBox="-1.79 0 501.79 94.114" xmlns="http://www.w3.org/2000/svg">
         <polygon style="fill: #FF3333;" points="500.159 16.553 432.482 24.328 392.825 93.844 409.667 93.703 443.069 37.609 499.889 30.393"/>

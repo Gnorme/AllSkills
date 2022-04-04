@@ -1,28 +1,28 @@
 <div class="vote-container">
-       <div class="section left">
-           <span class="title">
-            <img class="soft" alt="Vote" src="images/vote_soft.png" />
-            <img class="hard" alt="Vote" src="images/vote.png" />
-                <h3>{$_('home.vote.cast.title')}</h3>
-            </span>
-           <p>{$_('home.vote.cast.pStart')} <span class="highlight">{$_('home.vote.cast.highlighted')}</span> {$_('home.vote.cast.pEnd')}</p>
-       </div>
-       <div class="section left">
+  <div class="column-header"><h2 style="color:blueviolet">$VOTE Token</h2></div>
+      <div class="section left">
         <span class="title">
-            <img class="soft" alt="Earnings" src="images/earnings_soft.png" />
-            <img class="hard" alt="Earnings" src="images/earnings.png" />
-             <h3>{$_('home.vote.earn.title')}</h3>
-         </span>
-        <p>{$_('home.vote.earn.pStart')} <span class="highlight">{$_('home.vote.earn.highlighted')}</span> {$_('home.vote.earn.pEnd')}</p>
+            <img alt="Stable value" src="images/stable.png" />
+            <h3>{$_('home.vote.stable.title')}</h3>
+        </span>
+        <p>{$_('home.vote.stable.pStart')} <span class="highlight">{$_('home.vote.stable.highlighted')}</span> {$_('home.vote.stable.pEnd')}</p>
     </div>
     <div class="section left">
-        <span class="title">
-            <img class="soft" alt="Royalties" src="images/revenue_soft.png" />
-            <img class="hard" alt="Royalties" src="images/revenue.png" />
-             <h3>{$_('home.vote.success.title')}</h3>
-         </span>
-        <p>{$_('home.vote.success.pStart')} <span class="highlight">{$_('home.vote.success.highlighted')}</span> {$_('home.vote.success.pEnd')}</p>
-    </div>
+      <span class="title">
+          <img class="soft" alt="Vote" src="images/vote_soft.png" />
+          <img class="hard" alt="Vote" src="images/vote.png" />
+           <h3>{$_('home.vote.cast.title')}</h3>
+       </span>
+      <p>{$_('home.vote.cast.pStart')} <span class="highlight">{$_('home.vote.cast.highlighted')}</span> {$_('home.vote.cast.pEnd')}</p>
+  </div>
+       <div class="section left">
+           <span class="title">
+            <img class="soft" alt="Earnings" src="images/earnings_soft.png" />
+            <img class="hard" alt="Earnings" src="images/earnings.png" />
+            <h3>{$_('home.vote.win.title')}</h3>
+            </span>
+           <p>{$_('home.vote.win.pStart')} <span class="highlight">{$_('home.vote.win.highlighted')}</span> {$_('home.vote.win.pEnd')}</p>
+       </div>
     <div class="column middle">
         <h1 id="value">1 $Vote ≈ $0.10</h1>
         <div class='coin'>
@@ -41,34 +41,46 @@
           
         <!--<img id="token" alt="Vote Token" src="images/token.png" />-->
     </div>
+    <div class="column-header"><h2 style="color:blueviolet">$SKILL Token</h2></div>
+    <div class="section right">
+      <span class="title">
+          <img class="soft" alt="Stake" src="images/stake_soft.png" />
+          <img class="hard" alt="Stake" src="images/stake.png" />
+           <h3>{$_('home.vote.earn.title')}</h3>
+       </span>
+      <p>{$_('home.vote.earn.pStart')} <span class="highlight">{$_('home.vote.earn.highlighted')}</span> {$_('home.vote.earn.pEnd')}</p>
+  </div>
         <div class="section right">
             <span class="title">
-                <img alt="Stable value" src="images/stable.png" />
-                 <h3>{$_('home.vote.stable.title')}</h3>
+              <img class="soft" alt="Royalties" src="images/revenue_soft.png" />
+              <img class="hard" alt="Royalties" src="images/revenue.png" />
+                 <h3>{$_('home.vote.marketplace.title')}</h3>
              </span>
-            <p>{$_('home.vote.stable.pStart')} <span class="highlight">{$_('home.vote.stable.highlighted')}</span> {$_('home.vote.stable.pEnd')}</p>
-        </div>
-        <div class="section right">
-            <span class="title">
-                <img class="soft" alt="Stake" src="images/stake_soft.png" />
-                <img class="hard" alt="Stake" src="images/stake.png" />
-                 <h3>{$_('home.vote.stake.title')}</h3>
-             </span>
-            <p>{$_('home.vote.stake.pStart')} <span class="highlight">{$_('home.vote.stake.highlighted')}</span>. {$_('home.vote.stake.pEnd')}</p>
+            <p>{$_('home.vote.marketplace.pStart')} <span class="highlight">{$_('home.vote.marketplace.highlighted')}</span> {$_('home.vote.marketplace.pEnd')}</p>
         </div>
         <div class="section right">
             <span class="title">
                 <img class="soft" alt="Replenish" src="images/replenish_soft.png" />
                 <img class="hard" alt="Replenish" src="images/replenish.png" />
-                 <h3>{$_('home.vote.replenish.title')}</h3>
+                 <h3>{$_('home.vote.utility.title')}</h3>
              </span>
-             <p>{$_('home.vote.replenish.pStart')} <span class="highlight">{$_('home.vote.replenish.highlighted')}</span> {$_('home.vote.replenish.pEnd')}</p>
+             <p>{$_('home.vote.utility.pStart')} <span class="highlight">{$_('home.vote.utility.highlighted')}</span></p>
         </div>
 </div>
 <script>
     import { _ } from 'svelte-i18n'
 </script>
 <style>
+    .column-header {
+      background:white;
+      color: rgb(30,30,30);
+      border-radius: 40px;
+      width: 90%;
+      text-align: center;
+      margin-bottom:30px;
+      margin-left:auto;
+      margin-right:auto;
+    }
     .soft {
         display: none;
     }
@@ -149,13 +161,14 @@
         margin-bottom:200px;
         margin-left:auto;
         margin-right:auto;
-        grid-template-rows: 33% !important;
         grid-template-columns: 1fr 1.25fr 1fr !important;
         justify-content: space-evenly;
         grid-template:
             "left middle right"
             "left middle right"
+            "left middle right"
             "left middle right";
+          grid-auto-flow:column;
     }
     @media screen and (min-width: 1920px) {
         p {
