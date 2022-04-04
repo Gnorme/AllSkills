@@ -71,6 +71,10 @@
         span {
             display: block !important;
         }
+        #partner-images {
+            flex-direction: column;
+            gap: 60px;
+        }
     }
     #partner-images {
         display:flex;
