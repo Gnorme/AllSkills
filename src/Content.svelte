@@ -71,7 +71,7 @@
     }
 </script>
 <Observers/>
-
+<h1 style="text-align:center; margin-top:50px;">Beta launching Q2 2022</h1>
 <div id="Trailer" class="video-container marker-highlight">
     <div id="mute" on:click={unmute}></div>
     <div class="img-frame"><img alt="Phone frame" src="images/iphone_frame.png"></div>
@@ -151,7 +151,7 @@
         <div class="triangle"></div>
     </div>
     <section id="Partners" class="white" style="width: 100%;">
-        <h2 style="margin-left:7%; text-shadow:none;">Partners</h2>  
+        <h2 style="margin-left:7%; text-shadow:none; color:black;">Partners</h2>  
         <Partners />
         <!--<p style="margin-left:7%; font-size: 1.5rem;">Announcements coming soon</p>-->
     </section>

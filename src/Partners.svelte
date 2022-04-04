@@ -1,8 +1,12 @@
 <div id="partner-container">
-    <h2 style="font-size: 2.2rem;">Big news coming soon.</h2>
-    <h3 style="font-size: 1.7rem; font-weight: 400;">We're always open to working with exceptional minds and talents. Reach out if you're interested in being a Partner, Ambassador, or helping us build and grow AllSkills.</h3>
+    <div id="partner-images">
+        <a href="https://vantagesports.ca/"><img alt="Vantage Sports Management" src="images/vantage_logo.png" /></a>
+        <a href="https://www.alliancemontreal.ca/"><img alt="Montreal Alliance Basketball" src="images/montreal_alliance.png" /></a>
+        <a href="https://www.instagram.com/charlyiacono/"><img alt="Charly Iacono" src="images/charly_iacono.png" /></a>
+    </div>
+    <h3 style="font-size: 1.7rem; font-weight: 400;">{$_('home.partners.reach')}</h3>
     <div>
-        <button on:click="{showForm}" id="reach-out">Reach Out</button>
+        <button on:click="{showForm}" id="reach-out">{$_('home.partners.buttonText')}</button>
     </div>
     <div id="partner-form">
         <form>
@@ -17,7 +21,7 @@
             <polygon style="fill: aqua;" points="120.568 -0.003 99.057 64.191 500.785 2.143 499.522 0.721 117.904 49.127 134.741 0.134"/>
           </svg>
           <span on:click="{hideForm}">X</span>
-        <h2>Thank you for reaching out</h2>
+        <h2 style="color: white">Thank you for reaching out</h2>
         <form name="partnerships" data-netlify-honeypot="bot-field" method="POST" data-netlify="true" netlify class="signup">
             <input type="hidden" name="form-name" value="partnerships" />
             <label style="text-decoration-color: aqua;" for="name">Name</label>
@@ -45,6 +49,7 @@
 </div>
 
 <script>
+    import { _ } from 'svelte-i18n'
     let formShowing = false;
     let textValue = "";
     let emailValue = "";
@@ -66,6 +71,14 @@
         span {
             display: block !important;
         }
+    }
+    #partner-images {
+        display:flex;
+        align-items: center;
+        margin-bottom:100px;
+    }
+    #partner-images img {
+        height: 100%;
     }
     span {
         position:absolute;
