@@ -8,13 +8,22 @@
         },
         "table": {
             "title1":"Skills Competition",
-            "p1":"Using our platform, creators can challenge others using a video showcasing their talents. Challenge winners are decided by a community vote and all votes enter a reward pool that gets distrubuted to the winning creator and all those who voted for it to win.",
-            "title2":"Earning Potential",
-            "p2": "Our carefully crafted royalties system and Vote Token will allow both creators and consumers of content to earn money. Creators can earn by winning challenges and viewers can earn by voting.",
-            "title3":"NFT Collectibles",
-            "p3": "Videos that win have the opportunity to be minted into NFT collectibles that can be traded on our Marketplace or any of the other top NFT marketplaces. Tokenizing challenge videos enables users to fully own and easily monetize their content, and each one is backed up forever using blockchain technology.",
+            "p1_start":"Creators",
+            "p1_highlight":"challenge others to a 1on1",
+            "p1_end":"using a video showcasing their talents. Users vote using our stablecoin $VOTE tokens for the video they like most and the winning video has a chance to be minted as an NFT. Both creators and voters share in the success.",
+            "title2":"Earnings & Rewards",
+            "p2_start": "Creators earn $VOTE tokens",
+            "p2_middle":"for winning challenges which can be easily exchanged into various currencies. Successful",
+            "p2_highlight":"voters are rewarded with $SKILL tokens",
+            "p2_end":"to be used in our app and on our Marketplace.",
+            "title3":"GM Mode",
+            "p3_start": "Don’t have a skill but still want to compete and earn $VOTE tokens? Then GM Mode is for you. Users with at least 3 NFTs of winning challenge videos in their collection will unlock GM Mode. In GM Mode,",
+            "p3_highlight":"users can participate in challenges using NFTs",
+            "p3_end":"and level them up to unlock additional rewards.",
             "title4":"Ambassador Program",
-            "p4": "Have the opportunity to try and out-perform your favourite pros and earn prizes doing it. Every week top athletes from different domains submit a challenge to the community to try and replicate one of their iconic moves. Submit your best attempt to get entered into a raffle and earn prizes."
+            "p4_start": "Try and",
+            "p4_highlight":"out-perform your favourite pros and earn prizes doing it.",
+            "p4_end":"Every week top athletes from different domains submit a challenge to the community to try and replicate one of their iconic moves. Submit your best attempt to get entered into a raffle and earn prizes."
         },
         "highlighted": {
             "company": "AllSkills",
@@ -50,77 +59,83 @@
                 "tooltips": []}
         },
         "vote": {
+            "win": {
+                "title": "Earn by winning",
+                "pStart":"Challenge winners earn a portion of all $VOTE tokens cast during the challenge, making it",
+                "highlighted": "easier than ever to monetize your skills.",
+                "pEnd": " "},
             "cast": {
                 "title": "Cast your vote",
-                "pStart":"Show your support by voting for the challenge video you like most. All votes form a",
-                "highlighted": "reward pool",
-                "pEnd": "and decide the winning video."},
-            "success": {
-                "title": "Share in the success",
-                "pStart":"Voters continue to share in the success by",
-                "highlighted": "earning royalties",
-                "pEnd": "everytime a video they voted for is sold on marketplaces."},
-            "stake": {
-                "title": "Stake to earn more",
-                "pStart":"Staking your $Skills tokens allows you to",
-                "highlighted": "earn $Vote tokens",
-                "pEnd": "$Skills tokens can also be used to participate in raffles, pay gas fees, and to declare how you think AllSkills should operate."},
+                "pStart":"Use $VOTE tokens to show your support and",
+                "highlighted": "vote for the challenge videos you love.",
+                "pEnd": "Vote for the winner and you'll get to share in their success."},
+            "marketplace": {
+                "title": "Collect Community Content",
+                "pStart":"Spend your $SKILL tokens on community content featured in our Marketplace like",
+                "highlighted": "video filters, sound effects, Mint Tokens, and NFTs",
+                "pEnd": "to use in GM Mode."},
             "earn": {
                 "title": "Earn through voting",
-                "pStart":"The reward pool is split between the winner and all those who voted for them.",
-                "highlighted": "Earn up to 145%",
-                "pEnd": "back for votes cast on winning videos."},
+                "pStart":"Use a keen eye and vote in our Challenge system to collect $SKILL tokens.",
+                "highlighted": "Voting for the winner of a challenge will earn you $SKILL tokens.",
+                "pEnd": " "},
             "stable": {
                 "title": "Stablecoin for all skills",
-                "pStart":"$Vote tokens are",
-                "highlighted": "backed by fiat reserves",
-                "pEnd": "at 1:1 ratio and will always be redeemable at a stable value."},
-            "replenish": {
-                "title": "Easily replenish your wallet",
-                "pStart":"If you run out of Vote tokens, you can",
-                "highlighted": "watch sponsored videos to earn more",
-                "pEnd": "and get right back in the game."}
+                "pStart":"Whether buying them to cast votes, or cashing out your hard-earned rewards, $VOTE tokens are guaranteed to be",
+                "highlighted": "always worth $0.10 each.",
+                "pEnd": " "},
+            "utility": {
+                "title": "Platform Utility Token",
+                "pStart":"Posting a new challenge? Taking a shot at the Ambassador challenge? Selling on our Marketplace? Use $SKILL tokens and pay",
+                "highlighted": "tiny gas fees.",
+                "pEnd": ""}
         },
         "nft": {
             "1": {
-                "pStart":"Level up by winning challenges and unlock",
-                "link":"exclusive benefits.",
-                "pEnd":""
+                "pStart":"All challenge wins that end in the daily",
+                "highlight":"top 10% of votes received",
+                "pEnd":"get minted."
             },
             "2": {
-                "pStart":"Reach level 7 to unlock",
-                "link":"NFT minting",
-                "pEnd":"for all your challenge wins."
+                "pStart": "To guarantee your wins get minted, purchase a",
+                "highlight": "Mint Token",
+                "pEnd":"on our Marketplace or"
             },
             "3": {
-                "pStart":"All winning challenge videos that end in the daily",
-                "link":"top 10% of votes",
-                "pEnd":"received get minted."
+                "pStart": "Level up by winning challenges and unlock exclusive benefits like NFT",
+                "highlight":"minting for all your challenge wins.",
+                "pEnd":""
             },
             "4": {
-                "pStart":"Purchase a",
-                "link":"Mint Token",
-                "pEnd":"to automatically mint one of your challenge wins as an NFT."
+                "pStart": "Sell your NFTs on our Marketplace for a quick payout or save them for",
+                "highlight":"GM Mode",
+                "pEnd":"to continue earning $VOTE tokens."
             },
             "5": {
-                "pStart":"Users can choose to mint to either",
-                "link":"Ethereum, Polygon, Tezos, NEAR, or Flow.",
+                "pStart":"Your NFTs are safely stored using decentralized cloud storage providers combined with the IPFS, and backed up forever using a “collectively owned hard drive that never forgets”, called",
+                "link":"arweave.",
                 "pEnd":""
+            }
+        },
+        "gm": {
+            "1": {
+                "pStart":"Build up a collection of amazing content and unlock GM Mode once you own",
+                "highlight":"at least 3 NFTs."
             },
-            "6": {
-                "pStart":"Minted videos are tradeable on our marketplace as well as other top NFT marketplaces like",
-                "link":"OpenSea and Rarible.",
-                "pEnd":""
+            "2": {
+                "pStart":"Save your own NFTs or",
+                "highlight":"collect NFTs of talented creators on our marketplace",
+                "pEnd":"using $SKILL tokens earned from voting."
             },
-            "7": {
-                "pStart":"NFT videos will be stored using decentralized cloud storage providers and the",
-                "link":"IPFS",
-                "pEnd":""
+            "3": {
+                "pStart":"Challenge other GMs to a 1on1 to",
+                "highlight":"earn $VOTE tokens",
+                "pEnd":"and level up your NFTs."
             },
-            "8": {
-                "pStart":"All minted challenge videos are also backed-up forever using",
-                "link":"arweave and ardrive.",
-                "pEnd":""
+            "4": {
+                "pStart": "Each level your NFT goes up",
+                "highlight": "increases the base cut",
+                "pEnd":"you receive for winning."
             }
         },
         "ambassador": {
@@ -150,7 +165,7 @@
             }
         },
         "tokenomics": {
-            "pTitle": "100,000,000 Tokens",
+            "pTitle": "10,000,000,000 Tokens",
             "paragraph": "Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat.",
             "list": ["Team 10%", "Advisors & Partners 10%", "Private Sale 10%", "Public Sale 20%", "Liquidity Pool 20%", "Foundation 30%"]
         },
