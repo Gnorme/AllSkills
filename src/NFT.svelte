@@ -17,7 +17,7 @@
                         <polygon style="fill: var(--firstColor); opacity: 0.7;" points="70.086 0.382 53.904 51.969 -0.944 61.327 -1.27 75.069 63.124 65.518 83.649 -0.101"/>
                         <polygon style="fill: var(--firstColor); opacity: 0.7;" points="120.568 -0.003 99.057 64.191 500.785 2.143 499.522 0.721 117.904 49.127 134.741 0.134"/>
                       </svg>
-                    <ul>
+                    <ul id="nft-info">
                         <li><h4>{$_('home.nft.1.pStart')} <span style="color:blueviolet">{$_('home.nft.1.highlight')}</span> {$_('home.nft.1.pEnd')}</h4></li>
                         <li><h4>{$_('home.nft.2.pStart')} <span style="color:blueviolet">{$_('home.nft.2.highlight')}</span> {$_('home.nft.2.pEnd')}</h4></li> 
                         <li><h4>{$_('home.nft.3.pStart')} <span style="color:blueviolet">{$_('home.nft.3.highlight')}</span></h4></li>  
@@ -84,12 +84,13 @@
     :global(.soft-mode) .right{
         background-color: #5497f0;
     }
+    :global(.soft-mode) #nft-info{
+        margin-top:75px;
+    }
     :global(.soft-mode) .right a {
         color: gold;
     }
     :global(.soft-mode) .right h4 {
-        padding-top: 75px;
-        padding-bottom:30px;
         font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, Oxygen-Sans, Ubuntu, Cantarell, "Helvetica Neue", sans-serif !important;
     }
     .marker-highlight {
