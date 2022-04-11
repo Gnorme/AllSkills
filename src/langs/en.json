@@ -53,7 +53,7 @@
                 "tooltips": []},
             "earn":  {
                 "title": "Earn money from voting and winning challenges", 
-                "pStart":"Get rewarded for showing off your skills. The creator of the winning video will receive between 1-25% of all vote tokens cast during the challenge while the rest is rewarded to all those who voted for the winning video. The creators cut changes based on how close the vote is.",
+                "pStart":"Get rewarded for showing off your skills. The creator of the winning video will receive between 1-25% of all vote tokens cast during the challenge while the voters that voted for it get rewarded in SKILL tokens. The creators cut changes based on how close the vote is.",
                 "highlighted": " Closer vote count = bigger cut.",
                 "pEnd": "",
                 "tooltips": []}
@@ -152,8 +152,8 @@
                 "cleared": ["Market research", "Acquired advisors & CTO", "Backed by PME Montreal", "Finalist in NBA Launchpad", "Pivot towards NFT platform", "Launch website", "Release whitepaper and tokenomics"]
             },
             "plan": {
-                "cleared": ["Setup social community", "Release marketing plan", "Trailer"],
-                "uncleared": ["Announce partners", "Reveal plan for Ambassador program", "Reveal first AllSkills Ambassadors", "Mint $Skills token"]
+                "cleared": ["Setup social community", "Release marketing plan", "Trailer","Announce partners"],
+                "uncleared": ["Reveal plan for Ambassador program", "Reveal first AllSkills Ambassadors", "Mint $Skills token"]
             },
             "launch": {
                 "cleared": [],
