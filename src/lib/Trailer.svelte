@@ -18,7 +18,11 @@
 
           //set HTML
           youTubeVideo.innerHTML = '<div class="play"></div>' +
-              '<meta thumbnailUrl="https://img.youtube.com/vi/O2A5MIWsCFI/maxresdefault.jpg" uploadDate="Jan 31, 2022" description="Showcasing AllSkills" name="AllSkills Trailer" itemprop="embedURL" content="https://www.youtube.com/embed/O2A5MIWsCFI" />' +
+          '<title itemprop="name">AllSkills Overview</title>' +  
+          '<p style="display:none;" itemprop="description">AllSkills is a platform that looks to bring creativity, sustainable growth, and increased competition to the talent world. Our platform provides an opportunity to witness people of all skills showcasing their talents and competing against others all while earning benefits through our carefully crafted token based Vote and Challenge system and NFT marketplace.</p>' +   
+          '<meta itemprop="uploadDate" content="2022-01-31T08:00:00+08:00" />' +  
+          '<meta itemprop="thumbnailUrl" content="https://img.youtube.com/vi/O2A5MIWsCFI/maxresdefault.jpg" />' +    
+          '<meta itemprop="embedURL" content="https://www.youtube.com/embed/O2A5MIWsCFI" />' +
               '<img style="cursor: pointer; border-radius:25px;" class="trailer" src="' + thumbnail + '" />';
 
           //add click event that will load YouTube video
