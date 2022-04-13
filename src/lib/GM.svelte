@@ -3,7 +3,7 @@
     <div class="GM-container">
         <div class="GM-section">
             <div class="image second">
-                <img src="images/gm_mode.png" />
+                <img alt="GM Mode" src="images/gm_mode.png" />
             </div>
             <div class="content first">
                 <div>

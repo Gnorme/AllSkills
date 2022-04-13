@@ -8,11 +8,11 @@
         <img src="images/Chris_Boucher.jpeg" alt="NFT Trading Card">
         </label>
         <label class="card" for="item-2" id="card-2">
-          <div class="text-holder"><h1 class="overlay-text">Coming soon</h1></div>
+          <div class="text-holder"><h3 class="overlay-text">Coming soon</h3></div>
           <img class="blurred" src="images/Dunk.webp" alt="NFT Trading Card">
         </label>
         <label class="card" for="item-3" id="card-3">
-          <div class="text-holder"><h1 class="overlay-text">Coming soon</h1></div>
+          <div class="text-holder"><h3 class="overlay-text">Coming soon</h3></div>
           <img class="blurred" src="images/skateboard.webp" alt="NFT Trading Card">
         </label>
         

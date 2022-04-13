@@ -26,7 +26,7 @@
             <p>{$t('en.home.vote.win.pStart')} <span class="highlight">{$t('en.home.vote.win.highlighted')}</span> {$t('en.home.vote.win.pEnd')}</p>
         </div>
       <div class="column middle">
-          <h1 id="value">1 $Vote ≈ $0.10</h1>
+          <h4 id="value">1 $Vote ≈ $0.10</h4>
           <div class='coin'>
               <div class='front jump'>
                 <div class='star'></div>

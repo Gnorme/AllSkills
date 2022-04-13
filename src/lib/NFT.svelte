@@ -3,7 +3,7 @@
     <div class="NFT-container">
         <div class="nft-section" style="margin-bottom:50px;">
             <div class="image first marker-highlight">
-                <h1 style="position: absolute; top: 40%; z-index:2; font-size: 2rem; font-family: var(--headerFont); color: white;">Coming soon</h1>
+                <h3 style="position: absolute; top: 40%; z-index:2; font-size: 2rem; font-family: var(--headerFont); color: white;">Coming soon</h3>
                 <img class="blurred" alt="NFT card" src="images/frame.png" />
             </div>
             <div class="content second">
