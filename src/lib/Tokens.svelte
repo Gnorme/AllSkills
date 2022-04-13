@@ -186,7 +186,7 @@
     }
     @media screen and (min-width: 1920px) {
         p {
-            font-size: 1rem !important;
+            font-size: 1.1rem !important;
         }
     }
     @media screen and (max-width: 820px) {

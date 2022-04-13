@@ -260,7 +260,7 @@
     .content p {
         font-size: 1.2rem;
         line-height: 1.8rem;
-        font-weight: 300;
+        font-weight: 400;
     }
     .content{
         flex: 0 0 50%;

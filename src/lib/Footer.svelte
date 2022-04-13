@@ -116,13 +116,9 @@ img{
 .col-content{
     margin-top: 3rem;
 }
-
-li{
-    text-decoration: underline black;
-}
 a{
     color: black;
-    font-weight:300;
+    font-weight:400;
 }
 :global(.soft-mode) a {
     color: white !important;

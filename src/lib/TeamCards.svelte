@@ -225,7 +225,7 @@ a:hover {
 .card h2 {
   margin: 0 0 15px;
   font-size: 1.4em;
-  font-weight: 300;
+  font-weight: 400;
 }
 .card h2 span {
   display: block;

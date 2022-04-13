@@ -336,7 +336,10 @@ p {
             height: auto;
         }
         .scrolling-content {
-            margin-top:20px
+            margin-top:20px;
+            width: 100%;
+            display: flex;
+            justify-content: center;
         }
         .content {
             text-align:center;
