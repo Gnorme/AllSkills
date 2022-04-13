@@ -1981,7 +1981,7 @@ function set_paths(paths) {
 }
 function set_prerendering(value) {
 }
-const template = ({ head, body, assets: assets2, nonce }) => '<!DOCTYPE html>\n<html lang="en">\n\n<head>\n	<meta charset="utf-8" />\n	<meta name="description" content="" />\n	<link rel="icon" href="' + assets2 + '/favicon.png" />\n	<meta name="viewport" content="width=device-width, initial-scale=1" />\n	' + head + "\n	<style>\n		body {\n			margin:0;\n		}\n	</style>\n</head>\n\n<body>\n	<div>" + body + "</div>\n</body>\n\n</html>";
+const template = ({ head, body, assets: assets2, nonce }) => '<!DOCTYPE html>\n<html lang="en">\n\n<head>\n	<meta charset="utf-8" />\n	<link rel="icon" href="' + assets2 + '/favicon.png" />\n	<meta name="viewport" content="width=device-width, initial-scale=1" />\n	<title>AllSkills - Competition based NFT Platform for showcasing all skills.</title>\n    <meta name="description" content="AllSkills is a competition based NFT platform where both talented creators and consumers of content can earn money.">\n	' + head + "\n	<style>\n		body {\n			margin:0;\n		}\n	</style>\n\n</head>\n\n<body>\n	<div>" + body + "</div>\n</body>\n\n</html>";
 let read = null;
 set_paths({ "base": "", "assets": "" });
 let default_protocol = "https";

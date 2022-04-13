@@ -127,16 +127,16 @@ const Table = (0, import_index_4f192781.c)(($$result, $$props, $$bindings, slots
   $$result.css.add(css$e);
   $$unsubscribe_t();
   return `<section id="${"About"}"><h2 class="${"section-title"}" style="${"text-decoration-line: none; -webkit-text-decoration-line:none"}">What We Provide</h2>
-    <div class="${"table-content svelte-1dxsl2"}" id="${"Table"}"><div class="${"grid-item svelte-1dxsl2"}" style="${"background-image: url('../images/tags_hero_bg.png')"}"><div class="${"table-icon svelte-1dxsl2"}"><img alt="${"Handshake"}" style="${"width:100%"}" src="${"images/" + (0, import_index_4f192781.e)(softTableIcons[0])}"></div>
+    <div class="${"table-content svelte-1dxsl2"}" id="${"Table"}"><div class="${"grid-item svelte-1dxsl2"}" style="${"background-image: url('../images/black_bg_s.png')"}"><div class="${"table-icon svelte-1dxsl2"}"><img alt="${"Handshake"}" style="${"width:100%"}" src="${"images/" + (0, import_index_4f192781.e)(softTableIcons[0])}"></div>
             <h3 class="${"svelte-1dxsl2"}">${(0, import_index_4f192781.e)($t("en.home.table.title1"))}</h3>
             <p class="${"svelte-1dxsl2"}">${(0, import_index_4f192781.e)($t("en.home.table.p1_start"))} <span class="${"highlight svelte-1dxsl2"}">${(0, import_index_4f192781.e)($t("en.home.table.p1_highlight"))}</span> ${(0, import_index_4f192781.e)($t("en.home.table.p1_end"))}</p></div>
-        <div class="${"grid-item svelte-1dxsl2"}" style="${"background-image: url('../images/tags_hero_bg.png')"}"><div class="${"table-icon svelte-1dxsl2"}"><img alt="${"Earnings"}" style="${"width:100%"}" src="${"images/" + (0, import_index_4f192781.e)(softTableIcons[1])}"></div>
+        <div class="${"grid-item svelte-1dxsl2"}" style="${"background-image: url('../images/black_bg_s.png')"}"><div class="${"table-icon svelte-1dxsl2"}"><img alt="${"Earnings"}" style="${"width:100%"}" src="${"images/" + (0, import_index_4f192781.e)(softTableIcons[1])}"></div>
             <h3 class="${"svelte-1dxsl2"}">${(0, import_index_4f192781.e)($t("en.home.table.title2"))}</h3>
             <p class="${"svelte-1dxsl2"}"><span class="${"highlight svelte-1dxsl2"}">${(0, import_index_4f192781.e)($t("en.home.table.p2_start"))}</span> ${(0, import_index_4f192781.e)($t("en.home.table.p2_middle"))} <span class="${"highlight svelte-1dxsl2"}">${(0, import_index_4f192781.e)($t("en.home.table.p2_highlight"))}</span> ${(0, import_index_4f192781.e)($t("en.home.table.p2_end"))}</p></div>
-        <div class="${"grid-item svelte-1dxsl2"}" style="${"background-image: url('../images/tags_hero_bg.png')"}"><div class="${"table-icon svelte-1dxsl2"}"><img alt="${"Collectibles"}" style="${"width:100%"}" src="${"images/" + (0, import_index_4f192781.e)(softTableIcons[2])}"></div>
+        <div class="${"grid-item svelte-1dxsl2"}" style="${"background-image: url('../images/black_bg_s.png')"}"><div class="${"table-icon svelte-1dxsl2"}"><img alt="${"Collectibles"}" style="${"width:100%"}" src="${"images/" + (0, import_index_4f192781.e)(softTableIcons[2])}"></div>
             <h3 class="${"svelte-1dxsl2"}">${(0, import_index_4f192781.e)($t("en.home.table.title3"))}</h3>
             <p class="${"svelte-1dxsl2"}">${(0, import_index_4f192781.e)($t("en.home.table.p3_start"))} <span class="${"highlight svelte-1dxsl2"}">${(0, import_index_4f192781.e)($t("en.home.table.p3_highlight"))}</span> ${(0, import_index_4f192781.e)($t("en.home.table.p3_end"))}</p></div>
-        <div class="${"grid-item svelte-1dxsl2"}" style="${"background-image: url('../images/tags_hero_bg.png')"}"><div class="${"table-icon svelte-1dxsl2"}"><img alt="${"Marketplace"}" style="${"width:100%"}" src="${"images/" + (0, import_index_4f192781.e)(softTableIcons[3])}"></div>
+        <div class="${"grid-item svelte-1dxsl2"}" style="${"background-image: url('../images/black_bg_s.png')"}"><div class="${"table-icon svelte-1dxsl2"}"><img alt="${"Marketplace"}" style="${"width:100%"}" src="${"images/" + (0, import_index_4f192781.e)(softTableIcons[3])}"></div>
             <h3 class="${"svelte-1dxsl2"}">${(0, import_index_4f192781.e)($t("en.home.table.title4"))}</h3>
             <p class="${"svelte-1dxsl2"}">${(0, import_index_4f192781.e)($t("en.home.table.p4_start"))} <span class="${"highlight svelte-1dxsl2"}">${(0, import_index_4f192781.e)($t("en.home.table.p4_highlight"))}</span> ${(0, import_index_4f192781.e)($t("en.home.table.p4_end"))}</p></div></div>
 </section>`;
@@ -545,7 +545,7 @@ const Routes = (0, import_index_4f192781.c)(($$result, $$props, $$bindings, slot
   $$unsubscribe_t = (0, import_index_4f192781.b)(import_index_51131352.t, (value) => $t = value);
   $$result.css.add(css);
   $$unsubscribe_t();
-  return `${$$result.head += `${$$result.title = `<title>AllSkills - Competition based NFT Platform for showcasing all skills.</title>`, ""}<meta name="${"description"}" content="${"AllSkills is a competition based NFT platform where both talented creators and consumers of content can earn money."}" data-svelte="svelte-1hfb6er"><style data-svelte="svelte-1hfb6er">@font-face {
+  return `${$$result.head += `${$$result.title = `<title>AllSkills - Competition based NFT Platform for showcasing all skills.</title>`, ""}<meta name="${"description"}" content="${"AllSkills is a competition based NFT platform where both talented creators and consumers of content can earn money."}" data-svelte="svelte-1t5kgcz"><style data-svelte="svelte-1t5kgcz">@font-face {
 			font-family: "Oswald";
 			src: url("./fonts/Oswald-Regular.ttf");
 			font-display: swap;
@@ -644,13 +644,7 @@ const Routes = (0, import_index_4f192781.c)(($$result, $$props, $$bindings, slot
     .soft-mode h3 {
       color: var(--headerColor);
     }
-	</style><script data-svelte="svelte-1hfb6er">var tag = document.createElement("script");
-    tag.src = "https://www.youtube.com/iframe_api";
-    var firstScriptTag = document.getElementsByTagName("script")[0];
-    firstScriptTag.parentNode.insertBefore(tag, firstScriptTag);
-    var youtube = document.querySelectorAll(".youtube");
-
-  <\/script><link rel="${"preconnect"}" href="${"https://fonts.googleapis.com"}" data-svelte="svelte-1hfb6er"><link rel="${"preconnect"}" href="${"https://fonts.gstatic.com"}" crossorigin data-svelte="svelte-1hfb6er"><link href="${"https://fonts.googleapis.com/css2?family=Lato:wght@100;300;400&family=Roboto:wght@100&display=swap"}" rel="${"stylesheet"}" data-svelte="svelte-1hfb6er">`, ""}
+	</style><link rel="${"preconnect"}" href="${"https://fonts.googleapis.com"}" data-svelte="svelte-1t5kgcz"><link rel="${"preconnect"}" href="${"https://fonts.gstatic.com"}" crossorigin data-svelte="svelte-1t5kgcz"><link href="${"https://fonts.googleapis.com/css2?family=Lato:wght@100;300;400&family=Roboto:wght@100&display=swap"}" rel="${"stylesheet"}" data-svelte="svelte-1t5kgcz">`, ""}
 ${(0, import_index_4f192781.v)(Navbar, "Navbar").$$render($$result, {}, {}, {})}
 ${(0, import_index_4f192781.v)(Observers, "Observers").$$render($$result, {}, {}, {})}
 ${(0, import_index_4f192781.v)(Hero, "Hero").$$render($$result, {}, {}, {})}

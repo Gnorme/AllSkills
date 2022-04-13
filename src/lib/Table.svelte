@@ -2,22 +2,22 @@
 <section id="About">
     <h2 class="section-title" style="text-decoration-line: none; -webkit-text-decoration-line:none">What We Provide</h2>
     <div class="table-content" id="Table">
-        <div class="grid-item" style="background-image: url('../images/tags_hero_bg.png')">
+        <div class="grid-item" style="background-image: url('../images/black_bg_s.png')">
             <div class="table-icon"><img alt="Handshake" style="width:100%" src="images/{softTableIcons[0]}"></div>
             <h3>{$t('en.home.table.title1')}</h3>
             <p>{$t('en.home.table.p1_start')} <span class="highlight">{$t('en.home.table.p1_highlight')}</span> {$t('en.home.table.p1_end')}</p>
         </div>
-        <div class="grid-item" style="background-image: url('../images/tags_hero_bg.png')">
+        <div class="grid-item" style="background-image: url('../images/black_bg_s.png')">
             <div class="table-icon"><img alt="Earnings" style="width:100%" src="images/{softTableIcons[1]}"></div>
             <h3>{$t('en.home.table.title2')}</h3>
             <p><span class="highlight">{$t('en.home.table.p2_start')}</span> {$t('en.home.table.p2_middle')} <span class="highlight">{$t('en.home.table.p2_highlight')}</span> {$t('en.home.table.p2_end')}</p>
         </div>
-        <div class="grid-item" style="background-image: url('../images/tags_hero_bg.png')">
+        <div class="grid-item" style="background-image: url('../images/black_bg_s.png')">
             <div class="table-icon"><img alt="Collectibles" style="width:100%" src="images/{softTableIcons[2]}"></div>
             <h3>{$t('en.home.table.title3')}</h3>
             <p>{$t('en.home.table.p3_start')} <span class="highlight">{$t('en.home.table.p3_highlight')}</span> {$t('en.home.table.p3_end')}</p>
         </div>
-        <div class="grid-item" style="background-image: url('../images/tags_hero_bg.png')">
+        <div class="grid-item" style="background-image: url('../images/black_bg_s.png')">
             <div class="table-icon"><img alt="Marketplace" style="width:100%" src="images/{softTableIcons[3]}"></div>
             <h3>{$t('en.home.table.title4')}</h3>
             <p>{$t('en.home.table.p4_start')} <span class="highlight">{$t('en.home.table.p4_highlight')}</span> {$t('en.home.table.p4_end')}</p>
