@@ -98,7 +98,7 @@ const Hero = (0, import_index_4f192781.c)(($$result, $$props, $$bindings, slots)
         <div class="${"scrolling-content svelte-1vpjnve"}"><div class="${"scrolling-content-mask svelte-1vpjnve"}"><ul class="${"scroll-animation svelte-1vpjnve"}">${(0, import_index_4f192781.d)(skills, (skill) => {
     return `<li class="${"svelte-1vpjnve"}">${(0, import_index_4f192781.e)(skill)}</li>`;
   })}
-                    <li style="${"color:var(--highlight); font-weight: 600 !important; font-family:'Bebas Neue'; margin-top:11px;"}" class="${"svelte-1vpjnve"}">AllSkills</li></ul></div></div></div>
+                    <li style="${"color:var(--highlight); font-weight: 600 !important; font-family:'Bebas Neue'; margin-top:11px;"}" class="${"svelte-1vpjnve"}"><h1>AllSkills</h1></li></ul></div></div></div>
     <div class="${"hero-split svelte-1vpjnve"}"><div class="${"description svelte-1vpjnve"}"><p style="${"margin-bottom:2rem; color: white !important;"}" class="${"svelte-1vpjnve"}">${(0, import_index_4f192781.e)($t("en.home.hero.description_start"))} <span style="${"color:var(--highlight)"}">${(0, import_index_4f192781.e)($t("en.home.hero.description_highlight"))}</span> ${(0, import_index_4f192781.e)($t("en.home.hero.description_end"))}</p>
             ${(0, import_index_4f192781.v)(NewsletterSignup, "NewsletterSignup").$$render($$result, { color: "white" }, {}, {})}</div></div>
     <div id="${"socials"}" class="${"svelte-1vpjnve"}"><div class="${"tooltip svelte-1vpjnve"}"><ul id="${"social-links"}" class="${"svelte-1vpjnve"}"><a href="${"https://twitter.com/@AllSkillsNFT"}" class="${"svelte-1vpjnve"}">Twitter</a>

@@ -57,7 +57,7 @@
                     {#each skills as skill}
                         <li>{skill}</li>
                     {/each}
-                    <li style="color:var(--highlight); font-weight: 600 !important; font-family:'Bebas Neue'; margin-top:11px;">AllSkills</li>
+                    <li style="color:var(--highlight); font-weight: 600 !important; font-family:'Bebas Neue'; margin-top:11px;"><h1>AllSkills</h1></li>
                 </ul>
             </div>
         </div>

@@ -18,12 +18,12 @@
 
           //set HTML
           youTubeVideo.innerHTML = '<div class="play"></div>' +
-              '<meta itemprop="embedURL" content="https://www.youtube.com/embed/O2A5MIWsCFI" />' +
+              '<meta thumbnailUrl="https://img.youtube.com/vi/O2A5MIWsCFI/maxresdefault.jpg" uploadDate="Jan 31, 2022" description="Showcasing AllSkills" name="AllSkills Trailer" itemprop="embedURL" content="https://www.youtube.com/embed/O2A5MIWsCFI" />' +
               '<img style="cursor: pointer; border-radius:25px;" class="trailer" src="' + thumbnail + '" />';
 
           //add click event that will load YouTube video
           youTubeVideo.addEventListener( "click", function() {
-              this.innerHTML = '<iframe class="trailer" thumbnailUrl="https://img.youtube.com/vi/O2A5MIWsCFI/maxresdefault.jpg" uploadDate="Jan 31, 2022" description="Showcasing AllSkills" name="AllSkills Trailer" frameBorder="0" style="border-radius:25px; width:100%"' +
+              this.innerHTML = '<iframe class="trailer" frameBorder="0" style="border-radius:25px; width:100%"' +
                   'allow="accelerometer; autoplay; encrypted-media; gyroscope; picture-in-picture"' +
                   'src="https://www.youtube.com/embed/O2A5MIWsCFI?enablejsapi=1&rel=0&showinfo=0&autoplay=1"' +
                   ' allowFullScreen="allowfullscreen"></iframe>';
