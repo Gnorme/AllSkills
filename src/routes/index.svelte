@@ -23,8 +23,6 @@
 </script>
 
 <svelte:head>
-    <title>AllSkills - Competition based NFT Platform for showcasing all skills.</title>
-    <meta name="description" content="AllSkills is a competition based NFT platform where both talented creators and consumers of content can earn money.">
     <style>
 
 		@font-face {
