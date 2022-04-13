@@ -72,6 +72,7 @@
 </section>
 <script>
     import { t } from '$lib/translations/index.js';
+  //test
 </script>
 <style>
     :global(.soft-mode) #Tokens{
