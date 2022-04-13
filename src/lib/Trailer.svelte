@@ -18,7 +18,7 @@
 
           //set HTML
           youTubeVideo.innerHTML = '<div class="play"></div>' +
-          '<h2 itemprop="name">AllSkills Overview</h2>' +  
+          '<h2 itemprop="name" style="display:none">AllSkills Overview</h2>' +  
           '<p style="display:none;" itemprop="description">AllSkills is a platform that looks to bring creativity, sustainable growth, and increased competition to the talent world. Our platform provides an opportunity to witness people of all skills showcasing their talents and competing against others all while earning benefits through our carefully crafted token based Vote and Challenge system and NFT marketplace.</p>' +   
           '<meta itemprop="uploadDate" content="2022-01-31T08:00:00+08:00" />' +  
           '<meta itemprop="thumbnailUrl" content="https://img.youtube.com/vi/O2A5MIWsCFI/maxresdefault.jpg" />' +    
