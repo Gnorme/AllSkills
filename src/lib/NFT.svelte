@@ -96,7 +96,6 @@
         font-family: 'Varela';
     }
     .marker-highlight {
-        background: url('../images/purple-brush4-v2.png');
         background-position: center;
         background-repeat:no-repeat;
         background-size: 80% 80%;
