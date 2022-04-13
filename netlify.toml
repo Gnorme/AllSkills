@@ -1,4 +1,4 @@
-[[redirects]]
-  from = "/AthleteOnePager.pdf"
-  to = "/"
-  force=true
+[build]
+  command = "npm run build"
+  publish = "build/"
+  functions = "functions/"
