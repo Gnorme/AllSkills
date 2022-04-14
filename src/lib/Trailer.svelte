@@ -36,7 +36,7 @@
 </script>
 
 <style>
-    :global(.youtube:hover .play){
+    :global(#trailer:hover .play){
         cursor: pointer;
     background: red;
     opacity: 0.9;
@@ -60,6 +60,7 @@
   transition: all 150ms ease-out;
   width: 4em;
   top:25%;
+  cursor:pointer;
 }
 
 :global(.play::before) {
