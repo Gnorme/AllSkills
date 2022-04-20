@@ -545,7 +545,7 @@ const Routes = (0, import_index_4f192781.c)(($$result, $$props, $$bindings, slot
   $$unsubscribe_t = (0, import_index_4f192781.b)(import_index_51131352.t, (value) => $t = value);
   $$result.css.add(css);
   $$unsubscribe_t();
-  return `${$$result.head += `<style data-svelte="svelte-1t40xfl">@font-face {
+  return `${$$result.head += `<style data-svelte="svelte-qia3p">@font-face {
 			font-family: "Oswald";
 			src: url("./fonts/Oswald-Regular.ttf");
 			font-display: swap;
@@ -644,7 +644,7 @@ const Routes = (0, import_index_4f192781.c)(($$result, $$props, $$bindings, slot
     .soft-mode h3 {
       color: var(--headerColor);
     }
-	</style><link rel="${"preconnect"}" href="${"https://fonts.googleapis.com"}" data-svelte="svelte-1t40xfl"><link rel="${"preconnect"}" href="${"https://fonts.gstatic.com"}" crossorigin data-svelte="svelte-1t40xfl"><link href="${"https://fonts.googleapis.com/css2?family=Lato:wght@100;300;400&family=Roboto:wght@100&display=swap"}" rel="${"stylesheet"}" data-svelte="svelte-1t40xfl">`, ""}
+	</style><meta name="${"description"}" content="${"AllSkills is a competition based NFT platform where both talented creators and consumers of content can earn money."}" data-svelte="svelte-qia3p">${$$result.title = `<title>AllSkills - Competition based NFT Platform for showcasing all skills.</title>`, ""}<link rel="${"preconnect"}" href="${"https://fonts.googleapis.com"}" data-svelte="svelte-qia3p"><link rel="${"preconnect"}" href="${"https://fonts.gstatic.com"}" crossorigin data-svelte="svelte-qia3p"><link href="${"https://fonts.googleapis.com/css2?family=Lato:wght@100;300;400&family=Roboto:wght@100&display=swap"}" rel="${"stylesheet"}" data-svelte="svelte-qia3p">`, ""}
 ${(0, import_index_4f192781.v)(Navbar, "Navbar").$$render($$result, {}, {}, {})}
 ${(0, import_index_4f192781.v)(Observers, "Observers").$$render($$result, {}, {}, {})}
 ${(0, import_index_4f192781.v)(Hero, "Hero").$$render($$result, {}, {}, {})}
