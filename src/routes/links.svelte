@@ -24,7 +24,8 @@
   />
 </svelte:head>
 <div id="links-container">
-  <a href="mailto:info@allskills.ca">
+  <a href="https://allskills.ca">
+    <!-- Generator: Adobe Illustrator 19.1.0, SVG Export Plug-In . SVG Version: 6.00 Build 0)  -->
     <svg
       version="1.1"
       xmlns="http://www.w3.org/2000/svg"
@@ -46,71 +47,84 @@
           fill: #231f20;
         }
         .st3 {
-          fill: #e0e0d1;
+          fill: #ffffff;
         }
         .st4 {
-          fill: #ffffff;
+          fill: #e0e0d1;
+        }
+        .st5 {
+          fill: #e0995e;
+        }
+        .st6 {
+          fill: #76c2af;
+        }
+        .st7 {
+          fill: #c75c5c;
+        }
+        .st8 {
+          fill: #4f5d73;
         }
       </style>
       <g id="Layer_1">
         <g>
           <circle class="st0" cx="32" cy="32" r="32" />
         </g>
+        <g class="st1">
+          <path
+            class="st2"
+            d="M52,48c0,2.2-1.8,4-4,4H16c-2.2,0-4-1.8-4-4V18c0-2.2,1.8-4,4-4h32c2.2,0,4,1.8,4,4V48z"
+          />
+        </g>
         <g>
-          <g class="st1">
-            <path
-              class="st2"
-              d="M52,44c0,2.2-1.8,4-4,4H16c-2.2,0-4-1.8-4-4V24c0-2.2,1.8-4,4-4h32c2.2,0,4,1.8,4,4V44z"
-            />
-          </g>
-          <g>
-            <path
-              class="st3"
-              d="M52,42c0,2.2-1.8,4-4,4H16c-2.2,0-4-1.8-4-4V22c0-2.2,1.8-4,4-4h32c2.2,0,4,1.8,4,4V42z"
-            />
-          </g>
-          <g class="st1">
-            <g>
-              <path
-                class="st2"
-                d="M35.5,30.2c-1.9-2.1-5.1-2.1-7,0L13,43.2c-0.2,0.2-0.3,0.4-0.5,0.6c0.7,1.3,2,2.2,3.4,2.2h32
-                        c1.5,0,2.7-0.9,3.4-2.2c-0.1-0.2-0.3-0.4-0.5-0.6L35.5,30.2z"
-              />
-            </g>
-          </g>
-          <g>
-            <g>
-              <path
-                class="st3"
-                d="M35.5,32c-1.9-1.9-5.1-1.9-7,0L13,43.5c-0.2,0.2-0.3,0.3-0.5,0.5c0.7,1.2,2,1.9,3.4,1.9h32
-                        c1.5,0,2.7-0.8,3.4-1.9c-0.1-0.2-0.3-0.3-0.5-0.5L35.5,32z"
-              />
-            </g>
-          </g>
-          <g class="st1">
-            <g>
-              <path
-                class="st2"
-                d="M12.6,20.2c0.7-1.3,2-2.2,3.4-2.2h32c1.5,0,2.7,0.9,3.4,2.2c-0.1,0.2-0.3,0.4-0.5,0.6l-15.4,13
-                        c-1.9,2.1-5.1,2.1-7,0L12.6,20.2z"
-              />
-            </g>
-          </g>
-          <g>
-            <g>
-              <path
-                class="st4"
-                d="M28.5,32c1.9,1.9,5.1,1.9,7,0L51,20.5c0.2-0.2,0.3-0.3,0.5-0.5c-0.7-1.2-2-1.9-3.4-1.9H16
-                        c-1.5,0-2.7,0.8-3.4,1.9c0.1,0.2,0.3,0.3,0.5,0.5L28.5,32z"
-              />
-            </g>
-          </g>
+          <path
+            class="st3"
+            d="M12,21.5V46c0,2.2,1.8,4,4,4h32c2.2,0,4-1.8,4-4V21.5H12z"
+          />
+        </g>
+        <g class="st1">
+          <path
+            class="st2"
+            d="M52,18c0-2.2-1.8-4-4-4H16c-2.2,0-4,1.8-4,4v6h40V18z"
+          />
+        </g>
+        <g>
+          <path
+            class="st4"
+            d="M52,16c0-2.2-1.8-4-4-4H16c-2.2,0-4,1.8-4,4v6h40V16z"
+          />
+        </g>
+        <g>
+          <circle class="st5" cx="23" cy="17" r="2" />
+        </g>
+        <g>
+          <circle class="st6" cx="29" cy="17" r="2" />
+        </g>
+        <g>
+          <circle class="st7" cx="17" cy="17" r="2" />
+        </g>
+        <g>
+          <rect x="16" y="28" class="st8" width="12" height="18" />
+        </g>
+        <g>
+          <rect x="32" y="28" class="st4" width="16" height="2" />
+        </g>
+        <g>
+          <rect x="32" y="32" class="st4" width="16" height="2" />
+        </g>
+        <g>
+          <rect x="32" y="36" class="st4" width="16" height="2" />
+        </g>
+        <g>
+          <rect x="32" y="40" class="st4" width="16" height="2" />
+        </g>
+        <g>
+          <rect x="32" y="44" class="st4" width="16" height="2" />
         </g>
       </g>
       <g id="Layer_2" />
     </svg>
   </a>
-  <a href="https://www.twitter.com/@AllSkillsNFT">
+  <a href="https://discord.gg/sXYR6EYj">
     <svg
       width="71"
       height="80"
@@ -202,10 +216,10 @@
     align-items: center;
     flex-direction: column;
     width: 100%;
-    height: 100vw;
+    height: 100vh;
   }
   #links-container a {
-    width: 40%;
+    width: 25%;
   }
   a > svg {
     width: 100% !important;
