@@ -1,7 +1,7 @@
 <script>
   import { onDestroy, onMount } from "svelte";
 
-  const link = "http://localhost:5000";
+  const link = "https://atagaia.shop/event";
   let team_one = { name: "Team 1", score: 0 };
   let team_two = { name: "Team 2", score: 0 };
   let vote_score = null;
@@ -11,6 +11,7 @@
   let voted = false;
   let rounds = null;
   let nextRound = null;
+  let currentRound = 0;
   onMount(async () => {
     user_id = localStorage.getItem("user_id");
     if (user_id == null) {
@@ -79,6 +80,7 @@
       }
       vote_score = team_one.score + team_two.score;
     }
+    currentRound = response.data.round;
     voted = hasVoted;
   }
   async function sendVote(team) {
@@ -130,18 +132,20 @@
   <div id="rounds-container">
     {#if rounds}
       {#each rounds as round}
-        <div class="previous-round">
-          {#each round.teams as team, idx}
-            {#if idx == 0}
-              <h4>{team}</h4>
-              <h4>&nbsp;VS&nbsp;</h4>
-            {:else}
-              <h4>{team}</h4>
-            {/if}
-          {/each}
-        </div>
-        {#if true}
-          <p class="winner">Winner: test</p>
+        {#if rounds.round < currentRound}
+          <div class="previous-round">
+            {#each round.teams as team, idx}
+              {#if idx == 0}
+                <h4>{team}</h4>
+                <h4>&nbsp;VS&nbsp;</h4>
+              {:else}
+                <h4>{team}</h4>
+              {/if}
+            {/each}
+          </div>
+          {#if true}
+            <p class="winner">Winner: test</p>
+          {/if}
         {/if}
       {/each}
     {/if}
