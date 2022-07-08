@@ -92,7 +92,9 @@
       },
       body: vote,
     }).then((res) => res.json());
-
+    if (response.status == 302) {
+      alert(response.message);
+    }
     console.log(response);
     getCurrentRound();
   }
