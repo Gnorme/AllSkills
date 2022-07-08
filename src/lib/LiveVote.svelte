@@ -98,6 +98,20 @@
     console.log(response);
     getCurrentRound();
   }
+  function addEffect(target) {
+    console.log(target);
+    if (!target.classList.contains("button-effect")) {
+      target.classList.add("button-effect");
+    }
+  }
+  function removeEffect(target) {
+    console.log(target);
+    if (target.classList.contains("button-effect")) {
+      setTimeout(() => {
+        target.classList.remove("button-effect");
+      }, 150);
+    }
+  }
 </script>
 
 <div id="live-vote-container">
@@ -106,12 +120,16 @@
   <button
     id="vote-red"
     class="vote-button"
+    on:pointerdown={(ev) => addEffect(ev.currentTarget)}
+    on:pointerup={(ev) => removeEffect(ev.currentTarget)}
     on:click={() => sendVote(team_one.name)}>Vote {team_one.name}</button
   >
   <h3>{team_two.name}</h3>
   <button
     id="vote-blue"
     class="vote-button"
+    on:pointerdown={(ev) => addEffect(ev.currentTarget)}
+    on:pointerup={(ev) => removeEffect(ev.currentTarget)}
     on:click={() => sendVote(team_two.name)}>Vote {team_two.name}</button
   >
   {#if voted}
@@ -161,6 +179,10 @@
 </div>
 
 <style>
+  :global(.button-effect) {
+    box-shadow: white 3px 3px 0px 1px !important;
+    opacity: 0.6;
+  }
   .winner {
     text-align: center;
     margin: 0;
@@ -192,9 +214,14 @@
   }
   .vote-button {
     border: none;
-    padding: 10px;
-    border-radius: 6px;
-    color: white;
+    font-size: 1rem;
+    border-radius: 10px;
+    padding: 10px 20px;
+    z-index: 2;
+    box-shadow: black 2px 2px 0px 2px;
+    font-weight: 700;
+    color: #fff;
+    margin-bottom: 10px;
   }
   #vote-button-container {
     position: absolute;
