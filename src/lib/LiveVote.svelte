@@ -115,7 +115,7 @@
   {#if voted}
     <h4>Vote Accepted</h4>
   {/if}
-  <h2>Next Round</h2>
+  <h2 style="margin-top:20px">Next Round</h2>
   {#if nextRound}
     <div id="next-round-container">
       <h3>Round {nextRound.round}:&nbsp;</h3>
