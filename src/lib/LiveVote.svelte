@@ -3,8 +3,8 @@
   import { t } from "$lib/translations/index.js";
 
   const link = "https://atagaia.shop/event";
-  let team_one = { name: "Team 1", score: 0 };
-  let team_two = { name: "Team 2", score: 0 };
+  let team_one = { name: "Red", score: 0 };
+  let team_two = { name: "Blue", score: 0 };
   let vote_score = null;
   let interval = null;
   let user_id = null;
@@ -12,7 +12,7 @@
   let voted = false;
   let rounds = null;
   let nextRound = null;
-  let currentRound = 0;
+  let currentRound = null;
   onMount(async () => {
     user_id = localStorage.getItem("user_id");
     if (user_id == null) {
@@ -23,7 +23,7 @@
     getCurrentRound();
     getRounds();
     getAllVotes();
-    getNextRound();
+    //getNextRound();
     interval = setInterval(() => {
       getCurrentRound();
     }, 5000);
@@ -37,7 +37,7 @@
     let response = await fetch(link + "/rounds").then((res) => res.json());
     if (response.status == 200) {
       rounds = response.data.rounds;
-      console.log(rounds);
+      console.log("rounds:", rounds);
     }
     console.log(response);
   }
@@ -82,6 +82,7 @@
       vote_score = team_one.score + team_two.score;
     }
     currentRound = response.data.round;
+    console.log("current:", currentRound);
     voted = hasVoted;
   }
   async function sendVote(team) {
@@ -126,6 +127,9 @@
     {$t("content.home.live_event.banner_end")} - July 9
   </h4>
   <h1 style="margin-top:40px;">{$t("content.home.live_event.top")}</h1>
+  {#if currentRound}
+    <h2>{currentRound.round}</h2>
+  {/if}
   <h3>{team_one.name}</h3>
   <button
     id="vote-red"
@@ -145,24 +149,12 @@
   {#if voted}
     <h4>Vote Accepted</h4>
   {/if}
-  <h2 style="margin-top:20px">{$t("content.home.live_event.middle")}</h2>
-  {#if nextRound}
-    <div id="next-round-container">
-      <h3>Round {nextRound.round}:&nbsp;</h3>
-      {#each nextRound.teams as team, idx}
-        {#if idx == 0}
-          <h4>{team} vs&nbsp;</h4>
-        {:else}
-          <h4>{team}</h4>
-        {/if}
-      {/each}
-    </div>
-  {/if}
-  <h2>{$t("content.home.live_event.bottom")}</h2>
+
+  <!--<h2 style="margin: 20px 0px">{$t("content.home.live_event.bottom")}</h2>
   <div id="rounds-container">
     {#if rounds}
       {#each rounds as round}
-        {#if rounds.round < currentRound}
+        {#if rounds.round < currentRound.round}
           <div class="previous-round">
             {#each round.teams as team, idx}
               {#if idx == 0}
@@ -179,7 +171,7 @@
         {/if}
       {/each}
     {/if}
-  </div>
+  </div>-->
   <!--{#if leader != null}
     <h4>{leader} is in the lead!</h4>
   {/if}
