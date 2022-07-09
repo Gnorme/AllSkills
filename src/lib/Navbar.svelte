@@ -259,6 +259,7 @@
   }
   .logo-container {
     display: flex;
+    padding: 10px;
     max-height: 100%;
     flex-direction: column;
   }
@@ -319,9 +320,6 @@
       width: 40px;
       height: 40px;
     }
-    .navbar {
-      flex-direction: row-reverse;
-    }
   }
   .logo {
     max-height: 100%;
@@ -333,13 +331,13 @@
     z-index: 2;
     position: fixed;
     box-sizing: border-box;
+    flex-direction: row-reverse;
     display: flex;
     top: 0;
-    left: 0;
     width: 100%;
     height: 100px;
     justify-content: space-between;
-    padding: 1rem 1rem;
+    padding-top: 1rem;
   }
 
   .hamburger {
