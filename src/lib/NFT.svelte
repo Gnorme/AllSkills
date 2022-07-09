@@ -20,12 +20,12 @@
                             <polygon style="fill: var(--firstColor); opacity: 0.7;" points="120.568 -0.003 99.057 64.191 500.785 2.143 499.522 0.721 117.904 49.127 134.741 0.134"/>
                         </svg>
                         <ul id="nft-info">
-                            <li><h4>{$t('en.home.nft.1.pStart')} <span style="color:blueviolet">{$t('en.home.nft.1.highlight')}</span> {$t('en.home.nft.1.pEnd')}</h4></li>
-                            <li><h4>{$t('en.home.nft.2.pStart')} <span style="color:blueviolet">{$t('en.home.nft.2.highlight')}</span> {$t('en.home.nft.2.pEnd')}</h4></li> 
-                            <li><h4>{$t('en.home.nft.3.pStart')} <span style="color:blueviolet">{$t('en.home.nft.3.highlight')}</span></h4></li>  
-                            <li><h4>{$t('en.home.nft.4.pStart')} <span style="color:blueviolet">{$t('en.home.nft.4.highlight')}</span> {$t('en.home.nft.4.pEnd')}</h4></li>  
+                            <li><h4>{$t('content.home.nft.1.pStart')} <span style="color:blueviolet">{$t('content.home.nft.1.highlight')}</span> {$t('content.home.nft.1.pEnd')}</h4></li>
+                            <li><h4>{$t('content.home.nft.2.pStart')} <span style="color:blueviolet">{$t('content.home.nft.2.highlight')}</span> {$t('content.home.nft.2.pEnd')}</h4></li> 
+                            <li><h4>{$t('content.home.nft.3.pStart')} <span style="color:blueviolet">{$t('content.home.nft.3.highlight')}</span></h4></li>  
+                            <li><h4>{$t('content.home.nft.4.pStart')} <span style="color:blueviolet">{$t('content.home.nft.4.highlight')}</span> {$t('content.home.nft.4.pEnd')}</h4></li>  
                         </ul>
-                        <h4 style="font-size: 0.8rem; line-height:normal;">{$t('en.home.nft.5.pStart')} <a on:click={() => showModal("arweave")}>{$t('en.home.nft.5.link')}</a></h4>
+                        <h4 style="font-size: 0.8rem; line-height:normal;">{$t('content.home.nft.5.pStart')} <a on:click={() => showModal("arweave")}>{$t('content.home.nft.5.link')}</a></h4>
                     </div>
             </div>
         </div>

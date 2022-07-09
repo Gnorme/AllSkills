@@ -35,7 +35,16 @@
 </script>
 
 <div class="navbar">
-  <img alt="Logo" class="logo" on:click={changeMode} src="images/logo.png" />
+  <div class="logo-container">
+    <img alt="Logo" class="logo" on:click={changeMode} src="images/logo.png" />
+    <div class="locale-selector">
+      <select on:change={handleLocaleChange} bind:value={$locale}>
+        {#each $locales as value}
+          <option {value}>{$t(`lang.${value}`)}</option>
+        {/each}
+      </select>
+    </div>
+  </div>
   <button class="hamburger" aria-label="Navigation button" on:click={openNav}>
     <svg
       width="48px"
@@ -248,6 +257,11 @@
     top: 25px;
     right: 75px;
   }
+  .logo-container {
+    display: flex;
+    max-height: 100%;
+    flex-direction: column;
+  }
   #moon {
     position: absolute;
     top: -5px;
@@ -309,11 +323,7 @@
     background-image: url();
     cursor: pointer;
   }
-  .locale-selector {
-    position: absolute;
-    top: 20px;
-    left: 20px;
-  }
+
   .navbar {
     z-index: 2;
     position: fixed;
@@ -324,7 +334,6 @@
     width: 100%;
     height: 100px;
     justify-content: space-between;
-    align-items: center;
     padding: 1rem 1rem;
   }
 

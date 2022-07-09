@@ -56,7 +56,7 @@
     src="images/logo-border-2.png"
   />
   <div class="left-content">
-    <div class="content">{$t("en.home.hero.title")}</div>
+    <div class="content">{$t("content.home.hero.title")}</div>
     <div class="scrolling-content">
       <div class="scrolling-content-mask">
         <ul class="scroll-animation">
@@ -75,11 +75,11 @@
   <div class="hero-split">
     <div class="description">
       <p style="margin-bottom:2rem; color: white !important;">
-        {$t("en.home.hero.description_start")}
+        {$t("content.home.hero.description_start")}
         <span style="color:var(--highlight)"
-          >{$t("en.home.hero.description_highlight")}</span
+          >{$t("content.home.hero.description_highlight")}</span
         >
-        {$t("en.home.hero.description_end")}
+        {$t("content.home.hero.description_end")}
       </p>
       <NewsletterSignup color="white" />
     </div>
