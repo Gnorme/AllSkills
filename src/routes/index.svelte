@@ -152,12 +152,12 @@
 <div class="powered-by" style="background-image: var(--bgImage);">
   <h3>
     <span style="color:var(--highlight);"
-      >{$t("en.home.highlighted.company")}</span
+      >{$t("content.home.highlighted.company")}</span
     >
-    {$t("en.home.highlighted.start")}
-    <span class="important">{$t("en.home.highlighted.highlight1")}</span>{$t(
-      "en.home.highlighted.middle"
-    )} <span class="important">{$t("en.home.highlighted.highlight2")}</span>
+    {$t("content.home.highlighted.start")}
+    <span class="important">{$t("content.home.highlighted.highlight1")}</span
+    >{$t("content.home.highlighted.middle")}
+    <span class="important">{$t("content.home.highlighted.highlight2")}</span>
   </h3>
 </div>
 <TopLines color="aqua" />
