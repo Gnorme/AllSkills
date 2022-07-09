@@ -136,7 +136,8 @@
     class="vote-button"
     on:pointerdown={(ev) => addEffect(ev.currentTarget)}
     on:pointerup={(ev) => removeEffect(ev.currentTarget)}
-    on:click={() => sendVote(team_one.name)}>Vote {team_one.name}</button
+    on:click={() => sendVote(team_one.name)}
+    >Vote {$t("content.home.live_event.first_color")}}</button
   >
   <h3>{team_two.name}</h3>
   <button
@@ -144,7 +145,8 @@
     class="vote-button"
     on:pointerdown={(ev) => addEffect(ev.currentTarget)}
     on:pointerup={(ev) => removeEffect(ev.currentTarget)}
-    on:click={() => sendVote(team_two.name)}>Vote {team_two.name}</button
+    on:click={() => sendVote(team_two.name)}
+    >Vote {$t("content.home.live_event.second_color")}</button
   >
   {#if voted}
     <h4>Vote Accepted</h4>
