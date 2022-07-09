@@ -125,7 +125,7 @@
     >
     {$t("content.home.live_event.banner_end")}
   </h4>
-  <h1 style="margin-top:40px;">{$t("content.home.live_event.top")}</h1>
+  <h1 style="margin-top:40px;">{$t("content.home.live_event.top")} - July 9</h1>
   <h3>{team_one.name}</h3>
   <button
     id="vote-red"
