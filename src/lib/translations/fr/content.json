@@ -6,7 +6,9 @@
       "banner_end":"Event",
       "top": "Tour en Cours",
       "middle": "Tour Suivant",
-      "bottom": "Tours Précédents"
+      "bottom": "Tours Précédents",
+      "first_color":"Rouge",
+      "second_color": "Bleue"
     },
       "hero": {
           "title":"Conçu pour",

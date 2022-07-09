@@ -6,7 +6,9 @@
         "banner_end":"Event",
         "top": "Current Round",
         "middle": "Next Round",
-        "bottom": "Previous Rounds"
+        "bottom": "Previous Rounds",
+        "first_color":"Red",
+        "second_color": "Blue"
       },
       "hero": {
           "title":"Built for",
