@@ -258,6 +258,9 @@
     right: 75px;
   }
   .logo-container {
+    max-width: 100px;
+    justify-content: center;
+    align-items: center;
     display: flex;
     padding: 10px;
     max-height: 100%;
@@ -309,10 +312,17 @@
     background-color: #000;
     visibility: hidden;
   }
+  .locale-selector {
+    display: flex;
+    margin-top: 10px;
+    font-size: 1rem;
+    flex-direction: row-reverse;
+  }
   select {
     background-color: transparent !important;
     color: aqua;
     border: none;
+    -webkit-appearance: none;
   }
   @media screen and (max-width: 820px) {
     .logo {
