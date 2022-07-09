@@ -115,7 +115,12 @@
 </script>
 
 <div id="live-vote-container">
-  <h1>Current Round</h1>
+  <h4
+    style="top:0; right:0; margin:0; text-align:right; color: white; position:absolute;"
+  >
+    MakeYourMove <span style="color:red">Live</span> Event
+  </h4>
+  <h1 style="margin-top:40px;">Current Round</h1>
   <h3>{team_one.name}</h3>
   <button
     id="vote-red"
