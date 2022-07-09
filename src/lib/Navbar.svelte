@@ -315,7 +315,12 @@
   }
   @media screen and (max-width: 820px) {
     .logo {
-      visibility: hidden;
+      /*visibility: hidden;*/
+      width: 40px;
+      height: 40px;
+    }
+    .navbar {
+      flex-direction: row-reverse;
     }
   }
   .logo {

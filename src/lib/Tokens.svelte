@@ -8,7 +8,7 @@
     class="section-title center"
     style="text-decoration-color: var(--fourthColor); -webkit-text-decoration-color: var(--fourthColor)"
   >
-    ALLSKILLS Token System
+    {$t("content.home.vote.main_title")}
   </h2>
   <div class="vote-container">
     <div class="column-header">

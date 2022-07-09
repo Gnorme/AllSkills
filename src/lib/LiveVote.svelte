@@ -1,5 +1,6 @@
 <script>
   import { onDestroy, onMount } from "svelte";
+  import { t } from "$lib/translations/index.js";
 
   const link = "https://atagaia.shop/event";
   let team_one = { name: "Team 1", score: 0 };
@@ -116,11 +117,15 @@
 
 <div id="live-vote-container">
   <h4
-    style="top:0; right:0; margin:0; text-align:right; color: white; position:absolute;"
+    style="top:0; left:0; margin:0; text-align:right; color: white; position:absolute;"
   >
-    MakeYourMove <span style="color:red">Live</span> Event
+    {$t("content.home.live_event.banner_start")}
+    <span style="color:red"
+      >{$t("content.home.live_event.banner_highlight")}</span
+    >
+    {$t("content.home.live_event.banner_end")}
   </h4>
-  <h1 style="margin-top:40px;">Current Round</h1>
+  <h1 style="margin-top:40px;">{$t("content.home.live_event.top")}</h1>
   <h3>{team_one.name}</h3>
   <button
     id="vote-red"
@@ -140,7 +145,7 @@
   {#if voted}
     <h4>Vote Accepted</h4>
   {/if}
-  <h2 style="margin-top:20px">Next Round</h2>
+  <h2 style="margin-top:20px">{$t("content.home.live_event.middle")}</h2>
   {#if nextRound}
     <div id="next-round-container">
       <h3>Round {nextRound.round}:&nbsp;</h3>
@@ -153,7 +158,7 @@
       {/each}
     </div>
   {/if}
-  <h2>Previous Rounds</h2>
+  <h2>{$t("content.home.live_event.bottom")}</h2>
   <div id="rounds-container">
     {#if rounds}
       {#each rounds as round}

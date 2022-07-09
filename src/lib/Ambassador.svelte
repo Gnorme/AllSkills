@@ -11,7 +11,7 @@
     class="section-title"
     style="text-decoration-color: red; -webkit-text-decoration-color: red"
   >
-    Ambassador Challenge
+    {$t("content.home.ambassador.main_title")}
   </h2>
   <div class="ambassador-container">
     <Carousel />

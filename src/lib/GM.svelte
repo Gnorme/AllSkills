@@ -66,7 +66,7 @@
     class="section-title"
     style="text-decoration-color: var(--firstColor); -webkit-text-decoration-color: var(--firstColor)"
   >
-    GM Mode
+    {$t("content.home.gm.main_title")}
   </h2>
   <div class="GM-container">
     <div class="GM-section">
