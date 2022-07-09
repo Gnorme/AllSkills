@@ -1,6 +1,6 @@
 <script>
   import { t, locales, locale } from "$lib/translations";
-  let value = "en";
+  let value = "fr";
 
   function revealTokenomics(e) {
     document.getElementById("Tokenomics").classList.toggle("reveal");

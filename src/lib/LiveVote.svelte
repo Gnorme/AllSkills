@@ -26,7 +26,7 @@
     getNextRound();
     interval = setInterval(() => {
       getCurrentRound();
-    }, 30000);
+    }, 5000);
   });
   onDestroy(() => {
     if (interval) {
