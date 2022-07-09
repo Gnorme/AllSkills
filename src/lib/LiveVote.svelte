@@ -130,7 +130,7 @@
   {#if currentRound}
     <h2>{currentRound.round}</h2>
   {/if}
-  <h3>{team_one.name}</h3>
+  <h3>{$t("content.home.live_event.first_color")}</h3>
   <button
     id="vote-red"
     class="vote-button"
@@ -139,7 +139,7 @@
     on:click={() => sendVote(team_one.name)}
     >Vote {$t("content.home.live_event.first_color")}</button
   >
-  <h3>{team_two.name}</h3>
+  <h3>{$t("content.home.live_event.second_color")}</h3>
   <button
     id="vote-blue"
     class="vote-button"
