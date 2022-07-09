@@ -1,5 +1,13 @@
 {
   "home": {
+      "live_event": {
+        "banner_start":"MakeYourMove",
+        "banner_highlight": "Live",
+        "banner_end":"Event",
+        "top": "Current Round",
+        "middle": "Next Round",
+        "bottom": "Previous Round"
+      },
       "hero": {
           "title":"Built for",
           "description_start": "AllSkills is a platform that looks to bring",
@@ -61,6 +69,7 @@
               "tooltips": []}
       },
       "vote": {
+          "main_title": "ALLSKILLS Token System",
           "win": {
               "title": "Earn by winning",
               "pStart":"Challenge winners earn a portion of all $VOTE tokens cast during the challenge, making it",
@@ -93,6 +102,7 @@
               "pEnd": ""}
       },
       "nft": {
+        "main_title": "ALLSKILLS NFTs",
           "1": {
               "pStart":"All challenge wins that end in the daily",
               "highlight":"top 10% of votes received",
@@ -120,6 +130,7 @@
           }
       },
       "gm": {
+          "main_title": "GM Mode",
           "1": {
               "pStart":"Build up a collection of amazing content and unlock GM Mode once you own",
               "highlight":"at least 3 NFTs."
@@ -141,6 +152,7 @@
           }
       },
       "ambassador": {
+        "main_title":"Ambassador Challenge",
           "line1": "Compete in new Ambassador Challenges every week hosted by different athletes",
           "line2": "Chance to win an NFT of Ambassador's Challenge video + additional prizes.",
           "line3": "Stay tuned for more details."
@@ -172,6 +184,7 @@
           "list": ["Team 10%", "Advisors & Partners 10%", "Private Sale 10%", "Public Sale 20%", "Liquidity Pool 20%", "Foundation 30%"]
       },
       "team": {
+        "main_title": "The Team",
           "position": "Co-Founder",
           "button": "MORE INFO",
           "noah": "Noah has been in and around the sport industry since he was 16. After graduating from Brock University’s Sport Management program, he began to focus his career on marketing. Through his experience in Junior Hockey, CFL, AHL and NHL, as well as freelance, Noah has learned the art of connecting with athletes. Noah’s passion for making sports and competition more accessible helps guide AllSkills and stems from his desire to improve the world around him.",
