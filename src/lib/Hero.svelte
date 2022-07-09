@@ -1,6 +1,8 @@
 <script>
   import NewsletterSignup from "./NewsletterSignup.svelte";
   import { t } from "$lib/translations/index.js";
+  import RequestAccess from "./RequestAccess.svelte";
+  let requestingAccess = false;
   const skills = [
     "Gymnastics",
     "Volleyball",
@@ -48,6 +50,9 @@
   let string = "<a>Twitter</a>";
 </script>
 
+{#if requestingAccess}
+  <RequestAccess bind:requestingAccess />
+{/if}
 <div style="background-image:url('images/tags_hero_bg.png')" id="hero">
   <img
     loading="lazy"
@@ -84,6 +89,9 @@
       <NewsletterSignup color="white" />
     </div>
   </div>
+  <button class="request-access" on:click={() => (requestingAccess = true)}
+    >Request access to beta</button
+  >
   <div id="socials">
     <div class="tooltip">
       <ul id="social-links">
@@ -98,6 +106,16 @@
 </div>
 
 <style>
+  .request-access {
+    position: absolute;
+    border: none;
+    padding: 10px;
+    border-radius: 6px;
+    background: blueviolet;
+    color: white;
+    margin: 10px;
+    bottom: 0;
+  }
   :global(.soft-mode) #hero {
     background-image: none !important;
     background-color: #ffa666;
@@ -200,6 +218,9 @@
     align-items: center;
   }
   @media screen and (max-width: 820px) {
+    .request-access {
+      bottom: -60px;
+    }
     :global(.soft-mode #hero::before) {
       background-image: none !important;
       background-color: #ffa666 !important;
