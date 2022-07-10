@@ -143,7 +143,7 @@
     rel="stylesheet"
   />
 </svelte:head>
-<LiveVote />
+<!--<LiveVote />-->
 <Navbar />
 <Observers />
 <Hero />
