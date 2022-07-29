@@ -125,13 +125,6 @@
       color: var(--headerColor);
     }
   </style>
-  <meta
-    name="description"
-    content="AllSkills is a competition based NFT platform where both talented creators and consumers of content can earn money."
-  />
-  <title
-    >AllSkills - Competition based NFT Platform for showcasing all skills.</title
-  >
   <link rel="preconnect" href="https://fonts.googleapis.com" />
   <link
     rel="preconnect"
