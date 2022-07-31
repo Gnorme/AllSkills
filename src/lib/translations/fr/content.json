@@ -1,5 +1,9 @@
 {
   "home": {
+    "newsletter": {
+        "button_text": "M'inscrire",
+        "placeholder_text": "Inscrivez-vous à notre infolettre"
+    },
     "live_event": {
       "banner_start":"MakeYourMove",
       "banner_highlight": "Live",
@@ -12,6 +16,8 @@
     },
       "hero": {
           "title":"Conçu pour",
+          "button_text": "Demander l'accès à la bêta",
+          "shoutout": "Consultez-nous",
           "description_start": "AllSkills est une plateforme qui vise à susciter",
           "description_highlight": "la créativité, la croissance durable et la concurrence",
           "description_end": "chez les talents de ce monde. Notre portail permet aux adeptes de toutes les disciplines de démontrer leurs talents et de se mesurer aux autres tout en accumulant des avantages au sein d’un système soigneusement étudié de vote et de défi reposant sur les jetons et le marché de jetons non fongibles (NFT)."

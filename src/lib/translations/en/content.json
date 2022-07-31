@@ -1,5 +1,9 @@
 {
   "home": {
+    "newsletter": {
+        "button_text": "Register",
+        "placeholder_text": "Sign up for our newsletter"
+    },
       "live_event": {
         "banner_start":"MakeYourMove",
         "banner_highlight": "Live",
@@ -12,6 +16,8 @@
       },
       "hero": {
           "title":"Built for",
+          "button_text": "Request access to beta",
+          "shoutout": "Check us out",
           "description_start": "AllSkills is a platform that looks to bring",
           "description_highlight": "creativity, sustainable growth, and increased competition",
           "description_end": "to the talent world. Our platform provides an opportunity to witness people of all skills showcasing their talents and competing against others all while earning benefits through our carefully crafted token based Vote and Challenge system and NFT marketplace."
