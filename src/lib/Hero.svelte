@@ -90,7 +90,7 @@
     </div>
   </div>
   <button class="request-access" on:click={() => (requestingAccess = true)}
-    >Request access to beta</button
+    >{$t("content.home.hero.button_text")}</button
   >
   <div id="socials">
     <div class="tooltip">
@@ -101,13 +101,14 @@
         <a href="https://www.facebook.com/AllSkills.ca">Facebook</a>
       </ul>
     </div>
-    <span>Check us out <a>@AllSkills.ca</a></span>
+    <span>{$t("content.home.hero.shoutout")} <a>@AllSkills.ca</a></span>
   </div>
 </div>
 
 <style>
   .request-access {
     position: absolute;
+    display: block;
     border: none;
     padding: 10px;
     border-radius: 6px;
