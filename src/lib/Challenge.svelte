@@ -309,7 +309,7 @@
     background-color: rgba(0, 0, 0, 0.5) !important;
     background-position-y: center !important;
     background-size: contain !important;
-    background: url("../images/win_screen.png");
+    background: url("/images/win_screen.png");
     background-repeat: no-repeat;
     border-radius: 20px;
     width: 250px;
