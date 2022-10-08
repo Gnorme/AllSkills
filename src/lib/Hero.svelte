@@ -1,6 +1,8 @@
 <script>
   import NewsletterSignup from "./NewsletterSignup.svelte";
   import { t } from "$lib/translations/index.js";
+  import RequestAccess from "./RequestAccess.svelte";
+  let requestingAccess = false;
   const skills = [
     "Gymnastics",
     "Volleyball",
@@ -48,6 +50,9 @@
   let string = "<a>Twitter</a>";
 </script>
 
+{#if requestingAccess}
+  <RequestAccess bind:requestingAccess />
+{/if}
 <div style="background-image:url('images/tags_hero_bg.png')" id="hero">
   <img
     loading="lazy"
@@ -56,7 +61,7 @@
     src="images/logo-border-2.png"
   />
   <div class="left-content">
-    <div class="content">{$t("en.home.hero.title")}</div>
+    <div class="content">{$t("content.home.hero.title")}</div>
     <div class="scrolling-content">
       <div class="scrolling-content-mask">
         <ul class="scroll-animation">
@@ -75,15 +80,18 @@
   <div class="hero-split">
     <div class="description">
       <p style="margin-bottom:2rem; color: white !important;">
-        {$t("en.home.hero.description_start")}
+        {$t("content.home.hero.description_start")}
         <span style="color:var(--highlight)"
-          >{$t("en.home.hero.description_highlight")}</span
+          >{$t("content.home.hero.description_highlight")}</span
         >
-        {$t("en.home.hero.description_end")}
+        {$t("content.home.hero.description_end")}
       </p>
       <NewsletterSignup color="white" />
     </div>
   </div>
+  <button class="request-access" on:click={() => (requestingAccess = true)}
+    >{$t("content.home.hero.button_text")}</button
+  >
   <div id="socials">
     <div class="tooltip">
       <ul id="social-links">
@@ -93,11 +101,22 @@
         <a href="https://www.facebook.com/AllSkills.ca">Facebook</a>
       </ul>
     </div>
-    <span>Check us out <a>@AllSkills.ca</a></span>
+    <span>{$t("content.home.hero.shoutout")} <a>@AllSkills.ca</a></span>
   </div>
 </div>
 
 <style>
+  .request-access {
+    position: absolute;
+    display: block;
+    border: none;
+    padding: 10px;
+    border-radius: 6px;
+    background: blueviolet;
+    color: white;
+    margin: 10px;
+    bottom: 0;
+  }
   :global(.soft-mode) #hero {
     background-image: none !important;
     background-color: #ffa666;
@@ -200,6 +219,9 @@
     align-items: center;
   }
   @media screen and (max-width: 820px) {
+    .request-access {
+      bottom: -60px;
+    }
     :global(.soft-mode #hero::before) {
       background-image: none !important;
       background-color: #ffa666 !important;

@@ -18,7 +18,11 @@
 
           //set HTML
           youTubeVideo.innerHTML = '<div class="play"></div>' +
-              '<meta itemprop="embedURL" content="https://www.youtube.com/embed/O2A5MIWsCFI" />' +
+          '<h2 itemprop="name" style="display:none">AllSkills Overview</h2>' +  
+          '<p style="display:none;" itemprop="description">AllSkills is a platform that looks to bring creativity, sustainable growth, and increased competition to the talent world. Our platform provides an opportunity to witness people of all skills showcasing their talents and competing against others all while earning benefits through our carefully crafted token based Vote and Challenge system and NFT marketplace.</p>' +   
+          '<meta itemprop="uploadDate" content="2022-01-31T08:00:00+08:00" />' +  
+          '<meta itemprop="thumbnailUrl" content="https://img.youtube.com/vi/O2A5MIWsCFI/maxresdefault.jpg" />' +    
+          '<meta itemprop="embedURL" content="https://www.youtube.com/embed/O2A5MIWsCFI" />' +
               '<img style="cursor: pointer; border-radius:25px;" class="trailer" src="' + thumbnail + '" />';
 
           //add click event that will load YouTube video
@@ -32,7 +36,7 @@
 </script>
 
 <style>
-    :global(.youtube:hover .play){
+    :global(#trailer:hover .play){
         cursor: pointer;
     background: red;
     opacity: 0.9;
@@ -56,6 +60,7 @@
   transition: all 150ms ease-out;
   width: 4em;
   top:25%;
+  cursor:pointer;
 }
 
 :global(.play::before) {

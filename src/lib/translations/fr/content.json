@@ -1,4 +1,209 @@
 {
-  "title": "Vítejte ve SvelteKit",
-  "text": "Dokumentace je k přečtení na <a href=\"{{link}}\">kit.svelte.dev</a>"
+  "home": {
+    "newsletter": {
+        "button_text": "M'inscrire",
+        "placeholder_text": "Inscrivez-vous à notre infolettre"
+    },
+    "live_event": {
+      "banner_start":"MakeYourMove",
+      "banner_highlight": "Live",
+      "banner_end":"Event",
+      "top": "Tour en Cours",
+      "middle": "Tour Suivant",
+      "bottom": "Tours Précédents",
+      "first_color":"Rouge",
+      "second_color": "Bleue"
+    },
+      "hero": {
+          "title":"Conçu pour",
+          "button_text": "Demander l'accès à la bêta",
+          "shoutout": "Consultez-nous",
+          "description_start": "AllSkills est une plateforme qui vise à susciter",
+          "description_highlight": "la créativité, la croissance durable et la concurrence",
+          "description_end": "chez les talents de ce monde. Notre portail permet aux adeptes de toutes les disciplines de démontrer leurs talents et de se mesurer aux autres tout en accumulant des avantages au sein d’un système soigneusement étudié de vote et de défi reposant sur les jetons et le marché de jetons non fongibles (NFT)."
+      },
+      "table": {
+          "main_title": "Notre Offre",
+          "title1":"Concours d’habiletés",
+          "p1_start":"Les créateurs",
+          "p1_highlight":"mettent au défi un adversaire",
+          "p1_end":"au moyen d’une vidéo qui démontre leurs talents individuels. Les utilisateurs votent en attribuant des jetons stables $VOTE à la vidéo qu’ils préfèrent, et la vidéo gagnante a la chance d’être convertie en NFT. Les créateurs et les personnes qui votent partagent les fruits de la réussite.",
+          "title2":"Récompenses",
+          "p2_start": "Les créateurs obtiennent des jetons $VOTE",
+          "p2_middle":"quand ils remportent un défi, et peuvent les échanger contre d’autres cryptomonnaies. Les",
+          "p2_highlight":"personnes qui ont voté pour le bon créateur sont récompensées en jetons $SKILL",
+          "p2_end":"à utiliser dans notre application et notre marché.",
+          "title3":"Mode DG",
+          "p3_start": "Vous n’avez pas de talent particulier, mais vous voulez tout de même participer et gagner des jetons $VOTE? Le mode DG (directeur général) est fait pour vous. Les utilisateurs qui disposent d’au moins 3 NFT associés aux vidéos gagnantes dans leur collection débloquent le mode DG. Celui-ci leur",
+          "p3_highlight":"permet de participer aux défis en utilisant leurs NFT,",
+          "p3_end":"et de passer au niveau suivant pour obtenir des récompenses supplémentaires.",
+          "title4":"Programme Ambassadeur",
+          "p4_start": "Essayez de",
+          "p4_highlight":"surpasser vos idoles et obtenez des prix.",
+          "p4_end":"Chaque semaine, les grands de chaque discipline mettent la communauté au défi de reproduire l’un de leurs gestes signature. Soumettez votre meilleure tentative pour participer à la loterie et remporter des prix."
+      },
+      "highlighted": {
+          "company": "AllSkills",
+          "start": "emploie une technologie d’avenir reposant sur la chaîne de blocs et les contrats intelligents pour",
+          "highlight1": "connecter les gens de talent à leur public",
+          "middle": ". Nous favorisons le développement des compétences par la compétition tout en offrant",
+          "highlight2":"des avantages à tous les participants."
+      },
+      "challenges": {
+          "main_title": "Système de Défis",
+          "videos": {
+              "title": "Enregistrez des vidéos qui démontrent vos talents", 
+              "pStart": "Peu importe si votre talent est", 
+              "highlighted": "athlétique, musical, stratégique, incroyablement niché ou même unique",
+              "pEnd": ", nous voulons le découvrir. Installez votre caméra pour capter vos meilleurs moments et utilisez nos fonctions personnalisées de montage pour faire briller votre séquence.",
+              "tooltips": []},
+          "challenges": {
+              "title": "Soumettez vos vidéos au défi", 
+              "pStart":"Lorsque la vidéo vous plaît, il est temps de la soumettre au défi.",
+              "highlighted": "C’est en gagnant une ronde de défi que votre vidéo deviendra admissible à la conversion en jeton.",
+              "pEnd": "Vous pouvez soumettre votre vidéo à la compétition générale, ou mettre au défi un autre utilisateur. Les rondes durent 72 heures.",
+              "tooltips": []},
+          "votes":  {
+              "title": "Les utilisateurs votent pour déterminer le vainqueur", 
+              "pStart":"Une fois le défi lancé,",
+              "highlighted": "le contrôle appartient aux utilisateurs qui votent.",
+              "pEnd": "Ils se servent des jetons de vote pour montrer leur appui et prendre part à la compétition. Une fois le défi terminé, la vidéo qui a obtenu le plus grand nombre de votes est déclarée gagnante et peut être convertie en NFT.",
+              "tooltips": []},
+          "earn":  {
+              "title": "Obtenez de l’argent en votant et en remportant des défis", 
+              "pStart":"Montrez vos talents et obtenez des récompenses. Le créateur de la vidéo gagnante reçoit entre 1 et 25 % des jetons de vote exprimés pendant le défi, alors que les personnes qui ont voté pour lui obtiennent des jetons $SKILL. La part du créateur varie selon la proportion des votes.",
+              "highlighted": " Un vote serré équivaut à une plus grande part.",
+              "pEnd": "",
+              "tooltips": []}
+      },
+      "vote": {
+        "main_title": "Système de jetons ALLSKILLS",
+          "win": {
+              "title": "Obtenez des récompenses en gagnant",
+              "pStart":"Les gagnants des défis obtiennent une portion du total des jetons $VOTE exprimés pendant le défi, ce qui vous permet de",
+              "highlighted": "monnayer vos talents plus facilement que jamais.",
+              "pEnd": " "},
+          "cast": {
+              "title": "Exprimez votre vote",
+              "pStart":"Utilisez les jetons $VOTE pour montrer votre soutien et",
+              "highlighted": "voter pour les vidéos des défis que vous aimez.",
+              "pEnd": "Votez pour le gagnant et vous partagerez sa réussite."},
+          "marketplace": {
+              "title": "Accumulez du contenu de communauté",
+              "pStart":"Échangez vos jetons $SKILL contre du contenu de communauté offert sur notre marché, notamment des",
+              "highlighted": "filtres vidéo, des effets sonores, des jetons et des NFT",
+              "pEnd": "à utiliser en mode DG."},
+          "earn": {
+              "title": "Obtenez des récompenses en votant",
+              "pStart":"Aiguisez votre œil et votez dans le cadre du système de défis pour amasser des jetons $SKILL.",
+              "highlighted": "En votant pour la vidéo gagnante, vous remporterez des jetons $SKILL.",
+              "pEnd": " "},
+          "stable": {
+              "title": "Un jeton stable pour tous les talents",
+              "pStart":"Qu’on les achète pour voter, ou qu’on encaisse des récompenses durement gagnées, les jetons $VOTE",
+              "highlighted": "valent toujours 0,10 $, c’est garanti.",
+              "pEnd": " "},
+          "utility": {
+              "title": "Jeton utilitaire de la plateforme",
+              "pStart":"Vous publiez un nouveau défi? Vous vous mesurez à un défi d’ambassadeur? Vous vendez sur notre marché? Utilisez les jetons $SKILL et ne payez que",
+              "highlighted": "des frais modiques.",
+              "pEnd": ""}
+      },
+      "nft": {
+        "main_title":"NFT ALLSKILLS",
+          "1": {
+              "pStart":"Toutes les vidéos gagnantes parmi les",
+              "highlight":"10 % ayant reçu le plus de votes chaque jour",
+              "pEnd":"sont converties en NFT."
+          },
+          "2": {
+              "pStart": "Pour vous assurer que votre victoire engendre un NFT, procurez-vous un",
+              "highlight": "jeton de conversion",
+              "pEnd":"dans notre marché ou"
+          },
+          "3": {
+              "pStart": "Passez au niveau supérieur en remportant des défis et débloquez les avantages exclusifs comme la",
+              "highlight":"conversion en NFT des défis que vous gagnez.",
+              "pEnd":""
+          },
+          "4": {
+              "pStart": "Vendez vos NFT sur notre marché pour obtenir de l’argent rapidement, ou conservez-les pour participer en",
+              "highlight":"mode DG",
+              "pEnd":"et continuer à cumuler les jetons $VOTE."
+          },
+          "5": {
+              "pStart":"Vos NFT sont stockés en toute sécurité auprès de fournisseurs de services infonuagiques décentralisés et tirent profit du protocole IPFS. Ils sont sauvegardés pour toujours sur arweave, le",
+              "link":" « disque dur collectif qui n’oublie jamais ».",
+              "pEnd":""
+          }
+      },
+      "gm": {
+        "main_title": "Mode DG",
+          "1": {
+              "pStart":"Construisez votre collection de contenu remarquable et débloquez le mode DG en",
+              "highlight":"obtenant au moins 3 NFT."
+          },
+          "2": {
+              "pStart":"Enregistrez vos propres NFT ou",
+              "highlight":"obtenez les NFT d’un créateur talentueux sur notre marché",
+              "pEnd":"en échangeant les jetons $SKILL que vous avez obtenus en votant."
+          },
+          "3": {
+              "pStart":"Conviez en duel d’autres DG pour",
+              "highlight":"amasser des jetons $VOTE",
+              "pEnd":"et faire évoluer vos NFT."
+          },
+          "4": {
+              "pStart": "Chaque niveau que gagne un NFT",
+              "highlight": "accroît la part de base",
+              "pEnd":"qui vous revient pour une victoire."
+          }
+      },
+      "ambassador": {
+          "main_title":"Défi Ambassadeur",
+          "line1": "Mesurez-vous au Défi ambassadeur qui met en vedette un créateur différent chaque semaine.",
+          "line2": "Courez la chance de gagner un NFT de la vidéo du Défi ambassadeur, en plus d’autres prix.",
+          "line3": "D’autres détails suivront."
+      },
+      "roadmap": {
+          "socials": "Join our Discord and follow our Twitter to get access to the latest announcements and enter raffles to earn prizes from our Ambassadors",
+          "idea": {
+              "cleared": ["Ideation", "Business plan", "Feasability study", "Olympic skater Charles Hamelin joins project"]
+          },
+          "research": {
+              "cleared": ["Market research", "Acquired advisors & CTO", "Backed by PME Montreal", "Finalist in NBA Launchpad", "Pivot towards NFT platform", "Launch website", "Release whitepaper and tokenomics"]
+          },
+          "plan": {
+              "cleared": ["Setup social community", "Release marketing plan", "Trailer","Announce partners"],
+              "uncleared": ["Reveal plan for Ambassador program", "Reveal first AllSkills Ambassadors", "Mint $Skills token"]
+          },
+          "launch": {
+              "cleared": [],
+              "uncleared": ["Token presale", "Mint stablecoin Vote token", "Launch closed beta", "Public sale","Full release of challenge system and marketplace", "Start Ambassador program"]
+          },
+          "post": {
+              "cleared": [],
+              "uncleared": ["Add unique Tap-to-Record", "Release Scout mode", "Release GM mode", "Add more cosmetics and editing features"]
+          }
+      },
+      "tokenomics": {
+          "pTitle": "10,000,000,000 Tokens",
+          "paragraph": "Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat.",
+          "list": ["Team 10%", "Advisors & Partners 10%", "Private Sale 10%", "Public Sale 20%", "Liquidity Pool 20%", "Foundation 30%"]
+      },
+      "team": {
+          "main_title": "L’équipe",
+          "position": "Co-Founder",
+          "button": "MORE INFO",
+          "noah": "Noah has been in and around the sport industry since he was 16. After graduating from Brock University’s Sport Management program, he began to focus his career on marketing. Through his experience in Junior Hockey, CFL, AHL and NHL, as well as freelance, Noah has learned the art of connecting with athletes. Noah’s passion for making sports and competition more accessible helps guide AllSkills and stems from his desire to improve the world around him.",
+          "frank": "A director, conceptualist and creative, François, known as the Skating Cameraman, is quick to navigate and come up with new and forward ideas. A lover of all things skills, he has worked on honing his craft and meeting with people across multiple sectors for over 14 years. From musicians to athletes to editors, François has learned from them all and applies this knowledge and passion to AllSkills.",
+          "christopher": "Christopher has a wide range of interests and knowledge. On top of taking on the role of full-stack engineer and smart contract developer, Christopher is an all-round problem solver and helps out wherever he can. With 17 years experience in software development and 9 years being involved in the blockchain world, his vision of bringing AllSkills in to the emerging Web 3.0 space has brought out the true potential of AllSkills and his foresight continues to be invaluable.",
+          "charles": "A ﬁve-time Olympian and two-time Speed Skating World Champion, Charles has worked with some of the world’s biggest brands and brings a competitive edge to AllSkills. Charles not only has experience on the ice, but is also an avid gamer, which combined with his athletic background helps provides great insight in to the minds of athletes and gamers."
+      },
+      "partners": {
+          "reach":"Nous sommes toujours ouverts à l’idée de collaborer avec des talents et des entreprises d’exception. Contactez-nous si vous voulez devenir partenaire ou ambassadeur, ou contribuer à la croissance d’AllSkills.",
+          "buttonText": "Reach Out"
+      },
+      "news": {}
+  }
 }
