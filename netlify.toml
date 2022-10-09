@@ -4,3 +4,10 @@
   functions = "functions/"
 [build.environment]
   NODE_VERSION = "16.4.2"
+[[headers]]
+  for = "/fonts/*"
+  [headers.values]
+    cache-control = '''
+    max-age=365000000,
+    public
+    immutable'''
