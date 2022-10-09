@@ -27,23 +27,42 @@
   <style>
     @font-face {
       font-family: "Oswald";
-      src: url("./fonts/Oswald-Regular.ttf");
-      font-display: swap;
+      src: url("./fonts/Oswald-Regular.woff2");
+      font-display: optional;
     }
     @font-face {
       font-family: "Bebas Neue";
       src: url("./fonts/BebasNeue-Regular.ttf");
-      font-display: swap;
+      font-display: optional;
     }
     @font-face {
       font-family: "Raleway";
       src: url("./fonts/Raleway-Medium.ttf");
-      font-display: swap;
+      font-display: optional;
     }
     @font-face {
       font-family: "Roboto";
-      src: url("./fonts/Roboto-Light.ttf");
-      font-display: swap;
+      src: url("./fonts/Roboto-Light.woff2");
+      font-display: optional;
+      font-weight: 100;
+    }
+    @font-face {
+      font-family: "Lato";
+      src: url("./fonts/Lato-Light.woff2");
+      font-display: optional;
+      font-weight: 300;
+    }
+    @font-face {
+      font-family: "Lato";
+      src: url("./fonts/Lato-Regular.woff2");
+      font-display: optional;
+      font-weight: 400;
+    }
+    @font-face {
+      font-family: "Lato";
+      src: url("./fonts/Lato-Bold.woff2");
+      font-display: optional;
+      font-weight: 600;
     }
     @font-face {
       font-family: "Varela";
@@ -125,7 +144,42 @@
       color: var(--headerColor);
     }
   </style>
-  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link
+    rel="preload"
+    href="/fonts/Roboto-Light.woff2"
+    as="font"
+    type="font/woff"
+    crossorigin="anonymous"
+  />
+  <link
+    rel="preload"
+    href="/fonts/Oswald-Regular.woff2"
+    as="font"
+    type="font/woff"
+    crossorigin="anonymous"
+  />
+  <link
+    rel="preload"
+    href="/fonts/Lato-Regular.woff2"
+    as="font"
+    type="font/woff"
+    crossorigin="anonymous"
+  />
+  <link
+    rel="preload"
+    href="/fonts/Lato-Light.woff2"
+    as="font"
+    type="font/woff"
+    crossorigin="anonymous"
+  />
+  <link
+    rel="preload"
+    href="/fonts/Lato-Bold.woff2"
+    as="font"
+    type="font/woff"
+    crossorigin="anonymous"
+  />
+  <!--<link rel="preconnect" href="https://fonts.googleapis.com" />
   <link
     rel="preconnect"
     href="https://fonts.gstatic.com"
@@ -134,7 +188,7 @@
   <link
     href="https://fonts.googleapis.com/css2?family=Lato:wght@100;300;400&family=Roboto:wght@100&display=swap"
     rel="stylesheet"
-  />
+  />-->
 </svelte:head>
 <!--<LiveVote />-->
 <Navbar />

@@ -17,7 +17,7 @@
 <section id="About">
   <h2
     class="section-title"
-    style="text-decoration-line: none; -webkit-text-decoration-line:none"
+    style="text-decoration-line: none; -webkit-text-decoration-line:none; margin-right:10%;"
   >
     {$t("content.home.table.main_title")}
   </h2>

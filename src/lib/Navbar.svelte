@@ -239,7 +239,6 @@
 </div>
 
 <style>
-  @import url("https://fonts.googleapis.com/css2?family=Roboto:ital,wght@0,500;1,400&display=swap");
   .tumbler__wrapper {
     margin-left: auto;
     width: 60px;
