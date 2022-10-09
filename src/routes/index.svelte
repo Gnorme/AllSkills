@@ -24,6 +24,8 @@
 </script>
 
 <svelte:head>
+  <link rel="preload" as="image" href="images/tags_hero_bg.png" />
+  <link rel="preload" as="image" href="images/logo-border-2.png" />
   <style>
     @font-face {
       font-family: "Oswald";
@@ -32,7 +34,7 @@
     }
     @font-face {
       font-family: "Bebas Neue";
-      src: url("./fonts/BebasNeue-Regular.ttf");
+      src: url("./fonts/BebasNeue-Regular.woff2");
       font-display: optional;
     }
     @font-face {
@@ -147,6 +149,13 @@
   <link
     rel="preload"
     href="/fonts/Roboto-Light.woff2"
+    as="font"
+    type="font/woff"
+    crossorigin="anonymous"
+  />
+  <link
+    rel="preload"
+    href="/fonts/BebasNeue-Regular.woff2"
     as="font"
     type="font/woff"
     crossorigin="anonymous"
