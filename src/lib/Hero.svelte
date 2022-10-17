@@ -64,10 +64,11 @@
     <div class="content">{$t("content.home.hero.title")}</div>
     <div class="scrolling-content">
       <div class="scrolling-content-mask">
-        <ul class="scroll-animation">
+        <ul id="scrolling-animation" class="scroll-animation">
           {#each skills as skill}
             <li>{skill}</li>
           {/each}
+          <li><h1 style="margin:0; font-size: 64px">Web3</h1></li>
           <li
             style="color:var(--highlight); font-weight: 600 !important; font-family:'Bebas Neue'; margin-top:11px;"
           >
@@ -106,6 +107,11 @@
 </div>
 
 <style>
+  .loading *,
+  .loading *:before,
+  .loading *:after {
+    animation-play-state: paused !important;
+  }
   .request-access {
     position: absolute;
     display: block;
@@ -163,17 +169,7 @@
     max-width: 100%;
     mix-blend-mode: soft-light;
   }
-  .scrolling-content {
-    margin-left: 10px;
-    font-size: 64px;
-    height: 64px;
-    text-align: left;
-    line-height: 1;
-    text-overflow: ellipsis;
-    width: 200px;
-    white-space: nowrap;
-    color: white;
-  }
+
   #socials a {
     color: var(--highlight);
   }
@@ -192,12 +188,7 @@
     font-weight: 600;
     overflow: hidden;
   }
-  .scrolling-content-mask {
-    height: 64px;
-    overflow: hidden;
-    position: relative;
-    display: inline-block;
-  }
+
   .left-content {
     font-weight: 500;
     margin: 0px;
@@ -288,7 +279,23 @@
     float: left;
     margin: 0;
   }
-
+  .scrolling-content {
+    margin-left: 10px;
+    font-size: 64px;
+    height: 64px;
+    text-align: left;
+    line-height: 1;
+    text-overflow: ellipsis;
+    width: 200px;
+    white-space: nowrap;
+    color: white;
+  }
+  .scrolling-content-mask {
+    height: 64px;
+    overflow: hidden;
+    position: relative;
+    display: inline-block;
+  }
   .scroll-animation {
     min-height: 150px;
     max-height: 150px;
@@ -321,7 +328,7 @@
 
   @-webkit-keyframes change {
     100% {
-      margin-top: -2688px;
+      margin-top: -2752px;
     }
   }
 
@@ -336,8 +343,11 @@
   }
 
   @keyframes change {
+    0% {
+      margin-top: 0px;
+    }
     100% {
-      margin-top: -2694px;
+      margin-top: -2758px;
     }
   }
 
