@@ -14,7 +14,7 @@
     }
     let body = JSON.stringify({ email: email });
     console.log(body);
-    let response = await fetch(link + "/request_access", {
+    let response = await fetch(link + "/beta_signup", {
       headers: {
         "Content-Type": "application/json",
       },
