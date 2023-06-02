@@ -5,22 +5,92 @@
 	<meta charset="utf-8" />
 	<meta name="viewport" content="width=device-width, initial-scale=1" />
 	<style>
+    button {
+      border: none;
+    background-color: aqua;
+    color: #212121;
+    padding: 10px 60px;
+    font-family: 'Bebas Neue';
+    margin: 30px;
+    font-size: 1.3rem;
+    }
+    h1 {
+      text-align: center;
+      font-family: "Bebas Neue";
+      color: aqua;
+    }
 		body {
 			margin:0;
             height: 100%;
+            background-color: #212121;
 		}
         html {
             height: 100%;
         }
+        .custom-field {
+            position: relative;
+            font-size: 14px;
+            border-top: 20px solid transparent;
+            margin-bottom: 5px;
+            display: inline-block;
+            --field-padding: 12px;
+        }
+        *, *::before, *::after {
+    box-sizing: border-box;
+}
+        .custom-field input {
+              border: none;
+              -webkit-appearance: none;
+              -ms-appearance: none;
+              -moz-appearance: none;
+              appearance: none;
+              background: none;
+              padding: var(--field-padding);
+              width: 250px;
+              outline: none;
+              font-size: 14px;
+              color: white;
+              border-bottom: 1px solid;
+              border-radius: 0px;
+          }
+          .custom-field .placeholder {
+            position: absolute;
+            left: var(--field-padding);
+            width: calc(100% - (var(--field-padding) * 2));
+            overflow: hidden;
+            white-space: nowrap;
+            text-overflow: ellipsis;
+            top: 22px;
+            line-height: 100%;
+            transform: translateY(-50%);
+            color: white;
+            transition: top 0.3s ease, color 0.3s ease, font-size 0.3s ease;
+        }
+        .custom-field input.dirty + .placeholder,
+.custom-field input:focus + .placeholder,
+.custom-field input:not(:placeholder-shown) + .placeholder {
+  top: -10px;
+  font-size: 10px;
+  color: white;
+}
+form {
+  background-color: #212121;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+    text-align: center;
+}
     #links-container {
       background-color: #212121;
       display: flex;
       gap: 30px;
       justify-content: center;
+      padding:40px;
       align-items: center;
-      flex-direction: column;
+      /* flex-direction: column; */
       width: 100%;
-      height: 100%;
+      /* height: 100%; */
     }
     #links-container a {
       width: 80px;
@@ -40,11 +110,31 @@
     <link rel="preconnect" href="https://fonts.googleapis.com" />
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
     <link
-      href="https://fonts.googleapis.com/css2?family=Lato:wght@100;300;400&family=Roboto:wght@100&display=swap"
+      href="https://fonts.googleapis.com/css2?family=Lato:wght@100;300;400&family=Roboto:wght@100&family=Bebas+Neue:wght@400&display=swap"
       rel="stylesheet"
     />
 </head>
 <body>
+  <h1>Register for AllSkills beta!</h1>
+  <form name="beta" method="POST" data-netlify="true">
+    <div>
+    <label class="custom-field">
+      <input type="text" placeholder="&nbsp;" name="first" required="">
+      <span class="placeholder">First Name</span>
+    </label>
+    <label class="custom-field">
+      <input type="text" placeholder="&nbsp;" name="last" required="">
+      <span class="placeholder">Last Name</span>
+    </label>
+  </div>
+  <div>
+    <label class="custom-field">
+      <input type="text" placeholder="&nbsp;" name="email" required="">
+      <span class="placeholder">Email</span>
+    </label>
+  </div>
+  <button type="submit">Submit</button>
+  </form>
   <div id="links-container">
     <a href="https://allskills.ca">
       <!-- Generator: Adobe Illustrator 19.1.0, SVG Export Plug-In . SVG Version: 6.00 Build 0)  -->
