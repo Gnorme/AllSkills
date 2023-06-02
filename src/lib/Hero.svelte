@@ -90,7 +90,12 @@
       <NewsletterSignup color="white" />
     </div>
   </div>
-  <button class="request-access" on:click={() => (requestingAccess = true)}
+  <!--<button class="request-access" on:click={() => (requestingAccess = true)}
+    >{$t("content.home.hero.button_text")}</button
+  >-->
+  <button
+    class="request-access"
+    on:click={() => (window.location.href = "/links")}
     >{$t("content.home.hero.button_text")}</button
   >
   <div id="socials">
@@ -122,6 +127,7 @@
     color: white;
     margin: 10px;
     bottom: 0;
+    cursor: pointer;
   }
   :global(.soft-mode) #hero {
     background-image: none !important;
