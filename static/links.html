@@ -4,6 +4,39 @@
 <head>
 	<meta charset="utf-8" />
 	<meta name="viewport" content="width=device-width, initial-scale=1" />
+  <script>
+    async function requestAccess() {
+      let email = document.getElementById("email").value
+      if (!email) {
+        alert("Email is empty");
+        return;
+      }
+      if (email.length < 10) {
+        alert("Email too short");
+        return;
+      }
+      let body = JSON.stringify({ email: email });
+      console.log(body);
+      let response = await fetch(link + "/beta_signup", {
+        headers: {
+          "Content-Type": "application/json",
+        },
+        method: "POST",
+        body: body,
+      }).then((res) => res.json());
+      if (response.status == 201) {
+        alert(
+          "Thanks for signing up, keep an eye on your email for further instructions."
+        );
+        window.location.href = "https://allskills.ca"
+      } else if (response.status == 409) {
+        alert("Request already submitted with that email");
+      } else {
+        alert("Invalid request");
+      }
+      console.log(response);
+    }
+  </script>
 	<style>
     button {
       border: none;
@@ -118,7 +151,7 @@ form {
 </head>
 <body>
   <h1>Register for AllSkills beta!</h1>
-  <form name="beta" method="POST" data-netlify="true" >
+  <form name="beta" method="POST" onsubmit="requestAccess()">
     <div>
     <label class="custom-field">
       <input type="text" placeholder="&nbsp;" name="first" required="">
@@ -131,7 +164,7 @@ form {
   </div>
   <div>
     <label class="custom-field">
-      <input type="text" placeholder="&nbsp;" name="email" required="">
+      <input type="text" placeholder="&nbsp;" name="email" required="" id="email">
       <span class="placeholder">Email</span>
     </label>
   </div>
