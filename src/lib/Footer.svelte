@@ -33,7 +33,7 @@
         <a href="mailto:info@allskills.ca"
           ><img alt="Email" src="images/email.png" id="email" /></a
         >
-        <a href=""
+        <a href="https://discord.gg/3M3yW9Fx"
           ><img alt="Discord" src="images/discord.png" id="discord" /></a
         >
         <a href="https://www.instagram.com/AllSkills.ca"

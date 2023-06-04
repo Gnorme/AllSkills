@@ -109,8 +109,9 @@
       <ul id="social-links">
         <a href="https://twitter.com/@AllSkillsca">Twitter</a>
         <a href="https://www.instagram.com/AllSkills.ca">Instagram</a>
-        <a href="https://www.tiktok.com/@allskillsnft">TikTok</a>
+        <a href="https://www.tiktok.com/@allskills.ca">TikTok</a>
         <a href="https://www.facebook.com/AllSkills.ca">Facebook</a>
+        <a href="https://discord.gg/3M3yW9Fx">Discord</a>
       </ul>
     </div>
     <span>{$t("content.home.hero.shoutout")} <a>@AllSkills.ca</a></span>
