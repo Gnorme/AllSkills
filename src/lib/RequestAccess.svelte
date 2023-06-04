@@ -23,7 +23,7 @@
     }).then((res) => res.json());
     if (response.status == 201) {
       alert(
-        `You are number ${response.data.count} in line. Thank you for your interest.`
+        "Thanks for signing up, keep an eye on your email for further instructions."
       );
       requestingAccess = false;
     } else if (response.status == 409) {
