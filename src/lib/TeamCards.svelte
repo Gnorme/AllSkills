@@ -32,10 +32,22 @@
       descr:
         "Christopher has a wide range of interests and knowledge.  On top of taking on the role of full-stack engineer and smart contract developer, Christopher is an all-round problem solver and helps out wherever he can. With 17 years experience in software development and 9 years being involved in the blockchain world, his vision of bringing AllSkills in to the emerging Web 3.0 space has brought out the true potential of AllSkills and his foresight continues to be invaluable.",
       email: "cthompson@allskills.ca",
-      twitter: "",
+      twitter: "https://twitter.com/@Allskillsca",
       linkedin: "https://www.linkedin.com/in/christopher-thompson-b48b7b8b/",
       img: "images/christopher_s.png",
       bg: "blueviolet",
+    },
+    {
+      id: 0,
+      name: "Elizabeth Thompson",
+      position: "Co-Founder",
+      descr:
+        "Elizabeth has proven track record in start-ups, recruiting, and operations. With a passion for driving success, Elizabeth's expertise lies in streamlining operations, optimizing resources, and assembling high-performing teams. Her strategic mindset and ability to transform ambitious visions into reality make her an indispensable partner.",
+      email: "elizabeth@allskills.ca",
+      twitter: "https://twitter.com/@Allskillsca",
+      linkedin: "https://www.linkedin.com/in/elizabeth-shakepay",
+      img: "images/elizabeth.png",
+      bg: "white",
     },
     {
       id: 0,

@@ -48,12 +48,18 @@
     "Trickshots",
   ];
   let string = "<a>Twitter</a>";
+  function showBetaSignup() {
+    requestingAccess = true;
+  }
 </script>
 
 {#if requestingAccess}
   <RequestAccess bind:requestingAccess />
 {/if}
 <div style="background-image:url('images/tags_hero_bg.png')" id="hero">
+  <div on:click={showBetaSignup} class="banner">
+    Click here to join our beta test
+  </div>
   <img
     loading="lazy"
     alt="AllSkills logo"
@@ -93,11 +99,11 @@
   <!--<button class="request-access" on:click={() => (requestingAccess = true)}
     >{$t("content.home.hero.button_text")}</button
   >-->
-  <button
+  <!--<button
     class="request-access"
     on:click={() => (window.location.href = "/links")}
     >{$t("content.home.hero.button_text")}</button
-  >
+  >-->
   <div id="socials">
     <div class="tooltip">
       <ul id="social-links">
@@ -112,6 +118,18 @@
 </div>
 
 <style>
+  .banner {
+    position: absolute;
+    top: 0;
+    z-index: 3;
+    width: 100%;
+    text-align: center;
+    background-color: blueviolet;
+    padding: 15px;
+    font-size: 1.5rem;
+    cursor: pointer;
+    font-weight: 400;
+  }
   .loading *,
   .loading *:before,
   .loading *:after {
