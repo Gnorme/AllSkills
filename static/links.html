@@ -5,8 +5,7 @@
 	<meta charset="utf-8" />
 	<meta name="viewport" content="width=device-width, initial-scale=1" />
   <script>
-    async function requestAccess(e) {
-      e.preventDefault()
+    async function requestAccess() {
       let email = document.getElementById("email").value
       if (!email) {
         alert("Email is empty");
@@ -154,7 +153,7 @@ form {
 </head>
 <body>
   <h1>Register for AllSkills beta!</h1>
-  <form name="beta" onsubmit="requestAccess">
+  <form name="beta" onsubmit="return false">
     <div>
     <label class="custom-field">
       <input type="text" placeholder="&nbsp;" name="first" required="">
@@ -171,7 +170,7 @@ form {
       <span class="placeholder">Email</span>
     </label>
   </div>
-  <button type="submit">Submit</button>
+  <button type="submit" onclick="requestAccess()">Submit</button>
   </form>
   <div id="links-container">
     <a href="https://allskills.ca">
