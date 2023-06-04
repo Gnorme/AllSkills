@@ -5,7 +5,8 @@
 	<meta charset="utf-8" />
 	<meta name="viewport" content="width=device-width, initial-scale=1" />
   <script>
-    async function requestAccess() {
+    async function requestAccess(e) {
+      e.preventDefault()
       let email = document.getElementById("email").value
       if (!email) {
         alert("Email is empty");
@@ -28,6 +29,7 @@
         alert(
           "Thanks for signing up, keep an eye on your email for further instructions."
         );
+        return false
         window.location.href = "https://allskills.ca"
       } else if (response.status == 409) {
         alert("Request already submitted with that email");
@@ -35,6 +37,7 @@
         alert("Invalid request");
       }
       console.log(response);
+      return false
     }
   </script>
 	<style>
@@ -151,7 +154,7 @@ form {
 </head>
 <body>
   <h1>Register for AllSkills beta!</h1>
-  <form name="beta" onsubmit="requestAccess()">
+  <form name="beta" onsubmit="requestAccess">
     <div>
     <label class="custom-field">
       <input type="text" placeholder="&nbsp;" name="first" required="">
